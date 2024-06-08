@@ -22,7 +22,10 @@ struct Screen{
     //Menu management
     enum MenuType menuType;
 
-    double frameRenderTime;
+    //Frame rendering
+    int targetFPS;
+    int frameDelay;
+    Uint32 frameRenderTime;
 
     //Weather the screen should run
     bool run;

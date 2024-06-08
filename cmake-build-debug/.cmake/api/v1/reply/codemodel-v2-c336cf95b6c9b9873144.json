@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Spencer/Desktop/projects/edifice/cmake-build-debug",
-		"source" : "C:/Users/Spencer/Desktop/projects/edifice"
+		"build" : "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug",
+		"source" : "C:/Users/Spencer/Desktop/Edifice_V2"
 	},
 	"version" : 
 	{

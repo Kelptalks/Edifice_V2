@@ -42,8 +42,8 @@ struct CastedPool{
 
 struct CastedBlock* createCastedBlock();
 
-struct CastedChunk* createCastedChunk(struct CameraData* cameraData, int isoX, int isoY);
+struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_Renderer* renderer, int isoX, int isoY);
 
-struct CastedPool* createCastedPool(struct CameraData* cameraData);
+struct CastedPool* createCastedPool(struct CameraData* cameraData, SDL_Renderer* renderer);
 
 #endif //EDIFICE_CASTEDBLOCKMANAGER_H

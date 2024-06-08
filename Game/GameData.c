@@ -47,7 +47,7 @@ struct GameData* createGameData(){
 
     //Create camera Data
     reportBug("Creating cameraData \n");
-    gameData->cameraData = createCameraData();
+    gameData->cameraData = createCameraData(gameData->screen->renderer);
     gameData->cameraData->octree = gameData->world->octree;
 
 

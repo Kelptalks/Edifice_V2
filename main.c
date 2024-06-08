@@ -19,9 +19,7 @@ int main(int argc, char* argv[]) {
     struct GameData* gameData = createGameData();
 
     while (gameData->screen->run){
-        clock_t start, end;
-        double cpu_time_used;
-        start = clock();
+        Uint32 time1 = SDL_GetTicks();
 
         //Control what the game is rendering
         if (gameData->screen->menuType == MainMenu){
@@ -39,26 +37,20 @@ int main(int argc, char* argv[]) {
                 renderDebugMenu(gameData);
             }
         }
-
         //Handle game inputs
         handleInput(gameData);
-
-        end = clock();
-
-        cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-
-        //Frame counter
-        gameData->screen->frameRenderTime = cpu_time_used;
-
 
         SDL_SetRenderDrawColor(gameData->screen->renderer, 255, 255, 255, 255);
         SDL_RenderPresent(gameData->screen->renderer);
         SDL_RenderClear(gameData->screen->renderer);
+
+        //Delay to limit frame rate
+        SDL_Delay(gameData->screen->frameDelay);
+
+        Uint32 time2 = SDL_GetTicks();
+        gameData->screen->frameRenderTime = time2 - time1;
+
     }
-
-
-
-
 
     return 0;
 }

@@ -10,15 +10,17 @@
 
 struct CameraData{
     //Drawing location
-    int xRenderingOffset;
-    int yRenderingOffset;
+    float xRenderingOffset;
+    float yRenderingOffset;
 
     //Camera world location
     unsigned long key;
 
     //Dimensions
+    int baseBlockScale;
     int viewDistance;
     int chunksScale;
+    int chunkPixelScale;
     float renderScale;
 
     //Viewport
@@ -31,7 +33,7 @@ struct CameraData{
     struct InMenuWindow* inMenuWindow;
 };
 
-struct CameraData* createCameraData();
+struct CameraData* createCameraData(SDL_Renderer* renderer);
 
 
 #endif //EDIFICE_CAMERADATA_H

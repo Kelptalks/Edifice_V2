@@ -15,7 +15,7 @@ struct CastedBlock* createCastedBlock(){
     return castedBlock;
 }
 
-struct CastedChunk* createCastedChunk(struct CameraData* cameraData, int isoX, int isoY){
+struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_Renderer* renderer, int isoX, int isoY){
     struct CastedChunk* castedChunk = malloc(sizeof (struct CastedChunk));
     castedChunk->worldKey = modKey(cameraData->key, isoX * cameraData->chunksScale, isoY * cameraData->chunksScale, 0, 0);
     castedChunk->castedBlocks = malloc(sizeof (struct CastedBlock*) * cameraData->chunksScale);
@@ -36,16 +36,27 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, int isoX, i
         }
     }
 
+    //Create casted Chunk texture
+    int xChunkTextureRez = cameraData->chunksScale * cameraData->baseBlockScale;
+    int yChunkTextureRez = cameraData->chunksScale * (cameraData->baseBlockScale/2);
+    castedChunk->chunkTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA32, SDL_TEXTUREACCESS_TARGET, xChunkTextureRez, yChunkTextureRez);
+
+    SDL_SetTextureBlendMode(castedChunk->chunkTexture, SDL_BLENDMODE_BLEND);
+    SDL_SetRenderTarget(renderer, castedChunk->chunkTexture);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);  // RGBA for transparent
+    SDL_RenderClear(renderer);
+    SDL_SetRenderTarget(renderer, NULL);
+
     return castedChunk;
 }
 
-struct CastedPool* createCastedPool(struct CameraData* cameraData){
+struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Renderer* renderer){
     struct CastedPool* castedPool = malloc(sizeof (struct CastedPool));
     castedPool->castedChunks = malloc(sizeof (struct CastedChunk*) * cameraData->viewDistance);
     for (int x = 0; x < cameraData->viewDistance; x++){
         castedPool->castedChunks[x] = malloc(sizeof (struct CastedChunk) * cameraData->viewDistance);
         for (int y = 0; y < cameraData->viewDistance; y++){
-            castedPool->castedChunks[x][y] = *createCastedChunk(cameraData, x, y);
+            castedPool->castedChunks[x][y] = *createCastedChunk(cameraData, renderer, x, y);
         }
     }
     return castedPool;

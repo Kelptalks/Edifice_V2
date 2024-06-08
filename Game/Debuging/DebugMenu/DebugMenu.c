@@ -24,12 +24,13 @@ struct DebugMenu* createDebugMenu(){
 
 void renderDebugMenu(struct GameData* gameData){
     //Frame rate
-    char FrameRate[30];
-    sprintf(FrameRate, "Frame Render Time : %f ", gameData->screen->frameRenderTime);
-    drawString(gameData, FrameRate, 30, 5, 5, 20);
+    char FrameRate[40] = {0};
+    Uint32 fps = 1000 / gameData->screen->frameRenderTime;
+    sprintf(FrameRate, "FPS : %u  CAP : %i", fps, gameData->screen->targetFPS);
+    drawString(gameData, FrameRate, 40, 5, 5, 20);
 
     //Mouse cords
-    char MouseCords[30];
+    char MouseCords[30] = {0};
     sprintf(MouseCords, "MouseCords : %d, %d", gameData->debugMenu->xBlockSelectedCor, gameData->debugMenu->yBlockSelectedCor);
     drawString(gameData, MouseCords, 30, 5, 30, 20);
 }

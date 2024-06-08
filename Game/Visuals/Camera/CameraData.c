@@ -9,7 +9,7 @@
 #include "../../World/Octree/KeyMod.h"
 #include "../InMenuWindow/InMenuWindow.h"
 
-struct CameraData* createCameraData(){
+struct CameraData* createCameraData(SDL_Renderer* renderer){
     struct CameraData* cameraData = malloc(sizeof(struct CameraData));
     if (cameraData == NULL){
         return NULL;
@@ -19,6 +19,7 @@ struct CameraData* createCameraData(){
     cameraData->yRenderingOffset = 0;
 
     //The scale the camera should render
+    cameraData->baseBlockScale = 64;
     cameraData->renderScale = 64;
 
     //How many chunks will generate
@@ -26,13 +27,14 @@ struct CameraData* createCameraData(){
 
     //Max 512
     cameraData->chunksScale = 16;
+    cameraData->chunkPixelScale = cameraData->baseBlockScale * cameraData->chunksScale;
 
     //Key the camera renderers from
     cameraData->key = modKey(0, 300, 300, 300, 0);
 
     //Create viewport
     reportBug(" - Creating CastedPool\n");
-    cameraData->castedPool = createCastedPool(cameraData);
+    cameraData->castedPool = createCastedPool(cameraData, renderer);
 
     //Create inMenuWindow
     cameraData->inMenuWindow = createInMenuWindow(50, 50, 1280, 720);
