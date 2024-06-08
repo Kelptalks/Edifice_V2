@@ -1,0 +1,32 @@
+//
+// Created by Spencer on 4/28/2024.
+//
+
+#ifndef ENGINE_TERRAINGEN_H
+#define ENGINE_TERRAINGEN_H
+#include "../World.h"
+#include "LairManager/LairManager.h"
+
+
+enum Feature{
+    Hills,
+    Trees,
+};
+
+struct TerrainGenRules{
+    struct ArrayList* lairRules;
+    struct ArrayList* shiftRules;
+};
+
+void createTerrainGenRules(struct World* world);
+
+void genArea(struct World* world, unsigned long key, int xArea, int yArea, int zArea);
+
+void genTree(struct World* world);
+
+void genHill();
+
+void buildGround();
+
+
+#endif //ENGINE_TERRAINGEN_H

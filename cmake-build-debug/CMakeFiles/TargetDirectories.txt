@@ -1,0 +1,3 @@
+C:/Users/Spencer/Desktop/projects/edifice/cmake-build-debug/CMakeFiles/edifice.dir
+C:/Users/Spencer/Desktop/projects/edifice/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Spencer/Desktop/projects/edifice/cmake-build-debug/CMakeFiles/rebuild_cache.dir
