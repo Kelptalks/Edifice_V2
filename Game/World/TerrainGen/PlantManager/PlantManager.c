@@ -91,8 +91,11 @@ void generatePlant(struct World* world, unsigned long key, enum Block block){
                 }
             }
             //10% flour
-            else{
+            else if (randomVal <= 97){
                 setOctreeKeyValue(world->octree->root, key, world->octree->RootDepth, Flour);
+            }
+            else{
+                setOctreeKeyValue(world->octree->root, key, world->octree->RootDepth, Mushroom);
             }
 
 

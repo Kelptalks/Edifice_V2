@@ -14,9 +14,8 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     if (cameraData == NULL){
         return NULL;
     }
-
-    cameraData->xRenderingOffset = 0;
-    cameraData->yRenderingOffset = 0;
+    //The current block selected for building
+    cameraData->blockSelected == Grass;
 
     //The scale the camera should render
     cameraData->baseBlockScale = 64;
@@ -28,6 +27,10 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     //Max 512
     cameraData->chunksScale = 16;
     cameraData->chunkPixelScale = cameraData->baseBlockScale * cameraData->chunksScale;
+
+    //Offset for drawing the screen and shifting
+    cameraData->xRenderingOffset = 0;
+    cameraData->yRenderingOffset = -cameraData->chunkPixelScale * (cameraData->viewDistance/4);
 
     //Key the camera renderers from
     cameraData->key = modKey(0, 300, 300, 300, 0);

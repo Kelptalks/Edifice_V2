@@ -10,6 +10,11 @@
 
 struct DebugMenu{
     bool visible;
+
+    int xMouseCor;
+    int yMouseCor;
+
+    bool LeftSide;
     int xBlockSelectedCor;
     int yBlockSelectedCor;
 };

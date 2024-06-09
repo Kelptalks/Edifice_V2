@@ -154,8 +154,8 @@ SDL_Texture* getCharTexture(struct GameData* gameData, char character){
         case '9' : return charTextures[Char9];
 
         //Punctuation
-        case '.' :return charTextures[CharPeriod];
-        case '?' :return charTextures[CharQuestion];
+        case '.' : return charTextures[CharPeriod];
+        case '?' : return charTextures[CharQuestion];
         case '!' : return charTextures[CharExclamation];
         case ';' : return charTextures[CharLineDot];
         case ':' : return charTextures[CharDots];

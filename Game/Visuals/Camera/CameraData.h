@@ -31,6 +31,7 @@ struct CameraData{
 
     //In MenuWindow
     struct InMenuWindow* inMenuWindow;
+    enum Block blockSelected;
 };
 
 struct CameraData* createCameraData(SDL_Renderer* renderer);
