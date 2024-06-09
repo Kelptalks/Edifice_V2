@@ -13,11 +13,19 @@ enum MenuType{
     MainMenu
 };
 
+struct Audio{
+    SDL_AudioSpec* wavSpec;
+    Uint32 wavLength;
+    Uint8 *wavBuffer;
+    SDL_AudioDeviceID deviceId;
+};
+
 struct Screen{
     //SDL Components
     SDL_Window* window;
     SDL_Renderer* renderer;
     SDL_Event* event;
+    struct Audio* audio;
 
     //Menu management
     enum MenuType menuType;
@@ -30,6 +38,8 @@ struct Screen{
     //Weather the screen should run
     bool run;
 };
+
+void playPlaceSound(struct Audio* audio);
 
 //Create the screen struct.
 struct Screen* createScreen();

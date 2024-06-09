@@ -6,6 +6,7 @@
 #include "IsoTextureManager.h"
 #include "malloc.h"
 #include "SDL.h"
+#include <windows.h>
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Basic
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14,9 +15,22 @@
  *
  */
 
+void getExecutablePath(char* buffer, size_t bufferSize) {
+    GetModuleFileNameA(NULL, buffer, bufferSize);
+    char* lastSlash = strrchr(buffer, '\\');
+    if (lastSlash) {
+        *lastSlash = '\0'; // Cut off the executable name, leaving only the path
+    }
+}
+
 //Load the sprite sheet from directory
 SDL_Surface* loadSpriteSheet(){
-    SDL_Surface* image = SDL_LoadBMP("C:\\Users\\Spencer\\Desktop\\projects\\edifice\\Assets\\SpriteSheet.bmp"); // Load the image file
+    char pathBuffer[1024];
+    getExecutablePath(pathBuffer, sizeof(pathBuffer));
+    char texturePath[1024];
+    sprintf(texturePath, "%s\\..\\Assets\\SpriteSheet.bmp", pathBuffer); // Construct the full path
+
+    SDL_Surface* image = SDL_LoadBMP(texturePath); // Load the image file
     return image;
 }
 

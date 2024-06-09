@@ -48,6 +48,7 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
 
         //Left click to break block
         if (event.button.button == SDL_BUTTON_LEFT) {
+            //Remove block
             unsigned long key = castedBlock->camKey;
             struct Octree *octree = gameData->world->octree;
             short block = 0;
@@ -63,10 +64,14 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
                     }
                 }
             }
+
         }
 
         //Right click to place block
         else if (event.button.button == SDL_BUTTON_RIGHT) {
+            //Play sound
+            //playPlaceSound(gameData->screen->audio);
+
             unsigned long key = castedBlock->camKey;
             struct Octree *octree = gameData->world->octree;
             short block = 0;
