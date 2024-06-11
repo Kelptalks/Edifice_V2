@@ -6,6 +6,7 @@
 #include "TextManager.h"
 #include "../../../Debuging/Test_Main.h"
 #include "../../Camera/Rendering/TextureManager/IsoTextureManager.h"
+#include "../../../../Assets/AssetManager.h"
 
 struct TextTextures* createTextTextures(SDL_Renderer* renderer){
     //Number of chars in enum for splicing

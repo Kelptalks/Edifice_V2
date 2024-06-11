@@ -55,6 +55,8 @@ add_executable(edifice main.c
         Game/Debuging/DebugMenu/DebugMenu.c
         Game/Visuals/InMenuWindow/InMenuWindow.h
         Game/Visuals/InMenuWindow/InMenuWindow.c
+        Assets/AssetManager.c
+        Assets/AssetManager.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

@@ -55,8 +55,6 @@ struct Textures{
     int shaderCount;
 };
 
-SDL_Surface* loadSpriteSheet();
-
 SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, int xCor, int yCor);
 
 struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, int xCor, int yCor);
