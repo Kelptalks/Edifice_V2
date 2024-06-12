@@ -14,6 +14,7 @@
 #include "Game/Debuging/Test_Main.h"
 #include "Game/Visuals/Menu/Menu.h"
 #include "Game/Visuals/InMenuWindow/InMenuWindow.h"
+#include "Game/Visuals/Camera/ChunkMap/ChunkMap.h"
 
 int main(int argc, char* argv[]) {
     struct GameData* gameData = createGameData();

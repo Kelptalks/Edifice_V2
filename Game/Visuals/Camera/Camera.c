@@ -60,10 +60,23 @@ void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChu
     }
     //Set render target back to main window
     SDL_SetRenderTarget(gameData->screen->renderer, NULL);
+    castedChunk->busy = false;
+    castedChunk->textured = true;
 }
 
 //Render the area around the mouse
-void renderMouseArea(){
+void renderMouseArea(struct GameData* gameData){
+    //I need to draw the area around the mouse directly to the chunks texture
+
+    //Check what chunk the Mouse is over
+    struct CastedChunk* castedChunk = &gameData->cameraData->castedPool->castedChunks[gameData->cameraData->xIsoChunkCamCenter][gameData->cameraData->yIsoChunkCamCenter];
+
+    if (castedChunk != NULL) {
+        if (!castedChunk->busy) {
+            castedChunk->rayCast = false;
+            castedChunk->textured = false;
+        }
+    }
 
 }
 
@@ -72,13 +85,13 @@ void renderView(struct GameData* gameData, int xCor, int yCor){
     struct CameraData* cameraData = gameData->cameraData;
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
 
-    //Cords calculations
+    //Cords of camera in world calculations
     int *cords = screenToIso(gameData->cameraData->renderScale/2,  (gameData->screen->xRez/2) - gameData->cameraData->xRenderingOffset, (gameData->screen->yRez/2) - gameData->cameraData->yRenderingOffset);
     gameData->cameraData->xIsoCamCenter = cords[0];
     gameData->cameraData->yIsoCamCenter = cords[1];
+    gameData->cameraData->xIsoChunkCamCenter = cords[0] / cameraData->chunksScale;
+    gameData->cameraData->yIsoChunkCamCenter = cords[1] / cameraData->chunksScale;
     free(cords);
-
-
 
     //Get texture dimensions
     float chunkRenderScale = (gameData->cameraData->renderScale / gameData->cameraData->baseBlockScale);
@@ -94,23 +107,33 @@ void renderView(struct GameData* gameData, int xCor, int yCor){
 
             if (!castedChunk->busy){
                 if (!castedChunk->rayCast){
-                    threadCastChunk(castedChunk, gameData->world->octree);
                     castedChunk->busy = true;
+                    threadCastChunk(castedChunk, gameData->world->octree);
                 }
                 else if(!castedChunk->textured){
+                    castedChunk->busy = true;
                     renderChunkTexture(gameData, castedChunk);
-                    castedChunk->textured = true;
                 }
             }
+
             //Render the chunk
             SDL_SetRenderDrawColor(gameData->screen->renderer, 255, 255, 255, 255);
-            int* cords = isoToScreen(cameraData->renderScale * cameraData->chunksScale, x, y);
+            int *cords = isoToScreen(cameraData->renderScale * cameraData->chunksScale, castedChunk->isoX,
+                                     castedChunk->isoY);
 
-            SDL_Rect chunkRect = {cords[0] + xCor + cameraData->xRenderingOffset, cords[1] + yCor + cameraData->yRenderingOffset, xChunkTextureRez + 3, yChunkTextureRez + 3};
+            SDL_Rect chunkRect = {cords[0] + xCor + cameraData->xRenderingOffset,
+                                  cords[1] + yCor + cameraData->yRenderingOffset, xChunkTextureRez + 3,
+                                  yChunkTextureRez + 3};
             SDL_RenderCopy(gameData->screen->renderer, castedChunk->chunkTexture, NULL, &chunkRect);
 
             //renderChunk(gameData, castedChunk, cords[0] + xCor, cords[1] + yCor);
             free(cords);
         }
     }
+
+    renderMouseArea(gameData);
+
+    SDL_SetRenderDrawColor(gameData->screen->renderer, 255, 0, 0, 255);
+    SDL_RenderDrawLine(gameData->screen->renderer, (gameData->screen->xRez/2), (gameData->screen->yRez/2) , 0, 0);
+
 }

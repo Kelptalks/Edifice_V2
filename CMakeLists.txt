@@ -57,6 +57,10 @@ add_executable(edifice main.c
         Game/Visuals/InMenuWindow/InMenuWindow.c
         Assets/AssetManager.c
         Assets/AssetManager.h
+        Game/Visuals/Camera/ChunkMap/ChunkMap.h
+        Game/Visuals/Camera/ChunkMap/ChunkMap.c
+        Game/Visuals/Camera/ChunkMap/ChunkLinkList/ChunkLinkList.c
+        Game/Visuals/Camera/ChunkMap/ChunkLinkList/ChunkLinkList.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

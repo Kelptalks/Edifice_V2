@@ -91,20 +91,6 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
             }
         }
     }
-    //ReRender modified chunk and the sounding ones;
-    castedChunk->rayCast = false;
-    castedChunk->textured = false;
-
-    int xStart = (xIso / gameData->cameraData->chunksScale) - 1;
-    int yStart = (xIso / gameData->cameraData->chunksScale) - 1;
-    for (int x = 0; x < 3; x++){
-        for (int y = 0; y < 3; y++) {
-            if (&gameData->cameraData->castedPool->castedChunks[xStart + x][yStart + y] != NULL) {
-                gameData->cameraData->castedPool->castedChunks[xStart + x][yStart + y].rayCast = false;
-                gameData->cameraData->castedPool->castedChunks[xStart + x][yStart + y].textured = false;
-            }
-        }
-    }
 
 }
 

@@ -24,6 +24,7 @@ struct CastedChunk{
     bool busy;
     bool rayCast;
     bool textured;
+    bool inView;
 
     //Vars
     unsigned long worldKey;

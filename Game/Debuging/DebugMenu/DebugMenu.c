@@ -54,6 +54,12 @@ void renderDebugMenu(struct GameData* gameData){
 
     //Iso cords of camera
     char camIsoCords[40] = {0};
-    sprintf(camIsoCords, "Camera Iso Cords : %d, %d Side : %s ", gameData->cameraData->xIsoCamCenter, gameData->cameraData->yIsoCamCenter, side);
+    sprintf(camIsoCords, "Camera Iso Cords : %d, %d", gameData->cameraData->xIsoCamCenter, gameData->cameraData->yIsoCamCenter);
     drawString(gameData, camIsoCords, 40, 5, 80, 20);
+
+    //Iso chunk cords of camera
+    char camChunkIsoCords[40] = {0};
+    sprintf(camChunkIsoCords, "Camera Chunk Cords : %d, %d", gameData->cameraData->xIsoChunkCamCenter, gameData->cameraData->yIsoChunkCamCenter);
+    drawString(gameData, camChunkIsoCords, 40, 5, 105, 20);
+
 }

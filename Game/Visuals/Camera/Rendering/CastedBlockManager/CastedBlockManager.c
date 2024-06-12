@@ -15,18 +15,27 @@ struct CastedBlock* createCastedBlock(){
     return castedBlock;
 }
 
+//Create a casted chunk object
 struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_Renderer* renderer, int isoX, int isoY){
     struct CastedChunk* castedChunk = malloc(sizeof (struct CastedChunk));
+
+    //set world rendering key
     castedChunk->worldKey = modKey(cameraData->key, isoX * cameraData->chunksScale, isoY * cameraData->chunksScale, 0, 0);
+
     castedChunk->castedBlocks = malloc(sizeof (struct CastedBlock*) * cameraData->chunksScale);
+
+    //set rendering cords / basics
     castedChunk->isoX = isoX;
     castedChunk->isoY = isoY;
+    castedChunk->scale = cameraData->chunksScale;
+
+    //set rendering variables
     castedChunk->busy = false;
     castedChunk->rayCast = false;
     castedChunk->textured = false;
-    castedChunk->scale = cameraData->chunksScale;
+    castedChunk->inView = false;
 
-    //SetupCasted blocks
+    //SetupCasted blocks utilizing the casted chunks camWorldKey
     for (int x = 0; x < cameraData->chunksScale; x++){
         castedChunk->castedBlocks[x] = malloc(sizeof (struct CastedBlock) * cameraData->chunksScale);
         for (int y = 0; y < cameraData->chunksScale; y++){
@@ -36,11 +45,12 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
         }
     }
 
-    //Create casted Chunk texture
+    //Create casted Chunk texture based on it's scale
     int xChunkTextureRez = cameraData->chunksScale * cameraData->baseBlockScale;
     int yChunkTextureRez = cameraData->chunksScale * (cameraData->baseBlockScale/2);
     castedChunk->chunkTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA32, SDL_TEXTUREACCESS_TARGET, xChunkTextureRez, yChunkTextureRez);
 
+    //Clear the chunk texture
     SDL_SetTextureBlendMode(castedChunk->chunkTexture, SDL_BLENDMODE_BLEND);
     SDL_SetRenderTarget(renderer, castedChunk->chunkTexture);
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);  // RGBA for transparent

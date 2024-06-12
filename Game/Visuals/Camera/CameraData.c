@@ -32,6 +32,9 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->xIsoCamCenter = 0;
     cameraData->yIsoCamCenter = 0;
 
+    cameraData->xIsoChunkCamCenter = 0;
+    cameraData->yIsoChunkCamCenter = 0;
+
     //Key the camera renderers from
     cameraData->key = modKey(0, 300, 300, 300, 0);
 

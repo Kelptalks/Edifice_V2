@@ -27,6 +27,8 @@ struct CameraData{
     struct CastedPool* castedPool;
     int xIsoCamCenter;
     int yIsoCamCenter;
+    int xIsoChunkCamCenter;
+    int yIsoChunkCamCenter;
 
     //World
     struct Octree* octree;
