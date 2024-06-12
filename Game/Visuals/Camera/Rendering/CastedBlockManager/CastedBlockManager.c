@@ -62,11 +62,10 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
 
 struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Renderer* renderer){
     struct CastedPool* castedPool = malloc(sizeof (struct CastedPool));
-    castedPool->castedChunks = malloc(sizeof (struct CastedChunk*) * cameraData->viewDistance);
+    castedPool->chunkMap = createChunkMap(100);
     for (int x = 0; x < cameraData->viewDistance; x++){
-        castedPool->castedChunks[x] = malloc(sizeof (struct CastedChunk) * cameraData->viewDistance);
         for (int y = 0; y < cameraData->viewDistance; y++){
-            castedPool->castedChunks[x][y] = *createCastedChunk(cameraData, renderer, x, y);
+            addChunkToMap(castedPool->chunkMap, createCastedChunk(cameraData, renderer, x, y));
         }
     }
     return castedPool;

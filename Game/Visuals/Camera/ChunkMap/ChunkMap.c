@@ -49,14 +49,12 @@ struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int x, int y){
     while (chunkLinkListNode != NULL){
         //Check if is chunk cords
         if (chunkLinkListNode->x == x && chunkLinkListNode->y == y){
-            reportBug("Test1\n");
             return chunkLinkListNode->castedChunk;
         }
         else{
             chunkLinkListNode = chunkLinkListNode->nextNode;
         }
     }
-    reportBug("Test2\n");
     return NULL;
 }
 
@@ -64,7 +62,7 @@ void addChunkToMap(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk){
     unsigned int key = getKey(castedChunk->isoX, castedChunk->isoY, chunkMap->size);
     struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[key];
     struct ChunkLinkListNode* NewChunkLinkListNode = createChunkLinkListNode(castedChunk->isoX, castedChunk->isoY, key);
-
+    NewChunkLinkListNode->castedChunk = castedChunk;
 
     //If node list is empty
     if (chunkLinkListNode == NULL){
@@ -83,5 +81,24 @@ void removeChunkFromMap(struct ChunkMap* chunkMap, int x, int y){
     unsigned int key = getKey(x, y, chunkMap->size);
     struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[key];
 
-
+    while (chunkLinkListNode->nextNode != NULL){
+        //Check if is chunk cords
+        if (chunkLinkListNode->nextNode->x == x && chunkLinkListNode->nextNode->y == y){
+            //If the next node is the desired node to remove, and it is not followed by another node free
+            if (chunkLinkListNode->nextNode->nextNode == NULL){
+                free(chunkLinkListNode->nextNode);
+                chunkLinkListNode->nextNode = NULL;
+                return;
+            }
+            //Connect the split
+            else{
+                free(chunkLinkListNode->nextNode);
+                chunkLinkListNode->nextNode = chunkLinkListNode->nextNode->nextNode;
+                return;
+            }
+        }
+        else{
+            chunkLinkListNode = chunkLinkListNode->nextNode;
+        }
+    }
 }

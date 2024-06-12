@@ -11,7 +11,7 @@
 void expandTextureList(struct TextureList* textureList){
     textureList->size += 5;
     //malloc new array with increased size
-    struct TextureNode* newNodes = malloc(sizeof (struct TextureNode) * textureList->size);
+    struct TextureNode* newNodes = calloc(textureList->size, sizeof (struct TextureNode));
     //Copy nodes from old array
     for (int x = 0; x < textureList->length; x++){
         newNodes[0] = textureList->nodes[x];

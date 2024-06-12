@@ -8,6 +8,7 @@
 #include "TextureList/TextureList.h"
 #include "../../Rendering/TextureManager/IsoTextureManager.h"
 #include "../../CameraData.h"
+#include "../../ChunkMap/ChunkMap.h"
 
 struct CastedBlock{
     struct TextureList* leftTextureList;
@@ -38,7 +39,7 @@ struct CastedChunk{
 };
 
 struct CastedPool{
-    struct CastedChunk** castedChunks;
+    struct ChunkMap* chunkMap;
 };
 
 struct CastedBlock* createCastedBlock();

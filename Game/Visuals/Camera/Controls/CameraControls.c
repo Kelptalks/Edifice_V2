@@ -22,7 +22,7 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
 
 
     //Identifie block from collection
-    struct CastedChunk* castedChunk = &gameData->cameraData->castedPool->castedChunks[xIso / gameData->cameraData->chunksScale][yIso / gameData->cameraData->chunksScale];
+    struct CastedChunk* castedChunk = getChunkFromMap(gameData->cameraData->castedPool->chunkMap, xIso / gameData->cameraData->chunksScale, yIso / gameData->cameraData->chunksScale);
     struct CastedBlock* castedBlock = &castedChunk->castedBlocks[xIso % gameData->cameraData->chunksScale][yIso % gameData->cameraData->chunksScale];
 
     //Use blocks cam key to rayCast and break block
@@ -119,16 +119,16 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
     const Uint8 *keystate = SDL_GetKeyboardState(NULL);
     // Check each key of interest and update accordingly
     if (keystate[SDL_SCANCODE_W]) {
-        gameData->cameraData->yRenderingOffset += timeAdjustedCamChange;  // Move camera up
+        gameData->cameraData->yRenderingOffset += 30;  // Move camera up
     }
     if (keystate[SDL_SCANCODE_S]) {
-        gameData->cameraData->yRenderingOffset -= timeAdjustedCamChange;  // Move camera down
+        gameData->cameraData->yRenderingOffset -= 30;  // Move camera down
     }
     if (keystate[SDL_SCANCODE_A]) {
-        gameData->cameraData->xRenderingOffset += timeAdjustedCamChange;  // Move camera left
+        gameData->cameraData->xRenderingOffset += 30;  // Move camera left
     }
     if (keystate[SDL_SCANCODE_D]) {
-        gameData->cameraData->xRenderingOffset -= timeAdjustedCamChange;  // Move camera right
+        gameData->cameraData->xRenderingOffset -= 30;  // Move camera right
     }
 
     if (event.type == SDL_KEYDOWN) {

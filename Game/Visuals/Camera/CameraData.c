@@ -10,7 +10,7 @@
 #include "../InMenuWindow/InMenuWindow.h"
 
 struct CameraData* createCameraData(SDL_Renderer* renderer){
-    struct CameraData* cameraData = malloc(sizeof(struct CameraData));
+    struct CameraData* cameraData = calloc(1, sizeof(struct CameraData));
     if (cameraData == NULL){
         return NULL;
     }
