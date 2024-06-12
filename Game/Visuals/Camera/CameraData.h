@@ -23,8 +23,10 @@ struct CameraData{
     int chunkPixelScale;
     float renderScale;
 
-    //Viewport
+    //Chunk management
     struct CastedPool* castedPool;
+    int xIsoCamCenter;
+    int yIsoCamCenter;
 
     //World
     struct Octree* octree;

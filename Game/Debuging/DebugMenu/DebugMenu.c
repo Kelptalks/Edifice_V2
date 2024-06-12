@@ -7,6 +7,7 @@
 #include "DebugMenu.h"
 #include "../Test_Main.h"
 #include "SDL.h"
+#include "../../Visuals/Camera/CameraData.h"
 #include "../../GameData.h"
 
 
@@ -50,4 +51,9 @@ void renderDebugMenu(struct GameData* gameData){
     char mouseIsoCords[40] = {0};
     sprintf(mouseIsoCords, "Mouse Iso Cords : %d, %d Side : %s ", gameData->debugMenu->xBlockSelectedCor, gameData->debugMenu->yBlockSelectedCor, side);
     drawString(gameData, mouseIsoCords, 40, 5, 55, 20);
+
+    //Iso cords of camera
+    char camIsoCords[40] = {0};
+    sprintf(camIsoCords, "Camera Iso Cords : %d, %d Side : %s ", gameData->cameraData->xIsoCamCenter, gameData->cameraData->yIsoCamCenter, side);
+    drawString(gameData, camIsoCords, 40, 5, 80, 20);
 }

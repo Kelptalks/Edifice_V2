@@ -14,7 +14,6 @@
 #include "../../../Visuals/InMenuWindow/InMenuWindow.h"
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){
-
     //Cords calculations
     int *cords = screenToIso(gameData->cameraData->renderScale/2, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset);
     int xIso = cords[0];

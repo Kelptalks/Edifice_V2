@@ -21,6 +21,10 @@ struct Audio{
 };
 
 struct Screen{
+    //Basics
+    int xRez;
+    int yRez;
+
     //SDL Components
     SDL_Window* window;
     SDL_Renderer* renderer;

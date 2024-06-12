@@ -29,8 +29,8 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->chunkPixelScale = cameraData->baseBlockScale * cameraData->chunksScale;
 
     //Offset for drawing the screen and shifting
-    cameraData->xRenderingOffset = 0;
-    cameraData->yRenderingOffset = -cameraData->chunkPixelScale * (cameraData->viewDistance/4);
+    cameraData->xIsoCamCenter = 0;
+    cameraData->yIsoCamCenter = 0;
 
     //Key the camera renderers from
     cameraData->key = modKey(0, 300, 300, 300, 0);

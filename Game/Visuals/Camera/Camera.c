@@ -13,7 +13,7 @@
 #include "Rendering/RayCasting/RayCastingManager.h"
 #include "../../World/World.h"
 
-
+//Render a chunks texture
 void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChunk){
     struct CameraData* cameraData = gameData->cameraData;
     SDL_SetRenderDrawColor(gameData->screen->renderer, 0, 255, 0, 255);
@@ -62,9 +62,23 @@ void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChu
     SDL_SetRenderTarget(gameData->screen->renderer, NULL);
 }
 
+//Render the area around the mouse
+void renderMouseArea(){
+
+}
+
+
 void renderView(struct GameData* gameData, int xCor, int yCor){
     struct CameraData* cameraData = gameData->cameraData;
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
+
+    //Cords calculations
+    int *cords = screenToIso(gameData->cameraData->renderScale/2,  (gameData->screen->xRez/2) - gameData->cameraData->xRenderingOffset, (gameData->screen->yRez/2) - gameData->cameraData->yRenderingOffset);
+    gameData->cameraData->xIsoCamCenter = cords[0];
+    gameData->cameraData->yIsoCamCenter = cords[1];
+    free(cords);
+
+
 
     //Get texture dimensions
     float chunkRenderScale = (gameData->cameraData->renderScale / gameData->cameraData->baseBlockScale);
@@ -88,7 +102,6 @@ void renderView(struct GameData* gameData, int xCor, int yCor){
                     castedChunk->textured = true;
                 }
             }
-
             //Render the chunk
             SDL_SetRenderDrawColor(gameData->screen->renderer, 255, 255, 255, 255);
             int* cords = isoToScreen(cameraData->renderScale * cameraData->chunksScale, x, y);

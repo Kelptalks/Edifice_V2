@@ -62,6 +62,9 @@ struct Screen* createScreen(){
         return NULL;
     }
 
+    screen->xRez = 2560;
+    screen->yRez = 1440;
+
     //set run to true
     screen->run = true;
     screen->menuType = MainMenu;
@@ -71,7 +74,7 @@ struct Screen* createScreen(){
     //create SDL window and render
     SDL_Window* window;
     SDL_Renderer* renderer;
-    SDL_CreateWindowAndRenderer(2560, 1440, 0, &window, &renderer);
+    SDL_CreateWindowAndRenderer(screen->xRez, screen->yRez, 0, &window, &renderer);
     SDL_Init(SDL_INIT_VIDEO);
     SDL_SetWindowTitle(window, "Edifice");
 
