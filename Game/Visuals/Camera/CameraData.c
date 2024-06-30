@@ -22,7 +22,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->renderScale = 64;
 
     //How many chunks will generate
-    cameraData->viewDistance = 16;
+    cameraData->viewDistance = 10;
 
     //Max 512
     cameraData->chunksScale = 16;
@@ -43,7 +43,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->castedPool = createCastedPool(cameraData, renderer);
 
     //Create inMenuWindow
-    cameraData->inMenuWindow = createInMenuWindow(50, 50, 1280, 720);
+    cameraData->inMenuWindow = createInMenuWindow(200, 200, 1280, 720);
 
     return cameraData;
 }

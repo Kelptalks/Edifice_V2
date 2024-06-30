@@ -12,6 +12,7 @@
 #include "../../../World/Octree/OctreeNode.h"
 #include "../../../Debuging/Test_Main.h"
 #include "../../../Visuals/InMenuWindow/InMenuWindow.h"
+#include "../../../PlayerData/PlayerData.h"
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){
     //Cords calculations
@@ -83,7 +84,7 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
                         //Mod key based off axis of intercept
                         key = modAxis(key, 1, keyModOrder[axis], 0);
 
-                        setOctreeKeyValue(octree->root, key, octree->RootDepth, gameData->cameraData->blockSelected);
+                        setOctreeKeyValue(octree->root, key, octree->RootDepth, gameData->playerData->block);
                         drawDistance = 0;
                         break;
                     }

@@ -23,23 +23,6 @@ int* isoToScreen(float scale, int x, int y){
     return cordArray;
 }
 
-float* accurateIsoToScreen(float scale, float x, float y){
-    float* cordArray = malloc(sizeof(int) * 2);
-
-    if (cordArray == NULL){
-        printf("IsoCordManager | Failed to initialize cord array");
-        return NULL;
-    }
-
-    scale = scale/2;
-
-    cordArray[0] = (x - y) * scale;
-    cordArray[1] = (x + y) * (scale/2);
-
-    return cordArray;
-}
-
-
 int* screenToIso(float scale, int x, int y){
     int* cordArray = malloc(sizeof(int) * 2);
     if (cordArray == NULL){

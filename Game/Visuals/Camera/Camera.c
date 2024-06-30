@@ -72,11 +72,11 @@ void renderMouseArea(struct GameData* gameData){
     int yChunkCor = gameData->debugMenu->yBlockSelectedCor / gameData->cameraData->chunksScale;
 
     //Check what chunk the Mouse is over
-    for (int x = xChunkCor - 1; x < xChunkCor + 1; x++){
-        for (int y = yChunkCor - 1; y < yChunkCor+ 1; y++){
+    for (int x = xChunkCor - 2; x < xChunkCor + 2; x++){
+        for (int y = yChunkCor - 2; y < yChunkCor + 2; y++){
             struct CastedChunk* castedChunk = getChunkFromMap(gameData->cameraData->castedPool->chunkMap, x, y);
             if (castedChunk != NULL) {
-                if (!castedChunk->busy) {
+                if (!castedChunk->busy && castedChunk->rayCast && castedChunk->textured) {
                     castedChunk->rayCast = false;
                     castedChunk->textured = false;
                 }

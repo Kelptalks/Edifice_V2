@@ -15,6 +15,8 @@ enum Block {
     Stone,
     Wood,
     Leave,
+    Dandi,
+    DandiStem,
     Hive,
     Cobble,
     Grass,
@@ -29,14 +31,6 @@ enum Block {
     Debug,
     Iron,
     Fungi,
-    Shadow,
-    Battery,
-    Battery1,
-    Battery2,
-    Battery3,
-    Factory,
-    Factory1,
-    Factory2,
     BlueGrass,
     Cloud,
     Water1,
@@ -45,6 +39,13 @@ enum Block {
     WhiteFlowers,
     Mushroom,
     Flour,
+    CrackedEarth,
+    MaskingBlock,
+    ShadowMaskingBlock,
+    GreyShader,
+    WhiteShader,
+    GreenShader,
+    RedShader,
 };
 
 bool isTransparent(enum Block);
@@ -54,5 +55,8 @@ bool isTranslucent(enum Block block);
 bool isPlantable(enum Block block);
 
 char* getName(enum Block block);
+
+int getSpriteSheetYCor(enum Block block);
+int getSpriteSheetXCor(enum Block block);
 
 #endif

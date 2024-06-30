@@ -9,6 +9,7 @@
 #include "Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
 #include "World/World.h"z
 #include "Debuging/Test_Main.h"
+#include "PlayerData/PlayerData.h"
 
 struct GameData* createGameData(){
     //Clear bug report file
@@ -50,7 +51,9 @@ struct GameData* createGameData(){
     gameData->cameraData = createCameraData(gameData->screen->renderer);
     gameData->cameraData->octree = gameData->world->octree;
 
-
+    //Create playerDaya
+    reportBug("Creating playerData \n");
+    gameData->playerData = createPlayerData();
 
     return gameData;
 }

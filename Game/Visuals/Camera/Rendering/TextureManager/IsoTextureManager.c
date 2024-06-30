@@ -7,6 +7,7 @@
 #include "malloc.h"
 #include "SDL.h"
 #include "../../../../../Assets/AssetManager.h"
+#include "../../../../Blocks/Blocks.h"
 #include <windows.h>
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Basic
@@ -18,8 +19,8 @@
 
 
 //crop a 64 by 64 block from the sprite sheet
-SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, int xCor, int yCor){
-    SDL_Rect srcRect = {xCor, yCor, 64, 64};
+SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, enum Block block){
+    SDL_Rect srcRect = {getSpriteSheetXCor(block), getSpriteSheetYCor(block), 64, 64};
     SDL_Surface* croppedSurface = SDL_CreateRGBSurfaceWithFormat(0, 64, 64, 32, SDL_PIXELFORMAT_RGBA32);
     if (croppedSurface == NULL){
         printf("TextureManager | failed to create cropped surface");
@@ -38,13 +39,13 @@ SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, int xCor, int yC
  */
 
 //Splice a block from the sprite sheet into the 6 needed triangles
-struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, int xCor, int yCor){
+struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, enum Block block){
     //The sprite sheet to crop from
-    SDL_Surface* block = cropBlockFromSpriteSheet(spriteSheet, xCor, yCor);
-    uint32_t *blockPixels = block->pixels;
+    SDL_Surface* blockSurface = cropBlockFromSpriteSheet(spriteSheet, block);
+    uint32_t *blockPixels = blockSurface->pixels;
 
     //get maskSprite
-    SDL_Surface* mask = cropBlockFromSpriteSheet(spriteSheet, 1216, 128);
+    SDL_Surface* mask = cropBlockFromSpriteSheet(spriteSheet, MaskingBlock);
     uint32_t *maskPixels = mask->pixels;
 
     //create surface for each splice
@@ -102,15 +103,15 @@ struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, int x
 
 struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSheet){
 
-    SDL_Surface* shader = cropBlockFromSpriteSheet(spriteSheet, 1216, 0);
+    SDL_Surface* shader = cropBlockFromSpriteSheet(spriteSheet, GreyShader);
     uint32_t *shaderPixels = shader->pixels;
 
     //get maskSprite1
-    SDL_Surface* aMask = cropBlockFromSpriteSheet(spriteSheet, 1216, 128);
+    SDL_Surface* aMask = cropBlockFromSpriteSheet(spriteSheet, MaskingBlock);
     uint32_t *aMaskPixels = aMask->pixels;
 
     //get maskSprite2
-    SDL_Surface* bMask = cropBlockFromSpriteSheet(spriteSheet, 1216, 192);
+    SDL_Surface* bMask = cropBlockFromSpriteSheet(spriteSheet, ShadowMaskingBlock);
     uint32_t *bMaskPixels = bMask->pixels;
 
     //create surface for each splice
@@ -234,11 +235,9 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
     textures->BlockTextures = malloc(sizeof(struct BlockTextures) * textures->blockCount);
 
     //Loop through array and create textures
-    int x = 0;
-    int y = 0;
     for (int b = 0; b < blockCount; b++){
         //Create spliced surfaces
-        struct SplicedBlockSurfaces* splicedBlockSurfaces = spliceBlockSurfaces(spriteSheet, x, y);
+        struct SplicedBlockSurfaces* splicedBlockSurfaces = spliceBlockSurfaces(spriteSheet, b);
         //turn those surfaces into textures
 
         if (splicedBlockSurfaces->surfaces == NULL){
@@ -255,11 +254,6 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
         }
         free(splicedBlockSurfaces);
 
-        x+=64;
-        if (x >= 1280){
-            x = 0;
-            y +=64;
-        }
     }
     textures->shaderCount = 1;
     textures->blockShaders = malloc(sizeof(struct BlockTextures) * textures->shaderCount);

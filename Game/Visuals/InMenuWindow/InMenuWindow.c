@@ -8,6 +8,9 @@
 #include "../../Debuging/Test_Main.h"
 #include "../Menu/Button/Button.h"
 #include "SDL.h"
+#include "../../Blocks/Blocks.h"
+#include "../../Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
+#include "../../PlayerData/PlayerData.h"
 
 struct InMenuWindow* createInMenuWindow(int xCor, int yCor, int xRez, int yRez){
     struct InMenuWindow* inMenuWindow = malloc(sizeof (struct InMenuWindow));
@@ -24,7 +27,7 @@ struct InMenuWindow* createInMenuWindow(int xCor, int yCor, int xRez, int yRez){
 
 
     //Setup Buttons for block menu
-    inMenuWindow->buttonCount = 50;
+    inMenuWindow->buttonCount = 30;
     inMenuWindow->menuButtons = malloc(sizeof (struct MenuButton) * inMenuWindow->buttonCount);
     int spacing = 64;
     int scale = 50;
@@ -57,16 +60,47 @@ bool InMenuWindowControls(struct GameData* gameData, struct InMenuWindow* inMenu
     if (xCor > inMenuWindow->xCor && yCor > inMenuWindow->yCor && xCor < (inMenuWindow->xCor + inMenuWindow->xRez) && yCor < (inMenuWindow->yCor + inMenuWindow->yRez)){
         for (int x = 0; x < inMenuWindow->buttonCount; x++) {
             buttonMouseInput(inMenuWindow->menuButtons[x], event);
+            if (inMenuWindow->menuButtons[x]->pressed){
+                gameData->playerData->block = x;
+            }
         }
         return true;
     }
     return false;
 }
 
+void DrawBlockTexture(struct GameData* gameData, enum Block block, int xCor, int yCor){
+    int xScale = 49;
+    int yScale = 49;
+
+    SDL_Texture* TopLeft = gameData->textures->BlockTextures[block].textures[TopLeftFace];
+    SDL_Rect TopLeftRect = {xCor, yCor, xScale, yScale};
+    SDL_RenderCopy(gameData->screen->renderer, TopLeft, NULL, &TopLeftRect);
+
+    SDL_Texture* TopRight = gameData->textures->BlockTextures[block].textures[TopRightFace];
+    SDL_Rect TopRightRect = {xCor + (xScale/2), yCor, xScale, yScale};
+    SDL_RenderCopy(gameData->screen->renderer, TopRight, NULL, &TopRightRect);
+
+    SDL_Texture* LeftTop = gameData->textures->BlockTextures[block].textures[LeftTopFace];
+    SDL_Rect LeftTopRect = {xCor, yCor + (xScale/4), xScale, yScale};
+    SDL_RenderCopy(gameData->screen->renderer, LeftTop, NULL, &LeftTopRect);
+
+    SDL_Texture* LeftBot = gameData->textures->BlockTextures[block].textures[LeftBotFace];
+    SDL_Rect LeftBotRect = {xCor, yCor + (xScale/2), xScale, yScale};
+    SDL_RenderCopy(gameData->screen->renderer, LeftBot, NULL, &LeftBotRect);
+
+    SDL_Texture* RightTop = gameData->textures->BlockTextures[block].textures[RightTopFace];
+    SDL_Rect RightTopRect = {xCor + (xScale/2), yCor + (xScale/4), xScale, yScale};
+    SDL_RenderCopy(gameData->screen->renderer, RightTop, NULL, &RightTopRect);
+
+    SDL_Texture* RightBot = gameData->textures->BlockTextures[block].textures[RightBotFace];
+    SDL_Rect RightBotRect = {xCor + (xScale/2), yCor + (xScale/2), xScale, yScale};
+    SDL_RenderCopy(gameData->screen->renderer, RightBot, NULL, &RightBotRect);
+
+}
+
 void renderInMenuWindow(struct GameData* gameData, struct InMenuWindow* inMenuWindow){
-
     int topBarYRez = inMenuWindow->xRez/30;
-
     //Draw Main Box
     SDL_SetRenderDrawColor(gameData->screen->renderer, 255, 255, 255, 200);
     SDL_Rect mainBox = {inMenuWindow->xCor, inMenuWindow->yCor, inMenuWindow->xRez, inMenuWindow->yRez};
@@ -90,5 +124,7 @@ void renderInMenuWindow(struct GameData* gameData, struct InMenuWindow* inMenuWi
     //Draw Buttons
     for (int x = 0; x < inMenuWindow->buttonCount; x++) {
         renderButton(gameData, inMenuWindow->menuButtons[x]);
+        DrawBlockTexture(gameData, x, inMenuWindow->menuButtons[x]->xCor, inMenuWindow->menuButtons[x]->yCor);
     }
+
 };

@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include "stdlib.h"
+#include "../../../../Blocks/Blocks.h"
 
 #ifndef ISOTEXTUREMANAGER_H
 #define ISOTEXTUREMANAGER_H
@@ -55,9 +56,9 @@ struct Textures{
     int shaderCount;
 };
 
-SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, int xCor, int yCor);
+SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, enum Block);
 
-struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, int xCor, int yCor);
+struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, enum Block);
 
 struct Textures* createTextures(SDL_Renderer* renderer, int blockCount);
 
