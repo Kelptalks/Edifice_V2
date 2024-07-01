@@ -23,6 +23,10 @@ struct World* createWorld(int scale){
         return NULL;
     }
 
+    //Name the world
+    char name[] = "World";
+    world->name = malloc(sizeof (name));
+    world->name = name;
 
     //Create octree for world data
     struct Octree* octree = createOctree(scale);

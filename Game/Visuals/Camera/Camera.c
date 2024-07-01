@@ -83,7 +83,6 @@ void renderMouseArea(struct GameData* gameData){
             }
         }
     }
-
 }
 
 

@@ -6,6 +6,7 @@
 #define ENGINE_WORLD_H
 
 struct World{
+    char* name;
     int totalBlocks;
     struct Octree* octree;
     struct TerrainGenRules* terrainGenRules;

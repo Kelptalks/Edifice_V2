@@ -1,20 +1,12 @@
-#include <stdio.h>
-#include <time.h>
 #include "SDL.h"
-#include "Game/Visuals/Screen.h"
 #include "Game/GameData.h"
 #include "Game/Controls/Controls.h"
 #include "Game/Visuals/Camera/Camera.h"
-#include "Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h"
 #include "Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
-#include "Game/Blocks/Blocks.h"
-#include "Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h"
-#include "Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h"
 #include "Game/World/World.h"
-#include "Game/Debuging/Test_Main.h"
 #include "Game/Visuals/Menu/Menu.h"
 #include "Game/Visuals/InMenuWindow/InMenuWindow.h"
-#include "Game/Visuals/Camera/ChunkMap/ChunkMap.h"
+#include "Game/World/World Saving/WorldFileManager.h"
 
 int main(int argc, char* argv[]) {
     struct GameData* gameData = createGameData();
@@ -56,5 +48,6 @@ int main(int argc, char* argv[]) {
         gameData->screen->frameRenderTime = time2 - time1;
     }
 
+    openWorldFile(gameData->world);
     return 0;
 }
