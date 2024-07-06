@@ -8,21 +8,27 @@
 #include "../../Debuging/Test_Main.h"
 #include "../../World/Octree/KeyMod.h"
 #include "../InMenuWindow/InMenuWindow.h"
+#include "Camera.h"
 
 struct CameraData* createCameraData(SDL_Renderer* renderer){
     struct CameraData* cameraData = calloc(1, sizeof(struct CameraData));
     if (cameraData == NULL){
         return NULL;
     }
-    //The current block selected for building
-    cameraData->blockSelected == Grass;
+
+    //cameraOrientation
+    cameraData->direction = North;
+    cameraData->xDirection = 1;
+    cameraData->yDirection = 1;
+
 
     //The scale the camera should render
     cameraData->baseBlockScale = 64;
     cameraData->renderScale = 64;
 
     //How many chunks will generate
-    cameraData->viewDistance = 10;
+    cameraData->viewDistance = 24;
+    cameraData->mouseUpdateDistance = 2;
 
     //Max 512
     cameraData->chunksScale = 16;
@@ -43,7 +49,22 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->castedPool = createCastedPool(cameraData, renderer);
 
     //Create inMenuWindow
-    cameraData->inMenuWindow = createInMenuWindow(200, 200, 1280, 720);
+    cameraData->inMenuWindow = createInMenuWindow(0, 0, 1280, 720);
 
     return cameraData;
+}
+
+char* getDirectionString(enum Direction direction){
+    if(direction == North){
+        return "North";
+    }
+    if(direction == East){
+        return "East";
+    }
+    if(direction == South){
+        return "South";
+    }
+    if(direction == West){
+        return "West";
+    }
 }

@@ -12,8 +12,7 @@
 //Were the threads code will run
 void* castChunk(void* arg) {
     struct args* data = (struct args*) arg;
-
-    rayCastChunk(data->castedChunk, data->octree);
+    rayCastChunk(data->cameraData, data->castedChunk, data->octree);
     data->castedChunk->rayCast = true;
     data->castedChunk->busy = false;
     free(data);

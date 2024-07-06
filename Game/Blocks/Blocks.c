@@ -228,7 +228,7 @@ int getSpriteSheetXCor(enum Block block){
         case Flour:
             return 256;
         case WhiteFlowers:
-            return 128;
+            return 64;
         case YellowFlowers:
             return 0;
         case Mushroom:

@@ -8,6 +8,14 @@
 #include "SDL.h"
 #include "Rendering/CastedBlockManager/CastedBlockManager.h"
 
+enum Direction{
+    North,
+    East,
+    South,
+    West
+};
+
+
 struct CameraData{
     //Drawing location
     float xRenderingOffset;
@@ -19,6 +27,7 @@ struct CameraData{
     //Dimensions
     int baseBlockScale;
     int viewDistance;
+    int mouseUpdateDistance;
     int chunksScale;
     int chunkPixelScale;
     float renderScale;
@@ -36,9 +45,15 @@ struct CameraData{
     //In MenuWindow
     struct InMenuWindow* inMenuWindow;
     enum Block blockSelected;
+
+    enum Direction direction;
+    int xDirection;
+    int yDirection;
+    int zDirection;
 };
 
 struct CameraData* createCameraData(SDL_Renderer* renderer);
 
+char* getDirectionString(enum Direction direction);
 
 #endif //EDIFICE_CAMERADATA_H

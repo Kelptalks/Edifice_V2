@@ -33,8 +33,11 @@ int* screenToIso(float scale, int x, int y){
     float isoX = (float) (x + 2 * y) / (2 * scale);
     float isoY = (float) (2 * y - x) / (2 * scale);
 
+    if (isoX < 0){
+        isoX--;
+    }
     if (isoY < 0){
-        isoY++;
+        isoY--;
     }
 
     cordArray[0] = isoX;

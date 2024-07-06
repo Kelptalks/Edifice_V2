@@ -44,7 +44,7 @@ struct GameData* createGameData(){
 
     //Create menu struct
     reportBug("Creating Main menu\n");
-    gameData->menu = createMenu();
+    gameData->menu = createMainMenu();
 
     //Create camera Data
     reportBug("Creating cameraData \n");

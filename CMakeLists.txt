@@ -59,12 +59,12 @@ add_executable(edifice main.c
         Assets/AssetManager.h
         Game/Visuals/Camera/ChunkMap/ChunkMap.h
         Game/Visuals/Camera/ChunkMap/ChunkMap.c
-        Game/Visuals/Camera/ChunkMap/ChunkLinkList/ChunkLinkList.c
-        Game/Visuals/Camera/ChunkMap/ChunkLinkList/ChunkLinkList.h
         Game/PlayerData/PlayerData.h
         Game/PlayerData/PlayerData.c
         "Game/World/World Saving/WorldFileManager.c"
         "Game/World/World Saving/WorldFileManager.h"
+        Game/World/TerrainGen/WaterGen/WaterGen.h
+        Game/World/TerrainGen/WaterGen/WaterGen.c
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

@@ -17,11 +17,14 @@ void handleInput(struct GameData* gameData){
     while (SDL_PollEvent(&event)) {
         //Handle Menu inputs
         if (gameData->screen->menuType == MainMenu) {
-            menuControlInput(gameData, event);
+            MainMenuControlInput(gameData, event);
 
         }
         else if (gameData->screen->menuType == WorldCamera) {
             cameraControlInput(gameData, event);
+        }
+        else if (gameData->screen->menuType == SettingsMenu) {
+            settingsMenuControlInput(gameData, event);
         }
 
 

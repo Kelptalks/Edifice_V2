@@ -22,6 +22,8 @@ struct MenuButton{
 
     //Rendering
     int color[3];
+    char* name;
+    short nameLength;
 };
 
 struct MenuButton* createMenuButton(int width, int height, int xCor, int yCor);

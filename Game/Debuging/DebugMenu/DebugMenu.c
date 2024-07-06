@@ -22,7 +22,9 @@ struct DebugMenu* createDebugMenu(){
     debugMenu->xMouseCor = 0;
     debugMenu->yMouseCor = 0;
 
-    debugMenu->visible = true;
+    debugMenu->chunkBoarders = false;
+    debugMenu->visible = false;
+
     return debugMenu;
 }
 
@@ -35,7 +37,7 @@ void renderDebugMenu(struct GameData* gameData){
 
     //Mouse cords
     char MouseCords[40] = {0};
-    sprintf(MouseCords, "Mouse cords : %d, %d", gameData->debugMenu->xMouseCor, gameData->debugMenu->yMouseCor);
+    sprintf(MouseCords, "Mouse cords : %f, %f", gameData->debugMenu->xMouseCor + gameData->cameraData->xRenderingOffset, gameData->debugMenu->yMouseCor + gameData->cameraData->yRenderingOffset);
     drawString(gameData, MouseCords, 40, 5, 30, 20);
 
     char side[6] = "right";
@@ -61,5 +63,10 @@ void renderDebugMenu(struct GameData* gameData){
     char camChunkIsoCords[40] = {0};
     sprintf(camChunkIsoCords, "Camera Chunk Cords : %d, %d", gameData->cameraData->xIsoChunkCamCenter, gameData->cameraData->yIsoChunkCamCenter);
     drawString(gameData, camChunkIsoCords, 40, 5, 105, 20);
+
+    //Iso chunk cords of camera
+    char camRenderingDirection[40] = {0};
+    sprintf(camRenderingDirection, getDirectionString(gameData->cameraData->direction));
+    drawString(gameData, camRenderingDirection, 40, 5, 130, 20);
 
 }

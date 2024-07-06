@@ -7,30 +7,31 @@
 #include "CastingThread/castingThread.h"
 #include "../CastedBlockManager/CastedBlockManager.h"
 #include "RayCaster.h"
+#include "../../../../Debuging/Test_Main.h"
 
 
-void rayCastBlock(struct CastedBlock* castedBlock, struct Octree* octree){
+void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree){
     clearTextureList(castedBlock->leftTextureList);
     clearTextureList(castedBlock->rightTextureList);
+
     castedBlock->leftShader = Empty;
     castedBlock->rightShader = Empty;
 
-    castLeftTriangle(castedBlock, octree);
-    castRightTriangle(castedBlock, octree);
-    castLeftShadow(castedBlock, octree);
-    castRightShadow(castedBlock, octree);
+    castLeftTriangle(cameraData, castedBlock, octree);
+    castRightTriangle(cameraData, castedBlock, octree);
+    castLeftShadow(cameraData, castedBlock, octree);
+    castRightShadow(cameraData, castedBlock, octree);
 }
 
-void rayCastChunk(struct CastedChunk* castedChunk, struct Octree* octree){
-    for (int x = 0; x < castedChunk->scale; x++){
-        for (int y = 0; y < castedChunk->scale; y++){
-            rayCastBlock(&castedChunk->castedBlocks[x][y], octree);
-        }
+void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk, struct Octree* octree){
+    for (int x = 0; x < castedChunk->castedBlockCount; x++){
+        rayCastBlock(cameraData, &castedChunk->castedBlocks[x], octree);
     }
 }
 
-void threadCastChunk(struct CastedChunk* castedChunk, struct Octree* octree){
+void threadCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk, struct Octree* octree){
     struct args* args = malloc(sizeof(struct args));
+    args->cameraData = cameraData;
     args->castedChunk = castedChunk;
     args->octree = octree;
     pthread_create(NULL, NULL, castChunk, (void*)args);

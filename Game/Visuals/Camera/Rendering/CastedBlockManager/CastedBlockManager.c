@@ -2,17 +2,36 @@
 // Created by Spencer on 5/7/2024.
 //
 
+#include <math.h>
 #include "CastedBlockManager.h"
 #include "../../../../World/Octree/KeyMod.h"
 #include "../../../../Debuging/Test_Main.h"
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Creation and freeing functions
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 
 struct CastedBlock* createCastedBlock(){
     struct CastedBlock* castedBlock = malloc(sizeof (struct CastedBlock));
     castedBlock->leftTextureList = createTextureList();
     castedBlock->rightTextureList = createTextureList();
+
     castedBlock->leftShader = Empty;
     castedBlock->rightShader = Empty;
     return castedBlock;
+}
+
+void updateChunkCamCords(struct CameraData* cameraData, struct CastedChunk* castedChunk){
+    for (int x = 0; x < castedChunk->scale; x++){
+        for (int y = 0; y < castedChunk->scale; y++){
+            //Set the world key for the casted block
+            castedChunk->castedBlocks[x + (y * castedChunk->scale)].camKey = modKey(castedChunk->worldKey, x * cameraData->xDirection, y * cameraData->yDirection, 0, 0);
+        }
+    }
+    castedChunk->isoX *= cameraData->xDirection;
+    castedChunk->isoY *= cameraData->yDirection;
+
 }
 
 //Create a casted chunk object
@@ -22,28 +41,26 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     //set world rendering key
     castedChunk->worldKey = modKey(cameraData->key, isoX * cameraData->chunksScale, isoY * cameraData->chunksScale, 0, 0);
 
-    castedChunk->castedBlocks = malloc(sizeof (struct CastedBlock*) * cameraData->chunksScale);
-
     //set rendering cords / basics
-    castedChunk->isoX = isoX;
-    castedChunk->isoY = isoY;
+    castedChunk->isoX = isoX * cameraData->xDirection;
+    castedChunk->isoY = isoY * cameraData->yDirection;
     castedChunk->scale = cameraData->chunksScale;
+    castedChunk->castedBlockCount = cameraData->chunksScale * cameraData->chunksScale;;
 
     //set rendering variables
     castedChunk->busy = false;
     castedChunk->rayCast = false;
     castedChunk->textured = false;
-    castedChunk->inView = false;
+    castedChunk->active = true;
 
     //SetupCasted blocks utilizing the casted chunks camWorldKey
-    for (int x = 0; x < cameraData->chunksScale; x++){
-        castedChunk->castedBlocks[x] = malloc(sizeof (struct CastedBlock) * cameraData->chunksScale);
-        for (int y = 0; y < cameraData->chunksScale; y++){
-            castedChunk->castedBlocks[x][y] = *createCastedBlock();
-            //Set the world key for the casted block
-            castedChunk->castedBlocks[x][y].camKey = modKey(castedChunk->worldKey, x, y, 0, 0);
-        }
+    castedChunk->castedBlocks = calloc(castedChunk->castedBlockCount, sizeof(struct CastedBlock));
+
+    for (int x = 0; x < castedChunk->castedBlockCount; x++){
+        castedChunk->castedBlocks[x] = *createCastedBlock();
     }
+
+    updateChunkCamCords(cameraData, castedChunk);
 
     //Create casted Chunk texture based on it's scale
     int xChunkTextureRez = cameraData->chunksScale * cameraData->baseBlockScale;
@@ -60,13 +77,77 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     return castedChunk;
 }
 
+void freeCastedChunk(struct CastedChunk* castedChunk){
+    //Free the casted blocks array's data
+    for (int x = 0; x < castedChunk->castedBlockCount; x++) {
+        struct CastedBlock castedBlock = castedChunk->castedBlocks[x];
+        freeTextureList(castedBlock.leftTextureList);
+        freeTextureList(castedBlock.rightTextureList);
+    }
+    //free castedBlockArray
+    free(castedChunk->castedBlocks);
+    //Free struct itself
+    castedChunk = NULL;
+}
+
 struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Renderer* renderer){
     struct CastedPool* castedPool = malloc(sizeof (struct CastedPool));
-    castedPool->chunkMap = createChunkMap(100);
-    for (int x = 0; x < cameraData->viewDistance; x++){
-        for (int y = 0; y < cameraData->viewDistance; y++){
-            addChunkToMap(castedPool->chunkMap, createCastedChunk(cameraData, renderer, x, y));
-        }
-    }
+    //Create the Casted Pool array based on the square of the view distance
+    castedPool->castedChunkArraySize = cameraData->viewDistance * cameraData->viewDistance;
+
+    castedPool->chunkMap = createChunkMap(256);
+
+
     return castedPool;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Pool Management
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+struct CastedChunk* getCastedChunkAtCords(struct CameraData* cameraData, int isoX, int isoY){
+    //Loop through chunks in array and identify on that has correct cords
+    int chunkIsoX = isoX/cameraData->chunksScale;
+    int chunkIsoY = isoY/cameraData->chunksScale;
+
+    //Index chunk map at cords
+    struct CastedChunk* castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, chunkIsoX, chunkIsoY);
+    return castedChunk;
+}
+
+struct CastedBlock* getCastedBlockAtCords(struct CameraData* cameraData, int isoX, int isoY){
+    //Get chunk chunk cords
+    int chunkIsoX = isoX / cameraData->chunksScale;
+    int chunkIsoY = isoY / cameraData->chunksScale;
+
+    int xBlockCor = isoX % cameraData->chunksScale;
+    int yBlockCor = isoY % cameraData->chunksScale;
+
+    if (xBlockCor < 0){
+        xBlockCor += cameraData->chunksScale;
+        chunkIsoX--;
+    }
+    if (yBlockCor < 0){
+        yBlockCor += cameraData->chunksScale;
+        chunkIsoY--;
+    }
+
+    //Mod cords based off chunk scale to determine where in the chunk the cords are located
+    struct CastedChunk* castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, chunkIsoX, chunkIsoY);
+
+    return &castedChunk->castedBlocks[xBlockCor + (yBlockCor * cameraData->chunksScale)];
+
+}
+
+int** getCordsInView(struct CameraData* cameraData){
+
+
+}
+
+
+void updateChunksInBounds(struct GameData* gameData){
+    int viewDistance = gameData->cameraData->viewDistance;
+
+
 }

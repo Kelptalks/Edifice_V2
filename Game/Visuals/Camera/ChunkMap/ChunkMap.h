@@ -4,20 +4,28 @@
 
 #ifndef EDIFICE_CHUNKMAP_H
 #define EDIFICE_CHUNKMAP_H
-
-#include "ChunkLinkList/ChunkLinkList.h"
+#include "../../../GameData.h"
 
 struct ChunkMap{
     struct ChunkLinkListNode** nodes;
     int size;
+    int offset;
+};
+
+struct ChunkLinkListNode{
+    struct CastedChunk* castedChunk;
+    int64_t key;
+    struct ChunkLinkListNode* nextNode;
 };
 
 struct ChunkMap* createChunkMap(int size);
 
-struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int x, int y);
+void addChunkToMap(struct ChunkMap* chunkMap,struct CastedChunk* castedChunk);
 
-void addChunkToMap(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk);
+struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int xCor, int yCor);
 
-void removeChunkFromMap(struct ChunkMap* chunkMap, int x, int y);
+void updateChunkMapLocation(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk, int oldX, int oldY);
+
+void testChunkMap(struct GameData* gameData);
 
 #endif //EDIFICE_CHUNKMAP_H

@@ -48,6 +48,8 @@ struct BlockShaders{
 };
 
 struct Textures{
+    SDL_Texture * spriteSheet;
+
     //Array for every array of block's spliced textures
     struct BlockTextures* BlockTextures;
     int blockCount;

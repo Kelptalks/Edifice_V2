@@ -13,6 +13,7 @@
 #include "../../../Debuging/Test_Main.h"
 #include "../../../Visuals/InMenuWindow/InMenuWindow.h"
 #include "../../../PlayerData/PlayerData.h"
+#include "../Camera.h"
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){
     //Cords calculations
@@ -22,72 +23,69 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
     free(cords);
 
 
-    //Identifie block from collection
-    struct CastedChunk* castedChunk = getChunkFromMap(gameData->cameraData->castedPool->chunkMap, xIso / gameData->cameraData->chunksScale, yIso / gameData->cameraData->chunksScale);
-    struct CastedBlock* castedBlock = &castedChunk->castedBlocks[xIso % gameData->cameraData->chunksScale][yIso % gameData->cameraData->chunksScale];
+//Get casted block from cords
+struct CastedBlock* castedBlock = getCastedBlockAtCords(gameData->cameraData, xIso, yIso);
 
-    //Use blocks cam key to rayCast and break block
-    if (xIso > 0 && yIso > 0) {
+//Use blocks cam key to rayCast and break block
 
-        //Determine the side of the cast block
-        int *detailedCords = screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset);
+    //Determine the side of the cast block
+    int *detailedCords = screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset);
 
-        int keyModOrder[3] = {0, 1, 2};
-        bool leftSide;
-        if (detailedCords[1]%2 == 0){
-            leftSide = false;
-            keyModOrder[0] = 1;
-            keyModOrder[1] = 0;
-            keyModOrder[2] = 2;
-        }
-        else{
-            leftSide = true;
-        }
-        free(detailedCords);
+    int keyModOrder[3] = {0, 1, 2};
+    bool leftSide;
+    if (detailedCords[1]%2 == 0){
+        leftSide = false;
+        keyModOrder[0] = 1;
+        keyModOrder[1] = 0;
+        keyModOrder[2] = 2;
+    }
+    else{
+        leftSide = true;
+    }
+    free(detailedCords);
 
 
-        //Left click to break block
-        if (event.button.button == SDL_BUTTON_LEFT) {
-            //Remove block
-            unsigned long key = castedBlock->camKey;
-            struct Octree *octree = gameData->world->octree;
-            short block = 0;
-            //Cast ray from camera to block
-            for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-                for (int axis = 0; axis < 3; axis++) {
-                    key = modAxis(key, -1, keyModOrder[axis], 0);
-                    block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
-                    if (!isTransparent(block)) {
-                        setOctreeKeyValue(octree->root, key, octree->RootDepth, 0);
-                        drawDistance = 0;
-                        break;
-                    }
+    //Left click to break block
+    if (event.button.button == SDL_BUTTON_LEFT) {
+        //Remove block
+        unsigned long key = castedBlock->camKey;
+        struct Octree *octree = gameData->world->octree;
+        short block = 0;
+        //Cast ray from camera to block
+        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+            for (int axis = 0; axis < 3; axis++) {
+                key = modAxis(key, -1, keyModOrder[axis], 0);
+                block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
+                if (!isTransparent(block)) {
+                    setOctreeKeyValue(octree->root, key, octree->RootDepth, 0);
+                    drawDistance = 0;
+                    break;
                 }
             }
-
         }
 
-        //Right click to place block
-        else if (event.button.button == SDL_BUTTON_RIGHT) {
-            //Play sound
-            //playPlaceSound(gameData->screen->audio);
+    }
 
-            unsigned long key = castedBlock->camKey;
-            struct Octree *octree = gameData->world->octree;
-            short block = 0;
-            //Cast ray from camera to block
-            for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-                for (int axis = 0; axis < 3; axis++) {
-                    key = modAxis(key, -1, keyModOrder[axis], 0);
-                    block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
-                    if (!isTransparent(block)) {
-                        //Mod key based off axis of intercept
-                        key = modAxis(key, 1, keyModOrder[axis], 0);
+    //Right click to place block
+    else if (event.button.button == SDL_BUTTON_RIGHT) {
+        //Play sound
+        //playPlaceSound(gameData->screen->audio);
 
-                        setOctreeKeyValue(octree->root, key, octree->RootDepth, gameData->playerData->block);
-                        drawDistance = 0;
-                        break;
-                    }
+        unsigned long key = castedBlock->camKey;
+        struct Octree *octree = gameData->world->octree;
+        short block = 0;
+        //Cast ray from camera to block
+        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+            for (int axis = 0; axis < 3; axis++) {
+                key = modAxis(key, -1, keyModOrder[axis], 0);
+                block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
+                if (!isTransparent(block)) {
+                    //Mod key based off axis of intercept
+                    key = modAxis(key, 1, keyModOrder[axis], 0);
+
+                    setOctreeKeyValue(octree->root, key, octree->RootDepth, gameData->playerData->block);
+                    drawDistance = 0;
+                    break;
                 }
             }
         }
@@ -113,23 +111,23 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
         }
     }
 
-    float camSpeed = 1;
+    float camSpeed = 10;
     float timeAdjustedCamChange = camSpeed * gameData->screen->frameRenderTime;
 
     //Camera Movement Controls
     const Uint8 *keystate = SDL_GetKeyboardState(NULL);
     // Check each key of interest and update accordingly
     if (keystate[SDL_SCANCODE_W]) {
-        gameData->cameraData->yRenderingOffset += 30;  // Move camera up
+        gameData->cameraData->yRenderingOffset +=  camSpeed;  // Move camera up
     }
     if (keystate[SDL_SCANCODE_S]) {
-        gameData->cameraData->yRenderingOffset -= 30;  // Move camera down
+        gameData->cameraData->yRenderingOffset -=  camSpeed;  // Move camera down
     }
     if (keystate[SDL_SCANCODE_A]) {
-        gameData->cameraData->xRenderingOffset += 30;  // Move camera left
+        gameData->cameraData->xRenderingOffset +=  camSpeed;  // Move camera left
     }
     if (keystate[SDL_SCANCODE_D]) {
-        gameData->cameraData->xRenderingOffset -= 30;  // Move camera right
+        gameData->cameraData->xRenderingOffset -=  camSpeed;  // Move camera right
     }
 
     if (event.type == SDL_KEYDOWN) {
@@ -137,16 +135,25 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
             case SDLK_TAB :
                 gameData->cameraData->inMenuWindow->visible = !gameData->cameraData->inMenuWindow->visible;
                 break;
-            case SDLK_e :
-                gameData->cameraData->blockSelected++;
-                if (gameData->cameraData->blockSelected > 35){
-                    gameData->cameraData->blockSelected = 1;
-                }
+            case SDLK_ESCAPE :
+                gameData->screen->menuType = MainMenu;
                 break;
             case SDLK_q :
-                gameData->cameraData->renderScale--;
-                break;
+                if (gameData->cameraData->direction < 3) {
 
+                    int newDirection = gameData->cameraData->direction + 1;
+                    setDirection(gameData, newDirection);
+                }
+                else {
+                    setDirection(gameData, 0);
+                }
+                break;
+            case SDLK_F3 :
+                gameData->debugMenu->visible = !gameData->debugMenu->visible;
+                break;
+            case SDLK_F4 :
+                gameData->debugMenu->chunkBoarders = !gameData->debugMenu->chunkBoarders;
+                break;
         }
     }
     if (event.type == SDL_MOUSEWHEEL) {

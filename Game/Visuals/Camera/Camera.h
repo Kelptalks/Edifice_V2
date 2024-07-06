@@ -7,6 +7,8 @@
 
 #include "CameraData.h"
 
+void setDirection(struct GameData* gameData, enum Direction direction);
+
 void renderView(struct GameData* gameData, int x, int y);
 
 #endif //EDIFICE_CAMERA_H

@@ -10,12 +10,19 @@
 struct Menu{
     struct MenuButton** menuButtons;
     int buttonCount;
+
+    //Sub menus
+    struct Menu* settingsMenu;
 };
 
-struct Menu* createMenu();
+struct Menu* createMainMenu();
 
-void menuControlInput(struct GameData* gameData, SDL_Event event);
+void MainMenuControlInput(struct GameData* gameData, SDL_Event event);
 
-void renderMenu(struct GameData* gameData, int x, int y);
+void renderMainMenu(struct GameData* gameData, int xCor, int yCor);
+
+void settingsMenuControlInput(struct GameData* gameData, SDL_Event event);
+
+void renderSettingsMenu(struct GameData* gameData, int xCor, int yCor);
 
 #endif //EDIFICE_MENU_H

@@ -9,6 +9,7 @@
 struct args{
     struct Octree* octree;
     struct CastedChunk* castedChunk;
+    struct CameraData* cameraData;
 };
 
 void* castChunk(void* arg);

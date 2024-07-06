@@ -15,6 +15,8 @@ struct DebugMenu{
     int yMouseCor;
 
     bool LeftSide;
+    bool chunkBoarders;
+
     int xBlockSelectedCor;
     int yBlockSelectedCor;
 };

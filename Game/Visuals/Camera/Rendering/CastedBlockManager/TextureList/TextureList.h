@@ -27,4 +27,6 @@ void addTexture(struct TextureList* textureList, enum Block block, enum Texture 
 
 void clearTextureList(struct TextureList* textureList);
 
+void freeTextureList(struct TextureList* textureList);
+
 #endif //EDIFICE_TEXTURELIST_H

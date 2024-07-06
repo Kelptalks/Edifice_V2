@@ -227,6 +227,7 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
     //load spriteSheet
     SDL_Surface* spriteSheet = loadSpriteSheet();
 
+
     //setup texture struct
     struct Textures* textures = malloc(sizeof(struct Textures));
     textures->blockCount = blockCount;
@@ -258,7 +259,8 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
     textures->shaderCount = 1;
     textures->blockShaders = malloc(sizeof(struct BlockTextures) * textures->shaderCount);
     textures->blockShaders = createShaders(renderer, spriteSheet);
-
+    textures->spriteSheet = SDL_CreateTextureFromSurface(renderer, spriteSheet);
     SDL_FreeSurface(spriteSheet);
+
     return textures;
 }

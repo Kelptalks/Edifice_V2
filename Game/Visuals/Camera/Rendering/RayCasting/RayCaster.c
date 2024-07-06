@@ -14,7 +14,7 @@
  * Casting blocks
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
-void castLeftTriangle(struct CastedBlock* castedBlock, struct Octree* octree) {
+void castLeftTriangle(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree) {
     int drawDistance = 300;
     short block = 0;
     unsigned long key = castedBlock->camKey;
@@ -23,7 +23,7 @@ void castLeftTriangle(struct CastedBlock* castedBlock, struct Octree* octree) {
         drawDistance--;
 
         //-x
-        key = modAxis(key, -1, 0, 0);
+        key = modAxis(key, -1 * cameraData->xDirection, 0, 0);
         block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
 
         if (!isTransparent(block)){
@@ -38,7 +38,7 @@ void castLeftTriangle(struct CastedBlock* castedBlock, struct Octree* octree) {
         }
 
         //-y
-        key = modAxis(key, -1, 1, 0);
+        key = modAxis(key, -1 * cameraData->yDirection, 1, 0);
         block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
 
         if (!isTransparent(block)){
@@ -68,7 +68,7 @@ void castLeftTriangle(struct CastedBlock* castedBlock, struct Octree* octree) {
     castedBlock->leftBlockKey = key;
 }
 
-void castRightTriangle(struct CastedBlock* castedBlock, struct Octree* octree){
+void castRightTriangle(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree){
     unsigned long key = castedBlock->camKey;
     int drawDistance = 300;
     short block = 0;
@@ -77,7 +77,7 @@ void castRightTriangle(struct CastedBlock* castedBlock, struct Octree* octree){
         drawDistance--;
 
         //-y
-        key = modAxis(key, -1, 1, 0);
+        key = modAxis(key, -1 * cameraData->yDirection, 1, 0);
         block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
         if (!isTransparent(block)){
             if (isTranslucent(block)){
@@ -90,7 +90,7 @@ void castRightTriangle(struct CastedBlock* castedBlock, struct Octree* octree){
         }
 
         //-x
-        key = modAxis(key, -1, 0, 0);
+        key = modAxis(key, -1 * cameraData->xDirection, 0, 0);
         block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
         if (!isTransparent(block)){
             if (isTranslucent(block)){
@@ -124,7 +124,7 @@ void castRightTriangle(struct CastedBlock* castedBlock, struct Octree* octree){
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
-void castRightShadow(struct CastedBlock* castedBlock, struct Octree* octree) {
+void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree) {
     unsigned long key = castedBlock->rightBlockKey;
     short block = 0;
     int drawDistance = 300;
@@ -191,7 +191,7 @@ void castRightShadow(struct CastedBlock* castedBlock, struct Octree* octree) {
     }
 }
 
-void castLeftShadow(struct CastedBlock* castedBlock, struct Octree* octree) {
+void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree) {
     unsigned long key = castedBlock->leftBlockKey;
     short block = 0;
     int drawDistance = 300;

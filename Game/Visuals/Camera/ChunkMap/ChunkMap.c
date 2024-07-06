@@ -2,103 +2,184 @@
 // Created by Spencer on 6/12/2024.
 //
 
+#include <malloc.h>
 #include "ChunkMap.h"
 #include "../../../Debuging/Test_Main.h"
+#include "../Rendering/CastedBlockManager/CastedBlockManager.h"
+#include <stdint.h>
 
-//Key management
-//return a long key of the bit packed cords;
-unsigned long createKey(int x, int y) {
-    return ((unsigned long)x << 32) | (unsigned long)(y & 0xFFFFFFFF);
-}
-//Create a hash of the key
-unsigned int getHash(unsigned long key, int map_size) {
-    const unsigned long prime = 0x9E3779B9;  // A large prime number
-    unsigned long hash_value = key * prime;
-    return (unsigned int)(hash_value % map_size);
-}
+struct ChunkLinkListNode* createChunkLinkListNode(int64_t key, struct CastedChunk* castedChunk){
+    struct ChunkLinkListNode* chunkLinkListNode = malloc(sizeof (struct ChunkLinkListNode));
 
-unsigned int getKey(int x, int y, int mapSize){
-    return getHash(createKey(x, y), mapSize);
+    chunkLinkListNode->key = key;
+    chunkLinkListNode->castedChunk = castedChunk;
+    chunkLinkListNode->nextNode = NULL;
+
+    return chunkLinkListNode;
 }
 
 struct ChunkMap* createChunkMap(int size){
-    //Malloc the chunkMapStruct
+    //Allocate the struct
     struct ChunkMap* chunkMap = malloc(sizeof(struct ChunkMap));
     if (chunkMap == NULL){
-        reportBug("Failed to malloc chunk map \n");
+        reportBug("Failed to malloc chunkmap\n");
         return NULL;
     }
 
-    //Set size
+    //Set basic vars
+    chunkMap->offset = 536870912;
     chunkMap->size = size;
 
-    //Create chunk node array
-    chunkMap->nodes = calloc(size,sizeof(struct ChunkLinkListNode*));
+    //Allocate array for chunks
+    chunkMap->nodes = calloc(size, sizeof(struct ChunkLinkListNode));
     if (chunkMap->nodes == NULL){
-        reportBug("Failed to calloc chunkmap node array \n");
+        reportBug("failed to malloc chunkMap node array of size %i\n", size);
         return NULL;
     }
 
     return chunkMap;
 }
 
-struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int x, int y){
-    unsigned int key = getKey(x, y, chunkMap->size);
-    struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[key];
 
-    while (chunkLinkListNode != NULL){
-        //Check if is chunk cords
-        if (chunkLinkListNode->x == x && chunkLinkListNode->y == y){
-            return chunkLinkListNode->castedChunk;
-        }
-        else{
+int64_t encodeKey(int offset,int x, int y){
+    int64_t key = ((int64_t)(x + offset) << 32) | (int64_t)(y + offset);
+    return key;
+}
+
+void decodeKey(int64_t key, int offset, int* x, int* y){
+    *x = (int)((key >> 32) - offset);
+    *y = (int)((key & 0xFFFFFFFF) - offset);
+}
+
+void addChunkToMap(struct ChunkMap* chunkMap,struct CastedChunk* castedChunk){
+    int64_t encodedKey = encodeKey(chunkMap->offset, castedChunk->isoX, castedChunk->isoY);
+    int mapIndex = encodedKey % chunkMap->size;
+
+    struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[mapIndex];
+
+    // Check if list is empty and create if needed
+    if (chunkLinkListNode == NULL){
+        chunkMap->nodes[mapIndex] = createChunkLinkListNode(encodedKey, castedChunk);
+    }
+    //Find the end of the list and add to that
+    else {
+        while (chunkLinkListNode->nextNode != NULL) {
             chunkLinkListNode = chunkLinkListNode->nextNode;
         }
+        chunkLinkListNode->nextNode = createChunkLinkListNode(encodedKey, castedChunk);
     }
+}
+
+struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int xCor, int yCor){
+    int64_t encodedKey = encodeKey(chunkMap->offset, xCor, yCor);
+
+    //Index the correct link list from the hashtable
+    int mapIndex = encodedKey % chunkMap->size;
+    struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[mapIndex];
+
+    while (chunkLinkListNode != NULL){
+        if (encodedKey == chunkLinkListNode->key){
+            return chunkLinkListNode->castedChunk;
+        }
+        chunkLinkListNode = chunkLinkListNode->nextNode;
+    }
+
     return NULL;
 }
 
-void addChunkToMap(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk){
-    unsigned int key = getKey(castedChunk->isoX, castedChunk->isoY, chunkMap->size);
-    struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[key];
-    struct ChunkLinkListNode* NewChunkLinkListNode = createChunkLinkListNode(castedChunk->isoX, castedChunk->isoY, key);
-    NewChunkLinkListNode->castedChunk = castedChunk;
+void removeFromMap(struct ChunkMap* chunkMap, int xCor, int yCor){
+    int64_t encodedKey = encodeKey(chunkMap->offset, xCor, yCor);
 
-    //If node list is empty
-    if (chunkLinkListNode == NULL){
-        chunkMap->nodes[key] = NewChunkLinkListNode;
-    }
-    //Append to the end of the other node/nodes
-    else{
-        while(chunkLinkListNode->nextNode != NULL){
-            chunkLinkListNode = chunkLinkListNode->nextNode;
+    //Index the correct link list from the hashtable
+    int mapIndex = encodedKey % chunkMap->size;
+    struct ChunkLinkListNode* CurrentChunkLinkListNode = chunkMap->nodes[mapIndex];
+    struct ChunkLinkListNode* lastChunkLinkListNode = NULL;
+
+    while (CurrentChunkLinkListNode != NULL){
+        if (encodedKey == CurrentChunkLinkListNode->key){
+            //If at start of list with no next following node
+            if (lastChunkLinkListNode == NULL){
+                free(chunkMap->nodes[mapIndex]);
+                chunkMap->nodes[mapIndex] = NULL;
+                return;
+            }
+            else {
+                if (CurrentChunkLinkListNode->nextNode != NULL) {
+                    //If at the end of a list
+                    lastChunkLinkListNode->nextNode = CurrentChunkLinkListNode->nextNode;
+                    free(CurrentChunkLinkListNode);
+                    return;
+                }
+                    //at end
+                else {
+                    lastChunkLinkListNode->nextNode = NULL;
+                    free(CurrentChunkLinkListNode);
+                    return;
+                }
+            }
         }
-        chunkLinkListNode->nextNode = NewChunkLinkListNode;
+        lastChunkLinkListNode = CurrentChunkLinkListNode;
+        CurrentChunkLinkListNode = CurrentChunkLinkListNode->nextNode;
     }
 }
 
-void removeChunkFromMap(struct ChunkMap* chunkMap, int x, int y){
-    unsigned int key = getKey(x, y, chunkMap->size);
-    struct ChunkLinkListNode* chunkLinkListNode = chunkMap->nodes[key];
+void updateChunkMapLocation(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk, int oldX, int oldY){
+    removeFromMap(chunkMap, oldX, oldY);
+    addChunkToMap(chunkMap, castedChunk);
+}
 
-    while (chunkLinkListNode->nextNode != NULL){
-        //Check if is chunk cords
-        if (chunkLinkListNode->nextNode->x == x && chunkLinkListNode->nextNode->y == y){
-            //If the next node is the desired node to remove, and it is not followed by another node free
-            if (chunkLinkListNode->nextNode->nextNode == NULL){
-                free(chunkLinkListNode->nextNode);
-                chunkLinkListNode->nextNode = NULL;
-                return;
-            }
-            //Connect the split
-            else{
-                free(chunkLinkListNode->nextNode);
-                chunkLinkListNode->nextNode = chunkLinkListNode->nextNode->nextNode;
-                return;
-            }
-        }
-        else{
-            chunkLinkListNode = chunkLinkListNode->nextNode;
-        }
+void testChunkMap(struct GameData* gameData) {
+    //Display test
+    reportBug(
+            "\n##################\n"
+            "Testing Chunk Map \n"
+            "##################\n");
+
+    //Test key encoding
+    struct ChunkMap *chunkMap = createChunkMap(1000);
+    int xCor = -9;
+    int yCor = -4;
+    int64_t encodedKey = encodeKey(chunkMap->offset, xCor, yCor);
+    int xDecode;
+    int yDecode;
+    decodeKey(encodedKey, chunkMap->offset, &xDecode, &yDecode);
+    reportBug("\nTest key encoding : \n"
+              "|Inputted %i, %i\n"
+              "|Decoded %i, %i\n", xCor, yCor, xDecode, yDecode
+    );
+
+    //Test map adding and retrieval
+    //Create casted chunk and add to map
+    struct CastedChunk *castedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, 9, -4);
+    addChunkToMap(chunkMap, castedChunk);
+
+    //Testing returning function
+    struct CastedChunk *returnedChunk = getChunkFromMap(chunkMap, 9, -4);
+    reportBug("\nTest Chunk encoding:\n");
+    if (castedChunk != NULL) {
+        reportBug("|added chunk cords\n", returnedChunk->isoX, returnedChunk->isoY);
+        reportBug("|Returned chunk cords\n", returnedChunk->isoX, returnedChunk->isoY);
     }
+    else{
+        reportBug("|Chunk not found \n");
+    }
+
+
+    reportBug("\nTest Removal from map:\n");
+    //Verify chunk is there
+    if (getChunkFromMap(chunkMap, 9, -4) != NULL){
+        reportBug("|Chunk(%i, %i) exists"
+                  , xCor, yCor);
+    }
+    //Remove and check if null
+    removeFromMap(chunkMap, 9, -4);
+    if (getChunkFromMap(chunkMap, 9, -4) == NULL){
+        reportBug("|Chunk was remove successfully");
+    }
+
+
+
+
+
+    reportBug("\n##################\n");
 }

@@ -6,6 +6,7 @@
 #include "TextureList.h"
 #include "../../TextureManager/IsoTextureManager.h"
 #include "../../../../../Blocks/Blocks.h"
+#include "../../../../../Debuging/Test_Main.h"
 
 
 void expandTextureList(struct TextureList* textureList){
@@ -22,10 +23,10 @@ void expandTextureList(struct TextureList* textureList){
 }
 
 struct TextureList* createTextureList(){
-    struct TextureList* textureList = malloc(sizeof (struct TextureList));
+    struct TextureList* textureList = calloc(1,sizeof(struct TextureList));
     textureList->length = 0;
     textureList->size = 5;
-    textureList->nodes = malloc(sizeof (struct TextureNode) * textureList->size);
+    textureList->nodes = calloc( textureList->size, sizeof(struct TextureNode));
     return textureList;
 }
 
@@ -40,5 +41,12 @@ void addTexture(struct TextureList* textureList, enum Block block, enum Texture 
 
 void clearTextureList(struct TextureList* textureList){
     textureList->length = 0;
+}
+
+void freeTextureList(struct TextureList* textureList){
+    free(textureList->nodes);
+    textureList->nodes = NULL;
+    free(textureList);
+    textureList = NULL;
 }
 

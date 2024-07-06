@@ -10,7 +10,8 @@
 
 enum MenuType{
     WorldCamera,
-    MainMenu
+    MainMenu,
+    SettingsMenu
 };
 
 struct Audio{
