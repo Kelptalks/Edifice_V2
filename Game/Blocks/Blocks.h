@@ -40,12 +40,12 @@ enum Block {
     Mushroom,
     Flour,
     CrackedEarth,
-    MaskingBlock,
-    ShadowMaskingBlock,
     GreyShader,
+    RedShader,
     WhiteShader,
     GreenShader,
-    RedShader,
+    MaskingBlock,
+    ShadowMaskingBlock,
 };
 
 bool isTransparent(enum Block);
@@ -54,7 +54,7 @@ bool isTranslucent(enum Block block);
 
 bool isPlantable(enum Block block);
 
-char* getName(enum Block block);
+char* getBlockName(enum Block block);
 
 int getSpriteSheetYCor(enum Block block);
 int getSpriteSheetXCor(enum Block block);

@@ -5,9 +5,6 @@
 #ifndef EDIFICE_CAMERADATA_H
 #define EDIFICE_CAMERADATA_H
 
-#include "SDL.h"
-#include "Rendering/CastedBlockManager/CastedBlockManager.h"
-
 enum Direction{
     North,
     East,
@@ -15,6 +12,8 @@ enum Direction{
     West
 };
 
+#include "SDL.h"
+#include "Rendering/CastedBlockManager/CastedBlockManager.h"
 
 struct CameraData{
     //Drawing location
@@ -36,8 +35,12 @@ struct CameraData{
     struct CastedPool* castedPool;
     int xIsoCamCenter;
     int yIsoCamCenter;
+
     int xIsoChunkCamCenter;
     int yIsoChunkCamCenter;
+
+    int xChunkScaledTextureRez;
+    int yChunkScaledTextureRez;
 
     //World
     struct Octree* octree;
@@ -46,6 +49,8 @@ struct CameraData{
     struct InMenuWindow* inMenuWindow;
     enum Block blockSelected;
 
+    //Raycasting
+    struct RayCastingData* rayCastingData;
     enum Direction direction;
     int xDirection;
     int yDirection;

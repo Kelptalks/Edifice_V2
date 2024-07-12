@@ -9,6 +9,7 @@
 #include "../../World/Octree/KeyMod.h"
 #include "../InMenuWindow/InMenuWindow.h"
 #include "Camera.h"
+#include "Rendering/RayCasting/RayCastingManager.h"
 
 struct CameraData* createCameraData(SDL_Renderer* renderer){
     struct CameraData* cameraData = calloc(1, sizeof(struct CameraData));
@@ -20,14 +21,17 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->direction = North;
     cameraData->xDirection = 1;
     cameraData->yDirection = 1;
-
+    cameraData->rayCastingData = createRayCastingData(cameraData);
+    setDirection(cameraData, North);
 
     //The scale the camera should render
     cameraData->baseBlockScale = 64;
     cameraData->renderScale = 64;
+    cameraData->xChunkScaledTextureRez = 0;
+    cameraData->yChunkScaledTextureRez = 0;
 
     //How many chunks will generate
-    cameraData->viewDistance = 24;
+    cameraData->viewDistance = 10;
     cameraData->mouseUpdateDistance = 2;
 
     //Max 512
@@ -37,9 +41,9 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     //Offset for drawing the screen and shifting
     cameraData->xIsoCamCenter = 0;
     cameraData->yIsoCamCenter = 0;
-
     cameraData->xIsoChunkCamCenter = 0;
     cameraData->yIsoChunkCamCenter = 0;
+
 
     //Key the camera renderers from
     cameraData->key = modKey(0, 300, 300, 300, 0);

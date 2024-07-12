@@ -8,7 +8,68 @@
 #include "../CastedBlockManager/CastedBlockManager.h"
 #include "RayCaster.h"
 #include "../../../../Debuging/Test_Main.h"
+#include "RayCastingManager.h"
 
+struct RayCastingData* createRayCastingData(struct CameraData* cameraData){
+    struct RayCastingData* rayCastingData = malloc(sizeof (struct RayCastingData));
+    if (rayCastingData == NULL){
+        reportBug("Failed to create rayCasting Data\n");
+        return NULL;
+    }
+
+    rayCastingData->leftOrder[0] = 0;
+    rayCastingData->leftOrder[1] = 1;
+    rayCastingData->leftOrder[2] = 2;
+
+    rayCastingData->rightOrder[1] = 0;
+    rayCastingData->rightOrder[0] = 1;
+    rayCastingData->rightOrder[2] = 2;
+
+    return rayCastingData;
+}
+
+void updateCastingDirectionOrder(struct CameraData* cameraData){
+    struct RayCastingData* rayCastingData = cameraData->rayCastingData;
+    int* leftOrder = rayCastingData->leftOrder;
+    int* rightOrder = rayCastingData->rightOrder;
+
+    if (cameraData->direction == North){
+        rayCastingData->leftOrder[0] = 2;
+        rayCastingData->leftOrder[1] = 1;
+        rayCastingData->leftOrder[2] = 0;
+
+        rayCastingData->rightOrder[1] = 0;
+        rayCastingData->rightOrder[0] = 1;
+        rayCastingData->rightOrder[2] = 2;
+    }
+    else if (cameraData->direction == East){
+        rayCastingData->leftOrder[0] = 2;
+        rayCastingData->leftOrder[1] = 1;
+        rayCastingData->leftOrder[2] = 0;
+
+        rayCastingData->rightOrder[1] = 0;
+        rayCastingData->rightOrder[0] = 1;
+        rayCastingData->rightOrder[2] = 2;
+    }
+    else if (cameraData->direction == South){
+        rayCastingData->leftOrder[0] = 2;
+        rayCastingData->leftOrder[1] = 1;
+        rayCastingData->leftOrder[2] = 0;
+
+        rayCastingData->rightOrder[1] = 0;
+        rayCastingData->rightOrder[0] = 1;
+        rayCastingData->rightOrder[2] = 2;
+    }
+    else if (cameraData->direction == West){
+        rayCastingData->leftOrder[0] = 2;
+        rayCastingData->leftOrder[1] = 1;
+        rayCastingData->leftOrder[2] = 0;
+
+        rayCastingData->rightOrder[1] = 0;
+        rayCastingData->rightOrder[0] = 1;
+        rayCastingData->rightOrder[2] = 2;
+    }
+}
 
 void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree){
     clearTextureList(castedBlock->leftTextureList);
@@ -19,11 +80,15 @@ void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock
 
     castLeftTriangle(cameraData, castedBlock, octree);
     castRightTriangle(cameraData, castedBlock, octree);
-    castLeftShadow(cameraData, castedBlock, octree);
-    castRightShadow(cameraData, castedBlock, octree);
+
+    if (cameraData->direction != East) {
+        castLeftShadow(cameraData, castedBlock, octree);
+        castRightShadow(cameraData, castedBlock, octree);
+    }
 }
 
 void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk, struct Octree* octree){
+    updateChunkCamCords(cameraData, castedChunk);
     for (int x = 0; x < castedChunk->castedBlockCount; x++){
         rayCastBlock(cameraData, &castedChunk->castedBlocks[x], octree);
     }

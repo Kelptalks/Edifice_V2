@@ -65,6 +65,10 @@ add_executable(edifice main.c
         "Game/World/World Saving/WorldFileManager.h"
         Game/World/TerrainGen/WaterGen/WaterGen.h
         Game/World/TerrainGen/WaterGen/WaterGen.c
+        Game/InGameTime/TikManager.c
+        Game/InGameTime/TikManager.h
+        Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h
+        Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

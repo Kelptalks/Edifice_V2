@@ -70,6 +70,7 @@ struct Screen* createScreen(){
     screen->menuType = MainMenu;
     screen->targetFPS = 256;
     screen->frameDelay = 1000 / screen->targetFPS;
+    screen->currentFrame = 0;
 
     //create SDL window and render
     SDL_Window* window;

@@ -14,6 +14,7 @@
 #include "../../../Visuals/InMenuWindow/InMenuWindow.h"
 #include "../../../PlayerData/PlayerData.h"
 #include "../Camera.h"
+#include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){
     //Cords calculations
@@ -22,12 +23,17 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
     int yIso = cords[1];
     free(cords);
 
+    //Get casted block from cords
+    struct CastedBlock* castedBlock = getCastedBlockAtCords(gameData->cameraData, xIso, yIso);
+    if (castedBlock == NULL){
+        return;
+    }
+    //Unpack the casted block data.
+    unsigned long CastedBlockCamkey = castedBlock->camKey;
+    struct Octree *octree = gameData->world->octree;
+    short block = 0;
 
-//Get casted block from cords
-struct CastedBlock* castedBlock = getCastedBlockAtCords(gameData->cameraData, xIso, yIso);
-
-//Use blocks cam key to rayCast and break block
-
+    //Use blocks cam CastedBlockCamkey to rayCast and break block
     //Determine the side of the cast block
     int *detailedCords = screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset);
 
@@ -45,52 +51,56 @@ struct CastedBlock* castedBlock = getCastedBlockAtCords(gameData->cameraData, xI
     free(detailedCords);
 
 
-    //Left click to break block
-    if (event.button.button == SDL_BUTTON_LEFT) {
-        //Remove block
-        unsigned long key = castedBlock->camKey;
-        struct Octree *octree = gameData->world->octree;
-        short block = 0;
-        //Cast ray from camera to block
-        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-            for (int axis = 0; axis < 3; axis++) {
-                key = modAxis(key, -1, keyModOrder[axis], 0);
-                block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
-                if (!isTransparent(block)) {
-                    setOctreeKeyValue(octree->root, key, octree->RootDepth, 0);
-                    drawDistance = 0;
-                    break;
+    highLightMouseCord(gameData, xIso, yIso, leftSide);
+
+    //If button was pressed
+    if (event.type == SDL_MOUSEBUTTONDOWN) {
+        //Left click to break block
+        if (event.button.button == SDL_BUTTON_LEFT) {
+            //Cast ray from camera to block
+            for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+                for (int axis = 0; axis < 3; axis++) {
+                    int axisMod = 1;
+                    if (keyModOrder[axis] == 0){
+                        axisMod *= gameData->cameraData->xDirection;
+                    }
+                    if (keyModOrder[axis] == 1){
+                        axisMod *= gameData->cameraData->yDirection;
+                    }
+                    CastedBlockCamkey = modAxis(CastedBlockCamkey, -1 * axisMod, keyModOrder[axis], 0);
+                    block = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
+                    if (!isTransparent(block)) {
+                        setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth, 0);
+                        drawDistance = 0;
+                        break;
+                    }
+                }
+            }
+
+        }
+
+            //Right click to place block
+        else if (event.button.button == SDL_BUTTON_RIGHT) {
+            //Play sound
+            //playPlaceSound(gameData->screen->audio);
+            //Cast ray from camera to block
+            for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+                for (int axis = 0; axis < 3; axis++) {
+                    CastedBlockCamkey = modAxis(CastedBlockCamkey, -1, keyModOrder[axis], 0);
+                    block = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
+                    if (!isTransparent(block)) {
+                        //Mod CastedBlockCamkey based off axis of intercept
+                        CastedBlockCamkey = modAxis(CastedBlockCamkey, 1, keyModOrder[axis], 0);
+
+                        setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth,
+                                          gameData->playerData->block);
+                        drawDistance = 0;
+                        break;
+                    }
                 }
             }
         }
-
     }
-
-    //Right click to place block
-    else if (event.button.button == SDL_BUTTON_RIGHT) {
-        //Play sound
-        //playPlaceSound(gameData->screen->audio);
-
-        unsigned long key = castedBlock->camKey;
-        struct Octree *octree = gameData->world->octree;
-        short block = 0;
-        //Cast ray from camera to block
-        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-            for (int axis = 0; axis < 3; axis++) {
-                key = modAxis(key, -1, keyModOrder[axis], 0);
-                block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
-                if (!isTransparent(block)) {
-                    //Mod key based off axis of intercept
-                    key = modAxis(key, 1, keyModOrder[axis], 0);
-
-                    setOctreeKeyValue(octree->root, key, octree->RootDepth, gameData->playerData->block);
-                    drawDistance = 0;
-                    break;
-                }
-            }
-        }
-    }
-
 }
 
 void cameraControlInput(struct GameData* gameData, SDL_Event event){
@@ -106,9 +116,9 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
 
     if (!mouseOnInMenuWindow) {
         //Convert to iso cords
-        if (event.type == SDL_MOUSEBUTTONDOWN) {
-            mouseBreakBlock(gameData, xCor, yCor, event);
-        }
+        mouseBreakBlock(gameData, xCor, yCor, event);
+
+
     }
 
     float camSpeed = 10;
@@ -140,12 +150,20 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
                 break;
             case SDLK_q :
                 if (gameData->cameraData->direction < 3) {
-
                     int newDirection = gameData->cameraData->direction + 1;
-                    setDirection(gameData, newDirection);
+                    setDirection(gameData->cameraData, newDirection);
                 }
                 else {
-                    setDirection(gameData, 0);
+                    setDirection(gameData->cameraData, 0);
+                }
+                break;
+            case SDLK_e :
+                if (gameData->cameraData->direction > 0) {
+                    int newDirection = gameData->cameraData->direction - 1;
+                    setDirection(gameData->cameraData, newDirection);
+                }
+                else {
+                    setDirection(gameData->cameraData, 3);
                 }
                 break;
             case SDLK_F3 :
@@ -157,16 +175,31 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
         }
     }
     if (event.type == SDL_MOUSEWHEEL) {
+        float scale2;
+        int xCamIsoChange = gameData->cameraData->xIsoCamCenter;
+        int yCamIsoChange = gameData->cameraData->yIsoCamCenter;
+
         if (event.wheel.y > 0) {
             //Zoom in
-            float scale2 = gameData->cameraData->renderScale / 0.95;
+            scale2 = gameData->cameraData->renderScale / 0.95;
             gameData->cameraData->renderScale = scale2;
         }
         if (event.wheel.y < 0) {
             //Zoom out
-            float scale2 = gameData->cameraData->renderScale * 0.95;
+            scale2 = gameData->cameraData->renderScale * 0.95;
             gameData->cameraData->renderScale = scale2;
         }
+
+        updateCameraCords(gameData);
+
+        xCamIsoChange = xCamIsoChange - gameData->cameraData->xIsoCamCenter;
+        yCamIsoChange = yCamIsoChange - gameData->cameraData->yIsoCamCenter;
+
+        int* cords = isoToScreen(scale2, xCamIsoChange, yCamIsoChange);
+        gameData->cameraData->xRenderingOffset -= cords[0];
+        gameData->cameraData->yRenderingOffset -= cords[1];
+        free(cords);
+
     }
 
     //Mouse location Debug menu update

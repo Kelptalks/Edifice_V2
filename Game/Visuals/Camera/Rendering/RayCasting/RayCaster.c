@@ -9,11 +9,14 @@
 #include "../../CameraData.h"
 #include "../../../../World/Octree/Octree.h"
 #include "../../../../Debuging/Test_Main.h"
+#include "RayCastingManager.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Casting blocks
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
+
+
 void castLeftTriangle(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree) {
     int drawDistance = 300;
     short block = 0;
@@ -75,7 +78,6 @@ void castRightTriangle(struct CameraData* cameraData, struct CastedBlock* casted
 
     while (drawDistance > 0){
         drawDistance--;
-
         //-y
         key = modAxis(key, -1 * cameraData->yDirection, 1, 0);
         block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
@@ -128,6 +130,7 @@ void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBl
     unsigned long key = castedBlock->rightBlockKey;
     short block = 0;
     int drawDistance = 300;
+    int* castingOrder = cameraData->rayCastingData->rightOrder;
 
     if ((castedBlock->rightTextureList->nodes[castedBlock->rightTextureList->length - 1].texture) == TopRightFace){
         while (drawDistance > 0){
@@ -144,7 +147,12 @@ void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBl
             unsigned long keyY = modAxis(key, 1, 1, 0);
             block = getOctreeKeyVal(octree->root, keyY, octree->RootDepth);
             if (!(isTransparent(block) || isTranslucent(block))){
-                castedBlock->rightShader = TopBotRight;
+                if (cameraData->xDirection == - 1 && cameraData->yDirection == -1){
+                    castedBlock->rightShader = TopTopRight;
+                }
+                else {
+                    castedBlock->rightShader = TopBotRight;
+                }
             }
 
             //x-- side
@@ -156,7 +164,12 @@ void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBl
                     break;
                 }
                 else {
-                    castedBlock->rightShader = TopTopRight;
+                    if (cameraData->xDirection == - 1 && cameraData->yDirection == -1){
+                        castedBlock->rightShader = TopBotRight;
+                    }
+                    else {
+                        castedBlock->rightShader = TopTopRight;
+                    }
                 }
             }
 
@@ -195,12 +208,13 @@ void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlo
     unsigned long key = castedBlock->leftBlockKey;
     short block = 0;
     int drawDistance = 300;
+    int* castingOrder = cameraData->rayCastingData->leftOrder;
 
     if ((castedBlock->leftTextureList->nodes[castedBlock->leftTextureList->length - 1].texture) == TopLeftFace){
         while (drawDistance > 0){
             drawDistance--;
             //z++
-            key = modAxis(key, 1, 2, 0);
+            key = modAxis(key, 1, castingOrder[0], 0);
             block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
             if (!(isTransparent(block) || isTranslucent(block))){
                 castedBlock->leftShader = TopLeftFace;
@@ -208,14 +222,19 @@ void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlo
             }
 
             //y++ side
-            unsigned long keyY = modAxis(key, 1, 1, 0);
+            unsigned long keyY = modAxis(key, 1, castingOrder[1], 0);
             block = getOctreeKeyVal(octree->root, keyY, octree->RootDepth);
             if (!(isTransparent(block) || isTranslucent(block))){
-                castedBlock->leftShader = TopBotLeft;
+                if (cameraData->xDirection == - 1 && cameraData->yDirection == -1){
+                    castedBlock->leftShader = TopTopLeft;
+                }
+                else {
+                    castedBlock->leftShader = TopBotLeft;
+                }
             }
 
             //x-- side
-            key = modAxis(key, -1, 0, 0);
+            key = modAxis(key, -1, castingOrder[2], 0);
             block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
             if (!(isTransparent(block) || isTranslucent(block))){
                 if (castedBlock->leftShader == TopBotLeft){
@@ -223,12 +242,17 @@ void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlo
                     break;
                 }
                 else {
-                    castedBlock->leftShader = TopTopLeft;
+                    if (cameraData->xDirection == - 1 && cameraData->yDirection == -1){
+                        castedBlock->leftShader = TopBotLeft;
+                    }
+                    else {
+                        castedBlock->leftShader = TopTopLeft;
+                    }
                 }
             }
 
             //diagonal side
-            key = modAxis(key, 1, 1, 0);
+            key = modAxis(key, 1, castingOrder[1], 0);
             block = getOctreeKeyVal(octree->root, key, octree->RootDepth);
             if (!(isTransparent(block) || isTranslucent(block))){
                 castedBlock->leftShader = TopLeftFace;

@@ -18,6 +18,7 @@ struct GameData{
     struct Menu* menu;
     struct DebugMenu* debugMenu;
     struct PlayerData* playerData;
+    struct TikManager* tikManager;
 };
 
 struct GameData* createGameData();

@@ -18,11 +18,49 @@ void clearBugReports(){
     debug = fopen("debug", "w");
     fprintf(debug, "Cleared \n");
     fclose(debug);
+
+    FILE * tikBug;
+    tikBug = fopen("tikManager", "w");
+    fprintf(tikBug, "Cleared \n");
+    fclose(tikBug);
+
+    FILE * frameBug;
+    frameBug = fopen("frameManager", "w");
+    fprintf(frameBug, "Cleared \n");
+    fclose(frameBug);
 }
 
 void reportBug(const char* format, ...) { // Accept a format string and variable arguments
     FILE *debug;
     debug = fopen("debug", "a");
+    if (debug != NULL) {
+        va_list args; // Define a variable of type va_list to hold the variable arguments
+        va_start(args, format); // Initialize the va_list with the arguments after the format string
+        vfprintf(debug, format, args); // Use vfprintf to print the formatted message to the file
+        va_end(args); // Clean up the va_list
+        fclose(debug);
+    } else {
+        printf("Error: Unable to open debug file.\n");
+    }
+}
+
+void reportTikBug(const char* format, ...) { // Accept a format string and variable arguments
+    FILE *debug;
+    debug = fopen("tikManager", "a");
+    if (debug != NULL) {
+        va_list args; // Define a variable of type va_list to hold the variable arguments
+        va_start(args, format); // Initialize the va_list with the arguments after the format string
+        vfprintf(debug, format, args); // Use vfprintf to print the formatted message to the file
+        va_end(args); // Clean up the va_list
+        fclose(debug);
+    } else {
+        printf("Error: Unable to open debug file.\n");
+    }
+}
+
+void reportFrameBug(const char* format, ...) { // Accept a format string and variable arguments
+    FILE *debug;
+    debug = fopen("frameManager", "a");
     if (debug != NULL) {
         va_list args; // Define a variable of type va_list to hold the variable arguments
         va_start(args, format); // Initialize the va_list with the arguments after the format string

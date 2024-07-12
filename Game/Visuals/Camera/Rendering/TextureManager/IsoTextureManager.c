@@ -8,6 +8,7 @@
 #include "SDL.h"
 #include "../../../../../Assets/AssetManager.h"
 #include "../../../../Blocks/Blocks.h"
+#include "../../../../Debuging/Test_Main.h"
 #include <windows.h>
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Basic
@@ -101,9 +102,8 @@ struct SplicedBlockSurfaces* spliceBlockSurfaces(SDL_Surface* spriteSheet, enum 
     return splicedBlock;
 }
 
-struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSheet){
-
-    SDL_Surface* shader = cropBlockFromSpriteSheet(spriteSheet, GreyShader);
+struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSheet, enum Block blockShader){
+    SDL_Surface* shader = cropBlockFromSpriteSheet(spriteSheet, blockShader);
     uint32_t *shaderPixels = shader->pixels;
 
     //get maskSprite1
@@ -240,7 +240,6 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
         //Create spliced surfaces
         struct SplicedBlockSurfaces* splicedBlockSurfaces = spliceBlockSurfaces(spriteSheet, b);
         //turn those surfaces into textures
-
         if (splicedBlockSurfaces->surfaces == NULL){
             FILE * debug;
             debug = fopen("debug", "a");
@@ -256,9 +255,10 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
         free(splicedBlockSurfaces);
 
     }
-    textures->shaderCount = 1;
+    textures->shaderCount = 4;
     textures->blockShaders = malloc(sizeof(struct BlockTextures) * textures->shaderCount);
-    textures->blockShaders = createShaders(renderer, spriteSheet);
+    textures->blockShaders[0] = *createShaders(renderer, spriteSheet, GreyShader);
+
     textures->spriteSheet = SDL_CreateTextureFromSurface(renderer, spriteSheet);
     SDL_FreeSurface(spriteSheet);
 

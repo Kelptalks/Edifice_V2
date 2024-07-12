@@ -7,17 +7,19 @@
 #include "Game/Visuals/Menu/Menu.h"
 #include "Game/Visuals/InMenuWindow/InMenuWindow.h"
 #include "Game/World/World Saving/WorldFileManager.h"
+#include "Game/InGameTime/TikManager.h"
 
 int main(int argc, char* argv[]) {
     struct GameData* gameData = createGameData();
 
+    enum Direction direction;
+    
     if (SDL_Init(SDL_INIT_AUDIO) != 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
         return 1;
     }
 
     while (gameData->screen->run){
-        Uint32 time1 = SDL_GetTicks();
         //Control what the game is rendering
         if (gameData->screen->menuType == MainMenu){
             renderMainMenu(gameData, 0, 0);
@@ -45,11 +47,11 @@ int main(int argc, char* argv[]) {
         //Delay to limit frame rate
         SDL_Delay(gameData->screen->frameDelay);
 
-        Uint32 time2 = SDL_GetTicks();
-        gameData->screen->frameRenderTime = time2 - time1;
 
         //Handle game inputs
         handleInput(gameData);
+
+        updateTikTime(gameData);
     }
 
     openWorldFile(gameData->world);

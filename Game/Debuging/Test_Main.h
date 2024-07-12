@@ -7,6 +7,10 @@
 
 void reportBug(const char* format, ...);
 
+void reportTikBug(const char* format, ...);
+
+void reportFrameBug(const char* format, ...);
+
 void clearBugReports();
 
 #endif //ENGINE_TEST_MAIN_H

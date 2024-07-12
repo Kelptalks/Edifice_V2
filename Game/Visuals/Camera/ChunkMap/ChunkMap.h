@@ -24,6 +24,8 @@ void addChunkToMap(struct ChunkMap* chunkMap,struct CastedChunk* castedChunk);
 
 struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int xCor, int yCor);
 
+void removeFromChunkMap(struct ChunkMap* chunkMap, int xCor, int yCor);
+
 void updateChunkMapLocation(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk, int oldX, int oldY);
 
 void testChunkMap(struct GameData* gameData);

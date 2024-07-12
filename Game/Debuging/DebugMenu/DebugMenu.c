@@ -31,9 +31,11 @@ struct DebugMenu* createDebugMenu(){
 void renderDebugMenu(struct GameData* gameData){
     //Frame rate
     char FrameRate[40] = {0};
-    Uint32 fps = 1000 / gameData->screen->frameRenderTime;
-    sprintf(FrameRate, "FPS : %u  CAP : %i ", fps, gameData->screen->targetFPS);
-    drawString(gameData, FrameRate, 40, 5, 5, 20);
+    if (gameData->screen->frameRenderTime > 0) {
+        Uint32 fps = 1000 / gameData->screen->frameRenderTime;
+        sprintf(FrameRate, "FPS : %u  CAP : %i ", fps, gameData->screen->targetFPS);
+        drawString(gameData, FrameRate, 40, 5, 5, 20);
+    }
 
     //Mouse cords
     char MouseCords[40] = {0};

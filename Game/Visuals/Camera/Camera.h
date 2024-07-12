@@ -7,7 +7,9 @@
 
 #include "CameraData.h"
 
-void setDirection(struct GameData* gameData, enum Direction direction);
+void setDirection(struct CameraData* cameraData, enum Direction direction);
+
+void updateCameraCords(struct GameData* gameData);
 
 void renderView(struct GameData* gameData, int x, int y);
 

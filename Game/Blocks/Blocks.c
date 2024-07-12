@@ -109,6 +109,14 @@ char* getBlockName(enum Block block){
             return "Mushroom";
         case CrackedEarth:
             return "CrackedEarth";
+        case GreyShader:
+            return "GreyShader";
+        case GreenShader:
+            return "GreenShader";
+        case RedShader :
+            return "redShader";
+        case WhiteShader :
+            return "WhiteShader";
     }
     return "unNamed";
 }
@@ -172,6 +180,12 @@ int getSpriteSheetYCor(enum Block block){
         case MaskingBlock :
             return 1152;
         case GreyShader:
+            return 1152;
+        case WhiteShader:
+            return 1152;
+        case GreenShader:
+            return 1152;
+        case RedShader:
             return 1152;
         case ShadowMaskingBlock:
             return 1216;
@@ -239,9 +253,14 @@ int getSpriteSheetXCor(enum Block block){
             return 1216;
         case GreyShader:
             return 0;
+        case WhiteShader :
+            return 64;
+        case GreenShader :
+            return 128;
+        case RedShader :
+            return 192;
         case ShadowMaskingBlock:
             return 1216;
-
     }
     return 0;
 }

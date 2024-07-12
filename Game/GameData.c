@@ -10,10 +10,12 @@
 #include "World/World.h"z
 #include "Debuging/Test_Main.h"
 #include "PlayerData/PlayerData.h"
+#include "InGameTime/TikManager.h"
 
 struct GameData* createGameData(){
     //Clear bug report file
     clearBugReports();
+
     reportBug("Building gameData \n");
 
     //Create gameData struct
@@ -54,6 +56,10 @@ struct GameData* createGameData(){
     //Create playerDaya
     reportBug("Creating playerData \n");
     gameData->playerData = createPlayerData();
+
+    //CreateTikManager
+    reportBug("Creating Tik Manager \n");
+    gameData->tikManager = createTikManager();
 
     return gameData;
 }

@@ -39,6 +39,7 @@ struct Screen{
     int targetFPS;
     int frameDelay;
     Uint32 frameRenderTime;
+    int currentFrame;
 
     //Weather the screen should run
     bool run;

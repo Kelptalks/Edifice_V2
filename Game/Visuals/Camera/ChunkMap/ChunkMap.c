@@ -87,7 +87,7 @@ struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int xCor, int yCo
     return NULL;
 }
 
-void removeFromMap(struct ChunkMap* chunkMap, int xCor, int yCor){
+void removeFromChunkMap(struct ChunkMap* chunkMap, int xCor, int yCor){
     int64_t encodedKey = encodeKey(chunkMap->offset, xCor, yCor);
 
     //Index the correct link list from the hashtable
@@ -124,7 +124,7 @@ void removeFromMap(struct ChunkMap* chunkMap, int xCor, int yCor){
 }
 
 void updateChunkMapLocation(struct ChunkMap* chunkMap, struct CastedChunk* castedChunk, int oldX, int oldY){
-    removeFromMap(chunkMap, oldX, oldY);
+    removeFromChunkMap(chunkMap, oldX, oldY);
     addChunkToMap(chunkMap, castedChunk);
 }
 
@@ -172,7 +172,7 @@ void testChunkMap(struct GameData* gameData) {
                   , xCor, yCor);
     }
     //Remove and check if null
-    removeFromMap(chunkMap, 9, -4);
+    removeFromChunkMap(chunkMap, 9, -4);
     if (getChunkFromMap(chunkMap, 9, -4) == NULL){
         reportBug("|Chunk was remove successfully");
     }
