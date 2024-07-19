@@ -51,6 +51,5 @@ struct World* createWorld(int scale){
 
     genArea(world, key, 400, 400, 50);
 
-
     return world;
 }

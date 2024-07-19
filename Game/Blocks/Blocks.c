@@ -46,6 +46,9 @@ bool isTranslucent(enum Block block){
     if (block == Water2){
         return true;
     }
+    if (block == Glass){
+        return true;
+    }
     else{
         return false;
     }
@@ -121,146 +124,154 @@ char* getBlockName(enum Block block){
     return "unNamed";
 }
 
-int getSpriteSheetYCor(enum Block block){
+void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
     switch (block) {
         case Dirt:
-            return 0;
+            *x = 0;
+            *y = 0;
+            break;
         case Stone:
-            return 0;
+            *x = 64;
+            *y = 0;
+            break;
         case Wood:
-            return 0;
+            *x = 128;
+            *y = 0;
+            break;
         case Leave:
-            return 0;
+            *x = 192;
+            *y = 0;
+            break;
         case Dandi:
-            return 64;
+            *x = 0;
+            *y = 64;
+            break;
         case DandiStem:
-            return 64;
+            *x = 64;
+            *y = 64;
+            break;
         case Hive:
-            return 64;
+            *x = 128;
+            *y = 64;
+            break;
         case Cobble:
-            return 64;
+            *x = 192;
+            *y = 64;
+            break;
         case Grass:
-            return 128;
+            *x = 0;
+            *y = 128;
+            break;
         case Magma:
-            return 128;
+            *x = 64;
+            *y = 128;
+            break;
         case Core:
-            return 128;
+            *x = 128;
+            *y = 128;
+            break;
         case LBM:
-            return 128;
+            *x = 192;
+            *y = 128;
+            break;
         case Metal:
-            return 192;
+            *x = 0;
+            *y = 192;
+            break;
         case Granite:
-            return 192;
+            *x = 64;
+            *y = 192;
+            break;
         case Sand:
-            return 192;
+            *x = 128;
+            *y = 192;
+            break;
         case Iron:
-            return 192;
+            *x = 192;
+            *y = 192;
+            break;
         case Fungi:
-            return 256;
+            *x = 0;
+            *y = 256;
+            break;
         case BlueGrass:
-            return 256;
+            *x = 64;
+            *y = 256;
+            break;
         case MushroomStem:
-            return 256;
+            *x = 128;
+            *y = 256;
+            break;
         case BlueMushroomBlock:
-            return 256;
+            *x = 192;
+            *y = 256;
+            break;
         case Debug:
-            return 320;
+            *x = 1216;
+            *y = 1088;
+            break;
         case Water1:
-            return 320;
+            *x = 64;
+            *y = 320;
+            break;
         case Flour:
-            return 960;
+            *x = 256;
+            *y = 960;
+            break;
         case WhiteFlowers:
-            return 960;
+            *x = 64;
+            *y = 960;
+            break;
         case YellowFlowers:
-            return 960;
+            *x = 0;
+            *y = 960;
+            break;
         case Mushroom:
-            return 960;
+            *x = 128;
+            *y = 960;
+            break;
         case CrackedEarth:
-            return 320;
-        case MaskingBlock :
-            return 1152;
+            *x = 0;
+            *y = 320;
+            break;
+        case MaskingBlock:
+            *x = 1216;
+            *y = 1152;
+            break;
         case GreyShader:
-            return 1152;
+            *x = 0;
+            *y = 1152;
+            break;
         case WhiteShader:
-            return 1152;
+            *x = 64;
+            *y = 1152;
+            break;
         case GreenShader:
-            return 1152;
+            *x = 128;
+            *y = 1152;
+            break;
         case RedShader:
-            return 1152;
+            *x = 192;
+            *y = 1152;
+            break;
         case ShadowMaskingBlock:
-            return 1216;
+            *x = 1216;
+            *y = 1216;
+            break;
+        case Glass :
+            *x = 192;
+            *y = 320;
+            break;
+        case MudBrick :
+            *x = 0;
+            *y = 384;
+            break;
+        case StoneBrick:
+            *x = 64;
+            *y = 384;
+        default:
+            *x = 0;
+            *y = 0;
+            break;
     }
-    return 0;
-}
-
-int getSpriteSheetXCor(enum Block block){
-    switch (block) {
-        case Dirt:
-            return 0;
-        case Stone:
-            return 64;
-        case Wood:
-            return 128;
-        case Leave:
-            return 192;
-        case Dandi:
-            return 0;
-        case DandiStem:
-            return 64;
-        case Hive:
-            return 128;
-        case Cobble:
-            return 192;
-        case Grass:
-            return 0;
-        case Magma:
-            return 64;
-        case Core:
-            return 128;
-        case LBM:
-            return 192;
-        case Metal:
-            return 0;
-        case Granite:
-            return 64;
-        case Sand:
-            return 128;
-        case Iron:
-            return 192;
-        case Fungi:
-            return 0;
-        case BlueGrass:
-            return 64;
-        case MushroomStem:
-            return 128;
-        case BlueMushroomBlock:
-            return 192;
-        case Debug:
-            return 64;
-        case Water1:
-            return 128;
-        case Flour:
-            return 256;
-        case WhiteFlowers:
-            return 64;
-        case YellowFlowers:
-            return 0;
-        case Mushroom:
-            return 192;
-        case CrackedEarth:
-            return 0;
-        case MaskingBlock :
-            return 1216;
-        case GreyShader:
-            return 0;
-        case WhiteShader :
-            return 64;
-        case GreenShader :
-            return 128;
-        case RedShader :
-            return 192;
-        case ShadowMaskingBlock:
-            return 1216;
-    }
-    return 0;
 }

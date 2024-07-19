@@ -70,5 +70,12 @@ void renderDebugMenu(struct GameData* gameData){
     char camRenderingDirection[40] = {0};
     sprintf(camRenderingDirection, getDirectionString(gameData->cameraData->direction));
     drawString(gameData, camRenderingDirection, 40, 5, 130, 20);
+}
 
+void toggleChunkBoarders(struct DebugMenu* debugMenu){
+    debugMenu->chunkBoarders = !debugMenu->chunkBoarders;
+}
+
+void toggleDebugMenu(struct DebugMenu* debugMenu){
+    debugMenu->visible = !debugMenu->visible;
 }

@@ -25,4 +25,7 @@ struct DebugMenu* createDebugMenu();
 
 void renderDebugMenu(struct GameData* gameData);
 
+//Controls
+void toggleChunkBoarders(struct DebugMenu* debugMenu);
+void toggleDebugMenu(struct DebugMenu* debugMenu);
 #endif //EDIFICE_DEBUGMENU_H

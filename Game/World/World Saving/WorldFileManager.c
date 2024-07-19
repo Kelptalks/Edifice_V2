@@ -6,6 +6,9 @@
 #include "../World.h"
 #include "../../Debuging/Test_Main.h"
 
+//E =
+
+
 void openWorldFile(struct World* world){
     reportBug("Saving world\n");
 
@@ -26,8 +29,8 @@ void openWorldFile(struct World* world){
         return;
     }
 
-    byte--;
-    reportBug("file read : %i\n", byte);
+    byte = 'e';
+    reportBug("file read : %c\n", byte);
 
     fseek(file, -1, SEEK_CUR);  // Move back one byte
     result = fwrite(&byte, sizeof(byte), 1, file);
@@ -38,4 +41,14 @@ void openWorldFile(struct World* world){
     }
 
     fclose(file);
+}
+
+void writeByte(FILE* file, size_t result){
+    fseek(file, -1, SEEK_CUR);  // Move back one byte
+    result = fwrite(&byte, sizeof(byte), 1, file);
+    if (result == 0) {
+        reportBug("Failed to write byte\n");
+        fclose(file);
+        return;
+    }
 }

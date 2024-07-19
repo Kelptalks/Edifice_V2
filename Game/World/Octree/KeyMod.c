@@ -4,6 +4,8 @@
 
 #include <stdio.h>
 #include "KeyMod.h"
+#include "../../Debuging/Test_Main.h"
+
 // Add a bit to axis
 unsigned long addBitToAxis(unsigned long key, int axis, int depth) {
     // Create mask for targeted bit
@@ -71,10 +73,30 @@ unsigned long modKey(unsigned long key, int xMod, int yMod, int zMod, int depth)
 int getAxis(unsigned long key, int axis, int depth){
     int axisCor = 0;
     for (int x = 0; x < depth; x++){
-        int mask = 1 << (x * 3 + axis);
+        int mask = 1 << ((x * 3) + axis);
         axisCor = ((key & mask) >> (3 * x + axis) << x) | axisCor;
     }
     return axisCor;
+}
+
+void getCords(unsigned long key, int depth, int* x, int* y, int* z){
+    for (int currentDepth = 0; depth > currentDepth; currentDepth++){
+        int mask = (7 << 3 * currentDepth);
+        int maskedDepth = (key & mask) >> (3 * currentDepth);
+        //x
+        if ((1 & maskedDepth) > 0){
+            *x += (1 << currentDepth);
+        }
+        //y
+        if ((2 & maskedDepth) > 0){
+            *y += (1 << (currentDepth));
+        }
+        //z
+        if ((4 & maskedDepth) > 0){
+            *z += (1 << (currentDepth));
+        }
+
+    }
 }
 
 void printKeyAxis(unsigned long key, int depth){

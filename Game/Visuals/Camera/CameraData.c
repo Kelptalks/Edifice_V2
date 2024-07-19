@@ -31,11 +31,11 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->yChunkScaledTextureRez = 0;
 
     //How many chunks will generate
-    cameraData->viewDistance = 10;
+    cameraData->viewDistance = 16;
     cameraData->mouseUpdateDistance = 2;
 
     //Max 512
-    cameraData->chunksScale = 16;
+    cameraData->chunksScale = 8;
     cameraData->chunkPixelScale = cameraData->baseBlockScale * cameraData->chunksScale;
 
     //Offset for drawing the screen and shifting

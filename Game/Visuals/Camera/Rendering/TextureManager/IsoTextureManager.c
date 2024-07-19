@@ -21,7 +21,9 @@
 
 //crop a 64 by 64 block from the sprite sheet
 SDL_Surface* cropBlockFromSpriteSheet(SDL_Surface* spriteSheet, enum Block block){
-    SDL_Rect srcRect = {getSpriteSheetXCor(block), getSpriteSheetYCor(block), 64, 64};
+    int xSpriteSheetCor; int ySpriteSheetCor;
+    getBlockSpriteSheetCords(block, &xSpriteSheetCor, &ySpriteSheetCor);
+    SDL_Rect srcRect = {xSpriteSheetCor, ySpriteSheetCor, 64, 64};
     SDL_Surface* croppedSurface = SDL_CreateRGBSurfaceWithFormat(0, 64, 64, 32, SDL_PIXELFORMAT_RGBA32);
     if (croppedSurface == NULL){
         printf("TextureManager | failed to create cropped surface");

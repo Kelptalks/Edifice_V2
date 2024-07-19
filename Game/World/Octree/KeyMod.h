@@ -17,6 +17,8 @@ unsigned long modAxis(unsigned long key, int value, int axis, int depth);
 
 int getAxis(unsigned long key, int axis, int depth);
 
+void getCords(unsigned long key, int depth, int* x, int* y, int* z);
+
 //Add/Subtract bits from all axis
 unsigned long modKey(unsigned long key, int xMod, int yMod, int zMod, int depth);
 

@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
         }
         else if (gameData->screen->menuType == WorldCamera){
             //Render game world
-            renderView(gameData, 0, 0);
+            renderView(gameData);
             //Render window if visible
             if (gameData->cameraData->inMenuWindow->visible){
                 renderInMenuWindow(gameData, gameData->cameraData->inMenuWindow);

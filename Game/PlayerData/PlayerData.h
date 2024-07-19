@@ -9,6 +9,8 @@
 
 struct PlayerData{
     enum Block block;
+    int lastMouseXCor;
+    int lastMouseYCor;
 };
 
 struct PlayerData* createPlayerData();

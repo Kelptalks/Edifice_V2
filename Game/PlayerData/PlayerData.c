@@ -9,5 +9,7 @@
 struct PlayerData* createPlayerData(){
     struct PlayerData* playerData = malloc(sizeof (struct PlayerData));
     playerData->block = 1;
+    int lastMouseXCor = 0;
+    int lastMouseYCor = 0;
     return playerData;
 }

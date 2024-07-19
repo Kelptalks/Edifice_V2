@@ -11,6 +11,8 @@
 
 enum Block {
     Air,
+
+    //Blocks
     Dirt,
     Stone,
     Wood,
@@ -33,19 +35,28 @@ enum Block {
     Fungi,
     BlueGrass,
     Cloud,
+    CrackedEarth,
+    MudBrick,
+    StoneBrick,
+
+    //Transparent Blocks
     Water1,
     Water2,
     YellowFlowers,
     WhiteFlowers,
     Mushroom,
     Flour,
-    CrackedEarth,
+    Glass,
+
+    //Shaders
     GreyShader,
     RedShader,
     WhiteShader,
     GreenShader,
+
+    //Masking blocks
     MaskingBlock,
-    ShadowMaskingBlock,
+    ShadowMaskingBlock
 };
 
 bool isTransparent(enum Block);
@@ -56,7 +67,6 @@ bool isPlantable(enum Block block);
 
 char* getBlockName(enum Block block);
 
-int getSpriteSheetYCor(enum Block block);
-int getSpriteSheetXCor(enum Block block);
+void getBlockSpriteSheetCords(enum Block block, int* x, int* y);
 
 #endif
