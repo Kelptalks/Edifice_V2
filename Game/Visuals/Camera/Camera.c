@@ -344,9 +344,9 @@ void renderView(struct GameData* gameData){
             //Make lazy chunk and lower texture rez
             else if (distanceFromCenter > cameraData->viewDistance){
                 if (castedChunk != NULL) {
-                    //reportBug("Distance :%f | Cords : (%i, %i)\n", distanceFromCenter, xChunkWorldCords, yChunkWorldCords);
-                    //removeFromChunkMap(cameraData->castedPool->chunkMap, xChunkWorldCords, yChunkWorldCords);
-                    //freeCastedChunk(castedChunk);
+                    reportBug("Distance :%f | Cords : (%i, %i)\n", distanceFromCenter, xChunkWorldCords, yChunkWorldCords);
+                    removeFromChunkMap(cameraData->castedPool->chunkMap, xChunkWorldCords, yChunkWorldCords);
+                    freeCastedChunk(castedChunk);
                 }
             }
         }

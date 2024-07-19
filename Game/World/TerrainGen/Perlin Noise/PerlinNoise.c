@@ -50,7 +50,7 @@ struct NoiseData* createNoiseData(int octave, int lacunarity, float persistence)
     }
 
     noiseData->seed = 1;
-    noiseData->chunkScale = 128;
+    noiseData->chunkScale = 16;
     noiseData->octave = octave;
     noiseData->lacunarity = lacunarity;
     noiseData->persistence = persistence;

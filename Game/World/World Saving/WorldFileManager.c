@@ -4,51 +4,108 @@
 
 #include <stdio.h>
 #include "../World.h"
+#include "../Octree/Octree.h"
+#include "../Octree/OctreeNode.h"
+#include "../Octree/KeyMod.h"
 #include "../../Debuging/Test_Main.h"
 
-//E =
 
-
-void openWorldFile(struct World* world){
-    reportBug("Saving world\n");
-
-    FILE *file = fopen("Saves/Test.bin", "rb+");
-    if (file == NULL){
-        file = fopen("Saves/Test.bin", "ab+");
-        if (file == NULL){
-            reportBug("failed to open world save file \n");
-            return;
-        }
-    }
-
-    unsigned char byte = 1;
-    size_t result = fread(&byte, sizeof(byte), 1, file);
-    if (result == 0) {
-        reportBug("Failed to read byte\n");
-        fclose(file);
-        return;
-    }
-
-    byte = 'e';
-    reportBug("file read : %c\n", byte);
-
-    fseek(file, -1, SEEK_CUR);  // Move back one byte
-    result = fwrite(&byte, sizeof(byte), 1, file);
-    if (result == 0) {
-        reportBug("Failed to write byte\n");
-        fclose(file);
-        return;
-    }
-
-    fclose(file);
+unsigned long readLongAtIndex(FILE* file, int offset){
+    // Move the file pointer to the correct position for reading
+    fseek(file, offset * sizeof(short ), SEEK_SET);
+    unsigned long test;
+    fread(&test, sizeof(unsigned long), 1, file);
+    return test;
 }
 
-void writeByte(FILE* file, size_t result){
-    fseek(file, -1, SEEK_CUR);  // Move back one byte
-    result = fwrite(&byte, sizeof(byte), 1, file);
-    if (result == 0) {
-        reportBug("Failed to write byte\n");
-        fclose(file);
-        return;
+void writeLongAtIndex(FILE* file, int offset, char value){
+    // Move the file pointer to the correct position
+    fseek(file, offset * sizeof(short ), SEEK_SET);
+    // Write the value
+    fwrite(&value, sizeof(unsigned long), 1, file);
+    // Flush the file buffer to ensure the data is written to the file
+    fflush(file);
+}
+
+short readShortAtIndex(FILE* file, int offset){
+    // Move the file pointer to the correct position for reading
+    fseek(file, offset * sizeof(short), SEEK_SET);
+    char test;
+    fread(&test, sizeof(short), 1, file);
+    return test;
+}
+
+void writeShortAtIndex(FILE* file, int offset, short value){
+    // Move the file pointer to the correct position
+    fseek(file, offset * sizeof(short), SEEK_SET);
+    // Write the value
+    fwrite(&value, sizeof(short), 1, file);
+    // Flush the file buffer to ensure the data is written to the file
+    fflush(file);
+}
+
+void writeNodeToFile(FILE* file, int offset, struct OctreeNode* octreeNode){
+    //Write the branch identifier
+    writeShortAtIndex(file, offset, 'b');
+    offset++;
+
+    //If leaf node
+    if (octreeNode->isLeaf) {
+        writeShortAtIndex(file, offset, 'l');
+        printf("offset : %i\n", offset);
+        offset++;
+
+        //Loop through leaf octreeNodes values
+        for (int x = 0; x < 8; x++){
+            writeShortAtIndex(file, offset + x, octreeNode->data[x]);
+        }
     }
+    else{
+        writeShortAtIndex(file, offset, 'b');
+    }
+
+
+
+}
+
+struct OctreeNode* readNodeFromFile(FILE* file, int offset){
+    printf("offset : %i\n", offset);
+    short ifBranch = readShortAtIndex(file, offset);
+    printf("offset : %i\n", offset);
+    if (ifBranch == 'b'){
+        printf("branch\n");
+    }
+
+    offset++;
+    short ifLeaf = readShortAtIndex(file, offset);
+    printf("isLeaf %c\n", ifLeaf);
+
+    if (ifLeaf == 'l'){
+        printf("Leaf\n");
+    }
+
+
+    return NULL;
+}
+
+//e = end of branch
+//b = start of branch
+//l = if leaf node
+
+void openWorldFile(struct World* world){
+    FILE *file = fopen("Saves/Test.bin", "rb+");
+    if (file == NULL) {
+        perror("Unable to open file for reading and writing");
+    }
+
+    unsigned long value = 13;
+    int offset = 0;
+
+    struct OctreeNode* octreeNode = createOctreeNode();
+    setOctreeKeyValue(octreeNode, 0, 0, 1);
+
+    writeNodeToFile(file, 50, octreeNode);
+    readNodeFromFile(file, 50);
+
+    fclose(file);
 }

@@ -71,6 +71,8 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c
         Game/InGameTime/TikEvent/TerpManager/TerpManager.c
         Game/InGameTime/TikEvent/TerpManager/TerpManager.h
+        Game/InGameTime/TikEvent/TikEvent.c
+        Game/InGameTime/TikEvent/TikEvent.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})
