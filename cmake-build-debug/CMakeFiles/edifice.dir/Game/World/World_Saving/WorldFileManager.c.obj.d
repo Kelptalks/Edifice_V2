@@ -16,4 +16,11 @@ CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: \
  C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h \
- C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Debuging/Test_Main.h
+ C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/sys/stat.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/io.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h

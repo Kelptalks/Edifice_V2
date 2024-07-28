@@ -324,3 +324,138 @@ void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlo
         }
     }
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Octree RayCasting
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
+    int octreeDepth = cameraData->octree->RootDepth;
+    unsigned long currentKey = castedBlock->camKey;
+
+    struct Octree* octree = cameraData->octree;
+    struct OctreeNode* octreeNode = cameraData->octree->root;
+    short currentBlock = 0;
+
+    unsigned long leftModdedKey = 0;
+    bool leftFaceStruck = false;
+
+    unsigned long rightModdedKey = 0;
+    bool rightFaceStruck = false;
+
+    for (int d = 0; d < cameraData->castingDistance; d++) {
+        //RightModdedKey to check if leftFace was struck
+        //x--
+        leftModdedKey = modAxis(currentKey, -1 * cameraData->xDirection, 0, 0);
+        currentBlock = getOctreeKeyVal(octreeNode, leftModdedKey, octreeDepth);
+        //Check if face has already been struck
+        if (!isTransparent(currentBlock) && !leftFaceStruck) {
+            if (isTranslucent(currentBlock)){
+                addTexture(castedBlock->leftTextureList, currentBlock, RightTopFace);
+            }
+            else {
+                addTexture(castedBlock->leftTextureList, currentBlock, RightTopFace);
+                if (cameraData->direction == North || cameraData->direction == West) {
+                    castedBlock->leftShader = RightTopFace;
+                    castedBlock->leftBlockKey = leftModdedKey;
+                    leftFaceStruck = true;
+                }
+            }
+        }
+
+        //LeftModded key to check if rightFace was struck
+        //y--
+        //Check if face has already been struck
+        rightModdedKey = modAxis(currentKey, -1 * cameraData->yDirection, 1, 0);
+        currentBlock = getOctreeKeyVal(octreeNode, rightModdedKey, octreeDepth);
+        if (!isTransparent(currentBlock) && !rightFaceStruck) {
+            if (isTranslucent(currentBlock)){
+                addTexture(castedBlock->rightTextureList, currentBlock, LeftTopFace);
+            }
+            else {
+                addTexture(castedBlock->rightTextureList, currentBlock, LeftTopFace);
+                if (cameraData->direction == South || cameraData->direction == West) {
+                    castedBlock->rightShader = LeftTopFace;
+                }
+                castedBlock->rightBlockKey = rightModdedKey;
+                rightFaceStruck = true;
+            }
+        }
+
+
+
+        //x-- & y--
+        //Check block behind diagonaly shaired by both left and right triangles of the casted block
+        currentKey = modAxis(leftModdedKey, -1 * cameraData->yDirection, 1, 0);
+        currentBlock = getOctreeKeyVal(octreeNode, currentKey, octreeDepth);
+        if (!isTransparent(currentBlock)) {
+            //If left face has not been struck update texture
+            if (!leftFaceStruck) {
+                if (isTranslucent(currentBlock)){
+                    addTexture(castedBlock->leftTextureList, currentBlock, LeftBotFace);
+                }
+                else {
+                    addTexture(castedBlock->leftTextureList, currentBlock, LeftBotFace);
+                    if (cameraData->direction == South || cameraData->direction == West) {
+                        castedBlock->leftShader = LeftBotFace;
+                    }
+                    castedBlock->leftBlockKey = currentKey;
+                    leftFaceStruck = true;
+                }
+            }
+
+            //If right face has not been struck update texture
+            if (!rightFaceStruck) {
+                if (isTranslucent(currentBlock)){
+                    addTexture(castedBlock->rightTextureList, currentBlock, RightBotFace);
+                }
+                else {
+                    addTexture(castedBlock->rightTextureList, currentBlock, RightBotFace);
+                    if (cameraData->direction == North || cameraData->direction == West) {
+                        castedBlock->rightShader = RightBotFace;
+                    }
+                    castedBlock->rightBlockKey = currentKey;
+                    rightFaceStruck = true;
+                }
+            }
+        }
+
+
+
+        //z--
+        //Check if top face has been struck
+        currentKey = modAxis(currentKey, -1, 2, 0);
+        currentBlock = getOctreeKeyVal(octreeNode, currentKey, octreeDepth);
+        if (!isTransparent(currentBlock)) {
+            if (!leftFaceStruck) {
+                if (isTranslucent(currentBlock)){
+                    addTexture(castedBlock->leftTextureList, currentBlock, TopLeftFace);
+                }
+                else {
+                    addTexture(castedBlock->leftTextureList, currentBlock, TopLeftFace);
+                    castedBlock->leftBlockKey = currentKey;
+                    leftFaceStruck = true;
+                }
+            }
+
+            if (!rightFaceStruck) {
+                if (isTranslucent(currentBlock)){
+                    addTexture(castedBlock->rightTextureList, currentBlock, TopRightFace);
+                }
+                else {
+                    addTexture(castedBlock->rightTextureList, currentBlock, TopRightFace);
+                    castedBlock->rightBlockKey = currentKey;
+                    rightFaceStruck = true;
+                }
+            }
+        }
+
+
+        //If both faces have been struck end loop
+        if (leftFaceStruck && rightFaceStruck) {
+            //reportBug("test\n");
+            break;
+        }
+    }
+}

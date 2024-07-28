@@ -8,6 +8,8 @@
 #include "../Octree/OctreeNode.h"
 #include "../Octree/KeyMod.h"
 #include "../../Debuging/Test_Main.h"
+#include <sys/stat.h>
+#include <sys/types.h>
 
 
 unsigned long readLongAtIndex(FILE* file, int offset){
@@ -52,7 +54,6 @@ void writeNodeToFile(FILE* file, int offset, struct OctreeNode* octreeNode){
     //If leaf node
     if (octreeNode->isLeaf) {
         writeShortAtIndex(file, offset, 'l');
-        printf("offset : %i\n", offset);
         offset++;
 
         //Loop through leaf octreeNodes values
@@ -69,21 +70,20 @@ void writeNodeToFile(FILE* file, int offset, struct OctreeNode* octreeNode){
 }
 
 struct OctreeNode* readNodeFromFile(FILE* file, int offset){
-    printf("offset : %i\n", offset);
+    reportBug("offset : %i\n", offset);
+
+
     short ifBranch = readShortAtIndex(file, offset);
     printf("offset : %i\n", offset);
     if (ifBranch == 'b'){
-        printf("branch\n");
+        reportBug("branch\n");
     }
 
     offset++;
     short ifLeaf = readShortAtIndex(file, offset);
-    printf("isLeaf %c\n", ifLeaf);
-
     if (ifLeaf == 'l'){
-        printf("Leaf\n");
+        reportBug("Leaf\n");
     }
-
 
     return NULL;
 }
@@ -93,7 +93,17 @@ struct OctreeNode* readNodeFromFile(FILE* file, int offset){
 //l = if leaf node
 
 void openWorldFile(struct World* world){
-    FILE *file = fopen("Saves/Test.bin", "rb+");
+    // Check if the directory "Saves" exists, create it if not
+    const char *dirname = "Saves";
+    struct stat st = {0};
+    if (stat(dirname, &st) == -1) {
+        // Directory does not exist, create it
+        mkdir(dirname); // Adjust permissions as necessary
+        chmod(dirname, 0777);
+    }
+
+
+    FILE *file = fopen("Saves/NewTest.bin", "rb+");
     if (file == NULL) {
         perror("Unable to open file for reading and writing");
     }
@@ -104,8 +114,8 @@ void openWorldFile(struct World* world){
     struct OctreeNode* octreeNode = createOctreeNode();
     setOctreeKeyValue(octreeNode, 0, 0, 1);
 
-    writeNodeToFile(file, 50, octreeNode);
-    readNodeFromFile(file, 50);
+    writeNodeToFile(file, 1, octreeNode);
+    readNodeFromFile(file, 1);
 
     fclose(file);
 }

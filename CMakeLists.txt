@@ -73,6 +73,8 @@ add_executable(edifice main.c
         Game/InGameTime/TikEvent/TerpManager/TerpManager.h
         Game/InGameTime/TikEvent/TikEvent.c
         Game/InGameTime/TikEvent/TikEvent.h
+        Game/World/Octree/AdvancedKeyMod.c
+        Game/World/Octree/AdvancedKeyMod.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

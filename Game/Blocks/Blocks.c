@@ -235,8 +235,8 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *y = 320;
             break;
         case MaskingBlock:
-            *x = 1216;
-            *y = 1152;
+            *x = 960;
+            *y = 180;
             break;
         case GreyShader:
             *x = 0;
@@ -255,8 +255,8 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *y = 1152;
             break;
         case ShadowMaskingBlock:
-            *x = 1216;
-            *y = 1216;
+            *x = 1024;
+            *y = 180;
             break;
         case Glass :
             *x = 192;

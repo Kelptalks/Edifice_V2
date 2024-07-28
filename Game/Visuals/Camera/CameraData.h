@@ -15,6 +15,13 @@ enum Direction{
 #include "SDL.h"
 #include "Rendering/CastedBlockManager/CastedBlockManager.h"
 
+struct DistanceCord
+{
+    int x;
+    int y;
+    double distance;
+};
+
 struct CameraData{
     //Drawing location
     float xRenderingOffset;
@@ -50,11 +57,15 @@ struct CameraData{
     enum Block blockSelected;
 
     //Raycasting
+    int castingDistance;
     struct RayCastingData* rayCastingData;
     enum Direction direction;
     int xDirection;
     int yDirection;
     int zDirection;
+
+    //sorted reltive cords for center based rendering
+    struct DistanceCord* distanceSortedRelativeCords;
 };
 
 struct CameraData* createCameraData(SDL_Renderer* renderer);

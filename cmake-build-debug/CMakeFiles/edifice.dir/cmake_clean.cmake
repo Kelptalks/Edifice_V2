@@ -55,6 +55,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj.d"
   "CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj"
   "CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj.d"
+  "CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj"
+  "CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj.d"
   "CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj"
   "CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj.d"
   "CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj"

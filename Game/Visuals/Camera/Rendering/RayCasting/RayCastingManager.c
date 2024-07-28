@@ -78,8 +78,11 @@ void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock
     castedBlock->leftShader = Empty;
     castedBlock->rightShader = Empty;
 
-    castLeftTriangle(cameraData, castedBlock, octree);
-    castRightTriangle(cameraData, castedBlock, octree);
+    //castLeftTriangle(cameraData, castedBlock, octree);
+    //castRightTriangle(cameraData, castedBlock, octree);
+
+    castBlock(cameraData, castedBlock);
+
 
     if (cameraData->direction != East) {
         castLeftShadow(cameraData, castedBlock, octree);

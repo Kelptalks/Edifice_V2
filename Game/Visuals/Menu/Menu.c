@@ -66,6 +66,10 @@ struct Menu* createSettingsMenu(){
     return menu;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Main menu
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 
 struct Menu* createMainMenu(){
     struct Menu* menu = malloc(sizeof (struct Menu));
@@ -135,8 +139,18 @@ void renderMainMenu(struct GameData* gameData, int xCor, int yCor){
         gameData->screen->menuType = SettingsMenu;
         menu->menuButtons[1]->pressed = false;
     }
+
+
+    SDL_Rect testRect = {50, 50, 64, 64};
+
+    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->blockShaders->textures[LeftTopFace], NULL, &testRect);
+
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Settings menu
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 
 void settingsMenuControlInput(struct GameData* gameData, SDL_Event event){
     struct Menu* menu = gameData->menu->settingsMenu;

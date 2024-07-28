@@ -37,7 +37,6 @@ void clearWorldBugs(){
 void clearBugReports(){
     clearFrameBugReports();
     clearTikBugReports();
-    clearWorldBugs();
     FILE * debug;
     debug = fopen("debug", "w");
     fprintf(debug, "Cleared \n");

@@ -4,6 +4,9 @@
 
 #include <math.h>
 #include "CastedBlockManager.h"
+
+#include <windows.h>
+
 #include "../../../../World/Octree/KeyMod.h"
 #include "../../../../Debuging/Test_Main.h"
 #include "../../CameraData.h"
@@ -101,6 +104,7 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
     //Create the Casted Pool array based on the square of the view distance
     castedPool->totalChunksCreated = 0;
     castedPool->chunkMap = createChunkMap(256);
+    castedPool->maxChunks = 2000;
 
 
     return castedPool;
@@ -110,6 +114,12 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
  * Pool Management
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
+
+
+void createChunkInPool(struct GameData* gameData, int isoX, int isoY) {
+    struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
+    addChunkToMap(gameData->cameraData->castedPool->chunkMap, newCastedChunk);
+}
 
 struct CastedChunk* getCastedChunkAtCords(struct CameraData* cameraData, int isoX, int isoY){
     //Loop through chunks in array and identify on that has correct cords

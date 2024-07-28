@@ -800,6 +800,30 @@ Game/Visuals/Screen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Screen.c.s
 .PHONY : Game/Visuals/Screen.c.s
 
+Game/World/Octree/AdvancedKeyMod.obj: Game/World/Octree/AdvancedKeyMod.c.obj
+.PHONY : Game/World/Octree/AdvancedKeyMod.obj
+
+# target to build an object file
+Game/World/Octree/AdvancedKeyMod.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj
+.PHONY : Game/World/Octree/AdvancedKeyMod.c.obj
+
+Game/World/Octree/AdvancedKeyMod.i: Game/World/Octree/AdvancedKeyMod.c.i
+.PHONY : Game/World/Octree/AdvancedKeyMod.i
+
+# target to preprocess a source file
+Game/World/Octree/AdvancedKeyMod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.i
+.PHONY : Game/World/Octree/AdvancedKeyMod.c.i
+
+Game/World/Octree/AdvancedKeyMod.s: Game/World/Octree/AdvancedKeyMod.c.s
+.PHONY : Game/World/Octree/AdvancedKeyMod.s
+
+# target to generate assembly for a file
+Game/World/Octree/AdvancedKeyMod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.s
+.PHONY : Game/World/Octree/AdvancedKeyMod.c.s
+
 Game/World/Octree/KeyMod.obj: Game/World/Octree/KeyMod.c.obj
 .PHONY : Game/World/Octree/KeyMod.obj
 
@@ -1157,6 +1181,9 @@ help:
 	@echo ... Game/Visuals/Screen.obj
 	@echo ... Game/Visuals/Screen.i
 	@echo ... Game/Visuals/Screen.s
+	@echo ... Game/World/Octree/AdvancedKeyMod.obj
+	@echo ... Game/World/Octree/AdvancedKeyMod.i
+	@echo ... Game/World/Octree/AdvancedKeyMod.s
 	@echo ... Game/World/Octree/KeyMod.obj
 	@echo ... Game/World/Octree/KeyMod.i
 	@echo ... Game/World/Octree/KeyMod.s

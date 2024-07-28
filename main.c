@@ -50,8 +50,8 @@ int main(int argc, char* argv[]) {
 
         //Handle game inputs
         handleInput(gameData);
-
         updateTikTime(gameData);
+
     }
 
     openWorldFile(gameData->world);

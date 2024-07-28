@@ -11,8 +11,8 @@
 void highLightMouseCord(struct GameData* gameData, int xIso, int yIso, bool leftSided){
     //clear all temp texture lists in vicinity
     struct CastedBlock* tempCastedBlock;
-    for (int x = -4; x < 4; x++){
-        for (int y = -4; y < 4; y++){
+    for (int x = -16; x < 16; x++){
+        for (int y = -16; y < 16; y++){
             tempCastedBlock = getCastedBlockAtCords(gameData->cameraData, xIso + x, yIso + y);
             if (tempCastedBlock != NULL) {
                 clearTextureList(tempCastedBlock->leftTempTextureList);
@@ -37,10 +37,10 @@ void highLightMouseCord(struct GameData* gameData, int xIso, int yIso, bool left
                 tempCastedBlock = getCastedBlockAtCords(gameData->cameraData, xIso + x, yIso + y);
                 if (tempCastedBlock != NULL) {
                     if (castedBlockKey == tempCastedBlock->leftBlockKey) {
-                        addTexture(tempCastedBlock->leftTempTextureList, WhiteShader, TopLeftFace);
+                        addTexture(tempCastedBlock->leftTempTextureList, WhiteShader, tempCastedBlock->leftTextureList->nodes[0].texture);
                     }
                     if (castedBlockKey == tempCastedBlock->rightBlockKey) {
-                        addTexture(tempCastedBlock->rightTemptTextureList, WhiteShader, TopRightFace);
+                        addTexture(tempCastedBlock->rightTemptTextureList, WhiteShader,  tempCastedBlock->rightTextureList->nodes[0].texture);
                     }
                 }
             }

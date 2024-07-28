@@ -213,4 +213,5 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: \
  C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
  C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h \
  C:\Users\kelpt\OneDrive\Desktop\Edifice_V2\Game\Visuals\Camera\Camera.h \
- C:\Users\kelpt\OneDrive\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h
+ C:\Users\kelpt\OneDrive\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.4/bin/mingw/x86_64-w64-mingw32/include/math.h

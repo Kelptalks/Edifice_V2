@@ -40,6 +40,7 @@ struct CastedChunk{
     int scale;
     int isoX;
     int isoY;
+    double distanceFromCamCenter;
 
     struct CastedBlock* castedBlocks;
     int castedBlockCount;
@@ -53,6 +54,7 @@ struct CastedChunk{
 struct CastedPool{
     struct ChunkMap* chunkMap;
     int totalChunksCreated;
+    int maxChunks;
 };
 
 //Casted area Creating/Freeing
@@ -65,5 +67,7 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, SDL_Renderer*
 //Pool management
 struct CastedChunk* getCastedChunkAtCords(struct CameraData* cameraData, int isoX, int isoY);
 struct CastedBlock* getCastedBlockAtCords(struct CameraData* cameraData, int isoX, int isoY);
+void createChunkInPool(struct GameData* gameData, int isoX, int isoY);
+
 
 #endif //EDIFICE_CASTEDBLOCKMANAGER_H

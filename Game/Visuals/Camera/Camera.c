@@ -192,7 +192,7 @@ void offSetCamWorldKeyBasedOnRotation(struct CameraData* cameraData, enum Direct
 
     //int xAxis = 0; int yAxis = 0; int zAxis = 0;
     //getCords(castedBlockCamkey, octree->RootDepth - 1, &xAxis, &yAxis, &zAxis);
-    //reportBug("Block hit at (%i, %i, %i)\n", xAxis, yAxis, zAxis);
+    ////reportBug("Block hit at (%i, %i, %i)\n", xAxis, yAxis, zAxis);
 
 
     //Calculate were that cast Blocks new cam key would be
@@ -298,56 +298,58 @@ void renderView(struct GameData* gameData){
 
     int maxTexturingPerFrame = 15;
     int maxNewChunksPerFrame = 15;
-    for (int x = -cameraData->viewDistance; x < cameraData->viewDistance; x++){
-        for (int y = -cameraData->viewDistance; y < cameraData->viewDistance; y++){
-            int xChunkWorldCords = (x) + cameraData->xIsoChunkCamCenter;
-            int yChunkWorldCords = (y) + cameraData->yIsoChunkCamCenter;
+    int totalCords = 1000;
+    for (int i = 0; i < 1000; i++)
+    {
+        int x = cameraData->distanceSortedRelativeCords[i].x;
+        int y = cameraData->distanceSortedRelativeCords[i].y;
 
-            struct CastedChunk *castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, xChunkWorldCords,
-                                                              yChunkWorldCords);
-            //if in view distance radius
-            double distanceFromCenter = sqrt((x * x) + (y * y));
-            if (distanceFromCenter < cameraData->viewDistance) {
-                //Manage chunks
-                if (castedChunk == NULL && maxNewChunksPerFrame > 0) {
-                    struct CastedChunk *newCastedChunk = createCastedChunk(cameraData, gameData->screen->renderer,
-                                                                           xChunkWorldCords, yChunkWorldCords);
-                    addChunkToMap(gameData->cameraData->castedPool->chunkMap, newCastedChunk);
-                    maxNewChunksPerFrame--;
+        int xChunkWorldCords = (x) + cameraData->xIsoChunkCamCenter;
+        int yChunkWorldCords = (y) + cameraData->yIsoChunkCamCenter;
 
-                } else if (castedChunk != NULL){
-                    //If chunk is rendered in wrong direction set for reRendering
-                    if (castedChunk->direction != cameraData->direction){
-                        castedChunk->textured = false;
-                        castedChunk->rayCast = false;
-                        castedChunk->direction = cameraData->direction;
-                    }
+        struct CastedChunk *castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, xChunkWorldCords,
+                                                          yChunkWorldCords);
+        //if in view distance radius
+        double distanceFromCenter = sqrt((x * x) + (y * y));
+        if (distanceFromCenter < cameraData->viewDistance) {
+            //Manage chunks
+            if (castedChunk == NULL && maxNewChunksPerFrame > 0) {
+                createChunkInPool(gameData, xChunkWorldCords, yChunkWorldCords);
+                maxNewChunksPerFrame--;
 
-                    //Render the chunk texture if needed
-                    if (!castedChunk->busy) {
-                        if (!castedChunk->rayCast) {
-                            castedChunk->busy = true;
-                            threadCastChunk(gameData->cameraData, castedChunk, gameData->world->octree);
-
-                        } else if (!castedChunk->textured && maxTexturingPerFrame > 0) {
-                            maxTexturingPerFrame--;
-                            castedChunk->busy = true;
-                            renderChunkTexture(gameData, castedChunk);
-                        }
-                    }
-
-                    //Draw the Casted Chunk
-                    DrawChunk(gameData, castedChunk);
+            } else if (castedChunk != NULL){
+                castedChunk->distanceFromCamCenter = distanceFromCenter;
+                //If chunk is rendered in wrong direction set for reRendering
+                if (castedChunk->direction != cameraData->direction){
+                    castedChunk->textured = false;
+                    castedChunk->rayCast = false;
+                    castedChunk->direction = cameraData->direction;
                 }
+
+                //Render the chunk texture if needed
+                if (!castedChunk->busy) {
+                    if (!castedChunk->rayCast) {
+                        castedChunk->busy = true;
+                        threadCastChunk(gameData->cameraData, castedChunk, gameData->world->octree);
+
+                    } else if (!castedChunk->textured && maxTexturingPerFrame > 0) {
+                        maxTexturingPerFrame--;
+                        castedChunk->busy = true;
+                        renderChunkTexture(gameData, castedChunk);
+                    }
+                }
+
+                //Draw the Casted Chunk
+                DrawChunk(gameData, castedChunk);
             }
+        }
 
-            //Make lazy chunk and lower texture rez
-            else if (distanceFromCenter > cameraData->viewDistance){
-                if (castedChunk != NULL) {
-                    //reportBug("Distance :%f | Cords : (%i, %i)\n", distanceFromCenter, xChunkWorldCords, yChunkWorldCords);
-                    //removeFromChunkMap(cameraData->castedPool->chunkMap, xChunkWorldCords, yChunkWorldCords);
-                    //freeCastedChunk(castedChunk);
-                }
+        //Make lazy chunk and lower texture rez
+        else if (distanceFromCenter > cameraData->viewDistance){
+            if (castedChunk != NULL) {
+                //reportBug("Distance :%f | Cords : (%i, %i)\n", distanceFromCenter, xChunkWorldCords, yChunkWorldCords);
+                //removeFromChunkMap(cameraData->castedPool->chunkMap, xChunkWorldCords, yChunkWorldCords);
+                //freeCastedChunk(castedChunk);
             }
         }
     }

@@ -10,6 +10,58 @@
 #include "../InMenuWindow/InMenuWindow.h"
 #include "Camera.h"
 #include "Rendering/RayCasting/RayCastingManager.h"
+#include "math.h"
+
+struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* cameraData)
+{
+    //Create an array of cordnate structs with distances
+    int totalCords = cameraData->viewDistance * 2 * cameraData->viewDistance * 2;
+    struct DistanceCord distanceCords[totalCords];
+
+    //Calculate the distances for all the cords
+    for (int x = -cameraData->viewDistance; x < cameraData->viewDistance; x++)
+    {
+        for (int y = -cameraData->viewDistance; y < cameraData->viewDistance; y++)
+        {
+            //if in view distance radius
+            double distanceFromCenter = sqrt((x * x) + (y * y));
+            int arrayIndex = (x + cameraData->viewDistance + ((y + cameraData->viewDistance) * cameraData->viewDistance * 2));
+
+            distanceCords[arrayIndex].x = x;
+            distanceCords[arrayIndex].y = y;
+            distanceCords[arrayIndex].distance = distanceFromCenter;
+        }
+    }
+
+    //Sort the cords in order | using selection sort
+    struct DistanceCord sortedDistanceCords[totalCords];
+    for (int i = 0; i < totalCords - 1; i++) {
+        int minValueIndex = i;
+        for (int j = i + 1; j < totalCords; j++) {
+            if (distanceCords[j].distance < distanceCords[minValueIndex].distance) {
+                minValueIndex = j;
+            }
+        }
+
+        // Swap the values
+        struct DistanceCord tempDistanceCord = distanceCords[i];
+        distanceCords[i] = distanceCords[minValueIndex];
+        distanceCords[minValueIndex] = tempDistanceCord;
+    }
+
+    //Check cords
+    reportBug("total cords : %i\n", totalCords);
+
+    //Create the array based off distance
+    struct DistanceCord* distanceSortedRelativeCords = malloc(totalCords * sizeof(struct DistanceCord));
+    for (int x = 0; x < totalCords; x++)
+    {
+        distanceSortedRelativeCords[x] = distanceCords[x];
+    }
+
+    return distanceSortedRelativeCords;
+}
+
 
 struct CameraData* createCameraData(SDL_Renderer* renderer){
     struct CameraData* cameraData = calloc(1, sizeof(struct CameraData));
@@ -43,6 +95,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->yIsoCamCenter = 0;
     cameraData->xIsoChunkCamCenter = 0;
     cameraData->yIsoChunkCamCenter = 0;
+    cameraData->castingDistance = 300;
 
 
     //Key the camera renderers from
@@ -54,6 +107,8 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
 
     //Create inMenuWindow
     cameraData->inMenuWindow = createInMenuWindow(0, 0, 1280, 720);
+
+    cameraData->distanceSortedRelativeCords = createDistanceSortedRelativeCords(cameraData);
 
     return cameraData;
 }

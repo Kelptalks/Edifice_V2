@@ -248,6 +248,12 @@
 		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Screen.h">
 			<Option target="edifice"/>
 		</Unit>
+		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.h">
+			<Option target="edifice"/>
+		</Unit>
 		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/KeyMod.c">
 			<Option target="edifice"/>
 		</Unit>

@@ -13,4 +13,6 @@ void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBl
 
 void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree);
 
+void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock);
+
 #endif //EDIFICE_RAYCASTER_H

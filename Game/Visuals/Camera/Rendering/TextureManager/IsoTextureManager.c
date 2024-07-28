@@ -129,14 +129,22 @@ struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSh
 
             //Left Top
             if (aMaskPixels[index + (64 * 16)] == -16776961 ){
-                uint32_t *pixels = surfaces[LeftTopFace].pixels;
-                pixels[index] = shaderPixels[index + (64 * 16)];
+                //Weird problem with index being to high
+                reportBug("shader pixel %i | index %i \n", shaderPixels[index], index + (64 * 16));
+                if (index + (64 * 16) < 64 * 64)
+                {
+                    uint32_t *pixels = surfaces[LeftTopFace].pixels;
+                    pixels[index] = shaderPixels[index + (64 * 16)];
+                }
+
             }
+
             //left bot C
             if (aMaskPixels[index  + (64 * 32)] == -1572611 ){
                 uint32_t *pixels = surfaces[LeftBotFace].pixels;
                 pixels[index] = shaderPixels[index + (64 * 32)];
             }
+
             //top left C
             if (aMaskPixels[index] == -16711693){
                 uint32_t *pixels = surfaces[TopLeftFace].pixels;
@@ -158,6 +166,7 @@ struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSh
                 uint32_t *pixels = surfaces[RightTopFace].pixels;
                 pixels[index] = shaderPixels[index + 32 + (64 * 16)];
             }
+
 
             if (bMaskPixels[index] == -16776961){
                 uint32_t *pixels = surfaces[TopTopLeft].pixels;
