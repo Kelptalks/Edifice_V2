@@ -16,6 +16,7 @@ enum Feature{
 struct TerrainGenRules{
     struct ArrayList* lairRules;
     struct ArrayList* shiftRules;
+    struct HeightMapPool* heightMapPool;
 };
 
 void createTerrainGenRules(struct World* world);

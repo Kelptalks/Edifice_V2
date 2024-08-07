@@ -29,7 +29,7 @@ struct NoiseData{
 
 struct NoiseData* createNoiseData(int octave, int lacunarity, float persistence);
 
-short* getChunkHeightsCor(struct NoiseData* noiseData, int x, int y);
+short* getChunkHeightsCor(int chunkSize, float** influenceVectors);
 
 void drawHeightArray(struct GameData* gameData, short* heightArray, int scale);
 

@@ -40,10 +40,7 @@ bool isTranslucent(enum Block block){
     if (block == Mushroom){
         return true;
     }
-    if (block == Water1){
-        return true;
-    }
-    if (block == Water2){
+    if (block == Water){
         return true;
     }
     if (block == Glass){
@@ -100,8 +97,8 @@ char* getBlockName(enum Block block){
             return "BlueMushroomBlock";
         case Debug:
             return "Debug";
-        case Water1:
-            return "Water1";
+        case Water:
+            return "Water";
         case Flour:
             return "Flour";
         case WhiteFlowers:
@@ -210,12 +207,12 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 1216;
             *y = 1088;
             break;
-        case Water1:
-            *x = 64;
+        case Water:
+            *x = 128;
             *y = 320;
             break;
         case Flour:
-            *x = 256;
+            *x = 192;
             *y = 960;
             break;
         case WhiteFlowers:
@@ -235,8 +232,8 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *y = 320;
             break;
         case MaskingBlock:
-            *x = 960;
-            *y = 180;
+            *x = 1216;
+            *y = 1152;
             break;
         case GreyShader:
             *x = 0;
@@ -255,8 +252,8 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *y = 1152;
             break;
         case ShadowMaskingBlock:
-            *x = 1024;
-            *y = 180;
+            *x = 1216;
+            *y = 1216;
             break;
         case Glass :
             *x = 192;
@@ -266,12 +263,21 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 0;
             *y = 384;
             break;
-        case StoneBrick:
+        case Coral:
             *x = 64;
             *y = 384;
+            break;
+        case StoneBrick:
+            *x = 128;
+            *y = 384;
+            break;
+        case FloweringStoneBrick:
+            *x = 192;
+            *y = 384;
+            break;
         default:
-            *x = 0;
-            *y = 0;
+            *x = 64;
+            *y = 320;
             break;
     }
 }

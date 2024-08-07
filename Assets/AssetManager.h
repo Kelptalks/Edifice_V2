@@ -7,6 +7,8 @@
 
 #include <SDL_surface.h>
 
+void getExecutablePath(char* buffer, size_t bufferSize);
+
 SDL_Surface* loadSpriteSheet();
 
 #endif //EDIFICE_ASSETMANAGER_H

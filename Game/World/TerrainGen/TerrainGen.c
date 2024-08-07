@@ -12,6 +12,7 @@
 #include "PlantManager/PlantManger.h"
 #include "../../../ArrayList/ArrayList.h"
 #include "WaterGen/WaterGen.h"
+#include "HillManager/HillManager.h"
 
 void createTerrainGenRules(struct World* world){
     struct TerrainGenRules* terrainGenRules = malloc(sizeof (struct TerrainGenRules));
@@ -27,18 +28,14 @@ void createTerrainGenRules(struct World* world){
     addLairRule(terrainGenRules->lairRules, 16, 20, Dirt);
     addLairRule(terrainGenRules->lairRules, 21, 21, Grass);
 
-    /*
-    //add some area shift rules
-    for (int rules = 0; rules < 1500; rules++){
-        int xCor = rand() % 1000;
-        int yCor = rand() % 1000;
-        int xScale = rand() % 100 + 3;
-        int yScale = rand() % 100 + 3;
 
-        addShiftRule(terrainGenRules->shiftRules, xCor, xCor + xScale, yCor, yCor + yScale, rand() % 12);
-    }
-    */
+    terrainGenRules->heightMapPool = createHeightMapPool();
+
     world->terrainGenRules = terrainGenRules;
+
+
+    //Create testing hill
+
 }
 
 void genArea(struct World* world, unsigned long key, int xArea, int yArea, int zArea){
@@ -50,14 +47,14 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
     int yEnd = yStart + yArea;
     int zEnd = zStart + zArea;
 
+
     //Get an array of only rules applicable to area
     struct ArrayList* lairRulesInArea = getLairRulesInArea(world->terrainGenRules->lairRules, zStart, zEnd);
     struct ArrayList* shiftRulesInArea = getShiftRulesInArea(world->terrainGenRules->shiftRules, xStart, xEnd, yStart, yEnd);
 
-
-    //test
-    struct NoiseData* noiseData = createNoiseData(0, 0, 0);
-    short* heights = getChunkHeightsCor(noiseData, 0, 0);
+    //Perlin terrain gen
+    struct HeightMapPool* heightMapPool = world->terrainGenRules->heightMapPool;
+    int chunkSizeCenterOffSet = (heightMapPool->chunkScale - heightMapPool->chunkScale) / 2;
 
     //Loop through keys in the area
     for (int x = 0; x < xArea; x++){
@@ -74,9 +71,18 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
                     }
                 }
 
-                if (y < noiseData->chunkScale && y > 0 && x > 0 && x < noiseData->chunkScale) {
-                    lairShift += heights[y + (x * noiseData->chunkScale)] / 3;
+
+                int chunkX = x / heightMapPool->chunkScale;
+                int chunkY = y / heightMapPool->chunkScale;
+                int xCor =  x % heightMapPool->chunkScale;
+                int yCor = y % heightMapPool->chunkScale;
+
+                if (chunkX > 0 && chunkX < heightMapPool->scale && chunkY > 0 && chunkY < heightMapPool->scale){
+                    int height = heightMapPool->heightChunkPool[chunkX][chunkY].heightMap[xCor + chunkSizeCenterOffSet + ((yCor + chunkSizeCenterOffSet) * heightMapPool->chunkScale)];
+                    height = height/4;
+                    lairShift += height;
                 }
+
 
 
                 //Set lair rules
@@ -85,12 +91,19 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
                     //Lair building
                     struct LairRule *lairRule = (struct LairRule *) indexList(lairRulesInArea, rule);
                     if (zInRuleBounds(lairRule, zStart + z)) {
+                        //Build the location
                         unsigned long shiftedLairKey = modKey(zKeyMod, 0, 0, lairShift, 0);
+
+
                         //Build block of the lair
                         setOctreeKeyValue(world->octree->root, shiftedLairKey, world->octree->RootDepth,
                                           lairRule->blockType);
+
+
                         //Attempt to plant on that block
-                        generatePlant(world, shiftedLairKey, lairRule->blockType);
+                        if (lairRule->blockType == Grass) {
+                            generatePlant(world, shiftedLairKey, lairRule->blockType);
+                        }
                     }
                 }
             }

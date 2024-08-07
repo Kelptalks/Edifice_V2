@@ -50,7 +50,7 @@ struct NoiseData* createNoiseData(int octave, int lacunarity, float persistence)
     }
 
     noiseData->seed = 1;
-    noiseData->chunkScale = 16;
+    noiseData->chunkScale = 32;
     noiseData->octave = octave;
     noiseData->lacunarity = lacunarity;
     noiseData->persistence = persistence;
@@ -60,7 +60,7 @@ struct NoiseData* createNoiseData(int octave, int lacunarity, float persistence)
     return noiseData;
 }
 
-short* getChunkHeightsCor(struct NoiseData* noiseData, int x, int y){
+short* getChunkHeightsCor(int chunkSize, float** influenceVectors){
     //Create an array of length 4 of pointers to short arrays
     short** dotProductMaps = malloc(sizeof(short*) * 4);
 
@@ -72,16 +72,22 @@ short* getChunkHeightsCor(struct NoiseData* noiseData, int x, int y){
     //Gradients
     //Create dot product map for each corner
     for (int corner = 0; corner < 4; corner++) {
-        short *cornerDotProductMap = calloc(noiseData->chunkScale * noiseData->chunkScale, sizeof(short));
-        int randInfluenceVector = rand() % noiseData->possibleAngles;
+        short *cornerDotProductMap = calloc(chunkSize * chunkSize, sizeof(short));
+        int randInfluenceVector = rand() % 16;
+
+        float xInfluence =  influenceVectors[randInfluenceVector][0];
+        float yInfluence =  influenceVectors[randInfluenceVector][1];
+
+
         //Loop through pixels in map
-        for (int x = 0; x < noiseData->chunkScale; x++) {
-            for (int y = 0; y < noiseData->chunkScale; y++) {
+        for (int x = 0; x < chunkSize; x++) {
+            for (int y = 0; y < chunkSize; y++) {
                 //Get the vector for each point
                 int offSetVector[2] = {x, y};
                 //get influence vector based off cords of point
-                int dotProduct = (offSetVector[0] * noiseData->influenceVectors[randInfluenceVector][0]) + (offSetVector[1] * noiseData->influenceVectors[randInfluenceVector][1]);
-                cornerDotProductMap[x + (y * noiseData->chunkScale)] = dotProduct;
+
+                short dotProduct = (offSetVector[0] * xInfluence) + (offSetVector[1] * yInfluence);
+                cornerDotProductMap[x + (y * chunkSize)] = dotProduct;
             }
         }
         //Save to heights array
@@ -90,24 +96,24 @@ short* getChunkHeightsCor(struct NoiseData* noiseData, int x, int y){
 
     //Lerping
     //Combine Top
-    short *combinedTopMap = calloc(noiseData->chunkScale * noiseData->chunkScale, sizeof(short));
-    for (int y = 0; y < noiseData->chunkScale; y++) {
-        short startVal = dotProductMaps[0][(y * noiseData->chunkScale)];
-        for (int x = 0; x < noiseData->chunkScale; x++) {
-            short lineDiff = ((dotProductMaps[0][x + (y * noiseData->chunkScale)]) - (dotProductMaps[1][x + (y * noiseData->chunkScale)])) * (x / (float) noiseData->chunkScale);
-            short lerpDiff = lineDiff * (x / (float) noiseData->chunkScale);
-            combinedTopMap[x + (y * noiseData->chunkScale)] = lerpDiff + startVal;
+    short *combinedTopMap = calloc(chunkSize * chunkSize, sizeof(short));
+    for (int y = 0; y < chunkSize; y++) {
+        short startVal = dotProductMaps[0][(y * chunkSize)];
+        for (int x = 0; x < chunkSize; x++) {
+            short lineDiff = ((dotProductMaps[0][x + (y * chunkSize)]) - (dotProductMaps[1][x + (y * chunkSize)])) * (x / (float) chunkSize);
+            short lerpDiff = lineDiff * (x / (float) chunkSize);
+            combinedTopMap[x + (y * chunkSize)] = lerpDiff + startVal;
         }
     }
 
     //Combine Bottom
-    short *combinedBopMap = calloc(noiseData->chunkScale * noiseData->chunkScale, sizeof(short));
-    for (int y = 0; y < noiseData->chunkScale; y++) {
-        short startVal = dotProductMaps[2][(y * noiseData->chunkScale)];
-        for (int x = 0; x < noiseData->chunkScale; x++) {
-            short lineDiff = ((dotProductMaps[2][x + (y * noiseData->chunkScale)]) - (dotProductMaps[3][x + (y * noiseData->chunkScale)])) * (x / (float) noiseData->chunkScale);
-            short lerpDiff = lineDiff * (x / (float) noiseData->chunkScale);
-            combinedBopMap[x + (y * noiseData->chunkScale)] = lerpDiff + startVal;
+    short *combinedBopMap = calloc(chunkSize * chunkSize, sizeof(short));
+    for (int y = 0; y < chunkSize; y++) {
+        short startVal = dotProductMaps[2][(y * chunkSize)];
+        for (int x = 0; x < chunkSize; x++) {
+            short lineDiff = ((dotProductMaps[2][x + (y * chunkSize)]) - (dotProductMaps[3][x + (y * chunkSize)])) * (x / (float) chunkSize);
+            short lerpDiff = lineDiff * (x / (float) chunkSize);
+            combinedBopMap[x + (y * chunkSize)] = lerpDiff + startVal;
         }
     }
 
@@ -117,13 +123,13 @@ short* getChunkHeightsCor(struct NoiseData* noiseData, int x, int y){
     free(dotProductMaps);
 
     //Combine Top and bottom
-    short *heightMap = calloc(noiseData->chunkScale * noiseData->chunkScale, sizeof(short));
-    for (int x = 0; x < noiseData->chunkScale; x++){
-        short startVal = combinedBopMap[(x * noiseData->chunkScale)];
-        for (int y = 0; y < noiseData->chunkScale; y++){
-            short lineDiff = ((combinedTopMap[x + (y * noiseData->chunkScale)]) - (combinedBopMap[x + (y * noiseData->chunkScale)])) * (y / (float) noiseData->chunkScale);
-            short lerpDiff = lineDiff * (y / (float) noiseData->chunkScale);
-            heightMap[x + (y * noiseData->chunkScale)] = lerpDiff + startVal;
+    short *heightMap = calloc(chunkSize * chunkSize, sizeof(short));
+    for (int x = 0; x < chunkSize; x++){
+        short startVal = combinedBopMap[(x * chunkSize)];
+        for (int y = 0; y < chunkSize; y++){
+            short lineDiff = ((combinedTopMap[x + (y * chunkSize)]) - (combinedBopMap[x + (y * chunkSize)])) * (y / (float) chunkSize);
+            short lerpDiff = lineDiff * (y / (float) chunkSize);
+            heightMap[x + (y * chunkSize)] = lerpDiff + startVal;
         }
     }
     free(combinedBopMap);

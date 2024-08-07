@@ -15,17 +15,8 @@ void handleInput(struct GameData* gameData){
     //Handling close event
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
-        //Handle Menu inputs
-        if (gameData->screen->menuType == MainMenu) {
-            MainMenuControlInput(gameData, event);
 
-        }
-        else if (gameData->screen->menuType == WorldCamera) {
-            cameraControlInput(gameData, event);
-        }
-        else if (gameData->screen->menuType == SettingsMenu) {
-            settingsMenuControlInput(gameData, event);
-        }
+        cameraControlInput(gameData, event);
 
 
         const Uint8 *keystate = SDL_GetKeyboardState(NULL);

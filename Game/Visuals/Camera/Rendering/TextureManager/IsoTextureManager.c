@@ -130,7 +130,6 @@ struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSh
             //Left Top
             if (aMaskPixels[index + (64 * 16)] == -16776961 ){
                 //Weird problem with index being to high
-                reportBug("shader pixel %i | index %i \n", shaderPixels[index], index + (64 * 16));
                 if (index + (64 * 16) < 64 * 64)
                 {
                     uint32_t *pixels = surfaces[LeftTopFace].pixels;
@@ -156,6 +155,7 @@ struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSh
                 uint32_t *pixels = surfaces[RightBotFace].pixels;
                 pixels[index] = shaderPixels[index + 32 + (64 * 32)];
             }
+
             //Top Right
             if (aMaskPixels[index + 32] == -16711929 ){
                 uint32_t *pixels = surfaces[TopRightFace].pixels;
@@ -237,6 +237,10 @@ struct BlockShaders* createShaders(SDL_Renderer* renderer, SDL_Surface* spriteSh
 struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
     //load spriteSheet
     SDL_Surface* spriteSheet = loadSpriteSheet();
+    if (spriteSheet == NULL){
+        reportBug("Unable to load spritesheet\n");
+        return NULL;
+    }
 
 
     //setup texture struct
@@ -258,7 +262,7 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
             fclose(debug);
             return NULL;
         }
-
+        
         for (int s = 0; s < 6; s++){
             textures->BlockTextures[b].textures[s] = SDL_CreateTextureFromSurface(renderer, splicedBlockSurfaces->surfaces[s]);
             SDL_FreeSurface(splicedBlockSurfaces->surfaces[s]); // Free the surface after creating the texture

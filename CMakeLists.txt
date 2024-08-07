@@ -43,8 +43,6 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h
         Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c
         Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c
-        Game/Visuals/Menu/Menu.h
-        Game/Visuals/Menu/Menu.c
         Game/Visuals/Menu/TextManager/TextManager.c
         Game/Visuals/Menu/TextManager/TextManager.h
         Game/Visuals/Menu/Button/Button.h
@@ -75,6 +73,18 @@ add_executable(edifice main.c
         Game/InGameTime/TikEvent/TikEvent.h
         Game/World/Octree/AdvancedKeyMod.c
         Game/World/Octree/AdvancedKeyMod.h
+        Game/Sound/SoundManager.c
+        Game/Sound/SoundManager.h
+        Game/World/TerrainGen/HillManager/HillManager.c
+        Game/World/TerrainGen/HillManager/HillManager.h
+        "Game/Visuals/Menu/MenuManager/ UIManager/UIManger.h"
+        "Game/Visuals/Menu/MenuManager/ UIManager/UIManger.c"
+        Game/Visuals/Menu/MenuManager/MenuManger.c
+        Game/Visuals/Menu/MenuManager/MenuManger.h
+        Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c
+        Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.h
+        "Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.c"
+        "Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.h"
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

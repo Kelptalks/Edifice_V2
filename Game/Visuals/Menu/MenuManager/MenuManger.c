@@ -1,0 +1,57 @@
+//
+// Created by Spencer on 8/7/2024.
+//
+
+#include <malloc.h>
+#include "MenuManger.h"
+#include "../../../Debuging/Test_Main.h"
+#include "../../../GameData.h"
+#include "../../Camera/Controls/CameraControls.h"
+#include "../../Camera/Camera.h"
+#include "../../InMenuWindow/InMenuWindow.h"
+#include "Menus/MainMenu/MainMenu.h"
+
+struct MenuManager* createMenuManager(){
+    struct MenuManager* menuManager = malloc(sizeof (struct MenuManager));
+    if (menuManager == NULL){
+        reportBug("failed to create menuManager\n");
+        return NULL;
+    }
+    //Set the default menu to main
+    menuManager->currentMenuType = MainMenu;
+
+}
+
+void setCurrentMenu(){
+
+}
+
+void renderCurrentMenu(struct GameData* gameData){
+    //Get the current Menu Type
+    enum MenuType currentMenuType = gameData->menuManger->currentMenuType;
+    if (currentMenuType == MainMenu){
+        renderMainMenu(gameData);
+    }
+    else if (currentMenuType == CameraMenu) {
+        //Render game world
+        renderView(gameData);
+        //Render window if visible
+        if (gameData->cameraData->inMenuWindow->visible){
+            renderInMenuWindow(gameData, gameData->cameraData->inMenuWindow);
+        }
+        //render debug menu if visible
+        if (gameData->debugMenu->visible) {
+            renderDebugMenu(gameData);
+        }
+    }
+}
+
+void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
+    enum MenuType currentMenuType = gameData->menuManger->currentMenuType;
+    if (currentMenuType == MainMenu){
+
+    }
+    else if (currentMenuType == CameraMenu) {
+        cameraControlInput(gameData, event);
+    }
+}

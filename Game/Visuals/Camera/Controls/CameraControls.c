@@ -15,6 +15,7 @@
 #include "../../../PlayerData/PlayerData.h"
 #include "../Camera.h"
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
+#include "../../../Sound/SoundManager.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Getters
@@ -91,6 +92,7 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
                 setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth,
                                   gameData->playerData->block);
                 drawDistance = 0;
+                playSound(gameData->sounds, 0);
                 break;
             }
         }
@@ -277,7 +279,7 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
                 gameData->cameraData->inMenuWindow->visible = !gameData->cameraData->inMenuWindow->visible;
                 break;
             case SDLK_ESCAPE :
-                gameData->screen->menuType = MainMenu;
+
                 break;
             case SDLK_q :
                 rotateCamLeft(gameData->cameraData);

@@ -37,11 +37,12 @@ enum Block {
     Cloud,
     CrackedEarth,
     MudBrick,
+    Coral,
     StoneBrick,
+    FloweringStoneBrick,
 
     //Transparent Blocks
-    Water1,
-    Water2,
+    Water,
     YellowFlowers,
     WhiteFlowers,
     Mushroom,

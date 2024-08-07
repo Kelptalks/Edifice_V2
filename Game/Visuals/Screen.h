@@ -8,11 +8,7 @@
 #include "SDL.h"
 #include <stdbool.h>
 
-enum MenuType{
-    WorldCamera,
-    MainMenu,
-    SettingsMenu
-};
+
 
 struct Audio{
     SDL_AudioSpec* wavSpec;
@@ -31,9 +27,6 @@ struct Screen{
     SDL_Renderer* renderer;
     SDL_Event* event;
     struct Audio* audio;
-
-    //Menu management
-    enum MenuType menuType;
 
     //Frame rendering
     int targetFPS;

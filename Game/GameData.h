@@ -5,9 +5,9 @@
 #ifndef EDIFICE_GAMEDATA_H
 #define EDIFICE_GAMEDATA_H
 #include "Visuals/Screen.h"
-#include "Visuals/Menu/Menu.h"
 #include "Visuals/Menu/TextManager/TextManager.h"
 #include "Debuging/DebugMenu/DebugMenu.h"
+#include "Visuals/Menu/MenuManager/MenuManger.h"
 
 struct GameData{
     struct Screen* screen;
@@ -15,10 +15,12 @@ struct GameData{
     struct World* world;
     struct Textures* textures;
     struct TextTextures* textTextures;
-    struct Menu* menu;
+    struct MenuManager* menuManger;
+
     struct DebugMenu* debugMenu;
     struct PlayerData* playerData;
     struct TikManager* tikManager;
+    struct Sounds* sounds;
 };
 
 struct GameData* createGameData();

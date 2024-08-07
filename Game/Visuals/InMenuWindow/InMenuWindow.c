@@ -27,7 +27,7 @@ struct InMenuWindow* createInMenuWindow(int xCor, int yCor, int xRez, int yRez){
 
 
     //Setup Buttons for block menu
-    inMenuWindow->buttonCount = 34;
+    inMenuWindow->buttonCount = 50;
     inMenuWindow->menuButtons = malloc(sizeof (struct MenuButton) * inMenuWindow->buttonCount);
     int spacing = 64;
     int scale = 50;

@@ -7,10 +7,12 @@
 #include "Visuals/Screen.h"
 #include "Visuals/Camera/CameraData.h"
 #include "Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
-#include "World/World.h"z
+#include "World/World.h"
 #include "Debuging/Test_Main.h"
 #include "PlayerData/PlayerData.h"
 #include "InGameTime/TikManager.h"
+#include "Sound/SoundManager.h"
+#include "Visuals/Menu/MenuManager/MenuManger.h"
 
 struct GameData* createGameData(){
     //Clear bug report file
@@ -44,9 +46,8 @@ struct GameData* createGameData(){
     reportBug("Building world\n");
     gameData->world = createWorld(12);
 
-    //Create menu struct
-    reportBug("Creating Main menu\n");
-    gameData->menu = createMainMenu();
+    //CreateMenuManager
+    gameData->menuManger = createMenuManager();
 
     //Create camera Data
     reportBug("Creating cameraData \n");
@@ -60,6 +61,11 @@ struct GameData* createGameData(){
     //CreateTikManager
     reportBug("Creating Tik Manager \n");
     gameData->tikManager = createTikManager();
+
+
+    //Create Sounds
+    //reportBug("Creating Sounds \n");
+    //gameData->sounds = createSounds();
 
     return gameData;
 }

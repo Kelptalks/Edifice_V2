@@ -5,326 +5,356 @@
 		<Option title="edifice"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\SDL2-2.30.2\;CMake Files\..\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\;CMake Files\..\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\;CMake Files\..\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\;CMake Files\..\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\SDL2\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\SDL2-2.30.2\;CMake Files\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\;CMake Files\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\;CMake Files\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\;CMake Files\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\SDL2\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edifice">
-				<Option output="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/edifice.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug"/>
+				<Option output="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/edifice.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include"/>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edifice"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edifice"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edifice/fast">
-				<Option output="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/edifice.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug"/>
+				<Option output="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/edifice.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include"/>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edifice/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edifice/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/ArrayList/arrayList.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/ArrayList/arrayList.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/ArrayList/arrayList.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/ArrayList/arrayList.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Assets/AssetManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Assets/AssetManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Assets/AssetManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Assets/AssetManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Blocks/Blocks.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Blocks/Blocks.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Controls/Controls.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Controls/Controls.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Controls/Controls.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Controls/Controls.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Debuging/Test_Main.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Debuging/Test_Main.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/GameData.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/GameData.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TikEvent.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TikEvent.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TikEvent.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TikEvent.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/InGameTime/TikManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/InGameTime/TikManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/PlayerData/PlayerData.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/Menu.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/Menu.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/UIManger.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/UIManger.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Screen.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/Visuals/Screen.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/KeyMod.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/Octree.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/Octree.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin Noise/PerlinNoise.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin Noise/PerlinNoise.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManger.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/HillManager/HillManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/HillManager/HillManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/World.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin Noise/PerlinNoise.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/Game/World/World.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin Noise/PerlinNoise.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/main.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManager.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/CMakeLists.txt">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManger.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/main.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/../../../../../SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\SDL2\"/>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/../../../../SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\SDL2\"/>
 		</Unit>
-		<Unit filename="C:/Users/kelpt/OneDrive/Desktop/Edifice_V2/../../../../../SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\SDL2\"/>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/../../../../SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\SDL2-2.30.2\x86_64-w64-mingw32\lib\cmake\SDL2\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
