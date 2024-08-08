@@ -215,4 +215,9 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus/MainMenu/MainMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIRenderer/UIRenderer.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

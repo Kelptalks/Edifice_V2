@@ -68,27 +68,5 @@ void audioCallback(void* userdata, Uint8* stream, int len) {
 
 // Function to play a sound from the sounds array
 void playSound(struct Sounds* sounds, int index) {
-    if (index < 0 || index >= sounds->numOfBlockSounds) {
-        reportBug("Invalid sound index");
-        return;
-    }
-
-    SDL_CloseAudio(); // Close the audio device if it was previously opened
-
-    currentSoundBuffer = sounds->blockSounds[index].wavBuffer;
-    currentSoundLength = sounds->blockSounds[index].wavLength;
-    currentSoundPosition = 0;
-
-    SDL_AudioSpec wavSpec = sounds->blockSounds[index].wavSpec;
-    wavSpec.callback = audioCallback;
-
-    if (SDL_OpenAudio(&wavSpec, NULL) < 0) {
-        fprintf(stderr, "Could not open audio: %s\n", SDL_GetError());
-        return;
-    }
-
-    SDL_PauseAudio(0); // Start playing audio
-
-    SDL_PauseAudio(1); // Stop the audio
 
 }

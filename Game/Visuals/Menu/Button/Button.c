@@ -30,7 +30,6 @@ struct MenuButton* createMenuButton(int width, int height, int xCor, int yCor){
     return menuButton;
 }
 
-
 void renderButton(struct GameData* gameData, struct MenuButton* menuButton){
     int colorMod = 0;
     if (menuButton->pressed){

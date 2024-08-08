@@ -11,6 +11,8 @@
 #include "../../InMenuWindow/InMenuWindow.h"
 #include "Menus/MainMenu/MainMenu.h"
 
+
+
 struct MenuManager* createMenuManager(){
     struct MenuManager* menuManager = malloc(sizeof (struct MenuManager));
     if (menuManager == NULL){
@@ -19,7 +21,9 @@ struct MenuManager* createMenuManager(){
     }
     //Set the default menu to main
     menuManager->currentMenuType = MainMenu;
+    menuManager->mainMenu = createMainMenu();
 
+    return menuManager;
 }
 
 void setCurrentMenu(){
@@ -29,6 +33,7 @@ void setCurrentMenu(){
 void renderCurrentMenu(struct GameData* gameData){
     //Get the current Menu Type
     enum MenuType currentMenuType = gameData->menuManger->currentMenuType;
+
     if (currentMenuType == MainMenu){
         renderMainMenu(gameData);
     }
@@ -49,7 +54,7 @@ void renderCurrentMenu(struct GameData* gameData){
 void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
     enum MenuType currentMenuType = gameData->menuManger->currentMenuType;
     if (currentMenuType == MainMenu){
-
+        handleInputMainMenu(gameData, event);
     }
     else if (currentMenuType == CameraMenu) {
         cameraControlInput(gameData, event);

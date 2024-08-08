@@ -5,18 +5,18 @@ Creating textTextures
 Creating DebugMenu
 Splicing textures 
 Building world
-Chunk Cords (0, 0) | Pointer = 000002202beb5d40
-Chunk Cords (0, 1) | Pointer = 000002202beb5d50
-Chunk Cords (0, 2) | Pointer = 000002202beb5d60
-Chunk Cords (0, 3) | Pointer = 000002202beb5d70
-Chunk Cords (1, 0) | Pointer = 000002202beb5d90
-Chunk Cords (1, 1) | Pointer = 000002202beb5da0
-Chunk Cords (1, 2) | Pointer = 000002202beb5db0
-Chunk Cords (1, 3) | Pointer = 000002202beb5dc0
-Chunk Cords (2, 0) | Pointer = 000002202beb5de0
-Chunk Cords (2, 1) | Pointer = 000002202beb5df0
-Chunk Cords (2, 2) | Pointer = 000002202beb5e00
-Chunk Cords (2, 3) | Pointer = 000002202beb5e10
+Chunk Cords (0, 0) | Pointer = 00000272c1b25d40
+Chunk Cords (0, 1) | Pointer = 00000272c1b25d50
+Chunk Cords (0, 2) | Pointer = 00000272c1b25d60
+Chunk Cords (0, 3) | Pointer = 00000272c1b25d70
+Chunk Cords (1, 0) | Pointer = 00000272c1b25d90
+Chunk Cords (1, 1) | Pointer = 00000272c1b25da0
+Chunk Cords (1, 2) | Pointer = 00000272c1b25db0
+Chunk Cords (1, 3) | Pointer = 00000272c1b25dc0
+Chunk Cords (2, 0) | Pointer = 00000272c1b25de0
+Chunk Cords (2, 1) | Pointer = 00000272c1b25df0
+Chunk Cords (2, 2) | Pointer = 00000272c1b25e00
+Chunk Cords (2, 3) | Pointer = 00000272c1b25e10
 Chunk Cords (3, 0) | Pointer = 0000000000000000
 Chunk Cords (3, 1) | Pointer = 0000000000000010
 Chunk Cords (3, 2) | Pointer = 0000000000000020

@@ -9,15 +9,20 @@
 
 enum MenuType{
     MainMenu,
-    CameraMenu
+    CameraMenu,
+    TestMenu
 };
 
 struct MenuManager{
     enum MenuType currentMenuType;
+
+    struct MainMenu* mainMenu;
 };
 
 struct MenuManager* createMenuManager();
 
 void renderCurrentMenu(struct GameData* gameData);
+
+void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event);
 
 #endif //EDIFICE_MENUMANGER_H
