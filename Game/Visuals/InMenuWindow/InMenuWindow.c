@@ -6,11 +6,11 @@
 #include "../../GameData.h"
 #include "InMenuWindow.h"
 #include "../../Debuging/Test_Main.h"
-#include "../Menu/Button/Button.h"
 #include "SDL.h"
 #include "../../Blocks/Blocks.h"
 #include "../../Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
 #include "../../PlayerData/PlayerData.h"
+#include "../Menu/MenuManager/ UIManager/Button/Button.h"
 
 struct InMenuWindow* createInMenuWindow(int xCor, int yCor, int xRez, int yRez){
     struct InMenuWindow* inMenuWindow = malloc(sizeof (struct InMenuWindow));

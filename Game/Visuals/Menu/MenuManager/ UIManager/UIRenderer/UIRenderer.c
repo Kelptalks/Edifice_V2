@@ -2,8 +2,8 @@
 // Created by Spencer on 8/7/2024.
 //
 
-#include "../../../../../GameData.h"
 #include "../../../../Camera/Rendering/TextureManager/IsoTextureManager.h"
+#include "UIRenderer.h"
 
 //Basic Boxes
 void renderXBox(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale){

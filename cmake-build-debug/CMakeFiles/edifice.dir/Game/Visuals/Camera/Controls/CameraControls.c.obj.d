@@ -191,10 +191,13 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_events.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIRenderer/UIRenderer.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
@@ -202,6 +205,13 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.h \
@@ -214,8 +224,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.h \

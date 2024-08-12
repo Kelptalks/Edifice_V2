@@ -43,8 +43,10 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: 
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_quit.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_gesture.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_touch.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager\UIManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager\UIRenderer/UIRenderer.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_main.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_assert.h \
@@ -185,21 +187,22 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: 
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_version.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_locale.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_misc.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager\UIManger.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager\UIRenderer/UIRenderer.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

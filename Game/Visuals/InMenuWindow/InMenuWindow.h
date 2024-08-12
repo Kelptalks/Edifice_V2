@@ -8,7 +8,6 @@
 
 #include <malloc.h>
 #include <stdbool.h>
-#include "../Menu/Button/Button.h"
 
 struct InMenuWindow{
     int xCor;

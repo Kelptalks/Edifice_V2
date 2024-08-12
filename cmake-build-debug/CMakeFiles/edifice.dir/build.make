@@ -443,20 +443,20 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\TextManager\TextManager.c -o CMakeFiles\edifice.dir\Game\Visuals\Menu\TextManager\TextManager.c.s
 
-CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.c
-CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\Button\Button.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\Button\Button.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\Button\Button.c
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/Button/Button.c
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\Button\Button.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\Button\Button.c.obj -c "C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\ UIManager\Button\Button.c"
 
-CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\Button\Button.c > CMakeFiles\edifice.dir\Game\Visuals\Menu\Button\Button.c.i
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\ UIManager\Button\Button.c" > CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\Button\Button.c.i
 
-CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\Button\Button.c -o CMakeFiles\edifice.dir\Game\Visuals\Menu\Button\Button.c.s
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\ UIManager\Button\Button.c" -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\Button\Button.c.s
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
@@ -743,6 +743,21 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\ UIManager\UIRenderer\UIRenderer.c" -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIRenderer\UIRenderer.c.s
 
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c
+
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c > CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.i
+
+CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.s
+
 # Object files for target edifice
 edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/main.c.obj" \
@@ -770,7 +785,7 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj" \
-"CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj" \
+"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj" \
 "CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.obj" \
@@ -789,7 +804,8 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj" \
-"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj"
+"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj" \
+"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj"
 
 # External object files for target edifice
 edifice_EXTERNAL_OBJECTS =
@@ -819,7 +835,7 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/Ray
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/Button/Button.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.obj
@@ -839,13 +855,14 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIM
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/build.make
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
 edifice.exe: CMakeFiles/edifice.dir/objects1.rsp
 edifice.exe: CMakeFiles/edifice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking C executable edifice.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable edifice.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\edifice.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

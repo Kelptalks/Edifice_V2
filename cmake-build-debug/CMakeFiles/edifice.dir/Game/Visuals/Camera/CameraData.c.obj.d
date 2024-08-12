@@ -205,12 +205,20 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_events.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIRenderer/UIRenderer.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Camera.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h

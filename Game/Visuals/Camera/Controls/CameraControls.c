@@ -279,7 +279,7 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
                 gameData->cameraData->inMenuWindow->visible = !gameData->cameraData->inMenuWindow->visible;
                 break;
             case SDLK_ESCAPE :
-
+                gameData->menuManger->currentMenuType = MainMenu;
                 break;
             case SDLK_q :
                 rotateCamLeft(gameData->cameraData);

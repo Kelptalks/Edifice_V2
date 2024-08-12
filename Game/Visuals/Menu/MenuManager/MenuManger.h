@@ -6,17 +6,20 @@
 #define EDIFICE_MENUMANGER_H
 
 #include "../../../GameData.h"
+#include "Menus/SettingsMenu/SettingsMenu.h"
+#include " UIManager/UIManger.h"
 
 enum MenuType{
     MainMenu,
     CameraMenu,
-    TestMenu
+    SettingsMenu
 };
 
 struct MenuManager{
     enum MenuType currentMenuType;
-
     struct MainMenu* mainMenu;
+    struct SettingsMenu* settingsMenu;
+
 };
 
 struct MenuManager* createMenuManager();

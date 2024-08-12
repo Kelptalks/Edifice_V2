@@ -45,8 +45,8 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c
         Game/Visuals/Menu/TextManager/TextManager.c
         Game/Visuals/Menu/TextManager/TextManager.h
-        Game/Visuals/Menu/Button/Button.h
-        Game/Visuals/Menu/Button/Button.c
+        "Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.h"
+        "Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.c"
         Game/Visuals/Camera/Controls/CameraControls.h
         Game/Visuals/Camera/Controls/CameraControls.c
         Game/Debuging/DebugMenu/DebugMenu.h
@@ -85,6 +85,8 @@ add_executable(edifice main.c
         Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.h
         "Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.c"
         "Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.h"
+        Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c
+        Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

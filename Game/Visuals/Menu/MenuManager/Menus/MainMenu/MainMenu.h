@@ -5,14 +5,13 @@
 #ifndef EDIFICE_MAINMENU_H
 #define EDIFICE_MAINMENU_H
 
+#include <SDL_events.h>
 #include "../../../../../GameData.h"
-#include "../../ UIManager/UIRenderer/UIRenderer.h"
-#include "../../ UIManager/UIManger.h"
 
 struct MainMenu{
-    struct Button* button;
-    struct ScrollWheel* scrollWheel;
-
+    struct Button* startButton;
+    struct Button* settingsButton;
+    struct Button* exitButton;
 };
 
 struct MainMenu* createMainMenu();

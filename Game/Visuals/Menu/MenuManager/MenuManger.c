@@ -10,6 +10,7 @@
 #include "../../Camera/Camera.h"
 #include "../../InMenuWindow/InMenuWindow.h"
 #include "Menus/MainMenu/MainMenu.h"
+#include "Menus/SettingsMenu/SettingsMenu.h"
 
 
 
@@ -22,6 +23,8 @@ struct MenuManager* createMenuManager(){
     //Set the default menu to main
     menuManager->currentMenuType = MainMenu;
     menuManager->mainMenu = createMainMenu();
+    menuManager->settingsMenu = createSettingsMenu();
+
 
     return menuManager;
 }
@@ -49,6 +52,9 @@ void renderCurrentMenu(struct GameData* gameData){
             renderDebugMenu(gameData);
         }
     }
+    else if (currentMenuType == SettingsMenu){
+        renderSettingsMenu(gameData);
+    }
 }
 
 void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
@@ -59,4 +65,8 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
     else if (currentMenuType == CameraMenu) {
         cameraControlInput(gameData, event);
     }
+    else if (currentMenuType == SettingsMenu){
+        handleInputSettingsMenu(gameData, event);
+    }
+
 }

@@ -3,10 +3,10 @@
 //
 
 #include <SDL_events.h>
-#include "../../../../GameData.h"
 #include "UIManger.h"
 #include "../../../../Debuging/Test_Main.h"
 #include "UIRenderer/UIRenderer.h"
+
 
 struct Button* createButton(enum ButtonTexture buttonTexture, int xCor, int yCor, int xScale, int yScale){
     struct Button* button = malloc(sizeof (struct Button));
@@ -25,7 +25,7 @@ struct Button* createButton(enum ButtonTexture buttonTexture, int xCor, int yCor
     button->mouseOn = false;
 
     button->buttonTexture = buttonTexture;
-
+    return button;
 }
 
 void handleButtonInputs(struct Button* button, struct GameData* gameData, SDL_Event event){
@@ -63,9 +63,10 @@ void renderUIButton(struct Button* button, struct GameData* gameData){
     else if (button->buttonTexture == ForwardButton){
         renderForwardBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
     }
+    else if (button->buttonTexture == MainButton){
+        renderScrollBar(gameData,  button->xCor, button->yCor, button->xScale, button->yScale);
+    }
 }
-
-
 
 
 
@@ -85,9 +86,11 @@ struct ScrollWheel* createScrollWheel(int xCor, int yCor, int xScale, int yScale
 
     scrollWheel->maxVal = maxVal;
 
-    scrollWheel->currentVal = 0;
+    int pixelsPerValChange = (scrollWheel->xScale/scrollWheel->maxVal);
+    scrollWheel->currentVal = (xScale/pixelsPerValChange) / 2;
     scrollWheel->lastX = 0;
-    scrollWheel->currentX = 0;
+
+    scrollWheel->currentX = xScale/2;
 
     scrollWheel->pressed = false;
 
@@ -102,12 +105,13 @@ void handleScrollWheelInputs(struct ScrollWheel* scrollWheel, struct GameData* g
     SDL_GetMouseState(&xCor, &yCor);
 
     //Get bounds of nob
-
     bool inXrange = (xCor < ((scrollWheel->xCor + scrollWheel->currentX) + scrollWheel->yScale) && xCor > scrollWheel->xCor + scrollWheel->currentX);
     bool inYrange = (yCor < (scrollWheel->yCor + scrollWheel->yScale) && yCor > scrollWheel->yCor);
 
+    //If in range and mouse was clicked
     if (inXrange && inYrange && mouseClickedPressed){
-        if (xCor < scrollWheel->xCor + scrollWheel->xScale && xCor > scrollWheel->xCor) {
+        //base location off current value
+        if (xCor < scrollWheel->xCor + scrollWheel->xScale && xCor > scrollWheel->xCor - scrollWheel->xScale) {
             scrollWheel->pressed = true;
             if (scrollWheel->lastX != 0) {
                 if (xCor < scrollWheel->xCor + scrollWheel->xScale && xCor > scrollWheel->xCor) {
@@ -115,6 +119,8 @@ void handleScrollWheelInputs(struct ScrollWheel* scrollWheel, struct GameData* g
                 }
             }
             scrollWheel->lastX = xCor;
+            //Update scroll wheel value
+            scrollWheel->currentVal = (scrollWheel->lastX - scrollWheel->xCor) / (scrollWheel->xScale/scrollWheel->maxVal);
         }
     }
     else{
@@ -129,6 +135,5 @@ void renderScrollWheel(struct ScrollWheel* scrollWheel, struct GameData* gameDat
     renderScrollBar(gameData, scrollWheel->xCor, scrollWheel->yCor, scrollWheel->xScale, scrollWheel->yScale);
 
     //Pointer Offset
-
     renderScrollPointer(gameData, scrollWheel->pressed, scrollWheel->xCor + scrollWheel->currentX, scrollWheel->yCor, scrollWheel->yScale, scrollWheel->yScale);
 }

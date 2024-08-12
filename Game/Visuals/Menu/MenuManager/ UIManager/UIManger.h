@@ -5,16 +5,23 @@
 #ifndef EDIFICE_UIMANGER_H
 #define EDIFICE_UIMANGER_H
 
+#include <SDL_events.h>
+#include "UIManger.h"
+#include "../../../../Debuging/Test_Main.h"
+#include "UIRenderer/UIRenderer.h"
 #include "../../../../GameData.h"
 
 enum ButtonTexture{
     ExitButton,
     CheckButton,
     BackButton,
-    ForwardButton
+    ForwardButton,
+    MainButton
 };
 
 struct Button{
+
+
     //location and scale
     int xCor;
     int yCor;
@@ -35,7 +42,6 @@ struct Button* createButton(enum ButtonTexture buttonTexture, int xCor, int yCor
 void handleButtonInputs(struct Button* button, struct GameData* gameData, SDL_Event event);
 
 void renderUIButton(struct Button* button, struct GameData* gameData);
-
 
 struct ScrollWheel{
     //Value

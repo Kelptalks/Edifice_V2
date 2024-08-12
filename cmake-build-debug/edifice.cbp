@@ -230,10 +230,10 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.c">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.c">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/Button/Button.h">
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.h">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/UIManger.c">
@@ -258,6 +258,12 @@
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c">

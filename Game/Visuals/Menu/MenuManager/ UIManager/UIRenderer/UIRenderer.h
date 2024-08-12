@@ -5,8 +5,8 @@
 #ifndef EDIFICE_UIRENDERER_H
 #define EDIFICE_UIRENDERER_H
 
-#include "../../../../../GameData.h"
 #include "../../../../Camera/Rendering/TextureManager/IsoTextureManager.h"
+#include "../../../../../GameData.h"
 
 void renderXBox(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale);
 
