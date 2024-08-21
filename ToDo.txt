@@ -1,0 +1,100 @@
+#################
+## Programming ##
+#################
+
+- index array for shadow raycasting logic, split into functions.
+
+- save the key of the first transparent block struck.
+
+- Documentation
+
+- Sound!!! It improves it so much.
+
+terrain gen
+	- Add perlin noise that takes x, y cords for input
+		- Seed noise by bitpacking the first 16 bits of 2 ints into int for seed
+		- Use to generate random 2D vectors
+	- Water
+		- All air blocks below a certain loaction set to water
+
+
+	
+User input :
+	Consol : 
+		- Text rendering
+		- Typing
+
+	World Editing :
+		- Get triangle mouse is on and highlight, if traingle to left is selcted select
+		- Mouse block editing
+
+Rendering:
+	Ray Casting :
+		- Use octree structure to skip large empty nodes
+	Chunk loading :
+		- Free chunks to far outside render distance
+		
+	List pool :
+		- Use a pool of lists for arrays to avoid constant mallocs
+
+	Texture manager
+		- Enum colors for when cropping.
+		- Splice block area.
+	
+Content :
+	- Terp
+		- Add block entity manager
+		- Add instructions and things it can do
+
+- Cuda raytracing.
+
+#########
+## ART ##
+#########
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-go back and do content quizes.
+

@@ -83,7 +83,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->yChunkScaledTextureRez = 0;
 
     //How many chunks will generate
-    cameraData->viewDistance = 16;
+    cameraData->viewDistance = 100;
     cameraData->mouseUpdateDistance = 2;
 
     //Max 512

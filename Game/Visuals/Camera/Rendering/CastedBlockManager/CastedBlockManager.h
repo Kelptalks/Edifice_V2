@@ -17,6 +17,8 @@ struct CastedBlock{
     struct TextureList* rightTextureList;
 
     //ExtraLair
+    bool hasLeftTextureList;
+    bool hasRightTextureList;
     struct TextureList* leftTempTextureList;
     struct TextureList* rightTemptTextureList;
 

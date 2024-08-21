@@ -49,7 +49,7 @@ struct World* createWorld(int scale){
 
     unsigned long key = modKey(0, 0, 0, 0, octree->RootDepth);
 
-    genArea(world, key, 200, 200, 50);
+    genArea(world, key, 2048, 2048, 50);
 
     return world;
 }
