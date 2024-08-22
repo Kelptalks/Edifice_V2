@@ -4,8 +4,6 @@
 
 - index array for shadow raycasting logic, split into functions.
 
-- save the key of the first transparent block struck.
-
 - Documentation
 
 - Sound!!! It improves it so much.
@@ -16,13 +14,10 @@ terrain gen
 		- Use to generate random 2D vectors
 	- Water
 		- All air blocks below a certain loaction set to water
-
-
 	
 User input :
 	Consol : 
-		- Text rendering
-		- Typing
+		- Text Box
 
 	World Editing :
 		- Get triangle mouse is on and highlight, if traingle to left is selcted select
@@ -30,9 +25,12 @@ User input :
 
 Rendering:
 	Ray Casting :
+		- save the key of the first transparent block struck.
 		- Use octree structure to skip large empty nodes
+		- Cuda raytracing.
+
 	Chunk loading :
-		- Free chunks to far outside render distance
+		- Unload chunks out of range
 		
 	List pool :
 		- Use a pool of lists for arrays to avoid constant mallocs
@@ -45,8 +43,9 @@ Content :
 	- Terp
 		- Add block entity manager
 		- Add instructions and things it can do
+	- Entitys
+		- Add animated textures
 
-- Cuda raytracing.
 
 #########
 ## ART ##

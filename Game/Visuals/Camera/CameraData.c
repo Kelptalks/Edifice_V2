@@ -15,17 +15,21 @@
 struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* cameraData)
 {
     //Create an array of cordnate structs with distances
-    int totalCords = cameraData->viewDistance * 2 * cameraData->viewDistance * 2;
+    int radius = cameraData->viewDistance * 2;
+    int totalCords = radius * 2 * radius * 2;
+
+    cameraData->totalDistanceCords = totalCords;
+
     struct DistanceCord distanceCords[totalCords];
 
     //Calculate the distances for all the cords
-    for (int x = -cameraData->viewDistance; x < cameraData->viewDistance; x++)
+    for (int x = -radius; x < radius; x++)
     {
-        for (int y = -cameraData->viewDistance; y < cameraData->viewDistance; y++)
+        for (int y = -radius; y < radius; y++)
         {
             //if in view distance radius
             double distanceFromCenter = sqrt((x * x) + (y * y));
-            int arrayIndex = (x + cameraData->viewDistance + ((y + cameraData->viewDistance) * cameraData->viewDistance * 2));
+            int arrayIndex = (x + radius + ((y + radius) * radius * 2));
 
             distanceCords[arrayIndex].x = x;
             distanceCords[arrayIndex].y = y;
@@ -34,7 +38,6 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
     }
 
     //Sort the cords in order | using selection sort
-    struct DistanceCord sortedDistanceCords[totalCords];
     for (int i = 0; i < totalCords - 1; i++) {
         int minValueIndex = i;
         for (int j = i + 1; j < totalCords; j++) {
@@ -48,9 +51,6 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
         distanceCords[i] = distanceCords[minValueIndex];
         distanceCords[minValueIndex] = tempDistanceCord;
     }
-
-    //Check cords
-    reportBug("total cords : %i\n", totalCords);
 
     //Create the array based off distance
     struct DistanceCord* distanceSortedRelativeCords = malloc(totalCords * sizeof(struct DistanceCord));
@@ -83,7 +83,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->yChunkScaledTextureRez = 0;
 
     //How many chunks will generate
-    cameraData->viewDistance = 100;
+    cameraData->viewDistance = 32;
     cameraData->mouseUpdateDistance = 2;
 
     //Max 512

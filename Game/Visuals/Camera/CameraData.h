@@ -65,6 +65,7 @@ struct CameraData{
     int zDirection;
 
     //sorted reltive cords for center based rendering
+    int totalDistanceCords;
     struct DistanceCord* distanceSortedRelativeCords;
 };
 

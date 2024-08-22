@@ -57,6 +57,11 @@ struct CastedPool{
     struct ChunkMap* chunkMap;
     int totalChunksCreated;
     int maxChunks;
+
+    //Chunks that are available for use
+    int freeChunkCount;
+    struct CastedChunk** freeChunks;
+
 };
 
 //Casted area Creating/Freeing
@@ -69,6 +74,10 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, SDL_Renderer*
 //Pool management
 struct CastedChunk* getCastedChunkAtCords(struct CameraData* cameraData, int isoX, int isoY);
 struct CastedBlock* getCastedBlockAtCords(struct CameraData* cameraData, int isoX, int isoY);
+
+void unloadChunk(struct CastedPool* castedPool, struct CastedChunk* castedChunk);
+struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY);
+
 void createChunkInPool(struct GameData* gameData, int isoX, int isoY);
 
 

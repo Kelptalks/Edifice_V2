@@ -7,41 +7,25 @@
 #include "stdio.h";
 
 
-int* isoToScreen(float scale, int x, int y){
-    int* cordArray = malloc(sizeof(int) * 2);
-
-    if (cordArray == NULL){
-        printf("IsoCordManager | Failed to initialize cord array");
-        return NULL;
-    }
-
+void isoToScreen(float scale, int x, int y, int* isoX, int* isoY){
     scale = scale/2;
-
-    cordArray[0] = (x - y) * scale;
-    cordArray[1] = (x + y) * (scale/2);
-
-    return cordArray;
+    *isoX = (int) ((x - y) * scale);
+    *isoY = (int) ((x + y) * (scale / 2));
 }
 
-int* screenToIso(float scale, int x, int y){
-    int* cordArray = malloc(sizeof(int) * 2);
-    if (cordArray == NULL){
-        printf("IsoCordManager | Failed to initialize cord array");
-        return NULL;
+void screenToIso(float scale, int x, int y, int* isoX, int* isoY){
+    int tempIsoX = (float) (x + 2 * y) / (2 * scale);
+    int tempIsoY = (float) (2 * y - x) / (2 * scale);
+
+    //Cord correction due to 0
+    if (tempIsoX < 0){
+        tempIsoX--;
+    }
+    if (tempIsoY < 0){
+        tempIsoY--;
     }
 
-    float isoX = (float) (x + 2 * y) / (2 * scale);
-    float isoY = (float) (2 * y - x) / (2 * scale);
+    *isoX = tempIsoX;
+    *isoY = tempIsoY;
 
-    if (isoX < 0){
-        isoX--;
-    }
-    if (isoY < 0){
-        isoY--;
-    }
-
-    cordArray[0] = isoX;
-    cordArray[1] = isoY;
-
-    return cordArray;
 }

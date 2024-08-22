@@ -24,10 +24,8 @@
 
 struct CastedBlock* getCastedBlockAtMouseCords(struct CameraData* cameraData, int xMouseCor, int yMouseCor){
     //Cords calculations
-    int *cords = screenToIso(cameraData->renderScale/2, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset);
-    int xIso = cords[0];
-    int yIso = cords[1];
-    free(cords);
+    int xIso; int yIso;
+    screenToIso(cameraData->renderScale/2, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset,&xIso, &yIso);
 
     //Get casted block from cords
     return getCastedBlockAtCords(cameraData, xIso, yIso);
@@ -41,15 +39,16 @@ struct CastedBlock* getCastedBlockAtMouseCords(struct CameraData* cameraData, in
 void mouseHighlight(struct GameData* gameData, int xMouseCor, int yMouseCor){
     struct CameraData* cameraData = gameData->cameraData;
 
-    int *cords = screenToIso(cameraData->renderScale/2, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset);
-    int xIso = cords[0];
-    int yIso = cords[1];
-    free(cords);
+    int xIso;
+    int yIso;
+    screenToIso(cameraData->renderScale/2, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset,  &xIso, &yIso);
 
-    int *detailedCords = screenToIso(cameraData->renderScale/4, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset);
+    int detailedXIso; int detailedYIso;
+    screenToIso(cameraData->renderScale/4, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
+
     int keyModOrder[3] = {0, 1, 2};
     bool leftSide = true;
-    if (detailedCords[1]%2 == 0){
+    if (detailedYIso % 2 == 0){
         leftSide = false;
     }
     highLightMouseCord(gameData, xIso, yIso, leftSide);
@@ -68,9 +67,12 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
 
     //Use blocks cam CastedBlockCamkey to rayCast and break block
     //Determine the side of the cast block
-    int *detailedCords = screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset);
+
+    int detailedXIso; int detailedYIso;
+    screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
+
     int keyModOrder[3] = {0, 1, 2};
-    if (detailedCords[1]%2 == 0){
+    if (detailedYIso % 2 == 0){
         keyModOrder[0] = 1;
         keyModOrder[1] = 0;
         keyModOrder[2] = 2;
@@ -112,9 +114,11 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
 
     //Use blocks cam CastedBlockCamkey to rayCast and break block
     //Determine the side of the cast block
-    int *detailedCords = screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset);
+    int detailedXIso; int detailedYIso;
+    screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
+
     int keyModOrder[3] = {0, 1, 2};
-    if (detailedCords[1]%2 == 0){
+    if (detailedYIso % 2 == 0){
         keyModOrder[0] = 1;
         keyModOrder[1] = 0;
         keyModOrder[2] = 2;
@@ -187,10 +191,15 @@ void updateZoomScale(struct GameData* gameData, SDL_Event event){
     xCamIsoChange = xCamIsoChange - gameData->cameraData->xIsoCamCenter;
     yCamIsoChange = yCamIsoChange - gameData->cameraData->yIsoCamCenter;
 
-    int* cords = isoToScreen(scale2, xCamIsoChange, yCamIsoChange);
-    gameData->cameraData->xRenderingOffset -= cords[0];
-    gameData->cameraData->yRenderingOffset -= cords[1];
-    free(cords);
+    int isoX; int isoY;
+    isoToScreen(scale2, xCamIsoChange, yCamIsoChange,&isoX, &isoY);
+
+
+    gameData->cameraData->xRenderingOffset -= isoX;
+    gameData->cameraData->yRenderingOffset -= isoY;
+
+
+
 }
 
 void keyboardCamMovement(struct CameraData* cameraData){
@@ -221,19 +230,19 @@ void updateDebugMenu(struct GameData* gameData, int xCor, int yCor){
     gameData->debugMenu->xMouseCor = xCor;
     gameData->debugMenu->yMouseCor = yCor;
 
-    int *cords = screenToIso(gameData->cameraData->renderScale/2, xCor - gameData->cameraData->xRenderingOffset, yCor - gameData->cameraData->yRenderingOffset);
-    gameData->debugMenu->xBlockSelectedCor = cords[0];
-    gameData->debugMenu->yBlockSelectedCor = cords[1];
-    free(cords);
+    int isoX; int isoY;
+    screenToIso(gameData->cameraData->renderScale/2, xCor - gameData->cameraData->xRenderingOffset, yCor - gameData->cameraData->yRenderingOffset, &isoX, &isoY);
+    gameData->debugMenu->xBlockSelectedCor = isoX;
+    gameData->debugMenu->yBlockSelectedCor = isoY;
 
-    int *detailedCords = screenToIso(gameData->cameraData->renderScale/4, xCor - gameData->cameraData->xRenderingOffset, yCor - gameData->cameraData->yRenderingOffset);
-    if (detailedCords[1]%2 == 0){
+    int detailedXIso; int detailedYIso;
+    screenToIso(gameData->cameraData->renderScale/4, xCor - gameData->cameraData->xRenderingOffset, yCor - gameData->cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
+    if (detailedYIso % 2 == 0){
         gameData->debugMenu->LeftSide = false;
     }
     else{
         gameData->debugMenu->LeftSide = true;
     }
-    free(detailedCords);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

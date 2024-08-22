@@ -20,7 +20,6 @@ int main(int argc, char* argv[]) {
 
     while (gameData->screen->run){
         //Control what the game is rendering
-
         renderCurrentMenu(gameData);
 
         SDL_SetRenderDrawColor(gameData->screen->renderer, 150, 255, 248, 255);
@@ -29,7 +28,6 @@ int main(int argc, char* argv[]) {
 
         //Delay to limit frame rate
         SDL_Delay(gameData->screen->frameDelay);
-
 
         //Handle game inputs
         handleInput(gameData);

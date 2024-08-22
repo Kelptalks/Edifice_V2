@@ -5,10 +5,9 @@
 #ifndef ISOCORDMANAGER_H
 #define ISOCORDMANAGER_H
 
-int* isoToScreen(float scale, int x, int y);
+void isoToScreen(float scale, int x, int y, int* isoX, int* isoY);
 
-float* accurateIsoToScreen(float scale, float x, float y);
 
-int* screenToIso(float scale, int x, int y);
+void screenToIso(float scale, int x, int y, int* isoX, int* isoY);
 
 #endif

@@ -104,9 +104,10 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
     //Create the Casted Pool array based on the square of the view distance
     castedPool->totalChunksCreated = 0;
     castedPool->chunkMap = createChunkMap(256);
+
     castedPool->maxChunks = 2000;
-
-
+    castedPool->freeChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
+    castedPool->freeChunkCount = 0;
     return castedPool;
 }
 
@@ -118,7 +119,46 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
 
 void createChunkInPool(struct GameData* gameData, int isoX, int isoY) {
     struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
+
     addChunkToMap(gameData->cameraData->castedPool->chunkMap, newCastedChunk);
+}
+
+void unloadChunk(struct CastedPool* castedPool, struct CastedChunk* castedChunk){
+    //Remove the chunk from the hashmap
+    removeFromChunkMap(castedPool->chunkMap, castedChunk->isoX, castedChunk->isoY);
+
+    //Add the chunk to the top of the free chunk array stack
+    reportFrameBug("Unloaded chunk\n");
+    castedPool->freeChunks[castedPool->freeChunkCount] = castedChunk;
+    castedPool->freeChunkCount++;
+}
+
+struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY){
+    struct CastedPool* castedPool = gameData->cameraData->castedPool;
+    //If there are no free chunks in pool create new one
+    if (castedPool->freeChunkCount == 0){
+        //Malloc new struct
+        struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
+        addChunkToMap(castedPool->chunkMap, newCastedChunk);
+        return newCastedChunk;
+    }
+    else {
+        reportFrameBug("Loaded Freed Chunk\n");
+        //Rebuild free struct
+        castedPool->freeChunkCount--;
+        struct CastedChunk *freeCastedChunk = castedPool->freeChunks[castedPool->freeChunkCount];
+        //Rebuild the chunk
+        //Basic vars
+        freeCastedChunk->isoX = isoX;
+        freeCastedChunk->isoY = isoY;
+        freeCastedChunk->direction = gameData->cameraData->direction;
+        freeCastedChunk->busy = false;
+        freeCastedChunk->rayCast = false;
+        freeCastedChunk->textured = false;
+        //World Camera location update
+        updateChunkCamCords(gameData->cameraData, freeCastedChunk);
+        return freeCastedChunk;
+    }
 }
 
 struct CastedChunk* getCastedChunkAtCords(struct CameraData* cameraData, int isoX, int isoY){
