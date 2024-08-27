@@ -62,8 +62,8 @@ struct Screen* createScreen(){
         return NULL;
     }
 
-    screen->xRez = 1920;
-    screen->yRez = 1080;
+    screen->xRez = 2560;
+    screen->yRez = 1440;
 
     //set run to true
     screen->run = true;

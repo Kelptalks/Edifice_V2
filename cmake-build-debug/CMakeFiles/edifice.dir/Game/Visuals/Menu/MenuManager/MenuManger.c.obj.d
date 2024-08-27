@@ -191,6 +191,8 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus/SettingsMenu/SettingsMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager/UIManger.h \
@@ -199,7 +201,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager/UIRenderer/UIRenderer.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \

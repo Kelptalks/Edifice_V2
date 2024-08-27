@@ -191,7 +191,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj:
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
@@ -219,6 +219,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj:
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \

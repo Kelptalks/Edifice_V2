@@ -23,8 +23,4 @@ void updateTikTime(struct GameData* gameData){
         tikManager->tik++;
     }
 
-    reportTikBug("Current tik : %i \n", tikManager->tik);
-    if (tikManager->tik % 200 == 0){
-        clearTikBugReports();
-    }
 }

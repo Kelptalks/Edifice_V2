@@ -188,5 +188,6 @@ CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Sound\SoundManager.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Assets/AssetManager.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_surface.h

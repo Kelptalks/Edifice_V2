@@ -3,7 +3,7 @@
 //
 
 #include "OctreeNode.h"
-#include "KeyMod.h"
+#include "Tools/KeyMod.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

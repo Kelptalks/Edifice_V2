@@ -8,6 +8,7 @@
 #include "Visuals/Menu/TextManager/TextManager.h"
 #include "Debuging/DebugMenu/DebugMenu.h"
 #include "Visuals/Menu/MenuManager/MenuManger.h"
+#include "Sound/SoundManager.h"
 
 struct GameData{
     struct Screen* screen;
@@ -16,11 +17,10 @@ struct GameData{
     struct Textures* textures;
     struct TextTextures* textTextures;
     struct MenuManager* menuManger;
-
     struct DebugMenu* debugMenu;
     struct PlayerData* playerData;
     struct TikManager* tikManager;
-    struct Sounds* sounds;
+    struct SoundManager* soundManager;
 };
 
 struct GameData* createGameData();

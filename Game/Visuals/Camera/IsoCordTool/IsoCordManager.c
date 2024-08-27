@@ -14,8 +14,8 @@ void isoToScreen(float scale, int x, int y, int* isoX, int* isoY){
 }
 
 void screenToIso(float scale, int x, int y, int* isoX, int* isoY){
-    int tempIsoX = (float) (x + 2 * y) / (2 * scale);
-    int tempIsoY = (float) (2 * y - x) / (2 * scale);
+    float tempIsoX = (float) (x + 2 * y) / (2 * scale);
+    float tempIsoY = (float) (2 * y - x) / (2 * scale);
 
     //Cord correction due to 0
     if (tempIsoX < 0){

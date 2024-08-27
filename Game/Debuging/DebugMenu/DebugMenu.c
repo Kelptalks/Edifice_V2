@@ -70,6 +70,18 @@ void renderDebugMenu(struct GameData* gameData){
     char camRenderingDirection[40] = {0};
     sprintf(camRenderingDirection, getDirectionString(gameData->cameraData->direction));
     drawString(gameData, camRenderingDirection, 40, 5, 130, 20);
+
+    //ChunkInformation
+    int totalChunks = gameData->cameraData->castedPool->totalChunksCreated;
+
+    char TotalChunkCount[40] = {0};
+    sprintf(TotalChunkCount, "Total Casted Chunks : %i", totalChunks);
+    drawString(gameData, TotalChunkCount, 40, 5, 155, 20);
+
+    int freeChunks = gameData->cameraData->castedPool->freeChunkCount;
+    char freeChunkCount[40] = {0};
+    sprintf(freeChunkCount, "Total Free Chunks : %i", freeChunks);
+    drawString(gameData, freeChunkCount, 40, 5, 180, 20);
 }
 
 void toggleChunkBoarders(struct DebugMenu* debugMenu){

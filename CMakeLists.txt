@@ -22,7 +22,7 @@ add_executable(edifice main.c
         Game/Controls/Controls.h
         Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c
         Game/Debuging/Test_Main.c
-        Game/World/Octree/KeyMod.c
+        Game/World/Octree/Tools/KeyMod.c
         Game/World/World.c
         Game/World/TerrainGen/LairManager/LairManager.c
         "Game/World/TerrainGen/Perlin Noise/PerlinNoise.c"
@@ -71,8 +71,8 @@ add_executable(edifice main.c
         Game/InGameTime/TikEvent/TerpManager/TerpManager.h
         Game/InGameTime/TikEvent/TikEvent.c
         Game/InGameTime/TikEvent/TikEvent.h
-        Game/World/Octree/AdvancedKeyMod.c
-        Game/World/Octree/AdvancedKeyMod.h
+        Game/World/Octree/Tools/AdvancedKeyMod.c
+        Game/World/Octree/Tools/AdvancedKeyMod.h
         Game/Sound/SoundManager.c
         Game/Sound/SoundManager.h
         Game/World/TerrainGen/HillManager/HillManager.c
@@ -87,6 +87,12 @@ add_executable(edifice main.c
         "Game/Visuals/Menu/MenuManager/ UIManager/UIRenderer/UIRenderer.h"
         Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c
         Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h
+        Game/World/WorldChunk/WorldChunk.c
+        Game/World/WorldChunk/WorldChunk.h
+        Game/World/Octree/OctreeBranchPool/OctreeNodePool.c
+        Game/World/Octree/OctreeBranchPool/OctreeNodePool.h
+        Game/World/WorldChunkHashMap/WorldChunkHashMap.c
+        Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

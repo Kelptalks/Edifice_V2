@@ -11,4 +11,6 @@ void getExecutablePath(char* buffer, size_t bufferSize);
 
 SDL_Surface* loadSpriteSheet();
 
+void loadSound(const char *fileName, struct Sound* sound);
+
 #endif //EDIFICE_ASSETMANAGER_H

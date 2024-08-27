@@ -225,6 +225,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManage
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\RayCasting\RayCaster.h \

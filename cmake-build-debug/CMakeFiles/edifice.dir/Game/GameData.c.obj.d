@@ -207,6 +207,7 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Sound/SoundManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals/Camera/CameraData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
@@ -224,5 +225,4 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData/PlayerData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime/TikManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Sound/SoundManager.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

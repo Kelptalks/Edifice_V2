@@ -6,7 +6,7 @@
 #include "../../../GameData.h"
 #include "../CameraData.h"
 #include "../../../World/World.h"
-#include "../../../World/Octree/KeyMod.h"
+#include "../../../World/Octree/Tools/KeyMod.h"
 #include "../IsoCordTool/IsoCordManager.h"
 #include "../../../World/Octree/Octree.h"
 #include "../../../World/Octree/OctreeNode.h"
@@ -55,6 +55,7 @@ void mouseHighlight(struct GameData* gameData, int xMouseCor, int yMouseCor){
 }
 
 void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
+
     //Get casted block from cords
     struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(gameData->cameraData, xMouseCor, yMouseCor);
     if (castedBlock == NULL){
@@ -91,10 +92,15 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
             if (!isTransparent(block)) {
                 //Mod CastedBlockCamkey based off axis of intercept
                 CastedBlockCamkey = modAxis(CastedBlockCamkey, 1 * axisMod, keyModOrder[axis], 0);
+
+
+                //play the sound of the current block in hand
+                playSound(gameData->soundManager, getBlockPlaceSound(gameData->playerData->block));
+
+                //Set the block
                 setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth,
                                   gameData->playerData->block);
                 drawDistance = 0;
-                playSound(gameData->sounds, 0);
                 break;
             }
         }
@@ -102,6 +108,7 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
 }
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){
+
     //Get casted block from cords
     struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(gameData->cameraData, xMouseCor, yMouseCor);
     if (castedBlock == NULL){
@@ -138,6 +145,11 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
             CastedBlockCamkey = modAxis(CastedBlockCamkey, -1 * axisMod, keyModOrder[axis], 0);
             block = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
             if (!isTransparent(block)) {
+
+                //Get the block to play the correct sound
+                enum Block blockType = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
+                playSound(gameData->soundManager, getBlockRemoveSound(blockType));
+
                 setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth, 0);
                 drawDistance = 0;
                 break;
@@ -161,7 +173,6 @@ void mouseCamMovement(struct GameData* gameData, int currentMouseXCor, int curre
     gameData->cameraData->xRenderingOffset -= xMouseCordChange;
     gameData->cameraData->yRenderingOffset -= yMouseCordChange;
 
-    reportBug("Fuck\n");
 }
 
 

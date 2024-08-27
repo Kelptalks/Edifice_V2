@@ -6,9 +6,10 @@
 
 #include <stdbool.h>
 #include "Blocks.h"
+#include "../Sound/SoundManager.h"
 
 bool isPlantable(enum Block block){
-    if (block == Grass){
+    if (block == GreenGrass){
         return true;
     }
     if (block == BlueGrass){
@@ -26,28 +27,21 @@ bool isTransparent(enum Block block){
     }
 }
 
-bool isTranslucent(enum Block block){
-    //if (block > 29 & block < 36){
-    if (block == YellowFlowers){
-        return true;
-    }
-    if (block == WhiteFlowers){
-        return true;
-    }
-    if (block == Flour){
-        return true;
-    }
-    if (block == Mushroom){
-        return true;
-    }
-    if (block == Water){
-        return true;
-    }
-    if (block == Glass){
-        return true;
-    }
-    else{
-        return false;
+bool isTranslucent(enum Block block) {
+    switch (block) {
+        case YellowFlowers :
+        case WhiteFlowers :
+        case Flour :
+        case Mushroom :
+        case Water :
+        case Glass :
+        case HalfBlockTest :
+        case ConveyorBelt :
+        case Bulb :
+        case Furnace :
+            return true;
+        default:
+            return false; // Non-translucent blocks
     }
 }
 
@@ -57,12 +51,10 @@ char* getBlockName(enum Block block){
             return "Dirt";
         case Stone:
             return "Stone";
-        case Wood:
-            return "Wood";
+        case BrownWood:
+            return "BrownWood";
         case Leave:
             return "Leave";
-        case Cloud:
-            return "Cloud";
         case Dandi:
             return "Dandi";
         case DandiStem:
@@ -71,8 +63,8 @@ char* getBlockName(enum Block block){
             return "Hive";
         case Cobble:
             return "Cobble";
-        case Grass:
-            return "Grass";
+        case GreenGrass:
+            return "GreenGrass";
         case Magma:
             return "Magma";
         case Core:
@@ -131,9 +123,17 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 64;
             *y = 0;
             break;
-        case Wood:
+        case PurpleWood:
             *x = 128;
             *y = 0;
+            break;
+        case BrownWood:
+            *x = 128;
+            *y = 512;
+            break;
+        case BrownWoodPlanks:
+            *x = 64;
+            *y = 512;
             break;
         case Leave:
             *x = 192;
@@ -155,7 +155,7 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 192;
             *y = 64;
             break;
-        case Grass:
+        case GreenGrass:
             *x = 0;
             *y = 128;
             break;
@@ -171,6 +171,22 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 192;
             *y = 128;
             break;
+        case Factory:
+            *x = 0;
+            *y = 1024;
+            break;
+        case Crate:
+            *x = 0;
+            *y = 1088;
+            break;
+        case Furnace:
+            *x = 0;
+            *y = 512;
+            break;
+        case ConveyorBelt:
+            *x = 256;
+            *y = 1088;
+            break;
         case Metal:
             *x = 0;
             *y = 192;
@@ -183,9 +199,13 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 128;
             *y = 192;
             break;
-        case Iron:
+        case Copper:
             *x = 192;
             *y = 192;
+            break;
+        case Iron:
+            *x = 128;
+            *y = 448;
             break;
         case Fungi:
             *x = 0;
@@ -201,6 +221,10 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             break;
         case BlueMushroomBlock:
             *x = 192;
+            *y = 448;
+            break;
+        case PinkMushroomBlock:
+            *x = 192;
             *y = 256;
             break;
         case Debug:
@@ -213,6 +237,10 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             break;
         case Flour:
             *x = 192;
+            *y = 960;
+            break;
+        case Bulb:
+            *x = 256;
             *y = 960;
             break;
         case WhiteFlowers:
@@ -263,6 +291,10 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 0;
             *y = 384;
             break;
+        case ClayBrick :
+            *x = 0;
+            *y = 448;
+            break;
         case Coral:
             *x = 64;
             *y = 384;
@@ -275,9 +307,73 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 192;
             *y = 384;
             break;
+        case HalfBlockTest:
+            *x = 0;
+            *y = 576;
+            break;
         default:
             *x = 64;
             *y = 320;
             break;
     }
+}
+
+
+int getBlockRemoveSound(enum Block block){
+    switch (block) {
+        //Plant Sound
+        case GreenGrass:
+        case BlueGrass:
+        case DandiStem:
+        case Dandi:
+        case Mushroom:
+        case Flour:
+        case Fungi:
+        case WhiteFlowers:
+        case YellowFlowers:
+        case MushroomStem:
+        case Bulb :
+        case BlueMushroomBlock:
+            return BlockRemoveSoundPlant;
+        case LBM :
+        case Factory :
+        case Crate :
+        case ConveyorBelt :
+        case Metal :
+            return BlockRemoveSoundFactory;
+    }
+    return BlockRemoveSoundDefault;
+}
+
+int getBlockPlaceSound(enum Block block){
+    switch (block) {
+        //Plant Sound
+        case DandiStem:
+        case Dandi:
+        case Mushroom:
+        case Flour:
+        case Fungi:
+        case WhiteFlowers:
+        case YellowFlowers:
+        case MushroomStem:
+        case Bulb :
+        case BlueMushroomBlock:
+            return BlockPlaceSoundPlant;
+        case LBM :
+        case Factory :
+        case Crate :
+        case ConveyorBelt :
+        case Metal :
+            return BlockPlaceSoundFactory;
+        case GreenGrass :
+        case BlueGrass :
+        case Dirt :
+        case CrackedEarth :
+            return BlockPlaceSoundDirt;
+        case ClayBrick :
+        case StoneBrick :
+        case MudBrick :
+            return BlockPlaceSoundBrick;
+    }
+    return BlockPlaceSoundDefault;
 }

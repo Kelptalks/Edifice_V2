@@ -207,6 +207,7 @@ CMakeFiles/edifice.dir/main.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game/Sound/SoundManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/Controls/Controls.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/Visuals/Camera/Camera.h \

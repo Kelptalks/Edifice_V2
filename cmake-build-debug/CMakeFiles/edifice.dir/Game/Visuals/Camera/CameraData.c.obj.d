@@ -215,9 +215,10 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Camera.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h \

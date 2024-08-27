@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 #include <math.h>
-#include "../../Octree/KeyMod.h"
+#include "../../Octree/Tools/KeyMod.h"
 #include "../../Octree/OctreeNode.h"
 #include "../../Octree/Octree.h"
 #include "../../World.h"
@@ -22,7 +22,7 @@ void buildLeaves(struct World* world, unsigned long key){
 }
 
 //Build the branch of a tree
-void buildBranch(struct World* world, unsigned long key){
+void buildBranch(struct World* world, unsigned long key, enum Block blockType){
     int rand = rand % 4;
     //select random direction
     int yMod = 0;
@@ -40,13 +40,19 @@ void buildBranch(struct World* world, unsigned long key){
         yMod = -1;
     }
     for (int x = 1; x < 3; x++){
-        setOctreeKeyValue(world->octree->root, modKey(key, xMod * x, yMod * x, 0, 0), world->octree->RootDepth, Wood);
+        setOctreeKeyValue(world->octree->root, modKey(key, xMod * x, yMod * x, 0, 0), world->octree->RootDepth, blockType);
     }
     buildLeaves(world, modKey(key, xMod * 3, yMod * 3, 1, 0));
 }
 
 //Build a purple tree
 void buildTree(struct World* world, unsigned long key){
+
+    enum Block blockType = BrownWood;
+    if (rand() % 10 == 0){
+        blockType = PurpleWood;
+    };
+
     int height = rand() % 10 + 5;
     int branchHeight = -1;
     if (height > 10){
@@ -55,9 +61,9 @@ void buildTree(struct World* world, unsigned long key){
 
     //Build the trunk and branches
     for (int z = 0; z < height; z++){
-        setOctreeKeyValue(world->octree->root, modKey(key, 0, 0, z, 0), world->octree->RootDepth, Wood);
+        setOctreeKeyValue(world->octree->root, modKey(key, 0, 0, z, 0), world->octree->RootDepth, blockType);
         if (branchHeight == z){
-            buildBranch(world, modKey(key, 0, 0, z, 0));
+            buildBranch(world, modKey(key, 0, 0, z, 0), blockType);
         }
     }
     //Top tree with leaves
@@ -82,6 +88,11 @@ void buildMushroom(struct World* world, unsigned long key){
         }
     }
 
+    enum Block blockType = BlueMushroomBlock;
+    if (rand() % 2 == 0){
+        blockType = PinkMushroomBlock;
+    };
+
     int topRadius = stemRadius + 8 + (rand() % 5);
 
     unsigned long mushroomTopKey = modKey(key, 0, 0, height, 0);
@@ -91,7 +102,7 @@ void buildMushroom(struct World* world, unsigned long key){
             for (int y = -topRadius; y < topRadius; y++) {
                 if (sqrt(x * x + y * y) < topRadius) {
                     setOctreeKeyValue(world->octree->root, modKey(mushroomTopKey, x, y, zMod, 0), world->octree->RootDepth,
-                                      BlueMushroomBlock);
+                                      blockType);
                 }
             }
         }
@@ -148,7 +159,7 @@ void generatePlant(struct World* world, unsigned long key, enum Block block){
         key = modKey(key, 0, 0, 1, 0);
 
         //Generate if grass
-        if (block == Grass){
+        if (block == GreenGrass){
             //reportBug("%i \n", randomVal);
             //60% chance to grow empty
             if (randomVal <= 74){

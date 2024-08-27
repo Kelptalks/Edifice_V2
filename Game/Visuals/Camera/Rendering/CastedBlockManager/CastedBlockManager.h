@@ -42,7 +42,6 @@ struct CastedChunk{
     int scale;
     int isoX;
     int isoY;
-    double distanceFromCamCenter;
 
     struct CastedBlock* castedBlocks;
     int castedBlockCount;
@@ -55,8 +54,12 @@ struct CastedChunk{
 
 struct CastedPool{
     struct ChunkMap* chunkMap;
+
+
     int totalChunksCreated;
     int maxChunks;
+    struct CastedChunk** allChunks;
+
 
     //Chunks that are available for use
     int freeChunkCount;
@@ -78,7 +81,6 @@ struct CastedBlock* getCastedBlockAtCords(struct CameraData* cameraData, int iso
 void unloadChunk(struct CastedPool* castedPool, struct CastedChunk* castedChunk);
 struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY);
 
-void createChunkInPool(struct GameData* gameData, int isoX, int isoY);
 
 
 #endif //EDIFICE_CASTEDBLOCKMANAGER_H

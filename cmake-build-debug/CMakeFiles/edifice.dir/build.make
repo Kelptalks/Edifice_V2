@@ -203,20 +203,20 @@ CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Debuging\Test_Main.c -o CMakeFiles\edifice.dir\Game\Debuging\Test_Main.c.s
 
-CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.c
-CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\KeyMod.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\KeyMod.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\KeyMod.c
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.c
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\Tools\KeyMod.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\Tools\KeyMod.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\KeyMod.c
 
-CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\KeyMod.c > CMakeFiles\edifice.dir\Game\World\Octree\KeyMod.c.i
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\KeyMod.c > CMakeFiles\edifice.dir\Game\World\Octree\Tools\KeyMod.c.i
 
-CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\KeyMod.c -o CMakeFiles\edifice.dir\Game\World\Octree\KeyMod.c.s
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\KeyMod.c -o CMakeFiles\edifice.dir\Game\World\Octree\Tools\KeyMod.c.s
 
 CMakeFiles/edifice.dir/Game/World/World.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/World/World.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
@@ -638,20 +638,20 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\TikEvent.c -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TikEvent.c.s
 
-CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.c
-CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\AdvancedKeyMod.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\AdvancedKeyMod.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\AdvancedKeyMod.c
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.c
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\AdvancedKeyMod.c
 
-CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\AdvancedKeyMod.c > CMakeFiles\edifice.dir\Game\World\Octree\AdvancedKeyMod.c.i
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\AdvancedKeyMod.c > CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.i
 
-CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\AdvancedKeyMod.c -o CMakeFiles\edifice.dir\Game\World\Octree\AdvancedKeyMod.c.s
+CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\AdvancedKeyMod.c -o CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.s
 
 CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
@@ -758,6 +758,51 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/Settings
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.s
 
+CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c
+CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj -MF CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.obj.d -o CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk\WorldChunk.c
+
+CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk\WorldChunk.c > CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.i
+
+CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk\WorldChunk.c -o CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.s
+
+CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c
+CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c
+
+CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c > CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.i
+
+CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c -o CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.s
+
+CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c
+CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj -MF CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.obj.d -o CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunkHashMap\WorldChunkHashMap.c
+
+CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunkHashMap\WorldChunkHashMap.c > CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.i
+
+CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunkHashMap\WorldChunkHashMap.c -o CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.s
+
 # Object files for target edifice
 edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/main.c.obj" \
@@ -769,7 +814,7 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj" \
-"CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj" \
+"CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/World.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj" \
@@ -798,14 +843,17 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj" \
-"CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj" \
+"CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj" \
 "CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/TerrainGen/HillManager/HillManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj" \
-"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj"
+"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj" \
+"CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj" \
+"CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj" \
+"CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj"
 
 # External object files for target edifice
 edifice_EXTERNAL_OBJECTS =
@@ -819,7 +867,7 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManag
 edifice.exe: CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/World.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj
@@ -848,7 +896,7 @@ edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/HillManager/HillManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj
@@ -856,13 +904,16 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.o
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj
 edifice.exe: CMakeFiles/edifice.dir/build.make
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
 edifice.exe: CMakeFiles/edifice.dir/objects1.rsp
 edifice.exe: CMakeFiles/edifice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable edifice.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Linking C executable edifice.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\edifice.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

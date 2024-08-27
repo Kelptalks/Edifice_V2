@@ -920,54 +920,6 @@ Game/Visuals/Screen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Screen.c.s
 .PHONY : Game/Visuals/Screen.c.s
 
-Game/World/Octree/AdvancedKeyMod.obj: Game/World/Octree/AdvancedKeyMod.c.obj
-.PHONY : Game/World/Octree/AdvancedKeyMod.obj
-
-# target to build an object file
-Game/World/Octree/AdvancedKeyMod.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.obj
-.PHONY : Game/World/Octree/AdvancedKeyMod.c.obj
-
-Game/World/Octree/AdvancedKeyMod.i: Game/World/Octree/AdvancedKeyMod.c.i
-.PHONY : Game/World/Octree/AdvancedKeyMod.i
-
-# target to preprocess a source file
-Game/World/Octree/AdvancedKeyMod.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.i
-.PHONY : Game/World/Octree/AdvancedKeyMod.c.i
-
-Game/World/Octree/AdvancedKeyMod.s: Game/World/Octree/AdvancedKeyMod.c.s
-.PHONY : Game/World/Octree/AdvancedKeyMod.s
-
-# target to generate assembly for a file
-Game/World/Octree/AdvancedKeyMod.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/AdvancedKeyMod.c.s
-.PHONY : Game/World/Octree/AdvancedKeyMod.c.s
-
-Game/World/Octree/KeyMod.obj: Game/World/Octree/KeyMod.c.obj
-.PHONY : Game/World/Octree/KeyMod.obj
-
-# target to build an object file
-Game/World/Octree/KeyMod.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.obj
-.PHONY : Game/World/Octree/KeyMod.c.obj
-
-Game/World/Octree/KeyMod.i: Game/World/Octree/KeyMod.c.i
-.PHONY : Game/World/Octree/KeyMod.i
-
-# target to preprocess a source file
-Game/World/Octree/KeyMod.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.i
-.PHONY : Game/World/Octree/KeyMod.c.i
-
-Game/World/Octree/KeyMod.s: Game/World/Octree/KeyMod.c.s
-.PHONY : Game/World/Octree/KeyMod.s
-
-# target to generate assembly for a file
-Game/World/Octree/KeyMod.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/KeyMod.c.s
-.PHONY : Game/World/Octree/KeyMod.c.s
-
 Game/World/Octree/Octree.obj: Game/World/Octree/Octree.c.obj
 .PHONY : Game/World/Octree/Octree.obj
 
@@ -992,6 +944,30 @@ Game/World/Octree/Octree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.s
 .PHONY : Game/World/Octree/Octree.c.s
 
+Game/World/Octree/OctreeBranchPool/OctreeNodePool.obj: Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj
+.PHONY : Game/World/Octree/OctreeBranchPool/OctreeNodePool.obj
+
+# target to build an object file
+Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj
+.PHONY : Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj
+
+Game/World/Octree/OctreeBranchPool/OctreeNodePool.i: Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i
+.PHONY : Game/World/Octree/OctreeBranchPool/OctreeNodePool.i
+
+# target to preprocess a source file
+Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i
+.PHONY : Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i
+
+Game/World/Octree/OctreeBranchPool/OctreeNodePool.s: Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s
+.PHONY : Game/World/Octree/OctreeBranchPool/OctreeNodePool.s
+
+# target to generate assembly for a file
+Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s
+.PHONY : Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s
+
 Game/World/Octree/OctreeNode.obj: Game/World/Octree/OctreeNode.c.obj
 .PHONY : Game/World/Octree/OctreeNode.obj
 
@@ -1015,6 +991,54 @@ Game/World/Octree/OctreeNode.s: Game/World/Octree/OctreeNode.c.s
 Game/World/Octree/OctreeNode.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.s
 .PHONY : Game/World/Octree/OctreeNode.c.s
+
+Game/World/Octree/Tools/AdvancedKeyMod.obj: Game/World/Octree/Tools/AdvancedKeyMod.c.obj
+.PHONY : Game/World/Octree/Tools/AdvancedKeyMod.obj
+
+# target to build an object file
+Game/World/Octree/Tools/AdvancedKeyMod.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj
+.PHONY : Game/World/Octree/Tools/AdvancedKeyMod.c.obj
+
+Game/World/Octree/Tools/AdvancedKeyMod.i: Game/World/Octree/Tools/AdvancedKeyMod.c.i
+.PHONY : Game/World/Octree/Tools/AdvancedKeyMod.i
+
+# target to preprocess a source file
+Game/World/Octree/Tools/AdvancedKeyMod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.i
+.PHONY : Game/World/Octree/Tools/AdvancedKeyMod.c.i
+
+Game/World/Octree/Tools/AdvancedKeyMod.s: Game/World/Octree/Tools/AdvancedKeyMod.c.s
+.PHONY : Game/World/Octree/Tools/AdvancedKeyMod.s
+
+# target to generate assembly for a file
+Game/World/Octree/Tools/AdvancedKeyMod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.s
+.PHONY : Game/World/Octree/Tools/AdvancedKeyMod.c.s
+
+Game/World/Octree/Tools/KeyMod.obj: Game/World/Octree/Tools/KeyMod.c.obj
+.PHONY : Game/World/Octree/Tools/KeyMod.obj
+
+# target to build an object file
+Game/World/Octree/Tools/KeyMod.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj
+.PHONY : Game/World/Octree/Tools/KeyMod.c.obj
+
+Game/World/Octree/Tools/KeyMod.i: Game/World/Octree/Tools/KeyMod.c.i
+.PHONY : Game/World/Octree/Tools/KeyMod.i
+
+# target to preprocess a source file
+Game/World/Octree/Tools/KeyMod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.i
+.PHONY : Game/World/Octree/Tools/KeyMod.c.i
+
+Game/World/Octree/Tools/KeyMod.s: Game/World/Octree/Tools/KeyMod.c.s
+.PHONY : Game/World/Octree/Tools/KeyMod.s
+
+# target to generate assembly for a file
+Game/World/Octree/Tools/KeyMod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.s
+.PHONY : Game/World/Octree/Tools/KeyMod.c.s
 
 Game/World/TerrainGen/HillManager/HillManager.obj: Game/World/TerrainGen/HillManager/HillManager.c.obj
 .PHONY : Game/World/TerrainGen/HillManager/HillManager.obj
@@ -1184,6 +1208,54 @@ Game/World/World.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World.c.s
 .PHONY : Game/World/World.c.s
 
+Game/World/WorldChunk/WorldChunk.obj: Game/World/WorldChunk/WorldChunk.c.obj
+.PHONY : Game/World/WorldChunk/WorldChunk.obj
+
+# target to build an object file
+Game/World/WorldChunk/WorldChunk.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj
+.PHONY : Game/World/WorldChunk/WorldChunk.c.obj
+
+Game/World/WorldChunk/WorldChunk.i: Game/World/WorldChunk/WorldChunk.c.i
+.PHONY : Game/World/WorldChunk/WorldChunk.i
+
+# target to preprocess a source file
+Game/World/WorldChunk/WorldChunk.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.i
+.PHONY : Game/World/WorldChunk/WorldChunk.c.i
+
+Game/World/WorldChunk/WorldChunk.s: Game/World/WorldChunk/WorldChunk.c.s
+.PHONY : Game/World/WorldChunk/WorldChunk.s
+
+# target to generate assembly for a file
+Game/World/WorldChunk/WorldChunk.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.s
+.PHONY : Game/World/WorldChunk/WorldChunk.c.s
+
+Game/World/WorldChunkHashMap/WorldChunkHashMap.obj: Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj
+.PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.obj
+
+# target to build an object file
+Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj
+.PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj
+
+Game/World/WorldChunkHashMap/WorldChunkHashMap.i: Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i
+.PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.i
+
+# target to preprocess a source file
+Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i
+.PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i
+
+Game/World/WorldChunkHashMap/WorldChunkHashMap.s: Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
+.PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.s
+
+# target to generate assembly for a file
+Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
+.PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
+
 Game/World/World_Saving/WorldFileManager.obj: Game/World/World_Saving/WorldFileManager.c.obj
 .PHONY : Game/World/World_Saving/WorldFileManager.obj
 
@@ -1340,18 +1412,21 @@ help:
 	@echo ... Game/Visuals/Screen.obj
 	@echo ... Game/Visuals/Screen.i
 	@echo ... Game/Visuals/Screen.s
-	@echo ... Game/World/Octree/AdvancedKeyMod.obj
-	@echo ... Game/World/Octree/AdvancedKeyMod.i
-	@echo ... Game/World/Octree/AdvancedKeyMod.s
-	@echo ... Game/World/Octree/KeyMod.obj
-	@echo ... Game/World/Octree/KeyMod.i
-	@echo ... Game/World/Octree/KeyMod.s
 	@echo ... Game/World/Octree/Octree.obj
 	@echo ... Game/World/Octree/Octree.i
 	@echo ... Game/World/Octree/Octree.s
+	@echo ... Game/World/Octree/OctreeBranchPool/OctreeNodePool.obj
+	@echo ... Game/World/Octree/OctreeBranchPool/OctreeNodePool.i
+	@echo ... Game/World/Octree/OctreeBranchPool/OctreeNodePool.s
 	@echo ... Game/World/Octree/OctreeNode.obj
 	@echo ... Game/World/Octree/OctreeNode.i
 	@echo ... Game/World/Octree/OctreeNode.s
+	@echo ... Game/World/Octree/Tools/AdvancedKeyMod.obj
+	@echo ... Game/World/Octree/Tools/AdvancedKeyMod.i
+	@echo ... Game/World/Octree/Tools/AdvancedKeyMod.s
+	@echo ... Game/World/Octree/Tools/KeyMod.obj
+	@echo ... Game/World/Octree/Tools/KeyMod.i
+	@echo ... Game/World/Octree/Tools/KeyMod.s
 	@echo ... Game/World/TerrainGen/HillManager/HillManager.obj
 	@echo ... Game/World/TerrainGen/HillManager/HillManager.i
 	@echo ... Game/World/TerrainGen/HillManager/HillManager.s
@@ -1373,6 +1448,12 @@ help:
 	@echo ... Game/World/World.obj
 	@echo ... Game/World/World.i
 	@echo ... Game/World/World.s
+	@echo ... Game/World/WorldChunk/WorldChunk.obj
+	@echo ... Game/World/WorldChunk/WorldChunk.i
+	@echo ... Game/World/WorldChunk/WorldChunk.s
+	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.obj
+	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.i
+	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.s
 	@echo ... Game/World/World_Saving/WorldFileManager.obj
 	@echo ... Game/World/World_Saving/WorldFileManager.i
 	@echo ... Game/World/World_Saving/WorldFileManager.s

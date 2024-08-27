@@ -208,6 +208,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\IsoCordTool/IsoCordManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\CameraData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/CastedBlockManager.h \
@@ -225,6 +226,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h

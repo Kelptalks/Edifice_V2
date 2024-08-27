@@ -18,7 +18,13 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    playSound(gameData->soundManager, 0);
+    playSound(gameData->soundManager, 0);
+
     while (gameData->screen->run){
+        //Get start time
+        Uint32 time1 = SDL_GetTicks();
+
         //Control what the game is rendering
         renderCurrentMenu(gameData);
 
@@ -26,12 +32,15 @@ int main(int argc, char* argv[]) {
         SDL_RenderPresent(gameData->screen->renderer);
         SDL_RenderClear(gameData->screen->renderer);
 
-        //Delay to limit frame rate
-        SDL_Delay(gameData->screen->frameDelay);
-
         //Handle game inputs
         handleInput(gameData);
         updateTikTime(gameData);
+
+        //end frame render time tracker
+        Uint32 time2 = SDL_GetTicks();
+        gameData->screen->frameRenderTime = time2 - time1;
+        //Update current frame
+        gameData->screen->currentFrame++;
 
     }
 

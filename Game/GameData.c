@@ -40,7 +40,7 @@ struct GameData* createGameData(){
 
     //create textures
     reportBug("Splicing textures \n");
-    gameData->textures = createTextures(gameData->screen->renderer, 50);
+    gameData->textures = createTextures(gameData->screen->renderer, 60);
 
     //Build the octree world
     reportBug("Building world\n");
@@ -61,6 +61,9 @@ struct GameData* createGameData(){
     //CreateTikManager
     reportBug("Creating Tik Manager \n");
     gameData->tikManager = createTikManager();
+
+    reportBug("Creating Sound Manager\n");
+    gameData->soundManager = createSoundManager(12);
 
 
     //Create Sounds

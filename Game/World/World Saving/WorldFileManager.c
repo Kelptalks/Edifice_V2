@@ -6,7 +6,7 @@
 #include "../World.h"
 #include "../Octree/Octree.h"
 #include "../Octree/OctreeNode.h"
-#include "../Octree/KeyMod.h"
+#include "../Octree/Tools/KeyMod.h"
 #include "../../Debuging/Test_Main.h"
 #include <sys/stat.h>
 #include <sys/types.h>

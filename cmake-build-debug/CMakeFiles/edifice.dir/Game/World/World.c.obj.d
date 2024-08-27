@@ -25,9 +25,10 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree/OctreeNode.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\World.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree/KeyMod.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree/Tools/KeyMod.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen/TerrainGen.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen/LairManager/LairManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk/WorldChunk.h

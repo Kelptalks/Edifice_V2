@@ -6,7 +6,7 @@
 #include "CameraData.h"
 #include "Rendering/CastedBlockManager/CastedBlockManager.h"
 #include "../../Debuging/Test_Main.h"
-#include "../../World/Octree/KeyMod.h"
+#include "../../World/Octree/Tools/KeyMod.h"
 #include "../InMenuWindow/InMenuWindow.h"
 #include "Camera.h"
 #include "Rendering/RayCasting/RayCastingManager.h"
@@ -15,7 +15,7 @@
 struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* cameraData)
 {
     //Create an array of cordnate structs with distances
-    int radius = cameraData->viewDistance * 2;
+    int radius = cameraData->viewDistance * 5;
     int totalCords = radius * 2 * radius * 2;
 
     cameraData->totalDistanceCords = totalCords;
@@ -83,7 +83,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
     cameraData->yChunkScaledTextureRez = 0;
 
     //How many chunks will generate
-    cameraData->viewDistance = 32;
+    cameraData->viewDistance = 16;
     cameraData->mouseUpdateDistance = 2;
 
     //Max 512

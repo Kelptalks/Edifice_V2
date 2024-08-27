@@ -2,11 +2,10 @@
 ## Programming ##
 #################
 
-- index array for shadow raycasting logic, split into functions.
-
 - Documentation
 
-- Sound!!! It improves it so much.
+- Every 30 seconds give an update of the average amount of time it takes to do each task of the program, to identify what is causeing the issues
+
 
 terrain gen
 	- Add perlin noise that takes x, y cords for input
@@ -25,12 +24,15 @@ User input :
 
 Rendering:
 	Ray Casting :
+		- Fix shadows
 		- save the key of the first transparent block struck.
 		- Use octree structure to skip large empty nodes
 		- Cuda raytracing.
 
 	Chunk loading :
-		- Unload chunks out of range
+
+		- Malloc all casted chunks at the same time.
+		- Fix the Unloading chunks out of range
 		
 	List pool :
 		- Use a pool of lists for arrays to avoid constant mallocs

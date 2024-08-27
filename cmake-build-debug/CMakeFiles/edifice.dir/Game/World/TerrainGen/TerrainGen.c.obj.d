@@ -216,7 +216,8 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\PlantManager/PlantManger.h \

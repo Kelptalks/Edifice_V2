@@ -57,6 +57,10 @@ int freeOctree(struct Octree* octree){
     free(octree);
 }
 
+int getOctreeDimensions(int maxDepth){
+    return (2 << maxDepth);
+}
+
 long getSize(int depth){
     return pow(8,depth);
 }

@@ -5,7 +5,7 @@
 #include <malloc.h>
 #include "TerrainGen.h"
 #include "Perlin Noise/PerlinNoise.h"
-#include "../Octree/KeyMod.h"
+#include "../Octree/Tools/KeyMod.h"
 #include "../Octree/OctreeNode.h"
 #include "../Octree/Octree.h"
 #include "LairManager/LairManager.h"
@@ -26,7 +26,7 @@ void createTerrainGenRules(struct World* world){
     //add all lair rules
     addLairRule(terrainGenRules->lairRules, -20, 15, Stone);
     addLairRule(terrainGenRules->lairRules, 16, 20, Dirt);
-    addLairRule(terrainGenRules->lairRules, 21, 21, Grass);
+    addLairRule(terrainGenRules->lairRules, 21, 21, GreenGrass);
 
 
     terrainGenRules->heightMapPool = createHeightMapPool();
@@ -101,7 +101,7 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
 
 
                         //Attempt to plant on that block
-                        if (lairRule->blockType == Grass) {
+                        if (lairRule->blockType == GreenGrass) {
                             generatePlant(world, shiftedLairKey, lairRule->blockType);
                         }
                     }

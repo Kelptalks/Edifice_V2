@@ -5,7 +5,7 @@
 #include "../TextureManager/IsoTextureManager.h"
 #include "../../../../Blocks/Blocks.h"
 #include "../../../../World/Octree/OctreeNode.h"
-#include "../../../../World/Octree/KeyMod.h"
+#include "../../../../World/Octree/Tools/KeyMod.h"
 #include "../../CameraData.h"
 #include "../../../../World/Octree/Octree.h"
 #include "../../../../Debuging/Test_Main.h"

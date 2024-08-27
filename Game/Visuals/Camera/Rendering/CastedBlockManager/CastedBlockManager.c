@@ -7,7 +7,7 @@
 
 #include <windows.h>
 
-#include "../../../../World/Octree/KeyMod.h"
+#include "../../../../World/Octree/Tools/KeyMod.h"
 #include "../../../../Debuging/Test_Main.h"
 #include "../../CameraData.h"
 
@@ -59,6 +59,7 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     castedChunk->busy = false;
     castedChunk->rayCast = false;
     castedChunk->textured = false;
+
     //castedChunk->direction = cameraData->direction;
 
     //SetupCasted blocks utilizing the casted chunks camWorldKey
@@ -82,6 +83,7 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     SDL_RenderClear(renderer);
     SDL_SetRenderTarget(renderer, NULL);
 
+    cameraData->castedPool->allChunks[cameraData->castedPool->totalChunksCreated] = castedChunk;
     cameraData->castedPool->totalChunksCreated++;
     return castedChunk;
 }
@@ -102,12 +104,15 @@ void freeCastedChunk(struct CastedChunk* castedChunk){
 struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Renderer* renderer){
     struct CastedPool* castedPool = malloc(sizeof (struct CastedPool));
     //Create the Casted Pool array based on the square of the view distance
-    castedPool->totalChunksCreated = 0;
-    castedPool->chunkMap = createChunkMap(256);
+    castedPool->chunkMap = createChunkMap(10000);
+    castedPool->maxChunks = 10000;
 
-    castedPool->maxChunks = 2000;
     castedPool->freeChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
+    castedPool->allChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
+
+    castedPool->totalChunksCreated = 0;
     castedPool->freeChunkCount = 0;
+
     return castedPool;
 }
 
@@ -116,37 +121,30 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
-
-void createChunkInPool(struct GameData* gameData, int isoX, int isoY) {
-    struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
-
-    addChunkToMap(gameData->cameraData->castedPool->chunkMap, newCastedChunk);
-}
-
 void unloadChunk(struct CastedPool* castedPool, struct CastedChunk* castedChunk){
     //Remove the chunk from the hashmap
     removeFromChunkMap(castedPool->chunkMap, castedChunk->isoX, castedChunk->isoY);
 
+    //Reset values
+    castedChunk->isoY = 0;
+    castedChunk->isoX = 0;
+
     //Add the chunk to the top of the free chunk array stack
-    reportFrameBug("Unloaded chunk\n");
     castedPool->freeChunks[castedPool->freeChunkCount] = castedChunk;
+
     castedPool->freeChunkCount++;
 }
 
 struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY){
     struct CastedPool* castedPool = gameData->cameraData->castedPool;
     //If there are no free chunks in pool create new one
-    if (castedPool->freeChunkCount == 0){
-        //Malloc new struct
-        struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
-        addChunkToMap(castedPool->chunkMap, newCastedChunk);
-        return newCastedChunk;
-    }
-    else {
-        reportFrameBug("Loaded Freed Chunk\n");
+
+    if (castedPool->freeChunkCount > 0){
         //Rebuild free struct
         castedPool->freeChunkCount--;
         struct CastedChunk *freeCastedChunk = castedPool->freeChunks[castedPool->freeChunkCount];
+        castedPool->freeChunks[castedPool->freeChunkCount] = NULL;
+
         //Rebuild the chunk
         //Basic vars
         freeCastedChunk->isoX = isoX;
@@ -155,9 +153,24 @@ struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY){
         freeCastedChunk->busy = false;
         freeCastedChunk->rayCast = false;
         freeCastedChunk->textured = false;
+
         //World Camera location update
         updateChunkCamCords(gameData->cameraData, freeCastedChunk);
+
+        //Add to chunk map
+        addChunkToMap(castedPool->chunkMap, freeCastedChunk);
         return freeCastedChunk;
+    }
+
+    //If not the max chunks created has not been reached create another
+    if (castedPool->maxChunks < castedPool->totalChunksCreated){
+        return NULL;
+    }
+    else {
+        //Malloc new struct
+        struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
+        addChunkToMap(castedPool->chunkMap, newCastedChunk);
+        return newCastedChunk;
     }
 }
 

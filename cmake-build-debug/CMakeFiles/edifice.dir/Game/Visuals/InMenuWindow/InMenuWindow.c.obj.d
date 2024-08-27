@@ -207,6 +207,7 @@ CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\InMenuWindow\InMenuWindow.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \

@@ -278,28 +278,34 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.c">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/AdvancedKeyMod.h">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.c">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/KeyMod.h">
-			<Option target="edifice"/>
-		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.c">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h">
 			<Option target="edifice"/>
 		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h">
+			<Option target="edifice"/>
+		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/HillManager/HillManager.c">
@@ -348,6 +354,18 @@
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/main.c">

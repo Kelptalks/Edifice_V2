@@ -7,7 +7,7 @@
 #include "../../World.h"
 #include "../../Octree/OctreeNode.h"
 #include "../../Octree/Octree.h"
-#include "../../Octree/KeyMod.h"
+#include "../../Octree/Tools/KeyMod.h"
 #include "../LairManager/LairManager.h"
 #include "../TerrainGen.h"
 #include "../../../../ArrayList/ArrayList.h"
@@ -54,8 +54,6 @@ void smoothChunkMapPool(struct HeightMapPool* heightMapPool, int smoothingScale)
                 else if(side == 3){
                     neighboringHeightMapChunk = &heightMapPool->heightChunkPool[x][y - 1];
                 }
-
-                reportBug("Chunk Cords (%i, %i) | Pointer = %p\n", x, y, neighboringHeightMapChunk);
 
                 //If the neighboring chunk exists smooth
 

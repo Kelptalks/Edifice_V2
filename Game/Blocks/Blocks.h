@@ -12,48 +12,81 @@
 enum Block {
     Air,
 
-    //Blocks
+    //Basic
     Dirt,
-    Stone,
-    Wood,
-    Leave,
-    Dandi,
-    DandiStem,
+    CrackedEarth,
     Hive,
     Cobble,
-    Grass,
-    MushroomStem,
-    BlueMushroomBlock,
-    Magma,
     Core,
-    LBM,
-    Metal,
-    Granite,
     Sand,
     Debug,
-    Iron,
-    Fungi,
-    BlueGrass,
-    Cloud,
-    CrackedEarth,
-    MudBrick,
-    Coral,
-    StoneBrick,
-    FloweringStoneBrick,
 
-    //Transparent Blocks
+    //Stones
+    Granite,
+    Stone,
+    Magma,
+
+    //Grasses
+    GreenGrass,
+    BlueGrass,
+
+    //Trees
+    Leave,
+    PurpleWood,
+    PurpleWoodPlanks,
+
+    BrownWood,
+    BrownWoodPlanks,
+
+    //LargeDandi
+    Dandi,
+    DandiStem,
+
+    //LargeMushrooms
+    MushroomStem,
+    BlueMushroomBlock,
+    PinkMushroomBlock,
+
+    //Large Fungi
+    Fungi,
+
+    //Transparent Plants
     Water,
     YellowFlowers,
     WhiteFlowers,
     Mushroom,
     Flour,
     Glass,
+    Bulb,
+
+    //Metals
+    Iron,
+    Copper,
+
+    MudBrick,
+    ClayBrick,
+    Coral,
+    StoneBrick,
+    FloweringStoneBrick,
+
+    //Factory
+    LBM,
+    Factory,
+    Crate,
+    Metal,
+
+    //Transparent Factory
+    ConveyorBelt,
+    Furnace,
 
     //Shaders
     GreyShader,
     RedShader,
     WhiteShader,
     GreenShader,
+
+    //Test
+    HalfBlockTest,
 
     //Masking blocks
     MaskingBlock,
@@ -69,5 +102,6 @@ bool isPlantable(enum Block block);
 char* getBlockName(enum Block block);
 
 void getBlockSpriteSheetCords(enum Block block, int* x, int* y);
+
 
 #endif
