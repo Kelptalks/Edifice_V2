@@ -5,6 +5,7 @@
 #ifndef EDIFICE_CASTEDBLOCKMANAGER_H
 #define EDIFICE_CASTEDBLOCKMANAGER_H
 
+#include <pthread.h>
 #include "TextureList/TextureList.h"
 #include "../../Rendering/TextureManager/IsoTextureManager.h"
 #include "../../ChunkMap/ChunkMap.h"
@@ -50,6 +51,8 @@ struct CastedChunk{
 
     //Rendering
     SDL_Texture* chunkTexture;
+
+    pthread_mutex_t lock;
 };
 
 struct CastedPool{
@@ -64,7 +67,6 @@ struct CastedPool{
     //Chunks that are available for use
     int freeChunkCount;
     struct CastedChunk** freeChunks;
-
 };
 
 //Casted area Creating/Freeing

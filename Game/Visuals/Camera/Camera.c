@@ -16,6 +16,7 @@
 #include "../../World/Octree/Tools/KeyMod.h"
 #include "../../World/Octree/Octree.h"
 #include "../../World/Octree/OctreeNode.h"
+#include "Rendering/RayCasting/CastingThread/castingThread.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Texture rendering
@@ -287,6 +288,9 @@ void renderMouseArea(struct GameData* gameData){
                     castedChunk->textured = false;
                 }
             }
+            else{
+
+            }
         }
     }
 }
@@ -303,8 +307,30 @@ void renderView(struct GameData* gameData){
     cameraData->xChunkScaledTextureRez = cameraData->chunkPixelScale * chunkRenderScale;
     cameraData->yChunkScaledTextureRez = (cameraData->chunkPixelScale/2) * chunkRenderScale;
 
-    int maxTexturingPerFrame = 30;
-    int maxNewChunksPerFrame = 30;
+
+    for (int i = 0; i < cameraData->totalDistanceCords; i++){
+        int x = cameraData->distanceSortedRelativeCords[i].x;
+        int y = cameraData->distanceSortedRelativeCords[i].y;
+
+        int xChunkWorldCords = (x) + cameraData->xIsoChunkCamCenter;
+        int yChunkWorldCords = (y) + cameraData->yIsoChunkCamCenter;
+
+        struct CastedChunk *castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, xChunkWorldCords,
+                                                          yChunkWorldCords);
+
+        if (castedChunk != NULL) {
+            if (castedChunk->direction != cameraData->direction) {
+                castedChunk->direction = cameraData->direction;
+                updateChunkCamCords(cameraData, castedChunk);
+                castedChunk->rayCast = false;
+                castedChunk->textured = false;
+                castedChunk->busy = false;
+            }
+        }
+    }
+
+    int maxTexturingPerFrame = 100;
+    int maxNewChunksPerFrame = 100;
     for (int i = 0; i < cameraData->totalDistanceCords / 2; i++)
     {
         int x = cameraData->distanceSortedRelativeCords[i].x;
@@ -323,19 +349,11 @@ void renderView(struct GameData* gameData){
                 maxNewChunksPerFrame--;
 
             } else if (castedChunk != NULL){
-                //If chunk is rendered in wrong direction set for reRendering
-                if (castedChunk->direction != cameraData->direction){
-                    castedChunk->textured = false;
-                    castedChunk->rayCast = false;
-                    castedChunk->direction = cameraData->direction;
-                }
-
                 //Render the chunk texture if needed
                 if (!castedChunk->busy) {
                     if (!castedChunk->rayCast) {
                         castedChunk->busy = true;
-                        threadCastChunk(gameData->cameraData, castedChunk, gameData->world->octree);
-
+                        addRayCastingTaskToThreadPool(cameraData->rayCastingThreadPool, castedChunk);
                     } else if (!castedChunk->textured && maxTexturingPerFrame > 0) {
                         maxTexturingPerFrame--;
                         castedChunk->busy = true;
@@ -349,6 +367,7 @@ void renderView(struct GameData* gameData){
         }
     }
 
+    executeAllTasks(cameraData->rayCastingThreadPool);
 
     for (int i = cameraData->totalDistanceCords/5; i < cameraData->totalDistanceCords; i++){
         //Get the chunk

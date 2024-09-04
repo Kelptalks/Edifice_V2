@@ -11,6 +11,7 @@
 #include "Camera.h"
 #include "Rendering/RayCasting/RayCastingManager.h"
 #include "math.h"
+#include "Rendering/RayCasting/CastingThread/castingThread.h"
 
 struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* cameraData)
 {
@@ -63,7 +64,7 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
 }
 
 
-struct CameraData* createCameraData(SDL_Renderer* renderer){
+struct CameraData* createCameraData(SDL_Renderer* renderer, struct Octree* octree){
     struct CameraData* cameraData = calloc(1, sizeof(struct CameraData));
     if (cameraData == NULL){
         return NULL;
@@ -107,8 +108,13 @@ struct CameraData* createCameraData(SDL_Renderer* renderer){
 
     //Create inMenuWindow
     cameraData->inMenuWindow = createInMenuWindow(0, 0, 1280, 720);
-
     cameraData->distanceSortedRelativeCords = createDistanceSortedRelativeCords(cameraData);
+
+    //World data
+    cameraData->octree = octree;
+
+    //Thread Pool
+    cameraData->rayCastingThreadPool = createRayCastingThreadPool(200, cameraData, octree);
 
     return cameraData;
 }

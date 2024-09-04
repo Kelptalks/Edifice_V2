@@ -184,6 +184,16 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_locale.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_misc.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/CastedBlockManager.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/signal.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_signal.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/time.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_compat.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/TextureList/TextureList.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/TextureList/TextureList.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
@@ -222,4 +232,5 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Camera.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/CastingThread/castingThread.h

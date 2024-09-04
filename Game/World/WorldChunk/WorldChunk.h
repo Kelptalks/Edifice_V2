@@ -7,7 +7,6 @@
 
 struct WorldChunk{
     struct Octree* octree;
-
 };
 
 enum Block getBlockInWorldChunk(struct WorldChunk* worldChunk, int x, int y, int z);

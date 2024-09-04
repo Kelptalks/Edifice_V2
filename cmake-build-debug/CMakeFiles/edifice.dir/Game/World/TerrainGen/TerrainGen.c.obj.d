@@ -18,10 +18,12 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\TerrainGen.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\LairManager/LairManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\Perlin\ Noise/PerlinNoise.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\Perlin\ Noise/PerlinNoise.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h \

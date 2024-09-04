@@ -59,6 +59,7 @@ struct CameraData{
     //Raycasting
     int castingDistance;
     struct RayCastingData* rayCastingData;
+    struct RayCastingThreadPool* rayCastingThreadPool;
     enum Direction direction;
     int xDirection;
     int yDirection;
@@ -69,7 +70,7 @@ struct CameraData{
     struct DistanceCord* distanceSortedRelativeCords;
 };
 
-struct CameraData* createCameraData(SDL_Renderer* renderer);
+struct CameraData* createCameraData(SDL_Renderer* renderer, struct Octree* octree);
 
 char* getDirectionString(enum Direction direction);
 

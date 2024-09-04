@@ -12,6 +12,7 @@
 #include "PlayerData/PlayerData.h"
 #include "InGameTime/TikManager.h"
 #include "Sound/SoundManager.h"
+#include "Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h"
 
 
 struct GameData* createGameData(){
@@ -51,8 +52,7 @@ struct GameData* createGameData(){
 
     //Create camera Data
     reportBug("Creating cameraData \n");
-    gameData->cameraData = createCameraData(gameData->screen->renderer);
-    gameData->cameraData->octree = gameData->world->octree;
+    gameData->cameraData = createCameraData(gameData->screen->renderer, gameData->world->octree);
 
     //Create playerDaya
     reportBug("Creating playerData \n");

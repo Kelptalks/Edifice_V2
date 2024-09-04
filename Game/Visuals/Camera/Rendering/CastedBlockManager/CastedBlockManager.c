@@ -60,7 +60,8 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     castedChunk->rayCast = false;
     castedChunk->textured = false;
 
-    //castedChunk->direction = cameraData->direction;
+    //Initilize
+    pthread_mutex_init(&castedChunk->lock, NULL);
 
     //SetupCasted blocks utilizing the casted chunks camWorldKey
     castedChunk->castedBlocks = calloc(castedChunk->castedBlockCount, sizeof(struct CastedBlock));
@@ -104,7 +105,7 @@ void freeCastedChunk(struct CastedChunk* castedChunk){
 struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Renderer* renderer){
     struct CastedPool* castedPool = malloc(sizeof (struct CastedPool));
     //Create the Casted Pool array based on the square of the view distance
-    castedPool->chunkMap = createChunkMap(10000);
+    castedPool->chunkMap = createChunkMap(9000);
     castedPool->maxChunks = 10000;
 
     castedPool->freeChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);

@@ -28,6 +28,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/ca
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_compat.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\RayCasting\CastingThread\castingThread.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
@@ -203,7 +204,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/ca
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.h \

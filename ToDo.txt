@@ -6,6 +6,12 @@
 
 - Every 30 seconds give an update of the average amount of time it takes to do each task of the program, to identify what is causeing the issues
 
+- Create thread pool system to avoid constant creations
+
+- Create a pool for reuse of rendering chunk hashmap nodes.
+
+Current 
+	- Working on create chunk based world system with sub octrees.
 
 terrain gen
 	- Add perlin noise that takes x, y cords for input
