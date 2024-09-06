@@ -15,7 +15,6 @@ void* castChunk(void* arg) {
     struct args* data = (struct args*) arg;
     rayCastChunk(data->cameraData, data->castedChunk, data->octree);
     data->castedChunk->rayCast = true;
-    data->castedChunk->busy = false;
     pthread_mutex_unlock(&data->castedChunk->lock);
     pthread_exit(NULL);
 }
@@ -49,7 +48,6 @@ void *rayCastingThreadWorker(void* arg){
             pthread_mutex_lock(&task.castedChunk->lock);
             rayCastChunk(threadPool->cameraData, task.castedChunk, threadPool->octree);
             task.castedChunk->rayCast = true;
-            task.castedChunk->busy = false;
 
             pthread_mutex_unlock(&task.castedChunk->lock);
 

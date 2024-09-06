@@ -18,8 +18,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    playSound(gameData->soundManager, 0);
-    playSound(gameData->soundManager, 0);
+    playSound(gameData->soundManager, MusicSunn);
 
     while (gameData->screen->run){
         //Get start time

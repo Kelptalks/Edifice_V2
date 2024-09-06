@@ -34,7 +34,6 @@ struct CastedBlock{
 
 struct CastedChunk{
     //Management
-    bool busy;
     bool rayCast;
     bool textured;
 

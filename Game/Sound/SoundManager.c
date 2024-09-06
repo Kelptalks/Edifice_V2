@@ -86,13 +86,12 @@ struct SoundManager* createSoundManager(int soundCount) {
 
     // Load sounds into the manager
     loadSound("MusicSunn.WAV", &soundManager->sounds[MusicSunn]);
-    loadSound("MenuClick.WAV", &soundManager->sounds[MenuClick]);
+    loadSound("MusicEdifice.WAV", &soundManager->sounds[MusicEdifice]);
+
     loadSound("BlockPlaceSoundPlant.WAV", &soundManager->sounds[BlockPlaceSoundPlant]);
     loadSound("BlockRemoveSoundPlant.WAV", &soundManager->sounds[BlockRemoveSoundPlant]);
     loadSound("BlockPlaceSoundDirt.WAV", &soundManager->sounds[BlockPlaceSoundDirt]);
-    loadSound("BlockRemoveSoundDirt.WAV", &soundManager->sounds[BlockRemoveSoundDirt]);
     loadSound("BlockPlaceSoundBrick.WAV", &soundManager->sounds[BlockPlaceSoundBrick]);
-    loadSound("BlockRemoveSoundBrick.WAV", &soundManager->sounds[BlockRemoveSoundBrick]);
     loadSound("BlockPlaceSoundFactory.WAV", &soundManager->sounds[BlockPlaceSoundFactory]);
     loadSound("BlockRemoveSoundFactory.WAV", &soundManager->sounds[BlockRemoveSoundFactory]);
     loadSound("BlockRemoveSoundDefault.WAV", &soundManager->sounds[BlockRemoveSoundDefault]);

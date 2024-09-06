@@ -8,17 +8,14 @@
 #include <SDL2/SDL.h>
 enum SoundType{
     MusicSunn,
-
-    MenuClick,
+    MusicEdifice,
 
     BlockPlaceSoundPlant,
     BlockRemoveSoundPlant,
 
     BlockPlaceSoundDirt,
-    BlockRemoveSoundDirt,
 
     BlockPlaceSoundBrick,
-    BlockRemoveSoundBrick,
 
     BlockPlaceSoundFactory,
     BlockRemoveSoundFactory,

@@ -7,7 +7,7 @@
 #ifndef ENGINE_CASTINGTHREAD_H
 #define ENGINE_CASTINGTHREAD_H
 
-#define MAX_THREADS 8
+#define MAX_THREADS 15
 
 struct args{
     struct Octree* octree;

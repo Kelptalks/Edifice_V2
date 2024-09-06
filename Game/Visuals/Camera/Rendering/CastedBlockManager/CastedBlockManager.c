@@ -56,7 +56,6 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     castedChunk->castedBlockCount = cameraData->chunksScale * cameraData->chunksScale;;
 
     //set rendering variables
-    castedChunk->busy = false;
     castedChunk->rayCast = false;
     castedChunk->textured = false;
 
@@ -151,7 +150,6 @@ struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY){
         freeCastedChunk->isoX = isoX;
         freeCastedChunk->isoY = isoY;
         freeCastedChunk->direction = gameData->cameraData->direction;
-        freeCastedChunk->busy = false;
         freeCastedChunk->rayCast = false;
         freeCastedChunk->textured = false;
 
