@@ -1307,6 +1307,7 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
@@ -1325,7 +1326,8 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.c
 
@@ -1963,6 +1965,8 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: C:/Users/Spencer/Deskto
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
@@ -2632,7 +2636,9 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: C:/Use
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
@@ -3856,8 +3862,12 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj:
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c \
@@ -6553,6 +6563,8 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/HillManager/HillManager.c.obj: C:/U
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin\ Noise/PerlinNoise.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/HillManager/HillManager.h
 
 CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.c \
@@ -6578,6 +6590,8 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj: C:/U
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h
 
 CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin\ Noise/PerlinNoise.c \
@@ -6807,7 +6821,9 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj: C:
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
@@ -7016,6 +7032,8 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C:/Users/Spencer/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/HillManager/HillManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin\ Noise/PerlinNoise.h \
@@ -7029,7 +7047,9 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: C:/Users/S
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
@@ -7055,9 +7075,12 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
@@ -7065,7 +7088,8 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
@@ -7091,6 +7115,8 @@ CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C:/Users/Spencer/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h
 
 CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c \
@@ -7145,7 +7171,9 @@ CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: C:/Users/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
@@ -7357,6 +7385,7 @@ CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Controls/Controls.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
@@ -7366,6 +7395,7 @@ CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
@@ -8184,9 +8214,15 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.c:
 
+C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h:
+
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h:
+
+C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.c:
+
+C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.c:
 
@@ -8199,10 +8235,6 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h:
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.h:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c:
 
@@ -8239,8 +8271,6 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManage
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c:
 

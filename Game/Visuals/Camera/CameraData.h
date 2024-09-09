@@ -28,7 +28,9 @@ struct CameraData{
     float yRenderingOffset;
 
     //Camera world location
-    unsigned long key;
+    int worldX;
+    int worldY;
+    int worldZ;
 
     //Dimensions
     int baseBlockScale;
@@ -49,9 +51,6 @@ struct CameraData{
     int xChunkScaledTextureRez;
     int yChunkScaledTextureRez;
 
-    //World
-    struct Octree* octree;
-
     //In MenuWindow
     struct InMenuWindow* inMenuWindow;
     enum Block blockSelected;
@@ -68,9 +67,11 @@ struct CameraData{
     //sorted reltive cords for center based rendering
     int totalDistanceCords;
     struct DistanceCord* distanceSortedRelativeCords;
+
+    struct World* world;
 };
 
-struct CameraData* createCameraData(SDL_Renderer* renderer, struct Octree* octree);
+struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world);
 
 char* getDirectionString(enum Direction direction);
 

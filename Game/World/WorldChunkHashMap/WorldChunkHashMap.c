@@ -50,14 +50,11 @@ void freeNodeToWorldChunkHashMapNodePool(struct WorldChunkHashMapNodePool* nodeP
  */
 
 uint64_t hashCords(int x, int y, int z) {
-    uint64_t hash = (uint64_t)x;
-    hash = hash * 0x9e3779b97f4a7c15 + (uint64_t)y;
-    hash ^= (hash >> 30);
-    hash *= 0xbf58476d1ce4e5b9;
-    hash ^= (hash >> 27);
-    hash = hash * 0x94d049bb133111eb + (uint64_t)z; // Include z into the mixing process
-    hash ^= (hash >> 31);
-    return hash;
+    const int64_t shift = 1 << 30; // Shift by 2^30 to ensure positive values
+    const uint64_t prime1 = 73856093;
+    const uint64_t prime2 = 19349663;
+    const uint64_t prime3 = 83492791;
+    return (uint64_t)((x + shift) * prime1) ^ (uint64_t)((y + shift) * prime2) ^ (uint64_t)((z + shift) * prime3);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

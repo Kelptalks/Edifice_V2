@@ -14,9 +14,9 @@ struct RayCastingData* createRayCastingData(struct CameraData* cameraData);
 
 void updateCastingDirectionOrder(struct CameraData* cameraData);
 
-void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree);
+void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock);
 
-void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk, struct Octree* octree);
+void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk);
 
 void threadCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk, struct Octree* octree);
 

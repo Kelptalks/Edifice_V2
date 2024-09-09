@@ -103,5 +103,8 @@ char* getBlockName(enum Block block);
 
 void getBlockSpriteSheetCords(enum Block block, int* x, int* y);
 
+int getBlockPlaceSound(enum Block block);
+
+int getBlockRemoveSound(enum Block block);
 
 #endif

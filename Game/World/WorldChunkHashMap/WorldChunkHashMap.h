@@ -30,9 +30,12 @@ struct WorldChunkHashMap{
     struct WorldChunkHashMapNode** worldChunkHashArray;
 };
 
-void addWorldChunkToMap();
+struct WorldChunkHashMap* createWorldChunkHashMap(int maxChunks);
 
-struct WorldChunk* getWorldChunkFromMap();
+void addWorldChunkToHashMap(struct WorldChunkHashMap* worldChunkHashMap, struct WorldChunk* worldChunk);
+
+struct WorldChunk* getWordChunkFromMap(struct WorldChunkHashMap* hashMap, int xCor, int yCor, int zCor);
+
 
 void testWorldChunkHashMap();
 #endif //EDIFICE_WORLDCHUNKHASHMAP_H

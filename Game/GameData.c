@@ -52,7 +52,7 @@ struct GameData* createGameData(){
 
     //Create camera Data
     reportBug("Creating cameraData \n");
-    gameData->cameraData = createCameraData(gameData->screen->renderer, gameData->world->octree);
+    gameData->cameraData = createCameraData(gameData->screen->renderer, gameData->world);
 
     //Create playerDaya
     reportBug("Creating playerData \n");

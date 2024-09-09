@@ -39,9 +39,9 @@ void createTerrainGenRules(struct World* world){
 }
 
 void genArea(struct World* world, unsigned long key, int xArea, int yArea, int zArea){
-    int xStart = getAxis(key, 0, 0);
-    int yStart = getAxis(key, 1, 0);
-    int zStart = getAxis(key, 2, 0);
+    int xStart = 0;
+    int yStart = 0;
+    int zStart = -30;
 
     int xEnd = xStart + xArea;
     int yEnd = yStart + yArea;
@@ -58,9 +58,7 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
 
     //Loop through keys in the area
     for (int x = 0; x < xArea; x++){
-        unsigned long xKeyMod = modKey(key, x, 0, 0, 0);
         for (int y = 0; y < yArea; y++){
-            unsigned long yKeyMod = modKey(xKeyMod, 0, y, 0, 0);
             for (int z = 0; z < zArea; z++) {
                 //Set Lair Shifting rule
                 int lairShift = 0;
@@ -86,23 +84,20 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
 
 
                 //Set lair rules
-                unsigned long zKeyMod = modKey(yKeyMod, 0, 0, z, 0);
                 for (int rule = 0; rule < lairRulesInArea->length; rule++) {
                     //Lair building
                     struct LairRule *lairRule = (struct LairRule *) indexList(lairRulesInArea, rule);
                     if (zInRuleBounds(lairRule, zStart + z)) {
                         //Build the location
-                        unsigned long shiftedLairKey = modKey(zKeyMod, 0, 0, lairShift, 0);
 
 
                         //Build block of the lair
-                        setOctreeKeyValue(world->octree->root, shiftedLairKey, world->octree->RootDepth,
-                                          lairRule->blockType);
+                        setBlockAtWorldCor(world, x, y, z + lairShift,lairRule->blockType);
 
 
                         //Attempt to plant on that block
                         if (lairRule->blockType == GreenGrass) {
-                            generatePlant(world, shiftedLairKey, lairRule->blockType);
+                            generatePlant(world, x, y, z + lairShift, GreenGrass);
                         }
                     }
                 }

@@ -30,11 +30,19 @@ struct CastedBlock* createCastedBlock(){
 }
 
 void updateChunkCamCords(struct CameraData* cameraData, struct CastedChunk* castedChunk){
-    castedChunk->worldKey = modKey(cameraData->key, (castedChunk->isoX * cameraData->xDirection) * cameraData->chunksScale, (castedChunk->isoY * cameraData->yDirection) * cameraData->chunksScale, 0, 0);
+
+    castedChunk->worldX = cameraData->worldX + ((castedChunk->isoX * cameraData->xDirection) * cameraData->chunksScale);
+    castedChunk->worldY = cameraData->worldY + ((castedChunk->isoY * cameraData->yDirection) * cameraData->chunksScale);
+    castedChunk->worldZ = cameraData->worldZ;
+
+
     for (int x = 0; x < castedChunk->scale; x++){
         for (int y = 0; y < castedChunk->scale; y++){
             //Set the world key for the casted block
-            castedChunk->castedBlocks[x + (y * castedChunk->scale)].camKey = modKey(castedChunk->worldKey, x * cameraData->xDirection, y * cameraData->yDirection, 0, 0);
+            struct CastedBlock* castedBlock = &castedChunk->castedBlocks[x + (y * castedChunk->scale)];
+            castedBlock->worldX = castedChunk->worldX + (x * cameraData->xDirection);
+            castedBlock->worldY = castedChunk->worldY + (y * cameraData->yDirection);
+            castedBlock->worldZ = castedChunk->worldZ;
         }
     }
 }
@@ -44,7 +52,9 @@ struct CastedChunk* createCastedChunk(struct CameraData* cameraData, struct SDL_
     struct CastedChunk* castedChunk = malloc(sizeof (struct CastedChunk));
 
     //set world rendering key
-    castedChunk->worldKey = modKey(cameraData->key, isoX * cameraData->chunksScale, isoY * cameraData->chunksScale, 0, 0);
+    castedChunk->worldX = cameraData->worldX + (isoX * cameraData->chunksScale);
+    castedChunk->worldY = cameraData->worldY + (isoY * cameraData->chunksScale);
+    castedChunk->worldZ = cameraData->worldZ;
 
     //set rendering cords / basics
     castedChunk->isoX = isoX;

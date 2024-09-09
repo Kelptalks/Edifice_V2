@@ -55,112 +55,143 @@ void mouseHighlight(struct GameData* gameData, int xMouseCor, int yMouseCor){
 }
 
 void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
+    struct CameraData* cameraData = gameData->cameraData;
+    struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(cameraData, xMouseCor, yMouseCor);
 
-    //Get casted block from cords
-    struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(gameData->cameraData, xMouseCor, yMouseCor);
-    if (castedBlock == NULL){
-        return;
-    }
+
     //Unpack the casted block data.
-    unsigned long CastedBlockCamkey = castedBlock->camKey;
-    struct Octree *octree = gameData->world->octree;
+    int castedBlockCamWorldX = castedBlock->worldX;
+    int castedBlockCamWorldY = castedBlock->worldY;
+    int castedBlockCamWorldZ = castedBlock->worldZ;
+
+    struct World *world = cameraData->world;
     short block = 0;
 
-    //Use blocks cam CastedBlockCamkey to rayCast and break block
-    //Determine the side of the cast block
-
     int detailedXIso; int detailedYIso;
-    screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
-
+    screenToIso(cameraData->renderScale/4, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
     int keyModOrder[3] = {0, 1, 2};
+    bool leftSide = true;
     if (detailedYIso % 2 == 0){
-        keyModOrder[0] = 1;
-        keyModOrder[1] = 0;
-        keyModOrder[2] = 2;
+        leftSide = false;
     }
-    for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-        for (int axis = 0; axis < 3; axis++) {
-            int axisMod = 1;
-            if (keyModOrder[axis] == 0){
-                axisMod *= gameData->cameraData->xDirection;
-            }
-            if (keyModOrder[axis] == 1){
-                axisMod *= gameData->cameraData->yDirection;
-            }
-            CastedBlockCamkey = modAxis(CastedBlockCamkey, -1 * axisMod, keyModOrder[axis], 0);
-            block = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
+
+    if (leftSide) {
+        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+            castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                //Mod CastedBlockCamkey based off axis of intercept
-                CastedBlockCamkey = modAxis(CastedBlockCamkey, 1 * axisMod, keyModOrder[axis], 0);
+                setBlockAtWorldCor(world, castedBlockCamWorldX + cameraData->xDirection, castedBlockCamWorldY, castedBlockCamWorldZ, gameData->playerData->block);
+                break;
+            }
 
+            castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY + cameraData->yDirection, castedBlockCamWorldZ, gameData->playerData->block);
+                break;
+            }
 
-                //play the sound of the current block in hand
-                playSound(gameData->soundManager, getBlockPlaceSound(gameData->playerData->block));
-
-                //Set the block
-                setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth,
-                                  gameData->playerData->block);
-                drawDistance = 0;
+            castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ + 1, gameData->playerData->block);
                 break;
             }
         }
     }
+    else{
+        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+            castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY + cameraData->yDirection, castedBlockCamWorldZ, gameData->playerData->block);
+                break;
+            }
+
+            castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                setBlockAtWorldCor(world, castedBlockCamWorldX + cameraData->xDirection, castedBlockCamWorldY, castedBlockCamWorldZ, gameData->playerData->block);
+                break;
+            }
+
+            castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ + 1, gameData->playerData->block);
+                break;
+            }
+        }
+    }
+    playSound(gameData->soundManager, getBlockPlaceSound(gameData->playerData->block));
 }
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){
+    struct CameraData* cameraData = gameData->cameraData;
+    struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(cameraData, xMouseCor, yMouseCor);
 
-    //Get casted block from cords
-    struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(gameData->cameraData, xMouseCor, yMouseCor);
-    if (castedBlock == NULL){
-        return;
-    }
+
     //Unpack the casted block data.
-    unsigned long CastedBlockCamkey = castedBlock->camKey;
-    struct Octree *octree = gameData->world->octree;
+    int castedBlockCamWorldX = castedBlock->worldX;
+    int castedBlockCamWorldY = castedBlock->worldY;
+    int castedBlockCamWorldZ = castedBlock->worldZ;
+
+    struct World *world = cameraData->world;
     short block = 0;
 
-    //Use blocks cam CastedBlockCamkey to rayCast and break block
-    //Determine the side of the cast block
     int detailedXIso; int detailedYIso;
-    screenToIso(gameData->cameraData->renderScale/4, xMouseCor - gameData->cameraData->xRenderingOffset, yMouseCor - gameData->cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
-
+    screenToIso(cameraData->renderScale/4, xMouseCor - cameraData->xRenderingOffset, yMouseCor - cameraData->yRenderingOffset, &detailedXIso, &detailedYIso);
     int keyModOrder[3] = {0, 1, 2};
+    bool leftSide = true;
     if (detailedYIso % 2 == 0){
-        keyModOrder[0] = 1;
-        keyModOrder[1] = 0;
-        keyModOrder[2] = 2;
+        leftSide = false;
     }
-    //If button was pressed
-    //Left click to break block
-    //Cast ray from camera to block
-    for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-        for (int axis = 0; axis < 3; axis++) {
-            int axisMod = 1;
-            if (keyModOrder[axis] == 0){
-                axisMod *= gameData->cameraData->xDirection;
-            }
-            if (keyModOrder[axis] == 1){
-                axisMod *= gameData->cameraData->yDirection;
-            }
-            CastedBlockCamkey = modAxis(CastedBlockCamkey, -1 * axisMod, keyModOrder[axis], 0);
-            block = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
+
+    if (leftSide) {
+        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+            castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
+                break;
+            }
 
-                //Get the block to play the correct sound
-                enum Block blockType = getOctreeKeyVal(octree->root, CastedBlockCamkey, octree->RootDepth);
-                playSound(gameData->soundManager, getBlockRemoveSound(blockType));
+            castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                break;
+            }
 
-                setOctreeKeyValue(octree->root, CastedBlockCamkey, octree->RootDepth, 0);
-                drawDistance = 0;
+            castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
                 break;
             }
         }
     }
+    else{
+        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
+            castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                break;
+            }
 
-    int xAxis = 0; int yAxis = 0; int zAxis = 0;
-    getCords(CastedBlockCamkey, octree->RootDepth - 1, &xAxis, &yAxis, &zAxis);
-    reportBug("block broken at(%i, %i, %i)\n", xAxis, yAxis, zAxis);
+            castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                break;
+            }
 
+            castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
+            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+            if (!isTransparent(block)) {
+                break;
+            }
+        }
+    }
+    setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ, Air);
+    playSound(gameData->soundManager, getBlockRemoveSound(gameData->playerData->block));
+    reportBug("block broken at(%i, %i, %i)\n", castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
 }
 
 void mouseCamMovement(struct GameData* gameData, int currentMouseXCor, int currentMouseYCor){

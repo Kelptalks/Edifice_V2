@@ -27,9 +27,18 @@ struct CastedBlock{
     enum Texture leftShader;
     enum Texture rightShader;
 
-    unsigned long leftBlockKey;
-    unsigned long rightBlockKey;
-    unsigned long camKey;
+    int worldLeftBlockX;
+    int worldLeftBlockY;
+    int worldLeftBlockZ;
+
+    int worldRightBlockX;
+    int worldRightBlockY;
+    int worldRightBlockZ;
+
+    //World cords
+    int worldX;
+    int worldY;
+    int worldZ;
 };
 
 struct CastedChunk{
@@ -38,7 +47,11 @@ struct CastedChunk{
     bool textured;
 
     //Vars
-    unsigned long worldKey;
+    int worldX;
+    int worldY;
+    int worldZ;
+
+
     int scale;
     int isoX;
     int isoY;

@@ -5,6 +5,6 @@
 #ifndef ENGINE_PLANTMANGER_H
 #define ENGINE_PLANTMANGER_H
 
-void generatePlant(struct World* world, unsigned long key, enum Block block);
+void generatePlant(struct World* world, int worldX, int worldY, int worldZ, enum Block block);
 
 #endif //ENGINE_PLANTMANGER_H

@@ -8,13 +8,14 @@
 #include "Game/World/World Saving/WorldFileManager.h"
 #include "Game/InGameTime/TikManager.h"
 #include "Game/World/WorldChunkHashMap/WorldChunkHashMap.h"
+#include "Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h"
 
 int main(int argc, char* argv[]) {
 
-    testWorldChunk();
 
-    if (false) {
+    if (true) {
         struct GameData *gameData = createGameData();
+
         //Play start music
         playSound(gameData->soundManager, MusicSunn);
 

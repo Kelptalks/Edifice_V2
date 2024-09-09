@@ -71,28 +71,23 @@ void updateCastingDirectionOrder(struct CameraData* cameraData){
     }
 }
 
-void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock, struct Octree* octree){
+void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock){
     clearTextureList(castedBlock->leftTextureList);
     clearTextureList(castedBlock->rightTextureList);
 
     castedBlock->leftShader = Empty;
     castedBlock->rightShader = Empty;
 
-    //castLeftTriangle(cameraData, castedBlock, octree);
-    //castRightTriangle(cameraData, castedBlock, octree);
-
     castBlock(cameraData, castedBlock);
-
-
     if (cameraData->direction != East) {
-        castLeftShadow(cameraData, castedBlock, octree);
-        castRightShadow(cameraData, castedBlock, octree);
+        castLeftShadow(cameraData, castedBlock);
+        castRightShadow(cameraData, castedBlock);
     }
 }
 
-void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk, struct Octree* octree){
+void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk){
     for (int x = 0; x < castedChunk->castedBlockCount; x++){
-        rayCastBlock(cameraData, &castedChunk->castedBlocks[x], octree);
+        rayCastBlock(cameraData, &castedChunk->castedBlocks[x]);
     }
 }
 

@@ -6,4 +6,7 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h

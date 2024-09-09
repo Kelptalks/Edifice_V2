@@ -164,63 +164,56 @@ void updateDirectionCastingMods(struct CameraData* cameraData, enum Direction di
 
 void offSetCamWorldKeyBasedOnRotation(struct CameraData* cameraData, enum Direction direction){
 
-    int xCamKey = 0; int yCamKey = 0; int zCamKey = 0;
-    getCords(cameraData->key, cameraData->octree->RootDepth - 1, &xCamKey, &yCamKey, &zCamKey);
+    reportBug("Starting camera cords (%i, %i, %i)\n", cameraData->worldX, cameraData->worldY, cameraData->worldZ);
+    struct World* world = cameraData->world;
 
-    //Get casted block at the center of the screen
+
+    //Get Casted block at the center of the screen
     struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData,cameraData->xIsoCamCenter, cameraData->yIsoCamCenter);
+    //Unpack cords
+    int worldX = castedBlock->worldX; int worldY = castedBlock->worldY; int worldZ = castedBlock->worldZ;
 
-    int xCastedBlockCamKey = 0; int yCastedBlockCamKey = 0; int zCastedBlockCamKey = 0;
-    getCords(castedBlock->camKey, cameraData->octree->RootDepth - 1, &xCastedBlockCamKey, &yCastedBlockCamKey, &zCastedBlockCamKey);
-
-    //Unpack the casted block data.
-    unsigned long castedBlockCamkey = castedBlock->camKey;
-    struct Octree *octree = cameraData->octree;
-    short block = 0;
-
-    int keyModOrder[3] = {0, 1, 2};
-    int distanceToBlock = 0;
-
-    //Cast ray from camera to block
-    for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-        for (int axis = 0; axis < 3; axis++) {
-            int axisMod = 1;
-            if (keyModOrder[axis] == 0){
-                axisMod *= cameraData->xDirection;
-            }
-            if (keyModOrder[axis] == 1){
-                axisMod *= cameraData->yDirection;
-            }
-            castedBlockCamkey = modAxis(castedBlockCamkey, -1 * axisMod, keyModOrder[axis], 0);
-            block = getOctreeKeyVal(octree->root, castedBlockCamkey, octree->RootDepth);
-            if (!isTransparent(block)) {
-                drawDistance = 0;
-                break;
-            }
+    //Cast a ray to the block it hits
+    enum Block block = Air;
+    int distance = 0;
+    for (int drawDistance = 300; drawDistance > 0; drawDistance--){
+        worldX - cameraData->xDirection;
+        block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
+        if (!isTransparent(block)){
+            break;
         }
-        distanceToBlock++;
+        block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
+        worldY - cameraData->yDirection;
+        if (!isTransparent(block)){
+            break;
+        }
+        block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
+        worldZ - 1;
+        if (!isTransparent(block)){
+            break;
+        }
+        distance++;
     }
 
+    //Update the casting directions
     updateDirectionCastingMods(cameraData, direction);
 
-    //int xAxis = 0; int yAxis = 0; int zAxis = 0;
-    //getCords(castedBlockCamkey, octree->RootDepth - 1, &xAxis, &yAxis, &zAxis);
-    ////reportBug("Block hit at (%i, %i, %i)\n", xAxis, yAxis, zAxis);
+    int newCamWorldX = worldX + (cameraData->xDirection * distance);
+    int newCamWorldY = worldY + (cameraData->yDirection * distance);
+    int newCamWorldZ = distance;
 
+    cameraData->worldX = newCamWorldX;
+    cameraData->worldY = newCamWorldY;
+    cameraData->worldZ = newCamWorldZ;
 
-    //Calculate were that cast Blocks new cam key would be
-    castedBlockCamkey = modKey(castedBlockCamkey, distanceToBlock * cameraData->xDirection, distanceToBlock * cameraData->yDirection, distanceToBlock, 0);
+    reportBug("new cam cords (%i, %i, %i)\n", newCamWorldX, newCamWorldY, newCamWorldZ);
 
-    //Calculate how far away from the original camera key that block is
-    //castedBlockCamkey = modKey(castedBlockCamkey, -xCamToCastedBlockDifference, -yCamToCastedBlockDifference, -zCamToCastedBlockDifference, 0);
-    cameraData->xRenderingOffset = 1920/2;
-    cameraData->yRenderingOffset = 1080/2;
-    cameraData->key = castedBlockCamkey;
+    //Calculate a new Casted block key by casting from the struck block
 
 }
 
 void setDirection(struct CameraData* cameraData, enum Direction direction){
-    if (cameraData->octree != NULL) {
+    if (cameraData->world != NULL) {
         offSetCamWorldKeyBasedOnRotation(cameraData, direction);
     }
 
@@ -353,7 +346,7 @@ void renderView(struct GameData* gameData){
     //Ray cast all chunks added to the thread pool task q
     executeAllTasks(cameraData->rayCastingThreadPool);
 
-    for (int i = cameraData->totalDistanceCords/5; i < cameraData->totalDistanceCords; i++){
+    for (int i = cameraData->totalDistanceCords/10; i < cameraData->totalDistanceCords; i++){
         //Get the chunk
         int x = cameraData->distanceSortedRelativeCords[i].x;
         int y = cameraData->distanceSortedRelativeCords[i].y;

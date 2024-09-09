@@ -40,14 +40,13 @@ struct RayCastingThreadPool{
     bool shutDown;
 
     //Read only data needed
-    struct Octree* octree;
     struct CameraData* cameraData;
 };
 
 
 void* castChunk(void* arg);
 
-struct RayCastingThreadPool* createRayCastingThreadPool(int maxTasks, struct CameraData* cameraData, struct Octree* octree);
+struct RayCastingThreadPool* createRayCastingThreadPool(int maxTasks, struct CameraData* cameraData);
 
 void executeAllTasks(struct RayCastingThreadPool* rayCastingThreadPool);
 

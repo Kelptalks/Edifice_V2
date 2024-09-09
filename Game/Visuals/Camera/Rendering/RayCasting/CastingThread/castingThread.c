@@ -13,7 +13,7 @@
 //Were the threads code will run
 void* castChunk(void* arg) {
     struct args* data = (struct args*) arg;
-    rayCastChunk(data->cameraData, data->castedChunk, data->octree);
+    rayCastChunk(data->cameraData, data->castedChunk);
     data->castedChunk->rayCast = true;
     pthread_mutex_unlock(&data->castedChunk->lock);
     pthread_exit(NULL);
@@ -46,7 +46,7 @@ void *rayCastingThreadWorker(void* arg){
 
             //Ray cast the chunk
             pthread_mutex_lock(&task.castedChunk->lock);
-            rayCastChunk(threadPool->cameraData, task.castedChunk, threadPool->octree);
+            rayCastChunk(threadPool->cameraData, task.castedChunk);
             task.castedChunk->rayCast = true;
 
             pthread_mutex_unlock(&task.castedChunk->lock);
@@ -63,14 +63,13 @@ void *rayCastingThreadWorker(void* arg){
     return NULL;
 }
 
-struct RayCastingThreadPool* createRayCastingThreadPool(int maxTasks, struct CameraData* cameraData, struct Octree* octree){
+struct RayCastingThreadPool* createRayCastingThreadPool(int maxTasks, struct CameraData* cameraData){
     struct RayCastingThreadPool* threadPool = malloc(sizeof (struct RayCastingThreadPool));
     if (threadPool == NULL){
         reportBug("failed to malloc threadPool\n");
         return NULL;
     }
     threadPool->cameraData = cameraData;
-    threadPool->octree = octree;
 
     threadPool->shutDown = false;
 

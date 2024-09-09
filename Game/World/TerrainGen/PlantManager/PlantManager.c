@@ -12,17 +12,17 @@
 
 
 //Build leave pattern
-void buildLeaves(struct World* world, unsigned long key){
-    setOctreeKeyValue(world->octree->root, modKey(key, 0, 0, 0, 0), world->octree->RootDepth, Leave);
-    setOctreeKeyValue(world->octree->root, modKey(key, 1, 0, 0, 0), world->octree->RootDepth, Leave);
-    setOctreeKeyValue(world->octree->root, modKey(key, -1, 0, 0, 0), world->octree->RootDepth, Leave);
-    setOctreeKeyValue(world->octree->root, modKey(key, 0, -1, 0, 0), world->octree->RootDepth, Leave);
-    setOctreeKeyValue(world->octree->root, modKey(key, 0, 1, 0, 0), world->octree->RootDepth, Leave);
-    setOctreeKeyValue(world->octree->root, modKey(key, 0, 0, 1, 0), world->octree->RootDepth, Leave);
+void buildLeaves(struct World* world, int worldX, int worldY, int worldZ){
+    setBlockAtWorldCor(world, worldX, worldY, worldZ, Leave);
+    setBlockAtWorldCor(world, worldX + 1, worldY, worldZ, Leave);
+    setBlockAtWorldCor(world, worldX - 1, worldY, worldZ, Leave);
+    setBlockAtWorldCor(world, worldX, worldY + 1, worldZ, Leave);
+    setBlockAtWorldCor(world, worldX, worldY - 1, worldZ, Leave);
+    setBlockAtWorldCor(world, worldX, worldY, worldZ + 1, Leave);
 }
 
 //Build the branch of a tree
-void buildBranch(struct World* world, unsigned long key, enum Block blockType){
+void buildBranch(struct World* world, int worldX, int worldY, int worldZ, enum Block blockType){
     int rand = rand % 4;
     //select random direction
     int yMod = 0;
@@ -40,13 +40,13 @@ void buildBranch(struct World* world, unsigned long key, enum Block blockType){
         yMod = -1;
     }
     for (int x = 1; x < 3; x++){
-        setOctreeKeyValue(world->octree->root, modKey(key, xMod * x, yMod * x, 0, 0), world->octree->RootDepth, blockType);
+        setBlockAtWorldCor(world, worldX + (xMod * x), worldY + (yMod * x), worldZ, Leave);
     }
-    buildLeaves(world, modKey(key, xMod * 3, yMod * 3, 1, 0));
+    buildLeaves(world, worldX + (xMod * 3), worldY + (yMod * 3), worldZ);
 }
 
 //Build a purple tree
-void buildTree(struct World* world, unsigned long key){
+void buildTree(struct World* world, int worldX, int worldY, int worldZ){
 
     enum Block blockType = BrownWood;
     if (rand() % 10 == 0){
@@ -61,19 +61,19 @@ void buildTree(struct World* world, unsigned long key){
 
     //Build the trunk and branches
     for (int z = 0; z < height; z++){
-        setOctreeKeyValue(world->octree->root, modKey(key, 0, 0, z, 0), world->octree->RootDepth, blockType);
+
+        setBlockAtWorldCor(world, worldX, worldY, worldZ + z, blockType);
         if (branchHeight == z){
-            buildBranch(world, modKey(key, 0, 0, z, 0), blockType);
+            buildBranch(world, worldX, worldY, worldZ + z, blockType);
         }
     }
     //Top tree with leaves
-    buildLeaves(world, modKey(key, 0, 0, height, 0));
-
+    buildLeaves(world, worldX, worldY, worldZ + height);
 }
 
 
 
-void buildMushroom(struct World* world, unsigned long key){
+void buildMushroom(struct World* world, int worldX, int worldY, int worldZ){
     int height = rand() % 30 + 10;
     int stemRadius = (height / ((rand()%20) + 5)) + 3;
 
@@ -82,7 +82,7 @@ void buildMushroom(struct World* world, unsigned long key){
         for (int x = -stemRadius; x < stemRadius; x++){
             for (int y = -stemRadius; y < stemRadius; y++){
                 if (sqrt(x*x + y*y) < stemRadius){
-                    setOctreeKeyValue(world->octree->root, modKey(key, x, y, z, 0), world->octree->RootDepth, MushroomStem);
+                    setBlockAtWorldCor(world, worldX + x, worldY + y, worldZ + z, MushroomStem);
                 }
             }
         }
@@ -95,14 +95,12 @@ void buildMushroom(struct World* world, unsigned long key){
 
     int topRadius = stemRadius + 8 + (rand() % 5);
 
-    unsigned long mushroomTopKey = modKey(key, 0, 0, height, 0);
     int zMod = 0;
     while (topRadius > 2) {
         for (int x = -topRadius; x < topRadius; x++) {
             for (int y = -topRadius; y < topRadius; y++) {
                 if (sqrt(x * x + y * y) < topRadius) {
-                    setOctreeKeyValue(world->octree->root, modKey(mushroomTopKey, x, y, zMod, 0), world->octree->RootDepth,
-                                      blockType);
+                    setBlockAtWorldCor(world, worldX + x, worldY + y, worldZ + zMod + height, blockType);
                 }
             }
         }
@@ -111,7 +109,7 @@ void buildMushroom(struct World* world, unsigned long key){
     }
 }
 
-void buildDandi(struct World* world, unsigned long key){
+void buildDandi(struct World* world, int worldX, int worldY, int worldZ){
     int height = rand() % 25 + 12;
 
     int stemRadius = height / 15;
@@ -120,14 +118,14 @@ void buildDandi(struct World* world, unsigned long key){
         for (int x = -stemRadius; x < stemRadius; x++){
             for (int y = -stemRadius; y < stemRadius; y++){
                 if (sqrt(x*x + y*y) < stemRadius){
-                    setOctreeKeyValue(world->octree->root, modKey(key, x, y, z, 0), world->octree->RootDepth, DandiStem);
+                    setBlockAtWorldCor(world, worldX + x, worldY + y, worldZ + z, DandiStem);
                 }
             }
         }
     }
 
     //Build the ball
-    unsigned long puffTopKey = modKey(key, 0, 0, height--, 0);
+    int puffTop = height--;
 
     int puffRadius = stemRadius * 3.2;
     //Make sure number is odd
@@ -143,8 +141,7 @@ void buildDandi(struct World* world, unsigned long key){
                 int dz = z;
                 if ((dx * dx + dy * dy + dz * dz) <= (puffRadius * puffRadius)) {
                     if (rand() % 5 != 0) {
-                        setOctreeKeyValue(world->octree->root, modKey(puffTopKey, x, y, z, 0), world->octree->RootDepth,
-                                          Dandi);
+                        setBlockAtWorldCor(world, worldX + x, worldY + y, worldZ + z + puffTop, Dandi);
                     }
                 }
             }
@@ -153,10 +150,10 @@ void buildDandi(struct World* world, unsigned long key){
 }
 
 
-void generatePlant(struct World* world, unsigned long key, enum Block block){
+void generatePlant(struct World* world, int worldX, int worldY, int worldZ, enum Block block){
     if (isPlantable(block)){
         int randomVal = rand() % 100;
-        key = modKey(key, 0, 0, 1, 0);
+        worldZ++;
 
         //Generate if grass
         if (block == GreenGrass){
@@ -169,29 +166,29 @@ void generatePlant(struct World* world, unsigned long key, enum Block block){
             else if (randomVal <= 95){
                 //50% chance to be white or yellow
                 if (randomVal <= 80) {
-                    setOctreeKeyValue(world->octree->root, key, world->octree->RootDepth, WhiteFlowers);
+                    setBlockAtWorldCor(world, worldX, worldY, worldZ, WhiteFlowers);
                 }
                 else{
-                    setOctreeKeyValue(world->octree->root, key, world->octree->RootDepth, YellowFlowers);
+                    setBlockAtWorldCor(world, worldX, worldY, worldZ, YellowFlowers);
                 }
             }
             //10% flour
             else if (randomVal <= 97){
-                setOctreeKeyValue(world->octree->root, key, world->octree->RootDepth, Flour);
+                setBlockAtWorldCor(world, worldX, worldY, worldZ, Flour);
             }
             else if (randomVal <= 98){
-                setOctreeKeyValue(world->octree->root, key, world->octree->RootDepth, Mushroom);
+                setBlockAtWorldCor(world, worldX, worldY, worldZ, Mushroom);
             }
             //1% tree
             else {
                 if (rand() % 2 == 0) {
                     int randomTree = rand() % 200;
                     if (randomTree < 190) {
-                        buildTree(world, key);
+                        buildTree(world, worldX, worldY, worldZ);
                     } else if (randomTree < 199) {
-                        buildDandi(world, key);
+                        buildDandi(world, worldX, worldY, worldZ);
                     } else {
-                        buildMushroom(world, key);
+                        buildMushroom(world, worldX, worldY, worldZ);
                     }
                 }
             }

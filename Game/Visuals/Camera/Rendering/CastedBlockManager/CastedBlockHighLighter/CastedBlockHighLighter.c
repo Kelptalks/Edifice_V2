@@ -26,25 +26,34 @@ void highLightMouseCord(struct GameData* gameData, int xIso, int yIso, bool left
     struct CastedBlock* castedBlock = getCastedBlockAtCords(gameData->cameraData, xIso, yIso);
 
     if (castedBlock != NULL) {
-        //Get the world cords of the block mouse is in
-        unsigned long castedBlockKey = castedBlock->rightBlockKey;
+        int worldX;
+        int worldY;
+        int worldZ;
+
+
         if (leftSided) {
-            castedBlockKey = castedBlock->leftBlockKey;
+            worldX = castedBlock->worldLeftBlockX;
+            worldY = castedBlock->worldLeftBlockY;
+            worldZ = castedBlock->worldLeftBlockZ;
+        }
+        else{
+            worldX = castedBlock->worldRightBlockX;
+            worldY = castedBlock->worldRightBlockY;
+            worldZ = castedBlock->worldRightBlockZ;
         }
 
         for (int x = -4; x < 4; x++) {
             for (int y = -4; y < 4; y++) {
                 tempCastedBlock = getCastedBlockAtCords(gameData->cameraData, xIso + x, yIso + y);
                 if (tempCastedBlock != NULL) {
-                    if (castedBlockKey == tempCastedBlock->leftBlockKey) {
+                    if (worldX == tempCastedBlock->worldLeftBlockX && worldY == tempCastedBlock->worldLeftBlockY && worldZ == tempCastedBlock->worldLeftBlockZ) {
                         addTexture(tempCastedBlock->leftTempTextureList, WhiteShader, tempCastedBlock->leftTextureList->nodes[0].texture);
                     }
-                    if (castedBlockKey == tempCastedBlock->rightBlockKey) {
+                    if (worldX == tempCastedBlock->worldRightBlockX && worldY == tempCastedBlock->worldRightBlockY && worldZ == tempCastedBlock->worldRightBlockZ) {
                         addTexture(tempCastedBlock->rightTemptTextureList, WhiteShader,  tempCastedBlock->rightTextureList->nodes[0].texture);
                     }
                 }
             }
         }
     }
-
 }

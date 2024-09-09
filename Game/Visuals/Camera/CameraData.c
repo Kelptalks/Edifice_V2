@@ -64,7 +64,7 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
 }
 
 
-struct CameraData* createCameraData(SDL_Renderer* renderer, struct Octree* octree){
+struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world){
     struct CameraData* cameraData = calloc(1, sizeof(struct CameraData));
     if (cameraData == NULL){
         return NULL;
@@ -99,8 +99,10 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct Octree* octre
     cameraData->castingDistance = 300;
 
 
-    //Key the camera renderers from
-    cameraData->key = modKey(0, 300, 300, 300, 0);
+    //Set camera world cords
+    cameraData->worldX = 300;
+    cameraData->worldY = 300;
+    cameraData->worldZ = 300;
 
     //Create viewport
     reportBug(" - Creating CastedPool\n");
@@ -110,11 +112,11 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct Octree* octre
     cameraData->inMenuWindow = createInMenuWindow(0, 0, 1280, 720);
     cameraData->distanceSortedRelativeCords = createDistanceSortedRelativeCords(cameraData);
 
-    //World data
-    cameraData->octree = octree;
+
 
     //Thread Pool
-    cameraData->rayCastingThreadPool = createRayCastingThreadPool(200, cameraData, octree);
+    cameraData->world = world;
+    cameraData->rayCastingThreadPool = createRayCastingThreadPool(200, cameraData);
 
     return cameraData;
 }
