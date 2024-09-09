@@ -7,42 +7,40 @@
 #include "Game/Visuals/InMenuWindow/InMenuWindow.h"
 #include "Game/World/World Saving/WorldFileManager.h"
 #include "Game/InGameTime/TikManager.h"
+#include "Game/World/WorldChunkHashMap/WorldChunkHashMap.h"
 
 int main(int argc, char* argv[]) {
-    struct GameData* gameData = createGameData();
 
-    enum Direction direction;
-    
-    if (SDL_Init(SDL_INIT_AUDIO) != 0) {
-        SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
-        return 1;
+    testWorldChunk();
+
+    if (false) {
+        struct GameData *gameData = createGameData();
+        //Play start music
+        playSound(gameData->soundManager, MusicSunn);
+
+        while (gameData->screen->run) {
+            //Get start time
+            Uint32 time1 = SDL_GetTicks();
+
+            //Control what the game is rendering
+            renderCurrentMenu(gameData);
+
+            SDL_SetRenderDrawColor(gameData->screen->renderer, 150, 255, 248, 255);
+            SDL_RenderPresent(gameData->screen->renderer);
+            SDL_RenderClear(gameData->screen->renderer);
+
+            //Handle game inputs
+            handleInput(gameData);
+            updateTikTime(gameData);
+
+            //end frame render time tracker
+            Uint32 time2 = SDL_GetTicks();
+            gameData->screen->frameRenderTime = time2 - time1;
+            //Update current frame
+            gameData->screen->currentFrame++;
+
+        }
+        openWorldFile(gameData->world);
     }
-
-    playSound(gameData->soundManager, MusicSunn);
-
-    while (gameData->screen->run){
-        //Get start time
-        Uint32 time1 = SDL_GetTicks();
-
-        //Control what the game is rendering
-        renderCurrentMenu(gameData);
-
-        SDL_SetRenderDrawColor(gameData->screen->renderer, 150, 255, 248, 255);
-        SDL_RenderPresent(gameData->screen->renderer);
-        SDL_RenderClear(gameData->screen->renderer);
-
-        //Handle game inputs
-        handleInput(gameData);
-        updateTikTime(gameData);
-
-        //end frame render time tracker
-        Uint32 time2 = SDL_GetTicks();
-        gameData->screen->frameRenderTime = time2 - time1;
-        //Update current frame
-        gameData->screen->currentFrame++;
-
-    }
-
-    openWorldFile(gameData->world);
     return 0;
 }

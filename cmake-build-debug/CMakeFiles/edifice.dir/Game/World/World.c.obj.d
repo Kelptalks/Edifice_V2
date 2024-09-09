@@ -35,4 +35,5 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen/LairManager/LairManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk/WorldChunk.h
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk/WorldChunk.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h

@@ -44,8 +44,6 @@ struct World* createWorld(int scale){
     world->chunkOctreeScale = 6;
     world->chunkOctreeDimension = getOctreeDimensions(world->chunkOctreeScale);
 
-
-
     //Calculate ground height
     world->octree = octree;
     createTerrainGenRules(world);
@@ -78,6 +76,18 @@ enum Block getBlockAtCor(struct World* world, int x, int y, int z){
     return getBlockInWorldChunk(worldChunk, chunkSubXCor, chunkSubYCor, chunkSubZCor);
 };
 
-void setBlockAtCor(struct World* world, int x, int y, int z, enum Block){
+void setBlockAtCor(struct World* world, int x, int y, int z, enum Block block){
+    //Shift the cords based on the scale of the octree
+    int chunkXCor = x >> world->chunkOctreeScale;
+    int chunkYCor = y >> world->chunkOctreeScale;
+    int chunkZCor = z >> world->chunkOctreeScale;
 
+    struct WorldChunk* worldChunk = getWorldChunk(chunkXCor, chunkYCor, chunkZCor);
+
+    //Mod the cords by getting the remainder using the bitwise operations
+    int chunkSubXCor = x & (world->chunkOctreeDimension - 1);
+    int chunkSubYCor = y & (world->chunkOctreeDimension - 1);
+    int chunkSubZCor = z & (world->chunkOctreeDimension - 1);
+
+    setBlockInWorldChunk(worldChunk, chunkSubXCor, chunkSubYCor, chunkSubZCor, block);
 };

@@ -5,6 +5,10 @@
 #include <stdio.h>
 #include "KeyMod.h"
 #include "../../../Debuging/Test_Main.h"
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Basic key manipulation
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 
 // Add a bit to axis
 unsigned long addBitToAxis(unsigned long key, int axis, int depth) {
@@ -70,6 +74,11 @@ unsigned long modKey(unsigned long key, int xMod, int yMod, int zMod, int depth)
     return newKey;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Key interpretation
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 int getAxis(unsigned long key, int axis, int depth){
     int axisCor = 0;
     for (int x = 0; x < depth; x++){
@@ -98,6 +107,22 @@ void getCords(unsigned long key, int depth, int* x, int* y, int* z){
 
     }
 }
+
+unsigned long cordsToKey(int depth, int x, int y, int z){
+    unsigned long key = 0;
+    for (int i = 0; i < depth; i++){
+        //Mask each bit of cords and create key
+        key = key | (((x >> i) & 1) << (i * 3 + 0));
+        key = key | (((y >> i) & 1) << (i * 3 + 1));
+        key = key | (((z >> i) & 1) << (i * 3 + 2));
+    }
+    return key;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Debugging
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 
 void printKeyAxis(unsigned long key, int depth){
     FILE * debug;

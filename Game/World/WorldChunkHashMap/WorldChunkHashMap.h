@@ -9,16 +9,16 @@
 
 struct WorldChunkHashMapNode{
     struct WorldChunk* worldChunk;
-    int xCor;
-    int yCor;
-    int zCor;
+    struct WorldChunkHashMapNode* nextNode;
 };
 
 struct WorldChunkHashMapNode* createWorldChunkHashMapNode();
 
 struct WorldChunkHashMapNodePool{
-    struct WorldChunkHashMapNode* freeNodes;
-    struct WorldChunkHashMapNode* maxNodes;
+    struct WorldChunkHashMapNode** freeNodes;
+
+    int maxNodes;
+    int freeNodesCount;
 };
 
 struct WorldChunkHashMapNodePool* createWorldChunkHashMapNodePool(int maxSize);
@@ -34,4 +34,5 @@ void addWorldChunkToMap();
 
 struct WorldChunk* getWorldChunkFromMap();
 
+void testWorldChunkHashMap();
 #endif //EDIFICE_WORLDCHUNKHASHMAP_H
