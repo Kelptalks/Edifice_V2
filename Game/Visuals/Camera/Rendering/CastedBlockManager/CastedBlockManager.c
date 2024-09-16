@@ -10,6 +10,7 @@
 #include "../../../../World/Octree/Tools/KeyMod.h"
 #include "../../../../Debuging/Test_Main.h"
 #include "../../CameraData.h"
+#include "../../Camera.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Creation and freeing functions
@@ -131,17 +132,18 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
-void unloadChunk(struct CastedPool* castedPool, struct CastedChunk* castedChunk){
+void unloadChunk(struct GameData* gameData, struct CastedChunk* castedChunk){
+    struct CastedPool* castedPool = gameData->cameraData->castedPool;
     //Remove the chunk from the hashmap
     removeFromChunkMap(castedPool->chunkMap, castedChunk->isoX, castedChunk->isoY);
 
     //Reset values
     castedChunk->isoY = 0;
     castedChunk->isoX = 0;
+    clearChunkTexture(gameData, castedChunk);
 
     //Add the chunk to the top of the free chunk array stack
     castedPool->freeChunks[castedPool->freeChunkCount] = castedChunk;
-
     castedPool->freeChunkCount++;
 }
 

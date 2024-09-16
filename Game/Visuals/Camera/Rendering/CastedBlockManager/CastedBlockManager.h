@@ -92,7 +92,7 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, SDL_Renderer*
 struct CastedChunk* getCastedChunkAtCords(struct CameraData* cameraData, int isoX, int isoY);
 struct CastedBlock* getCastedBlockAtCords(struct CameraData* cameraData, int isoX, int isoY);
 
-void unloadChunk(struct CastedPool* castedPool, struct CastedChunk* castedChunk);
+void unloadChunk(struct GameData* gameData, struct CastedChunk* castedChunk);
 struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY);
 
 

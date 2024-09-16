@@ -9,6 +9,8 @@
 #ifndef ISOTEXTUREMANAGER_H
 #define ISOTEXTUREMANAGER_H
 
+#include "EntityTextures.h"
+
 enum Texture{
     //Blocks
     TopLeftFace,
@@ -48,6 +50,8 @@ struct BlockShaders{
 };
 
 struct Textures{
+    struct EntityTextures* entityTextures;
+
     SDL_Texture * spriteSheet;
 
     //Array for every array of block's spliced textures

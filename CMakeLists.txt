@@ -93,6 +93,12 @@ add_executable(edifice main.c
         Game/World/Octree/OctreeBranchPool/OctreeNodePool.h
         Game/World/WorldChunkHashMap/WorldChunkHashMap.c
         Game/World/WorldChunkHashMap/WorldChunkHashMap.h
+        Game/InGameTime/TikEvent/EntityManager/PuffLogic.c
+        Game/InGameTime/TikEvent/EntityManager/PuffLogic.h
+        Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h
+        Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c
+        Game/InGameTime/TikEvent/EntityManager/EntityManager.c
+        Game/InGameTime/TikEvent/EntityManager/EntityManager.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

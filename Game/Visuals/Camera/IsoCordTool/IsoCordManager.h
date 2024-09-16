@@ -7,6 +7,7 @@
 
 void isoToScreen(float scale, int x, int y, int* isoX, int* isoY);
 
+void floatIsoToScreen(float scale, float x, float y, int* screenX, int* screenY);
 
 void screenToIso(float scale, int x, int y, int* isoX, int* isoY);
 

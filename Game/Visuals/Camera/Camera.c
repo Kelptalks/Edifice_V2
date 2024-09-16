@@ -17,6 +17,7 @@
 #include "../../World/Octree/Octree.h"
 #include "../../World/Octree/OctreeNode.h"
 #include "Rendering/RayCasting/CastingThread/castingThread.h"
+#include "../../PlayerData/PlayerData.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Texture rendering
@@ -114,6 +115,15 @@ void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChu
     castedChunk->textured = true;
 }
 
+void clearChunkTexture(struct GameData* gameData, struct CastedChunk* castedChunk){
+    SDL_SetRenderDrawColor(gameData->screen->renderer, 0, 255, 0, 255);
+    //Set renderer to target chunk texture
+    SDL_SetRenderTarget(gameData->screen->renderer, castedChunk->chunkTexture);
+    SDL_SetRenderDrawColor(gameData->screen->renderer, 0, 0, 0, 0);  // RGBA for transparent
+    SDL_RenderClear(gameData->screen->renderer);
+    SDL_SetRenderTarget(gameData->screen->renderer, NULL);
+}
+
 //Draw a chunk in the correct location
 void DrawChunk(struct GameData* gameData, struct CastedChunk* castedChunk){
     struct CameraData* cameraData = gameData->cameraData;
@@ -139,6 +149,18 @@ void DrawChunk(struct GameData* gameData, struct CastedChunk* castedChunk){
  * Rendering direction management
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
+
+void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY){
+
+    float heightDif = cameraData->worldZ - worldZ;
+    worldX += (heightDif * cameraData->xDirection);
+    worldY += (heightDif * cameraData->yDirection);
+
+    *camX = worldX - cameraData->worldX;
+    *camY = worldY - cameraData->worldY;
+
+}
+
 void updateDirectionCastingMods(struct CameraData* cameraData, enum Direction direction){
     if (direction == North){
         cameraData->xDirection = 1;
@@ -163,34 +185,34 @@ void updateDirectionCastingMods(struct CameraData* cameraData, enum Direction di
 }
 
 void offSetCamWorldKeyBasedOnRotation(struct CameraData* cameraData, enum Direction direction){
-
-    reportBug("Starting camera cords (%i, %i, %i)\n", cameraData->worldX, cameraData->worldY, cameraData->worldZ);
     struct World* world = cameraData->world;
 
 
     //Get Casted block at the center of the screen
     struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData,cameraData->xIsoCamCenter, cameraData->yIsoCamCenter);
     //Unpack cords
-    int worldX = castedBlock->worldX; int worldY = castedBlock->worldY; int worldZ = castedBlock->worldZ;
+    int worldX = castedBlock->worldX;
+    int worldY = castedBlock->worldY;
+    int worldZ = castedBlock->worldZ;
 
     //Cast a ray to the block it hits
     enum Block block = Air;
     int distance = 0;
     for (int drawDistance = 300; drawDistance > 0; drawDistance--){
-        worldX - cameraData->xDirection;
+        worldX -= cameraData->xDirection;
         block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
         if (!isTransparent(block)){
-            break;
+            drawDistance = 0;
+        }
+        worldY -= cameraData->yDirection;
+        block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
+        if (!isTransparent(block)){
+            drawDistance = 0;
         }
         block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
-        worldY - cameraData->yDirection;
+        worldZ -= 1;
         if (!isTransparent(block)){
-            break;
-        }
-        block = getBlockAtWorldCor(world, worldX, worldY, worldZ);
-        worldZ - 1;
-        if (!isTransparent(block)){
-            break;
+            drawDistance = 0;
         }
         distance++;
     }
@@ -198,16 +220,20 @@ void offSetCamWorldKeyBasedOnRotation(struct CameraData* cameraData, enum Direct
     //Update the casting directions
     updateDirectionCastingMods(cameraData, direction);
 
+    //
     int newCamWorldX = worldX + (cameraData->xDirection * distance);
     int newCamWorldY = worldY + (cameraData->yDirection * distance);
     int newCamWorldZ = distance;
 
+    cameraData->xRenderingOffset = 1920/2;
+    cameraData->yRenderingOffset = 1080/2;
+
     cameraData->worldX = newCamWorldX;
     cameraData->worldY = newCamWorldY;
-    cameraData->worldZ = newCamWorldZ;
+    cameraData->worldZ = 300;
 
-    reportBug("new cam cords (%i, %i, %i)\n", newCamWorldX, newCamWorldY, newCamWorldZ);
-
+    //reportBug("Distance to block : %i\n", distance);
+    //reportBug("new cam cords (%i, %i, %i)\n", newCamWorldX, newCamWorldY, newCamWorldZ);
     //Calculate a new Casted block key by casting from the struck block
 
 }
@@ -288,6 +314,15 @@ void renderMouseArea(struct GameData* gameData){
 }
 
 void renderView(struct GameData* gameData){
+    bool reportFrameData = true;
+    //Ray cast all chunks added to the thread pool task q
+    if (reportFrameData) {
+        reportFrameBug("\n\n"
+                "##################### \n"
+                "## RENDERING DATA ### \n"
+                "##################### \n");
+
+    }
 
     struct CameraData* cameraData = gameData->cameraData;
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
@@ -298,7 +333,6 @@ void renderView(struct GameData* gameData){
     float chunkRenderScale = (gameData->cameraData->renderScale / gameData->cameraData->baseBlockScale);
     cameraData->xChunkScaledTextureRez = cameraData->chunkPixelScale * chunkRenderScale;
     cameraData->yChunkScaledTextureRez = (cameraData->chunkPixelScale/2) * chunkRenderScale;
-
 
     int maxTexturingPerFrame = 15;
     int maxNewChunksPerFrame = 15;
@@ -324,9 +358,9 @@ void renderView(struct GameData* gameData){
                 //Reset the direction the chunk should be rendered
                 if (castedChunk->direction != cameraData->direction) {
                     castedChunk->direction = cameraData->direction;
-                    updateChunkCamCords(cameraData, castedChunk);
                     castedChunk->rayCast = false;
                     castedChunk->textured = false;
+                    clearChunkTexture(gameData, castedChunk);
                 }
 
                 //Render the chunk texture if needed
@@ -344,6 +378,15 @@ void renderView(struct GameData* gameData){
     }
 
     //Ray cast all chunks added to the thread pool task q
+    if (reportFrameData) {
+        reportFrameBug("\n Thread Pool RayCasting \n");
+        reportFrameBug(" - Total thread count : %i\n",
+                       cameraData->rayCastingThreadPool->threadCount);
+        reportFrameBug(" - Total Chunks to cast utilizing thread pool : %i\n",
+                       cameraData->rayCastingThreadPool->totalTasks);
+    }
+
+    reportFrameBug("reporting a bug fixes the bug right here\n");
     executeAllTasks(cameraData->rayCastingThreadPool);
 
     for (int i = cameraData->totalDistanceCords/10; i < cameraData->totalDistanceCords; i++){
@@ -357,9 +400,28 @@ void renderView(struct GameData* gameData){
 
 
         if (castedChunk != NULL) {
-            unloadChunk(cameraData->castedPool, castedChunk);
+            unloadChunk(gameData, castedChunk);
         }
     }
+    //Ray cast all chunks added to the thread pool task q
+    if (reportFrameData) {
+        reportFrameBug("\n Chunk unloading \n");
+        reportFrameBug(" - Total Free Chunks : %i\n",
+                       cameraData->castedPool->freeChunkCount);
+        reportFrameBug(" - Total Chunks created : %i\n",
+                       cameraData->castedPool->totalChunksCreated);
+    }
+
+
+    float xPlayerCamCor; float yPlayerCamCor;
+    worldCordsToCameraCords(cameraData, gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ, &xPlayerCamCor, &yPlayerCamCor);
+    int xPlayerScreenCor; int yPlayerScreenCor;
+    floatIsoToScreen(cameraData->renderScale, xPlayerCamCor, yPlayerCamCor, &xPlayerScreenCor, &yPlayerScreenCor);
+    reportBug("Player World cords (%f, %f, %f)\n", gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ);
+    SDL_Rect destRect = {xPlayerScreenCor + cameraData->xRenderingOffset, yPlayerScreenCor + cameraData->yRenderingOffset, chunkRenderScale * 64, chunkRenderScale *  128};
+    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->entityTextures->entityTextures[0].textures[gameData->playerData->playerDirection],
+                   NULL, &destRect);
+
 
     //re raycast and texture the area around the mouse
     renderMouseArea(gameData);

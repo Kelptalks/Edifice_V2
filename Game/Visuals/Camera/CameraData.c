@@ -92,16 +92,16 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
     cameraData->chunkPixelScale = cameraData->baseBlockScale * cameraData->chunksScale;
 
     //Offset for drawing the screen and shifting
-    cameraData->xIsoCamCenter = 0;
-    cameraData->yIsoCamCenter = 0;
+    cameraData->xIsoCamCenter = 300;
+    cameraData->yIsoCamCenter = 300;
     cameraData->xIsoChunkCamCenter = 0;
     cameraData->yIsoChunkCamCenter = 0;
     cameraData->castingDistance = 300;
 
 
     //Set camera world cords
-    cameraData->worldX = 300;
-    cameraData->worldY = 300;
+    cameraData->worldX = 0;
+    cameraData->worldY = 0;
     cameraData->worldZ = 300;
 
     //Create viewport

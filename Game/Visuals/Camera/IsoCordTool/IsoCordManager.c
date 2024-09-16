@@ -13,6 +13,12 @@ void isoToScreen(float scale, int x, int y, int* isoX, int* isoY){
     *isoY = (int) ((x + y) * (scale / 2));
 }
 
+void floatIsoToScreen(float scale, float x, float y, int* screenX, int* screenY){
+    scale = scale/2;
+    *screenX = (int) ((x - y) * scale);
+    *screenY = (int) ((x + y) * (scale / 2));
+}
+
 void screenToIso(float scale, int x, int y, int* isoX, int* isoY){
     float tempIsoX = (float) (x + 2 * y) / (2 * scale);
     float tempIsoY = (float) (2 * y - x) / (2 * scale);

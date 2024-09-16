@@ -50,7 +50,7 @@ struct World* createWorld(int scale){
 
     createTerrainGenRules(world);
 
-    genArea(world, 0, 300, 300, 100);
+    genArea(world, 0, 150, 150, 100);
 
     return world;
 }

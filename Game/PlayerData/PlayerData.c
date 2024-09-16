@@ -11,5 +11,13 @@ struct PlayerData* createPlayerData(){
     playerData->block = 1;
     int lastMouseXCor = 0;
     int lastMouseYCor = 0;
+
+
+    playerData->playerDirection = EntityNorth;
+
+    playerData->worldX = -98;
+    playerData->worldY = -96;
+    playerData->worldZ = 52;
+
     return playerData;
 }

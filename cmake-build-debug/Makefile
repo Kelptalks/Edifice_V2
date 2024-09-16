@@ -296,6 +296,54 @@ Game/GameData.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/GameData.c.s
 .PHONY : Game/GameData.c.s
 
+Game/InGameTime/TikEvent/EntityManager/EntityManager.obj: Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
+.PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
+
+# target to build an object file
+Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
+.PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
+
+Game/InGameTime/TikEvent/EntityManager/EntityManager.i: Game/InGameTime/TikEvent/EntityManager/EntityManager.c.i
+.PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.i
+
+# target to preprocess a source file
+Game/InGameTime/TikEvent/EntityManager/EntityManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.i
+.PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.c.i
+
+Game/InGameTime/TikEvent/EntityManager/EntityManager.s: Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s
+.PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.s
+
+# target to generate assembly for a file
+Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s
+.PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s
+
+Game/InGameTime/TikEvent/EntityManager/PuffLogic.obj: Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
+.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.obj
+
+# target to build an object file
+Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
+.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
+
+Game/InGameTime/TikEvent/EntityManager/PuffLogic.i: Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i
+.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.i
+
+# target to preprocess a source file
+Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i
+.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i
+
+Game/InGameTime/TikEvent/EntityManager/PuffLogic.s: Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s
+.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.s
+
+# target to generate assembly for a file
+Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s
+.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s
+
 Game/InGameTime/TikEvent/TerpManager/TerpManager.obj: Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj
 .PHONY : Game/InGameTime/TikEvent/TerpManager/TerpManager.obj
 
@@ -679,6 +727,30 @@ Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.s: Game/Visuals/Camer
 Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.s
 .PHONY : Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.s
+
+Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.obj: Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.obj
+
+# target to build an object file
+Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj
+
+Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.i: Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.i
+.PHONY : Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.i
+
+# target to preprocess a source file
+Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.i
+.PHONY : Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.i
+
+Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.s: Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.s
+.PHONY : Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.s
+
+# target to generate assembly for a file
+Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.s
+.PHONY : Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.s
 
 Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.obj: Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.obj
 .PHONY : Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.obj
@@ -1334,6 +1406,12 @@ help:
 	@echo ... Game/GameData.obj
 	@echo ... Game/GameData.i
 	@echo ... Game/GameData.s
+	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
+	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.i
+	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.s
+	@echo ... Game/InGameTime/TikEvent/EntityManager/PuffLogic.obj
+	@echo ... Game/InGameTime/TikEvent/EntityManager/PuffLogic.i
+	@echo ... Game/InGameTime/TikEvent/EntityManager/PuffLogic.s
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.obj
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.i
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.s
@@ -1382,6 +1460,9 @@ help:
 	@echo ... Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.obj
 	@echo ... Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.i
 	@echo ... Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.s
+	@echo ... Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.obj
+	@echo ... Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.i
+	@echo ... Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.s
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.obj
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.i
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.s

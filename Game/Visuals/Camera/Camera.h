@@ -13,6 +13,7 @@ void rotateCamLeft(struct CameraData* cameraData);
 void rotateCamRight(struct CameraData* cameraData);
 
 void updateCameraCords(struct GameData* gameData);
+void clearChunkTexture(struct GameData* gameData, struct CastedChunk* castedChunk);
 
 void renderView(struct GameData* gameData);
 

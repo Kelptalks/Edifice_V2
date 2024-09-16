@@ -23,7 +23,6 @@ struct NoiseData{
 
     //Array pointing to array of float vectors
     float** influenceVectors;
-
 };
 
 

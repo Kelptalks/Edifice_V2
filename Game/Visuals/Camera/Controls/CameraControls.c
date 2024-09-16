@@ -244,23 +244,71 @@ void updateZoomScale(struct GameData* gameData, SDL_Event event){
 
 }
 
-void keyboardCamMovement(struct CameraData* cameraData){
+void keyboardCamMovement(struct GameData* gameData){
     //Camera Movement Controls
     float camSpeed = 10;
     const Uint8 *keystate = SDL_GetKeyboardState(NULL);
+    struct CameraData* cameraData = gameData->cameraData;
     // Check each key of interest and update accordingly
+    bool w = false;
+    bool a = false;
+    bool s = false;
+    bool d = false;
     if (keystate[SDL_SCANCODE_W]) {
-        cameraData->yRenderingOffset +=  camSpeed;  // Move camera up
+        w = true;
+        //Render player
+        gameData->playerData->worldX -= 0.1f * cameraData->xDirection;
+        gameData->playerData->worldY -= 0.1f * cameraData->yDirection;
     }
     if (keystate[SDL_SCANCODE_S]) {
-        cameraData->yRenderingOffset -=  camSpeed;  // Move camera down
+        s = true;
+        gameData->playerData->worldX += 0.1f * cameraData->xDirection;
+        gameData->playerData->worldY += 0.1f * cameraData->yDirection;;
     }
     if (keystate[SDL_SCANCODE_A]) {
-        cameraData->xRenderingOffset +=  camSpeed;  // Move camera left
+        a = true;
+        gameData->playerData->worldY += 0.1f * cameraData->yDirection;;
+        gameData->playerData->worldX -= 0.1f * cameraData->xDirection;
     }
     if (keystate[SDL_SCANCODE_D]) {
-        cameraData->xRenderingOffset -=  camSpeed;  // Move camera right
+        d = true;
+        gameData->playerData->worldY -= 0.1f * cameraData->yDirection;;
+        gameData->playerData->worldX += 0.1f * cameraData->xDirection;
     }
+    if (keystate[SDL_SCANCODE_SPACE]) {
+        gameData->playerData->worldZ += 0.1f;
+    }
+    if (keystate[SDL_SCANCODE_LSHIFT]){
+        gameData->playerData->worldZ -= 0.1f;
+    }
+
+    if (!w && !a && s && !d){
+        gameData->playerData->playerDirection = EntityNorth;
+    }
+    if (!w && a && s && !d){
+        gameData->playerData->playerDirection = EntityNorthEast;
+    }
+    if (!w && a && !s && !d){
+        gameData->playerData->playerDirection = EntityEast;
+    }
+    if (w && a && !s && !d){
+        gameData->playerData->playerDirection = EntitySouthEast;
+    }
+    if (w && !a && !s && !d){
+        gameData->playerData->playerDirection = EntitySouth;
+    }
+    if (w && !a && !s && d){
+        gameData->playerData->playerDirection = EntityNorthWest;
+    }
+    if (!w && !a && !s && d){
+        gameData->playerData->playerDirection = EntityWest;
+    }
+    if (!w && !a && s && d){
+        gameData->playerData->playerDirection = EntityNorthWest;
+    }
+
+
+    setBlockAtWorldCor(gameData->world, gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ, Granite);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -322,7 +370,7 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
         mouseCamMovement(gameData, xCor, yCor);
     }
 
-    keyboardCamMovement(gameData->cameraData);
+    keyboardCamMovement(gameData);
 
     if (event.type == SDL_KEYDOWN) {
         switch (event.key.keysym.sym) {

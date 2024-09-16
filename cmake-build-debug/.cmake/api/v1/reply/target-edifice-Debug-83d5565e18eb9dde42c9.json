@@ -38,7 +38,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 98,
+				"line" : 104,
 				"parent" : 0
 			},
 			{
@@ -145,7 +145,10 @@
 				76,
 				78,
 				80,
-				82
+				82,
+				84,
+				87,
+				88
 			]
 		}
 	],
@@ -255,7 +258,10 @@
 				76,
 				78,
 				80,
-				82
+				82,
+				84,
+				87,
+				88
 			]
 		},
 		{
@@ -296,7 +302,10 @@
 				77,
 				79,
 				81,
-				83
+				83,
+				85,
+				86,
+				89
 			]
 		}
 	],
@@ -769,6 +778,39 @@
 		{
 			"backtrace" : 1,
 			"path" : "Game/World/WorldChunkHashMap/WorldChunkHashMap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/InGameTime/TikEvent/EntityManager/PuffLogic.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/InGameTime/TikEvent/EntityManager/PuffLogic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/InGameTime/TikEvent/EntityManager/EntityManager.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/InGameTime/TikEvent/EntityManager/EntityManager.h",
 			"sourceGroupIndex" : 1
 		}
 	],

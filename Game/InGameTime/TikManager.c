@@ -11,7 +11,7 @@
 struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
     tikManager->tik = 0;
-    tikManager->tikTime = 50;
+    tikManager->tikTime = 200;
     return tikManager;
 }
 
@@ -20,6 +20,7 @@ void updateTikTime(struct GameData* gameData){
 
     tikManager->sdlTime = SDL_GetTicks();
     if (tikManager->sdlTime > (tikManager->tik * tikManager->tikTime)){
+        reportTikBug("current tik %i \n", tikManager->tik);
         tikManager->tik++;
     }
 

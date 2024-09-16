@@ -53,7 +53,6 @@ void renderMainMenu(struct GameData* gameData){
     renderUIButton(exitButton, gameData);
     drawString(gameData, "exit", 4, exitButton->xCor + exitButton->xScale/4, exitButton->yCor + (exitButton->yScale/4), exitButton->yScale/2);
 
-
 }
 
 void handleInputMainMenu(struct GameData* gameData, SDL_Event event){

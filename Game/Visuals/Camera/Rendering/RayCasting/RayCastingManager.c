@@ -86,6 +86,7 @@ void rayCastBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock
 }
 
 void rayCastChunk(struct CameraData* cameraData, struct CastedChunk* castedChunk){
+    updateChunkCamCords(cameraData, castedChunk);
     for (int x = 0; x < castedChunk->castedBlockCount; x++){
         rayCastBlock(cameraData, &castedChunk->castedBlocks[x]);
     }

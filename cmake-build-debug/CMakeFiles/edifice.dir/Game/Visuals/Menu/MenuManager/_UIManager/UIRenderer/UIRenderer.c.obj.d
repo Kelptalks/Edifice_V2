@@ -189,10 +189,12 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRen
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\\\ UIManager\UIRenderer\UIRenderer.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \

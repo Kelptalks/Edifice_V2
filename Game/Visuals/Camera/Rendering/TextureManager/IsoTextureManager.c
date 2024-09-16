@@ -277,5 +277,9 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
     textures->spriteSheet = SDL_CreateTextureFromSurface(renderer, spriteSheet);
     SDL_FreeSurface(spriteSheet);
 
+
+    //Create entity textures
+    textures->entityTextures = createEntityTextures(renderer, 1);
+
     return textures;
 }

@@ -39,8 +39,8 @@ void createTerrainGenRules(struct World* world){
 }
 
 void genArea(struct World* world, unsigned long key, int xArea, int yArea, int zArea){
-    int xStart = 0;
-    int yStart = 0;
+    int xStart = -150;
+    int yStart = -150;
     int zStart = -30;
 
     int xEnd = xStart + xArea;
@@ -57,9 +57,9 @@ void genArea(struct World* world, unsigned long key, int xArea, int yArea, int z
     int chunkSizeCenterOffSet = (heightMapPool->chunkScale - heightMapPool->chunkScale) / 2;
 
     //Loop through keys in the area
-    for (int x = 0; x < xArea; x++){
-        for (int y = 0; y < yArea; y++){
-            for (int z = 0; z < zArea; z++) {
+    for (int x = xStart; x < xArea; x++){
+        for (int y = yStart; y < yArea; y++){
+            for (int z = zStart; z < zArea; z++) {
                 //Set Lair Shifting rule
                 int lairShift = 0;
                 for (int rule = 0; rule < shiftRulesInArea->length; rule++) {
