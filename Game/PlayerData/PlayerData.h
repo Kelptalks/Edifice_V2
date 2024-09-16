@@ -7,6 +7,7 @@
 
 #include "../Blocks/Blocks.h"
 #include "../InGameTime/TikEvent/EntityManager/EntityManager.h"
+#include "../GameData.h"
 
 struct PlayerData{
     enum Block block;
@@ -17,8 +18,20 @@ struct PlayerData{
     float worldX;
     float worldY;
     float worldZ;
+
+    float sizeX;
+    float sizeY;
+
+    float velResistance;
+    float sprintMod;
+    float velX;
+    float velY;
+
+    float gravity;
+    float velZ;
 };
 
 struct PlayerData* createPlayerData();
 
+void tikPlayer(struct GameData* gameData);
 #endif //EDIFICE_PLAYERDATA_H

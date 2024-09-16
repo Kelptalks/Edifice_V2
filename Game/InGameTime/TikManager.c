@@ -7,11 +7,12 @@
 #include "TikManager.h"
 #include "../GameData.h"
 #include "../Debuging/Test_Main.h"
+#include "../PlayerData/PlayerData.h"
 
 struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
     tikManager->tik = 0;
-    tikManager->tikTime = 200;
+    tikManager->tikTime = 10;
     return tikManager;
 }
 
@@ -22,6 +23,7 @@ void updateTikTime(struct GameData* gameData){
     if (tikManager->sdlTime > (tikManager->tik * tikManager->tikTime)){
         reportTikBug("current tik %i \n", tikManager->tik);
         tikManager->tik++;
+        tikPlayer(gameData);
     }
 
 }

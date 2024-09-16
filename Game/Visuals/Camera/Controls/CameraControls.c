@@ -254,61 +254,66 @@ void keyboardCamMovement(struct GameData* gameData){
     bool a = false;
     bool s = false;
     bool d = false;
+    bool shift = false;
     if (keystate[SDL_SCANCODE_W]) {
         w = true;
-        //Render player
-        gameData->playerData->worldX -= 0.1f * cameraData->xDirection;
-        gameData->playerData->worldY -= 0.1f * cameraData->yDirection;
     }
     if (keystate[SDL_SCANCODE_S]) {
         s = true;
-        gameData->playerData->worldX += 0.1f * cameraData->xDirection;
-        gameData->playerData->worldY += 0.1f * cameraData->yDirection;;
     }
     if (keystate[SDL_SCANCODE_A]) {
         a = true;
-        gameData->playerData->worldY += 0.1f * cameraData->yDirection;;
-        gameData->playerData->worldX -= 0.1f * cameraData->xDirection;
     }
     if (keystate[SDL_SCANCODE_D]) {
         d = true;
-        gameData->playerData->worldY -= 0.1f * cameraData->yDirection;;
-        gameData->playerData->worldX += 0.1f * cameraData->xDirection;
     }
     if (keystate[SDL_SCANCODE_SPACE]) {
-        gameData->playerData->worldZ += 0.1f;
+        gameData->playerData->velZ = 0.5f;
     }
     if (keystate[SDL_SCANCODE_LSHIFT]){
-        gameData->playerData->worldZ -= 0.1f;
+        shift = true;
     }
 
+    float shiftMod = 0;
+    if (shift){
+        shiftMod = gameData->playerData->sprintMod;
+    }
     if (!w && !a && s && !d){
         gameData->playerData->playerDirection = EntityNorth;
+        gameData->playerData->velX = +(0.05F + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velY = +(0.05F + shiftMod) * cameraData->yDirection;
     }
     if (!w && a && s && !d){
         gameData->playerData->playerDirection = EntityNorthEast;
+        gameData->playerData->velY = +(0.05F + shiftMod) * cameraData->yDirection;
     }
     if (!w && a && !s && !d){
         gameData->playerData->playerDirection = EntityEast;
+        gameData->playerData->velY = +(0.05F + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velX = -(0.05F + shiftMod) * cameraData->xDirection;
     }
     if (w && a && !s && !d){
         gameData->playerData->playerDirection = EntitySouthEast;
+        gameData->playerData->velX = -(0.05F + shiftMod) * cameraData->xDirection;
     }
     if (w && !a && !s && !d){
         gameData->playerData->playerDirection = EntitySouth;
+        gameData->playerData->velX = -(0.05F + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velY = -(0.05F + shiftMod) * cameraData->yDirection;
     }
     if (w && !a && !s && d){
-        gameData->playerData->playerDirection = EntityNorthWest;
+        gameData->playerData->playerDirection = EntitySouthWest;
+        gameData->playerData->velY = -(0.05F + shiftMod) * cameraData->yDirection;
     }
     if (!w && !a && !s && d){
         gameData->playerData->playerDirection = EntityWest;
+        gameData->playerData->velY = -(0.05F + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velX = +(0.05F + shiftMod) * cameraData->xDirection;
     }
     if (!w && !a && s && d){
         gameData->playerData->playerDirection = EntityNorthWest;
+        gameData->playerData->velX = +(0.05F + shiftMod) * cameraData->xDirection;
     }
-
-
-    setBlockAtWorldCor(gameData->world, gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ, Granite);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

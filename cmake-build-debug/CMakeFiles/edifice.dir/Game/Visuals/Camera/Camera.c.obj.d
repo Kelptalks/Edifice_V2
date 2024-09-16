@@ -249,4 +249,5 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/CastingThread/castingThread.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

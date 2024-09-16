@@ -414,11 +414,15 @@ void renderView(struct GameData* gameData){
 
 
     float xPlayerCamCor; float yPlayerCamCor;
+
     worldCordsToCameraCords(cameraData, gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ, &xPlayerCamCor, &yPlayerCamCor);
+
     int xPlayerScreenCor; int yPlayerScreenCor;
+
     floatIsoToScreen(cameraData->renderScale, xPlayerCamCor, yPlayerCamCor, &xPlayerScreenCor, &yPlayerScreenCor);
-    reportBug("Player World cords (%f, %f, %f)\n", gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ);
-    SDL_Rect destRect = {xPlayerScreenCor + cameraData->xRenderingOffset, yPlayerScreenCor + cameraData->yRenderingOffset, chunkRenderScale * 64, chunkRenderScale *  128};
+
+    reportBug("Player World cords (%f)\n", cameraData->renderScale);
+    SDL_Rect destRect = {xPlayerScreenCor + cameraData->xRenderingOffset - (cameraData->renderScale / 2), yPlayerScreenCor + cameraData->yRenderingOffset - (cameraData->renderScale), chunkRenderScale * 64, chunkRenderScale *  128};
     SDL_RenderCopy(gameData->screen->renderer, gameData->textures->entityTextures->entityTextures[0].textures[gameData->playerData->playerDirection],
                    NULL, &destRect);
 
