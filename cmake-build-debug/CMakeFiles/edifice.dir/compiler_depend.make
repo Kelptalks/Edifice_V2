@@ -1742,6 +1742,7 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: C:/Users/Spencer/Deskto
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \

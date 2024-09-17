@@ -15,6 +15,10 @@ struct PlayerData{
     int lastMouseYCor;
 
     enum EntityDirection playerDirection;
+
+    int walkingFrame;
+    int walkingTexture;
+
     float worldX;
     float worldY;
     float worldZ;
@@ -24,6 +28,8 @@ struct PlayerData{
 
     float velResistance;
     float sprintMod;
+    float walkingSpeed;
+    bool sprinting;
     float velX;
     float velY;
 

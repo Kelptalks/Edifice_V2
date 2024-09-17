@@ -9,7 +9,7 @@
 #include "SDL.h"
 
 struct EntityTexture{
-    SDL_Texture* textures[8];
+    SDL_Texture*** textures;
 };
 
 

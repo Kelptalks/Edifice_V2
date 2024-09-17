@@ -49,6 +49,74 @@ void renderChunkOutLine(struct GameData* gameData, int isoX, int isoY, int color
                        yChunkRenderCords + cameraData->yChunkScaledTextureRez);
 }
 
+void renderCastedBlock(struct GameData* gameData, struct CastedBlock* castedBlock, int x, int y, int side){
+    struct CameraData* cameraData = gameData->cameraData;
+
+    //get the cords the chunk should be draw to the screen
+
+    int chunkScreenX;
+    int chunkScreenY;
+    isoToScreen(cameraData->xChunkScaledTextureRez, x / 8, y / 8, &chunkScreenX, &chunkScreenY);
+
+    //Get chunk location on screen,
+    int xChunkRenderCords = chunkScreenX + cameraData->xRenderingOffset;
+    int yChunkRenderCords = chunkScreenY + cameraData->yRenderingOffset;
+    int color = {0, 20, 255};
+
+    renderChunkOutLine(gameData, xChunkRenderCords, yChunkRenderCords, &color);
+    reportBug("cords (%i, %i)\n", xChunkRenderCords, yChunkRenderCords);
+
+    //Drawing location
+    int blockScreenX;
+    int blockScreenY;
+
+    floatIsoToScreen(cameraData->renderScale, (x % cameraData->chunksScale), (y % cameraData->chunksScale), &blockScreenX, &blockScreenY);
+    blockScreenX = xChunkRenderCords + blockScreenX;
+    blockScreenY = yChunkRenderCords + blockScreenY;
+
+    blockScreenX -= cameraData->renderScale/2;
+
+    //Center on texture
+    SDL_Rect rightBLock = {(blockScreenX + (cameraData->renderScale/2)), blockScreenY, cameraData->renderScale + 1, cameraData->renderScale + 1};
+    SDL_Rect leftBlock = {blockScreenX, blockScreenY, cameraData->renderScale + 1,cameraData->renderScale + 1};
+
+    //Texture rendering
+    if (side == 1 || side == 2) {
+        for (int t = castedBlock->rightTextureList->length - 1; t >= 0; t--) {
+            struct TextureNode *currentTextureNode = &castedBlock->rightTextureList->nodes[t];
+            SDL_Texture *rightFace = gameData->textures->BlockTextures[currentTextureNode->block].textures[currentTextureNode->texture];
+            SDL_RenderCopy(gameData->screen->renderer, rightFace, NULL, &rightBLock);
+        }
+        //Temp Textures
+        for (int t = castedBlock->rightTemptTextureList->length - 1; t >= 0; t--) {
+            struct TextureNode *currentTextureNode = &castedBlock->rightTemptTextureList->nodes[t];
+            SDL_Texture *rightFace = gameData->textures->BlockTextures[currentTextureNode->block].textures[currentTextureNode->texture];
+            SDL_RenderCopy(gameData->screen->renderer, rightFace, NULL, &rightBLock);
+        }
+        //Shader rendering
+        if (castedBlock->rightShader != Empty) {
+            SDL_Texture *rightFace = gameData->textures->blockShaders->textures[castedBlock->rightShader];
+            SDL_RenderCopy(gameData->screen->renderer, rightFace, NULL, &rightBLock);
+        }
+    }
+    if (side == 0 || side == 2) {
+        for (int t = castedBlock->leftTempTextureList->length - 1; t >= 0; t--) {
+            struct TextureNode *currentTextureNode = &castedBlock->leftTempTextureList->nodes[t];
+            SDL_Texture *leftFace = gameData->textures->BlockTextures[currentTextureNode->block].textures[currentTextureNode->texture];
+            SDL_RenderCopy(gameData->screen->renderer, leftFace, NULL, &leftBlock);
+        }
+        for (int t = castedBlock->leftTextureList->length - 1; t >= 0; t--) {
+            struct TextureNode *currentTextureNode = &castedBlock->leftTextureList->nodes[t];
+            SDL_Texture *leftFace = gameData->textures->BlockTextures[currentTextureNode->block].textures[currentTextureNode->texture];
+            SDL_RenderCopy(gameData->screen->renderer, leftFace, NULL, &leftBlock);
+        }
+        if (castedBlock->leftShader != Empty) {
+            SDL_Texture *leftFace = gameData->textures->blockShaders->textures[castedBlock->leftShader];
+            SDL_RenderCopy(gameData->screen->renderer, leftFace, NULL, &leftBlock);
+        }
+    }
+}
+
 //Render a chunks texture
 void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChunk){
     struct CameraData* cameraData = gameData->cameraData;
@@ -61,7 +129,6 @@ void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChu
     for (int x = 0; x < gameData->cameraData->chunksScale; x++){
         for (int y = 0; y < gameData->cameraData->chunksScale; y++){
             struct CastedBlock* castedBlock = &castedChunk->castedBlocks[x + (y * gameData->cameraData->chunksScale)];
-
             //Drawing location
             int isoX;
             int isoY;
@@ -72,7 +139,6 @@ void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChu
 
             SDL_Rect rightBLock = {isoX + (cameraData->baseBlockScale/2), isoY, cameraData->baseBlockScale, cameraData->baseBlockScale};
             SDL_Rect leftBlock = {isoX, isoY, cameraData->baseBlockScale,cameraData->baseBlockScale};
-
             //Texture rendering
             for (int t = castedBlock->rightTextureList->length - 1; t >= 0; t--){
                 struct TextureNode* currentTextureNode = &castedBlock->rightTextureList->nodes[t];
@@ -106,8 +172,6 @@ void renderChunkTexture(struct GameData* gameData, struct CastedChunk* castedChu
                 SDL_Texture *leftFace = gameData->textures->blockShaders->textures[castedBlock->leftShader];
                 SDL_RenderCopy(gameData->screen->renderer, leftFace, NULL, &leftBlock);
             }
-
-
         }
     }
     //Set render target back to main window
@@ -158,7 +222,6 @@ void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float 
 
     *camX = worldX - cameraData->worldX;
     *camY = worldY - cameraData->worldY;
-
 }
 
 void updateDirectionCastingMods(struct CameraData* cameraData, enum Direction direction){
@@ -283,6 +346,12 @@ void updateCameraCords(struct GameData* gameData){
     int isoX; int isoY;
     screenToIso(gameData->cameraData->renderScale/2,  (gameData->screen->xRez/2) - gameData->cameraData->xRenderingOffset, (gameData->screen->yRez/2) - gameData->cameraData->yRenderingOffset, &isoX, &isoY);
 
+    cameraData->fractionalScale = (gameData->cameraData->renderScale / gameData->cameraData->baseBlockScale);
+
+    //Get texture dimensions
+    cameraData->xChunkScaledTextureRez = cameraData->chunkPixelScale * cameraData->fractionalScale;
+    cameraData->yChunkScaledTextureRez = (cameraData->chunkPixelScale/2) * cameraData->fractionalScale;
+
     cameraData->xIsoCamCenter = isoX;
     cameraData->yIsoCamCenter = isoY;
 
@@ -313,6 +382,44 @@ void renderMouseArea(struct GameData* gameData){
     }
 }
 
+void renderEntity(struct GameData* gameData){
+    struct CameraData* cameraData = gameData->cameraData;
+    struct PlayerData* playerData = gameData->playerData;
+
+    float chunkRenderScale = (cameraData->renderScale / cameraData->baseBlockScale);
+
+    float xPlayerCamCor; float yPlayerCamCor;
+    worldCordsToCameraCords(cameraData, gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ, &xPlayerCamCor, &yPlayerCamCor);
+    int xPlayerScreenCor; int yPlayerScreenCor;
+    floatIsoToScreen(cameraData->renderScale, xPlayerCamCor, yPlayerCamCor, &xPlayerScreenCor, &yPlayerScreenCor);
+
+    //Draw the entity texture
+    //reportBug("Player World cords (%f)\n", cameraData->renderScale);
+    SDL_Rect destRect = {xPlayerScreenCor + cameraData->xRenderingOffset - (cameraData->renderScale / 2), yPlayerScreenCor + cameraData->yRenderingOffset - (cameraData->renderScale), chunkRenderScale * 64, chunkRenderScale *  128};
+    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->entityTextures->entityTextures[0].textures[playerData->walkingTexture][playerData->playerDirection],
+                   NULL, &destRect);
+
+
+    //ReDraw Blocks infront of sprite
+    for (int x = -2; x < 5; x++){
+        for (int y = -2; y < 5; y++){
+            float relXCor = y + xPlayerCamCor;
+            float relYCor = x + yPlayerCamCor;
+            struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
+            if (castedBlock != NULL) {
+                //Check if block is in front of sprite
+                //Left
+                if (castedBlock->worldLeftBlockX > playerData->worldX && castedBlock->worldLeftBlockY > playerData->worldY && castedBlock->worldLeftBlockZ > playerData->worldZ) {
+                    renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 0);
+                }
+                if (castedBlock->worldRightBlockX > playerData->worldX && castedBlock->worldRightBlockY > playerData->worldY && castedBlock->worldRightBlockZ > playerData->worldZ) {
+                    renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 1);
+                }
+            }
+        }
+    }
+}
+
 void renderView(struct GameData* gameData){
     bool reportFrameData = true;
     //Ray cast all chunks added to the thread pool task q
@@ -328,11 +435,6 @@ void renderView(struct GameData* gameData){
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
 
     updateCameraCords(gameData);
-
-    //Get texture dimensions
-    float chunkRenderScale = (gameData->cameraData->renderScale / gameData->cameraData->baseBlockScale);
-    cameraData->xChunkScaledTextureRez = cameraData->chunkPixelScale * chunkRenderScale;
-    cameraData->yChunkScaledTextureRez = (cameraData->chunkPixelScale/2) * chunkRenderScale;
 
     int maxTexturingPerFrame = 15;
     int maxNewChunksPerFrame = 15;
@@ -413,19 +515,7 @@ void renderView(struct GameData* gameData){
     }
 
 
-    float xPlayerCamCor; float yPlayerCamCor;
-
-    worldCordsToCameraCords(cameraData, gameData->playerData->worldX, gameData->playerData->worldY, gameData->playerData->worldZ, &xPlayerCamCor, &yPlayerCamCor);
-
-    int xPlayerScreenCor; int yPlayerScreenCor;
-
-    floatIsoToScreen(cameraData->renderScale, xPlayerCamCor, yPlayerCamCor, &xPlayerScreenCor, &yPlayerScreenCor);
-
-    reportBug("Player World cords (%f)\n", cameraData->renderScale);
-    SDL_Rect destRect = {xPlayerScreenCor + cameraData->xRenderingOffset - (cameraData->renderScale / 2), yPlayerScreenCor + cameraData->yRenderingOffset - (cameraData->renderScale), chunkRenderScale * 64, chunkRenderScale *  128};
-    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->entityTextures->entityTextures[0].textures[gameData->playerData->playerDirection],
-                   NULL, &destRect);
-
+    renderEntity(gameData);
 
     //re raycast and texture the area around the mouse
     renderMouseArea(gameData);

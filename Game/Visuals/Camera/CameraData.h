@@ -34,11 +34,13 @@ struct CameraData{
 
     //Dimensions
     int baseBlockScale;
+    int blockPixelScale;
     int viewDistance;
     int mouseUpdateDistance;
     int chunksScale;
     int chunkPixelScale;
     float renderScale;
+    float fractionalScale;
 
     //Chunk management
     struct CastedPool* castedPool;

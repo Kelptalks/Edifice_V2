@@ -78,6 +78,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
     setDirection(cameraData, North);
 
     //The scale the camera should render
+    cameraData->fractionalScale = 1;
     cameraData->baseBlockScale = 64;
     cameraData->renderScale = 64;
     cameraData->xChunkScaledTextureRez = 0;

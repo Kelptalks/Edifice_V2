@@ -6,6 +6,7 @@
 #include <malloc.h>
 #include "PlayerData.h"
 #include "../World/World.h"
+#include "../InGameTime/TikManager.h"
 
 struct PlayerData* createPlayerData(){
     struct PlayerData* playerData = malloc(sizeof (struct PlayerData));
@@ -15,22 +16,26 @@ struct PlayerData* createPlayerData(){
 
 
     playerData->playerDirection = EntityNorth;
+    playerData->walkingFrame = 0;
+    playerData->walkingTexture = 0;
+    playerData->sprinting = false;
 
     playerData->worldX = -98;
     playerData->worldY = -96;
     playerData->worldZ = 52;
 
-    playerData->sizeX = 0.5;
-    playerData->sizeY = 0.5;
+    playerData->sizeX = 0.8f;
+    playerData->sizeY = 0.8f;
 
 
-    playerData->velResistance = 2;
+    playerData->velResistance = 1.2f;
     playerData->velX = 0;
     playerData->velY = 0;
     playerData->velZ = 0;
 
     playerData->gravity = 0.05f;
-    playerData->sprintMod = 0.1f;
+    playerData->walkingSpeed = 0.04f;
+    playerData->sprintMod = 0.04f;
 
 
     return playerData;
@@ -38,6 +43,29 @@ struct PlayerData* createPlayerData(){
 
 void tikPlayer(struct GameData* gameData){
     struct PlayerData* playerData = gameData->playerData;
+
+    int walkingAnimationSpeed = 10;
+    if (playerData->sprinting){
+        walkingAnimationSpeed = 5;
+    }
+    if ((playerData->velX < -0.01 || playerData->velX > 0.01) || (playerData->velY < -0.01 || playerData->velY > 0.01) ) {
+        if (gameData->tikManager->tik % walkingAnimationSpeed == 0) {
+            gameData->playerData->walkingFrame++;
+            if (gameData->playerData->walkingFrame > 4) {
+                gameData->playerData->walkingFrame = 0;
+            }
+            if (gameData->playerData->walkingFrame % 2 == 0) {
+                gameData->playerData->walkingTexture = 0;
+            } else if (gameData->playerData->walkingFrame == 1) {
+                gameData->playerData->walkingTexture = 1;
+            } else if (gameData->playerData->walkingFrame == 3) {
+                gameData->playerData->walkingTexture = 2;
+            }
+        }
+    }
+    else{
+        gameData->playerData->walkingFrame = 0;
+    }
 
     //setBlockAtWorldCor(gameData->world, playerData->worldX, playerData->worldY, playerData->worldZ, Air);
 
@@ -47,17 +75,20 @@ void tikPlayer(struct GameData* gameData){
     float newWorldZ = playerData->worldZ + playerData->velZ;
 
     enum Block block;
+    enum Block block2;
 
     block = getBlockAtWorldCor(gameData->world, newWorldX, playerData->worldY, playerData->worldZ);
-    if (!isTransparent(block) && !isTranslucent(block)){
+    block2 = getBlockAtWorldCor(gameData->world, newWorldX + playerData->sizeX, playerData->worldY + playerData->sizeY, playerData->worldZ);
+    if ((!isTransparent(block) && !isTranslucent(block)) || (!isTransparent(block2) && !isTranslucent(block2))){
         playerData->velX = 0;
     }
     else{
         playerData->worldX = newWorldX;
     }
 
-    block = getBlockAtWorldCor(gameData->world, playerData->worldX, newWorldY + playerData->sizeY, playerData->worldZ);
-    if (!isTransparent(block) && !isTranslucent(block)){
+    block = getBlockAtWorldCor(gameData->world, playerData->worldX, newWorldY, playerData->worldZ);
+    block2 = getBlockAtWorldCor(gameData->world, playerData->worldX + playerData->sizeX, newWorldY + playerData->sizeY, playerData->worldZ);
+    if ((!isTransparent(block) && !isTranslucent(block)) || (!isTransparent(block2) && !isTranslucent(block2))){
         playerData->velY = 0;
     }
     else{
@@ -65,7 +96,7 @@ void tikPlayer(struct GameData* gameData){
     }
 
     block = getBlockAtWorldCor(gameData->world, playerData->worldX, playerData->worldY, newWorldZ);
-    if (!isTransparent(block) && !isTranslucent(block)){
+    if ((!isTransparent(block) && !isTranslucent(block))){
         playerData->velZ = 0;
     }
     else{
@@ -73,7 +104,7 @@ void tikPlayer(struct GameData* gameData){
     }
 
 
-    //setBlockAtWorldCor(gameData->world, playerData->worldX, playerData->worldY, playerData->worldZ, Debug);
+    //setBlockAtWorldCor(gameData->world, playerData->worldX, playerData->worldY, playerData->worldZ, Granite);
 
     //update velocity
     if (playerData->velX != 0){

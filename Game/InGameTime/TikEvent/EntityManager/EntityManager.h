@@ -20,6 +20,6 @@ enum Entity{
     EntityMan,
 };
 
-void getEntitySpriteSheetLocation(enum Entity entity, int* xCor, int* yCor, int* width, int* height);
+void getEntitySpriteSheetLocation(enum Entity entity, int* xCor, int* yCor, int* width, int* height, int* frameCount);
 
 #endif //EDIFICE_ENTITYMANAGER_H

@@ -12,15 +12,20 @@ struct EntityTexture createEntityTexture(struct SDL_Renderer* renderer, SDL_Surf
     int yCor;
     int width;
     int height;
-    getEntitySpriteSheetLocation(entity, &xCor, &yCor, &width, &height);
+    int frameCount;
+    getEntitySpriteSheetLocation(entity, &xCor, &yCor, &width, &height, &frameCount);
 
     struct EntityTexture entityTexture;
 
-    for (int i = 0; i < 8; i++) {
-        SDL_Rect srcRect = {xCor + (width * i), yCor, width, height};
-        SDL_Surface *croppedSurface = SDL_CreateRGBSurfaceWithFormat(0, width, height, 32, SDL_PIXELFORMAT_RGBA32);
-        SDL_BlitSurface(spriteSheet, &srcRect, croppedSurface, NULL);
-        entityTexture.textures[i] = SDL_CreateTextureFromSurface(renderer, croppedSurface);
+    entityTexture.textures = malloc(sizeof (SDL_Texture*) * frameCount);
+    for (int t = 0; t < 3; t++) {
+        entityTexture.textures[t] = malloc(sizeof(SDL_Texture*) * 8);
+        for (int i = 0; i < 8; i++) {
+            SDL_Rect srcRect = {xCor + (width * i), yCor + (height * t), width, height};
+            SDL_Surface *croppedSurface = SDL_CreateRGBSurfaceWithFormat(0, width, height, 32, SDL_PIXELFORMAT_RGBA32);
+            SDL_BlitSurface(spriteSheet, &srcRect, croppedSurface, NULL);
+            entityTexture.textures[t][i] = SDL_CreateTextureFromSurface(renderer, croppedSurface);
+        }
     }
 
     return entityTexture;

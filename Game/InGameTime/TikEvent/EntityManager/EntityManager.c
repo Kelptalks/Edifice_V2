@@ -4,11 +4,12 @@
 
 #include "EntityManager.h"
 
-void getEntitySpriteSheetLocation(enum Entity entity, int* xCor, int* yCor, int* width, int* height){
+void getEntitySpriteSheetLocation(enum Entity entity, int* xCor, int* yCor, int* width, int* height, int* frameCount){
     if (entity == EntityMan){
          *xCor = 768;
-         *yCor = 832;
+         *yCor = 896;
          *width = 64;
          *height = 128;
+         *frameCount = 3;
     }
 }

@@ -255,6 +255,7 @@ void keyboardCamMovement(struct GameData* gameData){
     bool s = false;
     bool d = false;
     bool shift = false;
+    gameData->playerData->sprinting = false;
     if (keystate[SDL_SCANCODE_W]) {
         w = true;
     }
@@ -272,47 +273,49 @@ void keyboardCamMovement(struct GameData* gameData){
     }
     if (keystate[SDL_SCANCODE_LSHIFT]){
         shift = true;
+        gameData->playerData->sprinting = true;
     }
 
     float shiftMod = 0;
+    float halfWalk = gameData->playerData->walkingSpeed;
     if (shift){
         shiftMod = gameData->playerData->sprintMod;
     }
     if (!w && !a && s && !d){
         gameData->playerData->playerDirection = EntityNorth;
-        gameData->playerData->velX = +(0.05F + shiftMod) * cameraData->xDirection;
-        gameData->playerData->velY = +(0.05F + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velX = +(halfWalk+ shiftMod);
+        gameData->playerData->velY = +(halfWalk+ shiftMod);
     }
-    if (!w && a && s && !d){
+    else if (!w && a && s && !d){
         gameData->playerData->playerDirection = EntityNorthEast;
-        gameData->playerData->velY = +(0.05F + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velY = +(gameData->playerData->walkingSpeed + shiftMod);
     }
-    if (!w && a && !s && !d){
+    else if (!w && a && !s && !d){
         gameData->playerData->playerDirection = EntityEast;
-        gameData->playerData->velY = +(0.05F + shiftMod) * cameraData->yDirection;
-        gameData->playerData->velX = -(0.05F + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velY = +(halfWalk + shiftMod);
+        gameData->playerData->velX = -(halfWalk + shiftMod);
     }
-    if (w && a && !s && !d){
+    else if (w && a && !s && !d){
         gameData->playerData->playerDirection = EntitySouthEast;
-        gameData->playerData->velX = -(0.05F + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velX = -(gameData->playerData->walkingSpeed + shiftMod);
     }
-    if (w && !a && !s && !d){
+    else if (w && !a && !s && !d){
         gameData->playerData->playerDirection = EntitySouth;
-        gameData->playerData->velX = -(0.05F + shiftMod) * cameraData->xDirection;
-        gameData->playerData->velY = -(0.05F + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velX = -(halfWalk + shiftMod);
+        gameData->playerData->velY = -(halfWalk + shiftMod);
     }
-    if (w && !a && !s && d){
+    else if (w && !a && !s && d){
         gameData->playerData->playerDirection = EntitySouthWest;
-        gameData->playerData->velY = -(0.05F + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velY = -(gameData->playerData->walkingSpeed + shiftMod);
     }
-    if (!w && !a && !s && d){
+    else if (!w && !a && !s && d){
         gameData->playerData->playerDirection = EntityWest;
-        gameData->playerData->velY = -(0.05F + shiftMod) * cameraData->yDirection;
-        gameData->playerData->velX = +(0.05F + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velY = -(halfWalk + shiftMod);
+        gameData->playerData->velX = +(halfWalk + shiftMod);
     }
-    if (!w && !a && s && d){
+    else if (!w && !a && s && d){
         gameData->playerData->playerDirection = EntityNorthWest;
-        gameData->playerData->velX = +(0.05F + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velX = +(gameData->playerData->walkingSpeed + shiftMod);
     }
 }
 
