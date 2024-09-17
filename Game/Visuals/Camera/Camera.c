@@ -53,7 +53,6 @@ void renderCastedBlock(struct GameData* gameData, struct CastedBlock* castedBloc
     struct CameraData* cameraData = gameData->cameraData;
 
     //get the cords the chunk should be draw to the screen
-
     int chunkScreenX;
     int chunkScreenY;
     isoToScreen(cameraData->xChunkScaledTextureRez, x / 8, y / 8, &chunkScreenX, &chunkScreenY);
@@ -64,21 +63,17 @@ void renderCastedBlock(struct GameData* gameData, struct CastedBlock* castedBloc
     int color = {0, 20, 255};
 
     renderChunkOutLine(gameData, xChunkRenderCords, yChunkRenderCords, &color);
-    reportBug("cords (%i, %i)\n", xChunkRenderCords, yChunkRenderCords);
-
     //Drawing location
     int blockScreenX;
     int blockScreenY;
-
     floatIsoToScreen(cameraData->renderScale, (x % cameraData->chunksScale), (y % cameraData->chunksScale), &blockScreenX, &blockScreenY);
     blockScreenX = xChunkRenderCords + blockScreenX;
     blockScreenY = yChunkRenderCords + blockScreenY;
-
     blockScreenX -= cameraData->renderScale/2;
 
     //Center on texture
-    SDL_Rect rightBLock = {(blockScreenX + (cameraData->renderScale/2)), blockScreenY, cameraData->renderScale + 1, cameraData->renderScale + 1};
-    SDL_Rect leftBlock = {blockScreenX, blockScreenY, cameraData->renderScale + 1,cameraData->renderScale + 1};
+    SDL_Rect rightBLock = {(blockScreenX + (cameraData->renderScale/2)), blockScreenY, cameraData->renderScale + 3, cameraData->renderScale + 3};
+    SDL_Rect leftBlock = {blockScreenX, blockScreenY, cameraData->renderScale + 3,cameraData->renderScale + 3};
 
     //Texture rendering
     if (side == 1 || side == 2) {
@@ -401,18 +396,18 @@ void renderEntity(struct GameData* gameData){
 
 
     //ReDraw Blocks infront of sprite
-    for (int x = -2; x < 5; x++){
-        for (int y = -2; y < 5; y++){
+    for (int x = -3; x < 3; x++){
+        for (int y = -3; y < 3; y++){
             float relXCor = y + xPlayerCamCor;
             float relYCor = x + yPlayerCamCor;
             struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
             if (castedBlock != NULL) {
                 //Check if block is in front of sprite
                 //Left
-                if (castedBlock->worldLeftBlockX > playerData->worldX && castedBlock->worldLeftBlockY > playerData->worldY && castedBlock->worldLeftBlockZ > playerData->worldZ) {
+                if ((castedBlock->worldLeftBlockX >= playerData->worldX || castedBlock->worldLeftBlockY >= playerData->worldY) && castedBlock->worldLeftBlockZ >= playerData->worldZ) {
                     renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 0);
                 }
-                if (castedBlock->worldRightBlockX > playerData->worldX && castedBlock->worldRightBlockY > playerData->worldY && castedBlock->worldRightBlockZ > playerData->worldZ) {
+                if ((castedBlock->worldRightBlockX >= playerData->worldX || castedBlock->worldRightBlockY >= playerData->worldY) && castedBlock->worldRightBlockZ >= playerData->worldZ) {
                     renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 1);
                 }
             }

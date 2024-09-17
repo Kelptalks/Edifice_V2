@@ -251,4 +251,5 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h

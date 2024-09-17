@@ -16,6 +16,7 @@
 #include "../Camera.h"
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
 #include "../../../Sound/SoundManager.h"
+#include <math.h>
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Getters
@@ -219,11 +220,13 @@ void updateZoomScale(struct GameData* gameData, SDL_Event event){
 
     if (event.wheel.y > 0) {
         //Zoom in
+        //scale2 = round(gameData->cameraData->renderScale / 0.95 / 4) * 4;
         scale2 = gameData->cameraData->renderScale / 0.95;
         gameData->cameraData->renderScale = scale2;
     }
     if (event.wheel.y < 0) {
         //Zoom out
+        //scale2 = round(gameData->cameraData->renderScale * 0.95 / 4) * 4;
         scale2 = gameData->cameraData->renderScale * 0.95;
         gameData->cameraData->renderScale = scale2;
     }

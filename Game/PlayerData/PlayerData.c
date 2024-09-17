@@ -24,11 +24,11 @@ struct PlayerData* createPlayerData(){
     playerData->worldY = -96;
     playerData->worldZ = 52;
 
-    playerData->sizeX = 0.8f;
-    playerData->sizeY = 0.8f;
+    playerData->sizeX = +0.8f;
+    playerData->sizeY = +0.8f;
 
 
-    playerData->velResistance = 1.2f;
+    playerData->velResistance = 1.1f;
     playerData->velX = 0;
     playerData->velY = 0;
     playerData->velZ = 0;
@@ -44,9 +44,9 @@ struct PlayerData* createPlayerData(){
 void tikPlayer(struct GameData* gameData){
     struct PlayerData* playerData = gameData->playerData;
 
-    int walkingAnimationSpeed = 10;
+    int walkingAnimationSpeed = 5;
     if (playerData->sprinting){
-        walkingAnimationSpeed = 5;
+        walkingAnimationSpeed = 2;
     }
     if ((playerData->velX < -0.01 || playerData->velX > 0.01) || (playerData->velY < -0.01 || playerData->velY > 0.01) ) {
         if (gameData->tikManager->tik % walkingAnimationSpeed == 0) {
