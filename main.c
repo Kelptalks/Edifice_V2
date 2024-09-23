@@ -9,6 +9,7 @@
 #include "Game/InGameTime/TikManager.h"
 #include "Game/World/WorldChunkHashMap/WorldChunkHashMap.h"
 #include "Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h"
+#include "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.h"
 
 int main(int argc, char* argv[]) {
 

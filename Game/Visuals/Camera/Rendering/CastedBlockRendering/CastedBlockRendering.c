@@ -51,8 +51,9 @@ void renderCastedBlock(struct GameData* gameData, struct CastedBlock* castedBloc
     blockScreenX -= cameraData->renderScale/2;
 
     //Center on texture
-    SDL_Rect rightBLock = {(blockScreenX + (cameraData->renderScale/2)), blockScreenY, cameraData->renderScale + 3, cameraData->renderScale + 3};
-    SDL_Rect leftBlock = {blockScreenX, blockScreenY, cameraData->renderScale + 3,cameraData->renderScale + 3};
+    float pixelFill =  3/cameraData->renderScale;
+    SDL_Rect rightBLock = {(blockScreenX + (cameraData->renderScale/2)), blockScreenY, cameraData->renderScale + pixelFill, cameraData->renderScale + pixelFill};
+    SDL_Rect leftBlock = {blockScreenX, blockScreenY, cameraData->renderScale + pixelFill,cameraData->renderScale + pixelFill};
 
     //Texture rendering
     if (side == 1 || side == 2) {

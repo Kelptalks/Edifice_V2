@@ -220,13 +220,13 @@ void updateZoomScale(struct GameData* gameData, SDL_Event event){
 
     if (event.wheel.y > 0) {
         //Zoom in
-        //scale2 = round(gameData->cameraData->renderScale / 0.95 / 4) * 4;
+        //scale2 = round(gameData->cameraData->renderScale / 0.90 / 8) * 8;
         scale2 = gameData->cameraData->renderScale / 0.95;
         gameData->cameraData->renderScale = scale2;
     }
     if (event.wheel.y < 0) {
         //Zoom out
-        //scale2 = round(gameData->cameraData->renderScale * 0.95 / 4) * 4;
+        //scale2 = round(gameData->cameraData->renderScale * 0.90 / 8) * 8;
         scale2 = gameData->cameraData->renderScale * 0.95;
         gameData->cameraData->renderScale = scale2;
     }
@@ -237,7 +237,7 @@ void updateZoomScale(struct GameData* gameData, SDL_Event event){
     yCamIsoChange = yCamIsoChange - gameData->cameraData->yIsoCamCenter;
 
     int isoX; int isoY;
-    isoToScreen(scale2, xCamIsoChange, yCamIsoChange,&isoX, &isoY);
+    floatIsoToScreen(scale2, xCamIsoChange, yCamIsoChange,&isoX, &isoY);
 
 
     gameData->cameraData->xRenderingOffset -= isoX;

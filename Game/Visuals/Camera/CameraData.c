@@ -140,9 +140,10 @@ char* getDirectionString(enum Direction direction){
 void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY){
 
     float heightDif = cameraData->worldZ - worldZ;
+
     worldX += (heightDif * cameraData->xDirection);
     worldY += (heightDif * cameraData->yDirection);
 
-    *camX = worldX - cameraData->worldX;
-    *camY = worldY - cameraData->worldY;
+    *camX = (worldX - cameraData->worldX) * cameraData->xDirection;
+    *camY = (worldY - cameraData->worldY) * cameraData->yDirection;
 }

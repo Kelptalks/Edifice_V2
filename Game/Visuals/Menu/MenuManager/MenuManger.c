@@ -4,8 +4,6 @@
 
 #include <malloc.h>
 #include "MenuManger.h"
-#include "../../../Debuging/Test_Main.h"
-#include "../../../GameData.h"
 #include "../../Camera/Controls/CameraControls.h"
 #include "../../Camera/Camera.h"
 #include "../../InMenuWindow/InMenuWindow.h"

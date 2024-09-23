@@ -167,6 +167,7 @@ void renderMouseArea(struct GameData* gameData){
             }
         }
     }
+
 }
 
 void renderView(struct GameData* gameData){

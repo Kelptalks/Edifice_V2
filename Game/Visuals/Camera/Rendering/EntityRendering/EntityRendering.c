@@ -106,13 +106,13 @@ void renderEntity(struct GameData* gameData){
     int startX = playerData->worldX; int startY = playerData->worldY; float startZ = playerData->worldZ;
 
 
-    int shadowDrawDistance = 100;
+    float shadowDrawDistance;
     float increment = 0.1f;
-    for (int i = 0; i < shadowDrawDistance; i++){
+    for (int i = 0; i < 100; i++){
         startZ -= increment;
         enum Block block = getBlockAtWorldCor(gameData->world, startX, startY, startZ);
         if (!isTranslucent(block) && !isTransparent(block)){
-
+            shadowDrawDistance = i * increment;
             SDL_Rect sourceRect = {704, 1120, 64, 32};
             SDL_Rect destRect2 = {xSpriteScreenCords, ySpriteScreenCords + ((i * increment) * (cameraData->renderScale/2)) + (chunkRenderScale *  100), chunkRenderScale * 64, chunkRenderScale * 32};
             SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet,
@@ -132,6 +132,24 @@ void renderEntity(struct GameData* gameData){
         for (int y = -3; y < 3; y++){
             float relXCor = x + xPlayerCamCor + 1;
             float relYCor = y + yPlayerCamCor + 1;
+            struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
+            if (castedBlock != NULL) {
+                //Check if block is in front of sprite
+                //Left
+                if ((castedBlock->worldLeftBlockX >= playerData->worldX || castedBlock->worldLeftBlockY >= playerData->worldY) && castedBlock->worldLeftBlockZ >= playerData->worldZ) {
+                    renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 0);
+                }
+                if ((castedBlock->worldRightBlockX >= playerData->worldX || castedBlock->worldRightBlockY >= playerData->worldY) && castedBlock->worldRightBlockZ >= playerData->worldZ) {
+                    renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 1);
+                }
+            }
+        }
+    }
+    //ReDraw Blocks in front of Shadow
+    for (int x = -2; x < 2; x++){
+        for (int y = -2; y < 2; y++){
+            float relXCor = x + xPlayerCamCor + (shadowDrawDistance) + 1;
+            float relYCor = y + xPlayerCamCor + (shadowDrawDistance) + 1;
             struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
             if (castedBlock != NULL) {
                 //Check if block is in front of sprite

@@ -6,29 +6,6 @@
 #include "../../../../ArrayList/ArrayList.h"
 
 
-void addShiftRule(struct ArrayList* arrayList, int xMin, int xMax, int yMin, int yMax, int scale){
-    struct ShiftRule* shiftRule = malloc(sizeof (struct ShiftRule));
-
-    shiftRule->xMin = xMin;
-    shiftRule->xMax = xMax;
-    shiftRule->yMin = yMin;
-    shiftRule->yMax = yMax;
-    shiftRule->scale = scale;
-
-    addList(arrayList, shiftRule);
-}
-
-struct ArrayList* getShiftRulesInArea(struct ArrayList* shiftRules, int xMin, int xMax, int yMin, int yMax){
-    struct ArrayList* shiftRulesInArea = createList();
-    for (int x = 0; x < shiftRules->length; x++){
-        struct ShiftRule* shiftRule = shiftRules->ptrs[x];
-        //If the rule is in bounds of area
-        if ((shiftRule->xMin >= xMin) && (shiftRule->xMax <=xMax) && (shiftRule->yMin >= yMin) && (shiftRule->yMax <= yMax)){
-            addList(shiftRulesInArea, shiftRule);
-        }
-    }
-    return shiftRulesInArea;
-}
 
 bool inShiftRuleBounds(struct ShiftRule* shiftRule, int x, int y){
     if ((x >= shiftRule->xMin) && (x <= shiftRule->xMax) && (y >= shiftRule->yMin) && (y <= shiftRule->yMax)){

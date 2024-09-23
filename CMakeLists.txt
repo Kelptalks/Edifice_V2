@@ -75,8 +75,6 @@ add_executable(edifice main.c
         Game/World/Octree/Tools/AdvancedKeyMod.h
         Game/Sound/SoundManager.c
         Game/Sound/SoundManager.h
-        Game/World/TerrainGen/HillManager/HillManager.c
-        Game/World/TerrainGen/HillManager/HillManager.h
         "Game/Visuals/Menu/MenuManager/ UIManager/UIManger.h"
         "Game/Visuals/Menu/MenuManager/ UIManager/UIManger.c"
         Game/Visuals/Menu/MenuManager/MenuManger.c
@@ -103,6 +101,8 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.h
         Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.h
         Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c
+        "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.c"
+        "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.h"
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

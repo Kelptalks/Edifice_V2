@@ -97,6 +97,21 @@ void tickPuffEntity(struct GameData* gameData, struct Entity* entity){
         }
     }
 
+    float startZ = entity->worldZ;
+    bool groundTouched = false;
+    float increment = 0.1f;
+    for (int i = 0; i < 100; i++){
+        startZ -= increment;
+        enum Block block = getBlockAtWorldCor(gameData->world, entity->worldX, entity->worldY, startZ);
+        if (!isTranslucent(block) && !isTransparent(block)){
+            groundTouched = true;
+            break;
+        }
+    }
+    if (!groundTouched){
+        puffData->velZ = -puffData->speed;
+    }
+
     //Slow speed every tick
     puffData->velX = puffData->velX / puffData->resistance;
     puffData->velY = puffData->velY / puffData->resistance;

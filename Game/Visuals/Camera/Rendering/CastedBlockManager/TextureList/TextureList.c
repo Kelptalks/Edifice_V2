@@ -25,7 +25,7 @@ void expandTextureList(struct TextureList* textureList){
 struct TextureList* createTextureList(){
     struct TextureList* textureList = calloc(1,sizeof(struct TextureList));
     textureList->length = 0;
-    textureList->size = 5;
+    textureList->size = 15;
     textureList->nodes = calloc( textureList->size, sizeof(struct TextureNode));
     return textureList;
 }

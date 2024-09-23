@@ -1160,30 +1160,6 @@ Game/World/Octree/Tools/KeyMod.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.s
 .PHONY : Game/World/Octree/Tools/KeyMod.c.s
 
-Game/World/TerrainGen/HillManager/HillManager.obj: Game/World/TerrainGen/HillManager/HillManager.c.obj
-.PHONY : Game/World/TerrainGen/HillManager/HillManager.obj
-
-# target to build an object file
-Game/World/TerrainGen/HillManager/HillManager.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/HillManager/HillManager.c.obj
-.PHONY : Game/World/TerrainGen/HillManager/HillManager.c.obj
-
-Game/World/TerrainGen/HillManager/HillManager.i: Game/World/TerrainGen/HillManager/HillManager.c.i
-.PHONY : Game/World/TerrainGen/HillManager/HillManager.i
-
-# target to preprocess a source file
-Game/World/TerrainGen/HillManager/HillManager.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/HillManager/HillManager.c.i
-.PHONY : Game/World/TerrainGen/HillManager/HillManager.c.i
-
-Game/World/TerrainGen/HillManager/HillManager.s: Game/World/TerrainGen/HillManager/HillManager.c.s
-.PHONY : Game/World/TerrainGen/HillManager/HillManager.s
-
-# target to generate assembly for a file
-Game/World/TerrainGen/HillManager/HillManager.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/HillManager/HillManager.c.s
-.PHONY : Game/World/TerrainGen/HillManager/HillManager.c.s
-
 Game/World/TerrainGen/LairManager/LairManager.obj: Game/World/TerrainGen/LairManager/LairManager.c.obj
 .PHONY : Game/World/TerrainGen/LairManager/LairManager.obj
 
@@ -1207,6 +1183,30 @@ Game/World/TerrainGen/LairManager/LairManager.s: Game/World/TerrainGen/LairManag
 Game/World/TerrainGen/LairManager/LairManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.s
 .PHONY : Game/World/TerrainGen/LairManager/LairManager.c.s
+
+Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.obj: Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj
+.PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.obj
+
+# target to build an object file
+Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj
+.PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj
+
+Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.i: Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.i
+.PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.i
+
+# target to preprocess a source file
+Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.i
+.PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.i
+
+Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.s: Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.s
+.PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.s
+
+# target to generate assembly for a file
+Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.s
+.PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.s
 
 Game/World/TerrainGen/Perlin_Noise/PerlinNoise.obj: Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj
 .PHONY : Game/World/TerrainGen/Perlin_Noise/PerlinNoise.obj
@@ -1562,12 +1562,12 @@ help:
 	@echo ... Game/World/Octree/Tools/KeyMod.obj
 	@echo ... Game/World/Octree/Tools/KeyMod.i
 	@echo ... Game/World/Octree/Tools/KeyMod.s
-	@echo ... Game/World/TerrainGen/HillManager/HillManager.obj
-	@echo ... Game/World/TerrainGen/HillManager/HillManager.i
-	@echo ... Game/World/TerrainGen/HillManager/HillManager.s
 	@echo ... Game/World/TerrainGen/LairManager/LairManager.obj
 	@echo ... Game/World/TerrainGen/LairManager/LairManager.i
 	@echo ... Game/World/TerrainGen/LairManager/LairManager.s
+	@echo ... Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.obj
+	@echo ... Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.i
+	@echo ... Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.s
 	@echo ... Game/World/TerrainGen/Perlin_Noise/PerlinNoise.obj
 	@echo ... Game/World/TerrainGen/Perlin_Noise/PerlinNoise.i
 	@echo ... Game/World/TerrainGen/Perlin_Noise/PerlinNoise.s
