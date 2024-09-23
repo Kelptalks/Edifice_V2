@@ -20,6 +20,9 @@ struct World{
     struct OctreeNodePool* octreeNodePool;
     struct WorldChunkHashMap* worldChunkHashMap;
 
+    //
+    struct Entity** tempEntityArray;
+
 };
 
 //Create a world

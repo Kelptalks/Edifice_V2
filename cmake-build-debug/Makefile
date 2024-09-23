@@ -320,29 +320,29 @@ Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s
 .PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s
 
-Game/InGameTime/TikEvent/EntityManager/PuffLogic.obj: Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
-.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.obj
+Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.obj: Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj
+.PHONY : Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.obj
 
 # target to build an object file
-Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
-.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
+Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj
+.PHONY : Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj
 
-Game/InGameTime/TikEvent/EntityManager/PuffLogic.i: Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i
-.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.i
+Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.i: Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i
+.PHONY : Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.i
 
 # target to preprocess a source file
-Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i
-.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i
+Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i
+.PHONY : Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i
 
-Game/InGameTime/TikEvent/EntityManager/PuffLogic.s: Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s
-.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.s
+Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.s: Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.s
+.PHONY : Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.s
 
 # target to generate assembly for a file
-Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s
-.PHONY : Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s
+Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.s
+.PHONY : Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.s
 
 Game/InGameTime/TikEvent/TerpManager/TerpManager.obj: Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj
 .PHONY : Game/InGameTime/TikEvent/TerpManager/TerpManager.obj
@@ -1457,9 +1457,9 @@ help:
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.i
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.s
-	@echo ... Game/InGameTime/TikEvent/EntityManager/PuffLogic.obj
-	@echo ... Game/InGameTime/TikEvent/EntityManager/PuffLogic.i
-	@echo ... Game/InGameTime/TikEvent/EntityManager/PuffLogic.s
+	@echo ... Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.obj
+	@echo ... Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.i
+	@echo ... Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.s
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.obj
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.i
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.s

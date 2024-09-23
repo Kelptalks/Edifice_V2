@@ -11,6 +11,7 @@
 #include "TerrainGen/TerrainGen.h"
 #include "WorldChunk/WorldChunk.h"
 #include "../Debuging/Test_Main.h"
+#include "../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
 
 struct World* createWorld(int scale){
     //Create world struct
@@ -51,6 +52,14 @@ struct World* createWorld(int scale){
     createTerrainGenRules(world);
 
     genArea(world, 0, 150, 150, 100);
+
+    world->tempEntityArray = calloc(sizeof (struct Entity**), 20);
+
+    for (int i = 0; i < 20; i++){
+        world->tempEntityArray[i] = createPuffEntity();
+        world->tempEntityArray[i]->worldX += i * 5;
+    }
+
 
     return world;
 }
@@ -122,6 +131,4 @@ void testWorld(){
             }
         }
     }
-
-
 }

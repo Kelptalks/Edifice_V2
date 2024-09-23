@@ -803,20 +803,20 @@ CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunkHashMap\WorldChunkHashMap.c -o CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.s
 
-CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c
-CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c
+CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c
+CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c
 
-CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c > CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c.i
+CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c > CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.i
 
-CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\PuffLogic.c.s
+CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.s
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
@@ -929,7 +929,7 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj" \
-"CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj" \
+"CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj" \
@@ -987,7 +987,7 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/Settings
 edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj

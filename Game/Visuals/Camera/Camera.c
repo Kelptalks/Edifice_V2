@@ -40,7 +40,7 @@ void updateDirectionCastingMods(struct CameraData* cameraData, enum Direction di
 
 void offSetCamWorldKeyBasedOnRotation(struct CameraData* cameraData, enum Direction direction){
     struct World* world = cameraData->world;
-    
+
     //Get Casted block at the center of the screen
     struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData,cameraData->xIsoCamCenter, cameraData->yIsoCamCenter);
     //Unpack cords
@@ -263,8 +263,12 @@ void renderView(struct GameData* gameData){
                        cameraData->castedPool->totalChunksCreated);
     }
 
-
     renderEntity(gameData);
+    for (int i = 0; i < 20; i ++){
+        if (gameData->world->tempEntityArray[i] != NULL){
+            renderPuffEntity(gameData, gameData->world->tempEntityArray[i]);
+        }
+    }
 
     //re raycast and texture the area around the mouse
     renderMouseArea(gameData);

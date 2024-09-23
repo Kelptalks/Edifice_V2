@@ -279,7 +279,7 @@ struct Textures* createTextures(SDL_Renderer* renderer, int blockCount){
 
 
     //Create entity textures
-    textures->entityTextures = createEntityTextures(renderer, 1);
+    textures->entityTextures = createEntityTextures(renderer, 2);
 
     return textures;
 }

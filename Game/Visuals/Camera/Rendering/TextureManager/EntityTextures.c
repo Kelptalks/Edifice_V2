@@ -6,7 +6,7 @@
 #include "../../../../Debuging/Test_Main.h"
 #include "../../../../../Assets/AssetManager.h"
 
-struct EntityTexture createEntityTexture(struct SDL_Renderer* renderer, SDL_Surface* spriteSheet, enum Entity entity){
+struct EntityTexture createEntityTexture(struct SDL_Renderer* renderer, SDL_Surface* spriteSheet, enum EntityType entity){
     //Create surface from sprite sheet
     int xCor;
     int yCor;
