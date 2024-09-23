@@ -512,30 +512,6 @@ Game/Visuals/Camera/CameraData.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.s
 .PHONY : Game/Visuals/Camera/CameraData.c.s
 
-Game/Visuals/Camera/ChunkMap/ChunkMap.obj: Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj
-.PHONY : Game/Visuals/Camera/ChunkMap/ChunkMap.obj
-
-# target to build an object file
-Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj
-.PHONY : Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj
-
-Game/Visuals/Camera/ChunkMap/ChunkMap.i: Game/Visuals/Camera/ChunkMap/ChunkMap.c.i
-.PHONY : Game/Visuals/Camera/ChunkMap/ChunkMap.i
-
-# target to preprocess a source file
-Game/Visuals/Camera/ChunkMap/ChunkMap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.i
-.PHONY : Game/Visuals/Camera/ChunkMap/ChunkMap.c.i
-
-Game/Visuals/Camera/ChunkMap/ChunkMap.s: Game/Visuals/Camera/ChunkMap/ChunkMap.c.s
-.PHONY : Game/Visuals/Camera/ChunkMap/ChunkMap.s
-
-# target to generate assembly for a file
-Game/Visuals/Camera/ChunkMap/ChunkMap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.s
-.PHONY : Game/Visuals/Camera/ChunkMap/ChunkMap.c.s
-
 Game/Visuals/Camera/Controls/CameraControls.obj: Game/Visuals/Camera/Controls/CameraControls.c.obj
 .PHONY : Game/Visuals/Camera/Controls/CameraControls.obj
 
@@ -632,6 +608,30 @@ Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.s
 .PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.s
 
+Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.obj: Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.obj
+
+# target to build an object file
+Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj
+
+Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.i: Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.i
+
+# target to preprocess a source file
+Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i
+
+Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.s: Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.s
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.s
+
+# target to generate assembly for a file
+Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.s
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.s
+
 Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.obj: Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj
 .PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.obj
 
@@ -655,6 +655,54 @@ Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.s: Game
 Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.s
 .PHONY : Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.s
+
+Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.obj: Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.obj
+
+# target to build an object file
+Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj
+
+Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.i: Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.i
+
+# target to preprocess a source file
+Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i
+
+Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.s: Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.s
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.s
+
+# target to generate assembly for a file
+Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.s
+.PHONY : Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.s
+
+Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.obj: Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.obj
+
+# target to build an object file
+Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj
+.PHONY : Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj
+
+Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.i: Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i
+.PHONY : Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.i
+
+# target to preprocess a source file
+Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i
+.PHONY : Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i
+
+Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.s: Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.s
+.PHONY : Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.s
+
+# target to generate assembly for a file
+Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.s
+.PHONY : Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.s
 
 Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.obj: Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj
 .PHONY : Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.obj
@@ -1433,9 +1481,6 @@ help:
 	@echo ... Game/Visuals/Camera/CameraData.obj
 	@echo ... Game/Visuals/Camera/CameraData.i
 	@echo ... Game/Visuals/Camera/CameraData.s
-	@echo ... Game/Visuals/Camera/ChunkMap/ChunkMap.obj
-	@echo ... Game/Visuals/Camera/ChunkMap/ChunkMap.i
-	@echo ... Game/Visuals/Camera/ChunkMap/ChunkMap.s
 	@echo ... Game/Visuals/Camera/Controls/CameraControls.obj
 	@echo ... Game/Visuals/Camera/Controls/CameraControls.i
 	@echo ... Game/Visuals/Camera/Controls/CameraControls.s
@@ -1448,9 +1493,18 @@ help:
 	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.obj
 	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.i
 	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.s
+	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.obj
+	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.i
+	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.s
 	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.obj
 	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.i
 	@echo ... Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.s
+	@echo ... Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.obj
+	@echo ... Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.i
+	@echo ... Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.s
+	@echo ... Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.obj
+	@echo ... Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.i
+	@echo ... Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.s
 	@echo ... Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.obj
 	@echo ... Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.i
 	@echo ... Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.s

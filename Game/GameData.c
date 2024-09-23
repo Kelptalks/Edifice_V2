@@ -41,7 +41,7 @@ struct GameData* createGameData(){
 
     //create textures
     reportBug("Splicing textures \n");
-    gameData->textures = createTextures(gameData->screen->renderer, 60);
+    gameData->textures = createTextures(gameData->screen->renderer, 70);
 
     //Build the octree world
     reportBug("Building world\n");

@@ -176,12 +176,6 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.c">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.h">
-			<Option target="edifice"/>
-		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c">
 			<Option target="edifice"/>
 		</Unit>
@@ -206,10 +200,28 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h">
 			<Option target="edifice"/>
 		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.h">
+			<Option target="edifice"/>
+		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.h">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.h">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c">

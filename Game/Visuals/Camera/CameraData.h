@@ -77,4 +77,6 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
 
 char* getDirectionString(enum Direction direction);
 
+void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY);
+
 #endif //EDIFICE_CAMERADATA_H

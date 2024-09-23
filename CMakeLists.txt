@@ -55,8 +55,8 @@ add_executable(edifice main.c
         Game/Visuals/InMenuWindow/InMenuWindow.c
         Assets/AssetManager.c
         Assets/AssetManager.h
-        Game/Visuals/Camera/ChunkMap/ChunkMap.h
-        Game/Visuals/Camera/ChunkMap/ChunkMap.c
+        Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.h
+        Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c
         Game/PlayerData/PlayerData.h
         Game/PlayerData/PlayerData.c
         "Game/World/World Saving/WorldFileManager.c"
@@ -99,6 +99,10 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c
         Game/InGameTime/TikEvent/EntityManager/EntityManager.c
         Game/InGameTime/TikEvent/EntityManager/EntityManager.h
+        Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c
+        Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.h
+        Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.h
+        Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

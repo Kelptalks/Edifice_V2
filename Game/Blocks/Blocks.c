@@ -38,6 +38,7 @@ bool isTranslucent(enum Block block) {
         case HalfBlockTest :
         case ConveyorBelt :
         case Bulb :
+        case Rock :
         case Furnace :
             return true;
         default:
@@ -109,6 +110,8 @@ char* getBlockName(enum Block block){
             return "redShader";
         case WhiteShader :
             return "WhiteShader";
+        case Rock :
+            return "rock";
     }
     return "unNamed";
 }
@@ -135,6 +138,9 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 64;
             *y = 512;
             break;
+        case PurpleWoodPlanks:
+            *x = 0;
+            *y = 576;
         case Leave:
             *x = 192;
             *y = 0;
@@ -228,8 +234,8 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *y = 256;
             break;
         case Debug:
-            *x = 1216;
-            *y = 1088;
+            *x = 64;
+            *y = 320;
             break;
         case Water:
             *x = 128;
@@ -241,6 +247,10 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             break;
         case Bulb:
             *x = 256;
+            *y = 960;
+            break;
+        case Rock:
+            *x = 320;
             *y = 960;
             break;
         case WhiteFlowers:
@@ -262,6 +272,22 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
         case MaskingBlock:
             *x = 256;
             *y = 1152;
+            break;
+        case WormBody :
+            *y = 640;
+            *x = 0;
+            break;
+        case WormEyesLevel :
+            *y = 640;
+            *x = 64;
+            break;
+        case WormEyesUp :
+            *y = 640;
+            *x = 128;
+            break;
+        case WormMouth :
+            *y = 640;
+            *x = 192;
             break;
         case GreyShader:
             *x = 0;

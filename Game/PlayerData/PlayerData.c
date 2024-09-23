@@ -28,7 +28,7 @@ struct PlayerData* createPlayerData(){
     playerData->sizeY = +0.8f;
 
 
-    playerData->velResistance = 1.1f;
+    playerData->velResistance = 1.85f;
     playerData->velX = 0;
     playerData->velY = 0;
     playerData->velZ = 0;
@@ -44,7 +44,7 @@ struct PlayerData* createPlayerData(){
 void tikPlayer(struct GameData* gameData){
     struct PlayerData* playerData = gameData->playerData;
 
-    int walkingAnimationSpeed = 5;
+    int walkingAnimationSpeed = 1;
     if (playerData->sprinting){
         walkingAnimationSpeed = 2;
     }
@@ -96,7 +96,8 @@ void tikPlayer(struct GameData* gameData){
     }
 
     block = getBlockAtWorldCor(gameData->world, playerData->worldX, playerData->worldY, newWorldZ);
-    if ((!isTransparent(block) && !isTranslucent(block))){
+    block2 = getBlockAtWorldCor(gameData->world, playerData->worldX + playerData->sizeX, newWorldY + playerData->sizeY, playerData->worldZ);
+    if ((!isTransparent(block) && !isTranslucent(block))|| (!isTransparent(block2) && !isTranslucent(block2))){
         playerData->velZ = 0;
     }
     else{

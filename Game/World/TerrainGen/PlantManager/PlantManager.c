@@ -168,11 +168,14 @@ void generatePlant(struct World* world, int worldX, int worldY, int worldZ, enum
                 if (randomVal <= 80) {
                     setBlockAtWorldCor(world, worldX, worldY, worldZ, WhiteFlowers);
                 }
-                else{
+                else if (randomVal < 95){
                     setBlockAtWorldCor(world, worldX, worldY, worldZ, YellowFlowers);
                 }
+                else {
+                    setBlockAtWorldCor(world, worldX, worldY, worldZ, Rock);
+                }
             }
-            //10% flour
+            //10% flour / Mushroom
             else if (randomVal <= 97){
                 setBlockAtWorldCor(world, worldX, worldY, worldZ, Flour);
             }

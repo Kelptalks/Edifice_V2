@@ -8,7 +8,7 @@
 #include <pthread.h>
 #include "TextureList/TextureList.h"
 #include "../../Rendering/TextureManager/IsoTextureManager.h"
-#include "../../ChunkMap/ChunkMap.h"
+#include "ChunkMap/ChunkMap.h"
 #include "../../CameraData.h"
 
 

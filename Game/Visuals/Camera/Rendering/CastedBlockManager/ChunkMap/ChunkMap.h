@@ -4,7 +4,7 @@
 
 #ifndef EDIFICE_CHUNKMAP_H
 #define EDIFICE_CHUNKMAP_H
-#include "../../../GameData.h"
+#include "../../../../../GameData.h"
 
 struct ChunkMap{
     struct ChunkLinkListNode** nodes;

@@ -4,8 +4,8 @@
 
 #include <malloc.h>
 #include "ChunkMap.h"
-#include "../../../Debuging/Test_Main.h"
-#include "../Rendering/CastedBlockManager/CastedBlockManager.h"
+#include "../../../../../Debuging/Test_Main.h"
+#include "../CastedBlockManager.h"
 #include <stdint.h>
 
 struct ChunkLinkListNode* createChunkLinkListNode(int64_t key, struct CastedChunk* castedChunk){

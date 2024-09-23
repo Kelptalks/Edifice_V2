@@ -1,15 +1,6 @@
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Camera.c \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\CameraData.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_main.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_stdinc.h \
@@ -22,6 +13,13 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdarg.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_stdarg.h \
@@ -185,34 +183,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_version.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_locale.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_misc.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_events.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIRenderer/UIRenderer.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\IsoCordTool/IsoCordManager.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\CameraData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/CastedBlockManager.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/signal.h \
@@ -227,27 +197,46 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/TextureList/TextureList.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/TextureList/TextureList.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockManager/ChunkMap/ChunkMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/TextureManager/IsoTextureManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_events.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIRenderer/UIRenderer.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/RayCastingManager.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\IsoCordTool/IsoCordManager.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/EntityRendering/EntityRendering.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/CastedBlockRendering/CastedBlockRendering.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/CastingThread/castingThread.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering/RayCasting/CastingThread/castingThread.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h

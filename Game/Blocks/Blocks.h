@@ -58,6 +58,7 @@ enum Block {
     Flour,
     Glass,
     Bulb,
+    Rock,
 
     //Metals
     Iron,
@@ -84,6 +85,12 @@ enum Block {
     RedShader,
     WhiteShader,
     GreenShader,
+
+    //Creature
+    WormBody,
+    WormEyesLevel,
+    WormEyesUp,
+    WormMouth,
 
     //Test
     HalfBlockTest,

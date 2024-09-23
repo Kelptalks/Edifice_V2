@@ -518,20 +518,20 @@ CMakeFiles/edifice.dir/Assets/AssetManager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Assets/AssetManager.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Assets\AssetManager.c -o CMakeFiles\edifice.dir\Assets\AssetManager.c.s
 
-CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/ChunkMap/ChunkMap.c
-CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\ChunkMap\ChunkMap.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\ChunkMap\ChunkMap.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\ChunkMap\ChunkMap.c
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c
 
-CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\ChunkMap\ChunkMap.c > CMakeFiles\edifice.dir\Game\Visuals\Camera\ChunkMap\ChunkMap.c.i
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c > CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.i
 
-CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\ChunkMap\ChunkMap.c -o CMakeFiles\edifice.dir\Game\Visuals\Camera\ChunkMap\ChunkMap.c.s
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.s
 
 CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
@@ -848,6 +848,36 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\EntityManager.c -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\EntityManager.c.s
 
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c
+
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c > CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.i
+
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.s
+
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c
+
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c > CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.i
+
+CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.s
+
 # Object files for target edifice
 edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/main.c.obj" \
@@ -880,7 +910,7 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.obj" \
 "CMakeFiles/edifice.dir/Assets/AssetManager.c.obj" \
-"CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj" \
+"CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj" \
 "CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj" \
@@ -901,7 +931,9 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj" \
-"CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj"
+"CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj" \
+"CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj" \
+"CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj"
 
 # External object files for target edifice
 edifice_EXTERNAL_OBJECTS =
@@ -936,7 +968,7 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.
 edifice.exe: CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Assets/AssetManager.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/ChunkMap/ChunkMap.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj
@@ -958,13 +990,15 @@ edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashM
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/PuffLogic.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj
 edifice.exe: CMakeFiles/edifice.dir/build.make
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
 edifice.exe: CMakeFiles/edifice.dir/objects1.rsp
 edifice.exe: CMakeFiles/edifice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Linking C executable edifice.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Linking C executable edifice.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\edifice.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
