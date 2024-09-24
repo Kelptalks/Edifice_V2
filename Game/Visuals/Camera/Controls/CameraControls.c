@@ -131,6 +131,9 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
     struct CameraData* cameraData = gameData->cameraData;
     struct CastedBlock* castedBlock = getCastedBlockAtMouseCords(cameraData, xMouseCor, yMouseCor);
 
+    if (castedBlock == NULL){
+        return;
+    }
 
     //Unpack the casted block data.
     int castedBlockCamWorldX = castedBlock->worldX;

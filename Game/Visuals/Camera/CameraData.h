@@ -36,6 +36,7 @@ struct CameraData{
     int baseBlockScale;
     int blockPixelScale;
     int viewDistance;
+    int maxViewDistance;
     int mouseUpdateDistance;
     int chunksScale;
     int chunkPixelScale;

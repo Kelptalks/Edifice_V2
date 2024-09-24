@@ -16,7 +16,7 @@
 struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* cameraData)
 {
     //Create an array of cordnate structs with distances
-    int radius = cameraData->viewDistance * 5;
+    int radius = cameraData->maxViewDistance * 2;
     int totalCords = radius * 2 * radius * 2;
 
     cameraData->totalDistanceCords = totalCords;
@@ -86,6 +86,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
 
     //How many chunks will generate
     cameraData->viewDistance = 16;
+    cameraData->maxViewDistance = 64;
     cameraData->mouseUpdateDistance = 2;
 
     //Max 512
