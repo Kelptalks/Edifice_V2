@@ -171,16 +171,6 @@ void renderMouseArea(struct GameData* gameData){
 }
 
 void renderView(struct GameData* gameData){
-    bool reportFrameData = true;
-    //Ray cast all chunks added to the thread pool task q
-    if (reportFrameData) {
-        reportFrameBug("\n\n"
-                "##################### \n"
-                "## RENDERING DATA ### \n"
-                "##################### \n");
-
-    }
-
     struct CameraData* cameraData = gameData->cameraData;
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
 
@@ -188,7 +178,8 @@ void renderView(struct GameData* gameData){
 
     int maxTexturingPerFrame = 15;
     int maxNewChunksPerFrame = 15;
-    for (int i = 0; i < cameraData->totalDistanceCords / 2; i++)
+    //Loop through a circular area of chunks
+    for (int i = 0; i < cameraData->totalDistanceCords; i++)
     {
         int x = cameraData->distanceSortedRelativeCords[i].x;
         int y = cameraData->distanceSortedRelativeCords[i].y;
@@ -196,17 +187,20 @@ void renderView(struct GameData* gameData){
         int xChunkWorldCords = (x) + cameraData->xIsoChunkCamCenter;
         int yChunkWorldCords = (y) + cameraData->yIsoChunkCamCenter;
 
+        //Attempt to retrieve the chunk at the chunks world cords
         struct CastedChunk *castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, xChunkWorldCords,
                                                           yChunkWorldCords);
-        //if in view distance radius
-        if (cameraData->distanceSortedRelativeCords[i].distance < cameraData->viewDistance){
+
+        //If IN view distance : Update required fields
+        if (cameraData->distanceSortedRelativeCords[i].distance <= cameraData->viewDistance){
             //Manage chunks
+            //If the chunk does not exist load one from Casted pool.
             if (castedChunk == NULL && maxNewChunksPerFrame > 0) {
                 loadChunk(gameData, xChunkWorldCords,yChunkWorldCords);
                 maxNewChunksPerFrame--;
-            //If the chunk does exist
-            } else if (castedChunk != NULL){
-
+            }
+            // If chunk is not null manage its fields
+            else if (castedChunk != NULL){
                 //Reset the direction the chunk should be rendered
                 if (castedChunk->direction != cameraData->direction) {
                     castedChunk->direction = cameraData->direction;
@@ -214,7 +208,6 @@ void renderView(struct GameData* gameData){
                     castedChunk->textured = false;
                     clearChunkTexture(gameData, castedChunk);
                 }
-
                 //Render the chunk texture if needed
                 if (!castedChunk->rayCast) {
                     addRayCastingTaskToThreadPool(cameraData->rayCastingThreadPool, castedChunk);
@@ -222,50 +215,25 @@ void renderView(struct GameData* gameData){
                     maxTexturingPerFrame--;
                     renderChunkTexture(gameData, castedChunk);
                 }
-
                 //Draw the Casted Chunk
                 DrawChunk(gameData, castedChunk);
             }
         }
-    }
 
-    //Ray cast all chunks added to the thread pool task q
-    if (reportFrameData) {
-        reportFrameBug("\n Thread Pool RayCasting \n");
-        reportFrameBug(" - Total thread count : %i\n",
-                       cameraData->rayCastingThreadPool->threadCount);
-        reportFrameBug(" - Total Chunks to cast utilizing thread pool : %i\n",
-                       cameraData->rayCastingThreadPool->totalTasks);
-    }
-
-    reportFrameBug("reporting a bug fixes the bug right here\n");
-    executeAllTasks(cameraData->rayCastingThreadPool);
-
-    for (int i = cameraData->totalDistanceCords/10; i < cameraData->totalDistanceCords; i++){
-        //Get the chunk
-        int x = cameraData->distanceSortedRelativeCords[i].x;
-        int y = cameraData->distanceSortedRelativeCords[i].y;
-        int xChunkWorldCords = (x) + cameraData->xIsoChunkCamCenter;
-        int yChunkWorldCords = (y) + cameraData->yIsoChunkCamCenter;
-        struct CastedChunk *castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, xChunkWorldCords,
-                                                          yChunkWorldCords);
-
-
-        if (castedChunk != NULL) {
-            unloadChunk(gameData, castedChunk);
+        //If NOT in Distance : Free The chunk
+        if (cameraData->distanceSortedRelativeCords[i].distance > cameraData->viewDistance){
+            if (castedChunk != NULL) {
+                unloadChunk(gameData, castedChunk);
+            }
         }
     }
-    //Ray cast all chunks added to the thread pool task q
-    if (reportFrameData) {
-        reportFrameBug("\n Chunk unloading \n");
-        reportFrameBug(" - Total Free Chunks : %i\n",
-                       cameraData->castedPool->freeChunkCount);
-        reportFrameBug(" - Total Chunks created : %i\n",
-                       cameraData->castedPool->totalChunksCreated);
-    }
+
+
+    executeAllTasks(cameraData->rayCastingThreadPool);
+
 
     renderEntity(gameData);
-    for (int i = 0; i < 20; i ++){
+    for (int i = 0; i < gameData->world->entityCount; i ++){
         if (gameData->world->tempEntityArray[i] != NULL){
             renderPuffEntity(gameData, gameData->world->tempEntityArray[i]);
         }

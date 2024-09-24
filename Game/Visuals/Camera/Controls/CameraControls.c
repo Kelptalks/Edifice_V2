@@ -215,8 +215,8 @@ void mouseCamMovement(struct GameData* gameData, int currentMouseXCor, int curre
 
 void updateZoomScale(struct GameData* gameData, SDL_Event event){
     float scale2;
-    int xCamIsoChange = gameData->cameraData->xIsoCamCenter;
-    int yCamIsoChange = gameData->cameraData->yIsoCamCenter;
+    float xCamIsoChange = gameData->cameraData->xIsoCamCenter;
+    float yCamIsoChange = gameData->cameraData->yIsoCamCenter;
 
     if (event.wheel.y > 0) {
         //Zoom in

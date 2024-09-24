@@ -133,4 +133,11 @@ void tickPuffEntity(struct GameData* gameData, struct Entity* entity){
         entity->worldY = newWorldY;
         entity->worldZ = newWorldZ;
     }
+
+    if (entity->worldZ < -10){
+        reportBug("relocating puff that fell off the world\n");
+        entity->worldX = 0;
+        entity->worldY = 0;
+        entity->worldZ = 45;
+    }
 }

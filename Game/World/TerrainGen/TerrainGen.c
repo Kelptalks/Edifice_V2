@@ -70,7 +70,7 @@ void genArea(struct World* world, unsigned long key, int xStart, int yStart, int
                     struct LairRule *lairRule = (struct LairRule *) indexList(lairRulesInArea, rule);
                     if (zInRuleBounds(lairRule, zStart + z)) {
 
-                        int heightMod = perlinAt(x * 0.03, y * 0.03) * 25;
+                        int heightMod = perlinAt(x * 0.02, y * 0.02) * 25;
 
 
                         int oceanLevel = 15;

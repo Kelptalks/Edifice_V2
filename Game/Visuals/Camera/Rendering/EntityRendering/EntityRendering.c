@@ -136,10 +136,10 @@ void renderEntity(struct GameData* gameData){
             if (castedBlock != NULL) {
                 //Check if block is in front of sprite
                 //Left
-                if ((castedBlock->worldLeftBlockX >= playerData->worldX || castedBlock->worldLeftBlockY >= playerData->worldY) && castedBlock->worldLeftBlockZ >= playerData->worldZ) {
+                if ((castedBlock->worldLeftBlockX >= playerData->worldX && castedBlock->worldLeftBlockY >= playerData->worldY) && castedBlock->worldLeftBlockZ >= playerData->worldZ) {
                     renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 0);
                 }
-                if ((castedBlock->worldRightBlockX >= playerData->worldX || castedBlock->worldRightBlockY >= playerData->worldY) && castedBlock->worldRightBlockZ >= playerData->worldZ) {
+                if ((castedBlock->worldRightBlockX >= playerData->worldX && castedBlock->worldRightBlockY >= playerData->worldY) && castedBlock->worldRightBlockZ >= playerData->worldZ) {
                     renderCastedBlock(gameData, castedBlock, relXCor, relYCor, 1);
                 }
             }

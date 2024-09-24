@@ -120,9 +120,12 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
 
     castedPool->freeChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
     castedPool->allChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
+    castedPool->chunksInUse = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
 
     castedPool->totalChunksCreated = 0;
     castedPool->freeChunkCount = 0;
+    castedPool->totalChunksInUse = 0;
+
 
     return castedPool;
 }
@@ -181,6 +184,7 @@ struct CastedChunk* loadChunk(struct GameData* gameData, int isoX, int isoY){
         //Malloc new struct
         struct CastedChunk *newCastedChunk = createCastedChunk(gameData->cameraData, gameData->screen->renderer, isoX, isoY);
         addChunkToMap(castedPool->chunkMap, newCastedChunk);
+
         return newCastedChunk;
     }
 }
@@ -220,9 +224,3 @@ struct CastedBlock* getCastedBlockAtCords(struct CameraData* cameraData, int iso
     }
     return NULL;
 }
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Getters / Setters
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */

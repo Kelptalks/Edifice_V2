@@ -73,6 +73,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj.d"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj.d"
+  "CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.obj"
+  "CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.obj.d"
   "CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj"
   "CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj.d"
   "CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj"

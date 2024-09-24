@@ -52,12 +52,13 @@ struct World* createWorld(int scale){
     createTerrainGenRules(world);
 
 
-    world->tempEntityArray = calloc(sizeof (struct Entity**), 20);
+    world->entityCount = 50;
+    world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
 
     int worldXScale = 150;
     int worldYScale = 150;
     genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
-    for (int i = 0; i < 50; i++){
+    for (int i = 0; i < world->entityCount; i++){
         int x = (rand() % (worldXScale * 2)) - worldXScale;
         int y = (rand() % (worldYScale * 2)) - worldYScale;
         world->tempEntityArray[i] = createPuffEntity();

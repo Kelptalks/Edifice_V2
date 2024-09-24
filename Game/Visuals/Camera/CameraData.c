@@ -97,7 +97,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
     cameraData->yIsoCamCenter = 300;
     cameraData->xIsoChunkCamCenter = 0;
     cameraData->yIsoChunkCamCenter = 0;
-    cameraData->castingDistance = 300;
+    cameraData->castingDistance = 500;
 
 
     //Set camera world cords

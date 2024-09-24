@@ -21,6 +21,7 @@ struct World{
     struct WorldChunkHashMap* worldChunkHashMap;
 
     //
+    int entityCount;
     struct Entity** tempEntityArray;
 
 };

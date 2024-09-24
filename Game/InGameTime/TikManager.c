@@ -19,7 +19,7 @@ struct TikManager* createTikManager(){
 }
 
 void tickAllEntityInWorld(struct GameData* gameData){
-    for (int x = 0; x < 20; x++){
+    for (int x = 0; x < gameData->world->entityCount; x++){
         if (gameData->world->tempEntityArray[x] != NULL){
             tikEntity(gameData, gameData->world->tempEntityArray[x]);
         }

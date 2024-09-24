@@ -1016,6 +1016,30 @@ Game/Visuals/Menu/TextManager/TextManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.s
 .PHONY : Game/Visuals/Menu/TextManager/TextManager.c.s
 
+Game/Visuals/Menu/UI_Controls/UIControls.obj: Game/Visuals/Menu/UI_Controls/UIControls.c.obj
+.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.obj
+
+# target to build an object file
+Game/Visuals/Menu/UI_Controls/UIControls.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.obj
+.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.c.obj
+
+Game/Visuals/Menu/UI_Controls/UIControls.i: Game/Visuals/Menu/UI_Controls/UIControls.c.i
+.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.i
+
+# target to preprocess a source file
+Game/Visuals/Menu/UI_Controls/UIControls.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.i
+.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.c.i
+
+Game/Visuals/Menu/UI_Controls/UIControls.s: Game/Visuals/Menu/UI_Controls/UIControls.c.s
+.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.s
+
+# target to generate assembly for a file
+Game/Visuals/Menu/UI_Controls/UIControls.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.s
+.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.c.s
+
 Game/Visuals/Screen.obj: Game/Visuals/Screen.c.obj
 .PHONY : Game/Visuals/Screen.obj
 
@@ -1544,6 +1568,9 @@ help:
 	@echo ... Game/Visuals/Menu/TextManager/TextManager.obj
 	@echo ... Game/Visuals/Menu/TextManager/TextManager.i
 	@echo ... Game/Visuals/Menu/TextManager/TextManager.s
+	@echo ... Game/Visuals/Menu/UI_Controls/UIControls.obj
+	@echo ... Game/Visuals/Menu/UI_Controls/UIControls.i
+	@echo ... Game/Visuals/Menu/UI_Controls/UIControls.s
 	@echo ... Game/Visuals/Screen.obj
 	@echo ... Game/Visuals/Screen.i
 	@echo ... Game/Visuals/Screen.s

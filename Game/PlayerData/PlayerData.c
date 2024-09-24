@@ -78,18 +78,28 @@ void tikPlayer(struct GameData* gameData){
     enum Block block2;
 
     block = getBlockAtWorldCor(gameData->world, newWorldX, playerData->worldY, playerData->worldZ);
-    block2 = getBlockAtWorldCor(gameData->world, newWorldX, playerData->worldY, playerData->worldZ);
-    if ((!isTransparent(block) && !isTranslucent(block)) || (!isTransparent(block2) && !isTranslucent(block2))){
-        playerData->velX = 0;
+    if ((!isTransparent(block) && !isTranslucent(block))){
+        block = getBlockAtWorldCor(gameData->world, newWorldX, playerData->worldY, playerData->worldZ + 1);
+        if ((!isTransparent(block) && !isTranslucent(block))){
+            playerData->velX = 0;
+        }
+        else {
+            playerData->worldZ++;
+        }
     }
     else{
         playerData->worldX = newWorldX;
     }
 
     block = getBlockAtWorldCor(gameData->world, playerData->worldX, newWorldY, playerData->worldZ);
-    block2 = getBlockAtWorldCor(gameData->world, playerData->worldX, newWorldY, playerData->worldZ);
-    if ((!isTransparent(block) && !isTranslucent(block)) || (!isTransparent(block2) && !isTranslucent(block2))){
-        playerData->velY = 0;
+    if ((!isTransparent(block) && !isTranslucent(block))){
+        block = getBlockAtWorldCor(gameData->world, playerData->worldX, newWorldY, playerData->worldZ + 1);
+        if ((!isTransparent(block) && !isTranslucent(block))){
+            playerData->velY = 0;
+        }
+        else {
+            playerData->worldZ++;
+        }
     }
     else{
         playerData->worldY = newWorldY;

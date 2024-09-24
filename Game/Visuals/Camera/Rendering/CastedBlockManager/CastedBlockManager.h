@@ -71,14 +71,21 @@ struct CastedPool{
     struct ChunkMap* chunkMap;
 
 
+
+    //All chunks
     int totalChunksCreated;
     int maxChunks;
     struct CastedChunk** allChunks;
 
 
-    //Chunks that are available for use
+    //Free Chunks
     int freeChunkCount;
     struct CastedChunk** freeChunks;
+
+    //Chunks in use
+    int totalChunksInUse;
+    struct CastedChunk** chunksInUse;
+
 };
 
 //Casted area Creating/Freeing

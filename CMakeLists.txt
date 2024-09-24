@@ -103,6 +103,8 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c
         "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.c"
         "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.h"
+        "Game/Visuals/Menu/UI Controls/UIControls.c"
+        "Game/Visuals/Menu/UI Controls/UIControls.h"
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})
