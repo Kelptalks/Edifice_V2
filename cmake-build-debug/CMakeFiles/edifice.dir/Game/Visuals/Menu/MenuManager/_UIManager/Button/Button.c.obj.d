@@ -211,5 +211,4 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h

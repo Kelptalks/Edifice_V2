@@ -38,7 +38,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 110,
+				"line" : 106,
 				"parent" : 0
 			},
 			{
@@ -124,34 +124,32 @@
 				34,
 				37,
 				39,
-				41,
+				40,
 				43,
-				44,
-				47,
+				45,
+				46,
 				49,
 				50,
 				53,
 				54,
-				57,
+				56,
 				58,
 				60,
-				62,
+				63,
 				64,
-				67,
+				66,
 				68,
 				70,
 				72,
 				74,
 				76,
 				78,
-				80,
+				81,
 				82,
-				85,
-				86,
+				84,
+				87,
 				88,
-				91,
-				92,
-				94
+				91
 			]
 		}
 	],
@@ -240,34 +238,32 @@
 				34,
 				37,
 				39,
-				41,
+				40,
 				43,
-				44,
-				47,
+				45,
+				46,
 				49,
 				50,
 				53,
 				54,
-				57,
+				56,
 				58,
 				60,
-				62,
+				63,
 				64,
-				67,
+				66,
 				68,
 				70,
 				72,
 				74,
 				76,
 				78,
-				80,
+				81,
 				82,
-				85,
-				86,
+				84,
+				87,
 				88,
-				91,
-				92,
-				94
+				91
 			]
 		},
 		{
@@ -287,34 +283,32 @@
 				35,
 				36,
 				38,
-				40,
+				41,
 				42,
-				45,
-				46,
+				44,
+				47,
 				48,
 				51,
 				52,
 				55,
-				56,
+				57,
 				59,
 				61,
-				63,
+				62,
 				65,
-				66,
+				67,
 				69,
 				71,
 				73,
 				75,
 				77,
 				79,
-				81,
+				80,
 				83,
-				84,
-				87,
+				85,
+				86,
 				89,
-				90,
-				93,
-				95
+				90
 			]
 		}
 	],
@@ -527,17 +521,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"path" : "Game/Visuals/Camera/Controls/CameraControls.h",
 			"sourceGroupIndex" : 1
 		},
@@ -556,17 +539,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Game/Debuging/DebugMenu/DebugMenu.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Game/Visuals/InMenuWindow/InMenuWindow.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game/Visuals/InMenuWindow/InMenuWindow.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -846,14 +818,14 @@
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game/Visuals/Menu/UI Controls/UIControls.c",
-			"sourceGroupIndex" : 0
+			"path" : "Game/Visuals/Menu/OnScreenUI/OnScreenUI.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Game/Visuals/Menu/UI Controls/UIControls.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "Game/Visuals/Menu/OnScreenUI/OnScreenUI.c",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

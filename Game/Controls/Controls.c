@@ -3,13 +3,10 @@
 //
 
 #include "../GameData.h"
-#include "../Visuals/Screen.h"
 #include <stdbool.h>
 #include "Controls.h"
 #include "SDL.h"
 #include "../Visuals/Camera/CameraData.h"
-#include "../Visuals/Camera/Controls/CameraControls.h"
-#include "../Visuals/InMenuWindow/InMenuWindow.h"
 
 void handleInput(struct GameData* gameData){
     //Handling close event

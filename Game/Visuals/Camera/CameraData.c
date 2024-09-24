@@ -5,9 +5,6 @@
 
 #include "CameraData.h"
 #include "Rendering/CastedBlockManager/CastedBlockManager.h"
-#include "../../Debuging/Test_Main.h"
-#include "../../World/Octree/Tools/KeyMod.h"
-#include "../InMenuWindow/InMenuWindow.h"
 #include "Camera.h"
 #include "Rendering/RayCasting/RayCastingManager.h"
 #include "math.h"
@@ -111,7 +108,6 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
     cameraData->castedPool = createCastedPool(cameraData, renderer);
 
     //Create inMenuWindow
-    cameraData->inMenuWindow = createInMenuWindow(0, 0, 1280, 720);
     cameraData->distanceSortedRelativeCords = createDistanceSortedRelativeCords(cameraData);
 
 

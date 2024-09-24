@@ -254,18 +254,6 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h">
 			<Option target="edifice"/>
 		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.c">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.c">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.h">
-			<Option target="edifice"/>
-		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/ UIManager/UIManger.c">
 			<Option target="edifice"/>
 		</Unit>
@@ -296,16 +284,16 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h">
 			<Option target="edifice"/>
 		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/OnScreenUI/OnScreenUI.h">
+			<Option target="edifice"/>
+		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/UI Controls/UIControls.c">
-			<Option target="edifice"/>
-		</Unit>
-		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/UI Controls/UIControls.h">
 			<Option target="edifice"/>
 		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.c">

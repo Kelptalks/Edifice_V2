@@ -234,6 +234,5 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/InMenuWindow/InMenuWindow.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus/MainMenu/MainMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

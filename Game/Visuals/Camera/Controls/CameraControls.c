@@ -11,7 +11,6 @@
 #include "../../../World/Octree/Octree.h"
 #include "../../../World/Octree/OctreeNode.h"
 #include "../../../Debuging/Test_Main.h"
-#include "../../../Visuals/InMenuWindow/InMenuWindow.h"
 #include "../../../PlayerData/PlayerData.h"
 #include "../Camera.h"
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
@@ -355,27 +354,21 @@ void updateDebugMenu(struct GameData* gameData, int xCor, int yCor){
  */
 
 void cameraControlInput(struct GameData* gameData, SDL_Event event){
-    //InMenuWindow Controls
-    bool mouseOnInMenuWindow = false;
-    if (gameData->cameraData->inMenuWindow->visible){
-        mouseOnInMenuWindow = InMenuWindowControls(gameData, gameData->cameraData->inMenuWindow, event);
-    }
+
     //Mouse input Controls
     int xCor, yCor;
     SDL_GetMouseState(&xCor, &yCor);
 
     mouseHighlight(gameData, xCor, yCor);
-    if (!mouseOnInMenuWindow) {
-        //Convert to iso cords
-        if (event.type == SDL_MOUSEBUTTONDOWN) {
-            //If left break block
-            if (event.button.button == SDL_BUTTON_LEFT){
-                mouseBreakBlock(gameData, xCor, yCor, event);
-            }
-            //If right place block
-            else if(event.button.button == SDL_BUTTON_RIGHT){
-                mousePlaceBlock(gameData, xCor, yCor);
-            }
+    //Convert to iso cords
+    if (event.type == SDL_MOUSEBUTTONDOWN) {
+        //If left break block
+        if (event.button.button == SDL_BUTTON_LEFT){
+            mouseBreakBlock(gameData, xCor, yCor, event);
+        }
+        //If right place block
+        else if(event.button.button == SDL_BUTTON_RIGHT){
+            mousePlaceBlock(gameData, xCor, yCor);
         }
     }
 
@@ -389,7 +382,6 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
     if (event.type == SDL_KEYDOWN) {
         switch (event.key.keysym.sym) {
             case SDLK_TAB :
-                gameData->cameraData->inMenuWindow->visible = !gameData->cameraData->inMenuWindow->visible;
                 break;
             case SDLK_ESCAPE :
                 gameData->menuManger->currentMenuType = MainMenu;

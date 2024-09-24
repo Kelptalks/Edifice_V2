@@ -54,10 +54,6 @@ struct CameraData{
     int xChunkScaledTextureRez;
     int yChunkScaledTextureRez;
 
-    //In MenuWindow
-    struct InMenuWindow* inMenuWindow;
-    enum Block blockSelected;
-
     //Raycasting
     int castingDistance;
     struct RayCastingData* rayCastingData;

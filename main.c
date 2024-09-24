@@ -4,12 +4,10 @@
 #include "Game/Visuals/Camera/Camera.h"
 #include "Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
 #include "Game/World/World.h"
-#include "Game/Visuals/InMenuWindow/InMenuWindow.h"
 #include "Game/World/World Saving/WorldFileManager.h"
 #include "Game/InGameTime/TikManager.h"
 #include "Game/World/WorldChunkHashMap/WorldChunkHashMap.h"
 #include "Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h"
-#include "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.h"
 
 int main(int argc, char* argv[]) {
 

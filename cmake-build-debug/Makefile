@@ -824,30 +824,6 @@ Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.s
 .PHONY : Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.s
 
-Game/Visuals/InMenuWindow/InMenuWindow.obj: Game/Visuals/InMenuWindow/InMenuWindow.c.obj
-.PHONY : Game/Visuals/InMenuWindow/InMenuWindow.obj
-
-# target to build an object file
-Game/Visuals/InMenuWindow/InMenuWindow.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.obj
-.PHONY : Game/Visuals/InMenuWindow/InMenuWindow.c.obj
-
-Game/Visuals/InMenuWindow/InMenuWindow.i: Game/Visuals/InMenuWindow/InMenuWindow.c.i
-.PHONY : Game/Visuals/InMenuWindow/InMenuWindow.i
-
-# target to preprocess a source file
-Game/Visuals/InMenuWindow/InMenuWindow.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.i
-.PHONY : Game/Visuals/InMenuWindow/InMenuWindow.c.i
-
-Game/Visuals/InMenuWindow/InMenuWindow.s: Game/Visuals/InMenuWindow/InMenuWindow.c.s
-.PHONY : Game/Visuals/InMenuWindow/InMenuWindow.s
-
-# target to generate assembly for a file
-Game/Visuals/InMenuWindow/InMenuWindow.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/InMenuWindow/InMenuWindow.c.s
-.PHONY : Game/Visuals/InMenuWindow/InMenuWindow.c.s
-
 Game/Visuals/Menu/MenuManager/MenuManger.obj: Game/Visuals/Menu/MenuManager/MenuManger.c.obj
 .PHONY : Game/Visuals/Menu/MenuManager/MenuManger.obj
 
@@ -920,30 +896,6 @@ Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s
 .PHONY : Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s
 
-Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.obj: Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj
-.PHONY : Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.obj
-
-# target to build an object file
-Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj
-.PHONY : Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.obj
-
-Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.i: Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.i
-.PHONY : Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.i
-
-# target to preprocess a source file
-Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.i
-.PHONY : Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.i
-
-Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.s: Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.s
-.PHONY : Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.s
-
-# target to generate assembly for a file
-Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.s
-.PHONY : Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.c.s
-
 Game/Visuals/Menu/MenuManager/_UIManager/UIManger.obj: Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj
 .PHONY : Game/Visuals/Menu/MenuManager/_UIManager/UIManger.obj
 
@@ -992,6 +944,30 @@ Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.s
 .PHONY : Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.s
 
+Game/Visuals/Menu/OnScreenUI/OnScreenUI.obj: Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj
+.PHONY : Game/Visuals/Menu/OnScreenUI/OnScreenUI.obj
+
+# target to build an object file
+Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj
+.PHONY : Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj
+
+Game/Visuals/Menu/OnScreenUI/OnScreenUI.i: Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.i
+.PHONY : Game/Visuals/Menu/OnScreenUI/OnScreenUI.i
+
+# target to preprocess a source file
+Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.i
+.PHONY : Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.i
+
+Game/Visuals/Menu/OnScreenUI/OnScreenUI.s: Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.s
+.PHONY : Game/Visuals/Menu/OnScreenUI/OnScreenUI.s
+
+# target to generate assembly for a file
+Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.s
+.PHONY : Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.s
+
 Game/Visuals/Menu/TextManager/TextManager.obj: Game/Visuals/Menu/TextManager/TextManager.c.obj
 .PHONY : Game/Visuals/Menu/TextManager/TextManager.obj
 
@@ -1015,30 +991,6 @@ Game/Visuals/Menu/TextManager/TextManager.s: Game/Visuals/Menu/TextManager/TextM
 Game/Visuals/Menu/TextManager/TextManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.s
 .PHONY : Game/Visuals/Menu/TextManager/TextManager.c.s
-
-Game/Visuals/Menu/UI_Controls/UIControls.obj: Game/Visuals/Menu/UI_Controls/UIControls.c.obj
-.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.obj
-
-# target to build an object file
-Game/Visuals/Menu/UI_Controls/UIControls.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.obj
-.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.c.obj
-
-Game/Visuals/Menu/UI_Controls/UIControls.i: Game/Visuals/Menu/UI_Controls/UIControls.c.i
-.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.i
-
-# target to preprocess a source file
-Game/Visuals/Menu/UI_Controls/UIControls.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.i
-.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.c.i
-
-Game/Visuals/Menu/UI_Controls/UIControls.s: Game/Visuals/Menu/UI_Controls/UIControls.c.s
-.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.s
-
-# target to generate assembly for a file
-Game/Visuals/Menu/UI_Controls/UIControls.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.s
-.PHONY : Game/Visuals/Menu/UI_Controls/UIControls.c.s
 
 Game/Visuals/Screen.obj: Game/Visuals/Screen.c.obj
 .PHONY : Game/Visuals/Screen.obj
@@ -1544,9 +1496,6 @@ help:
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.obj
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.i
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.s
-	@echo ... Game/Visuals/InMenuWindow/InMenuWindow.obj
-	@echo ... Game/Visuals/InMenuWindow/InMenuWindow.i
-	@echo ... Game/Visuals/InMenuWindow/InMenuWindow.s
 	@echo ... Game/Visuals/Menu/MenuManager/MenuManger.obj
 	@echo ... Game/Visuals/Menu/MenuManager/MenuManger.i
 	@echo ... Game/Visuals/Menu/MenuManager/MenuManger.s
@@ -1556,21 +1505,18 @@ help:
 	@echo ... Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.obj
 	@echo ... Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.i
 	@echo ... Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.s
-	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.obj
-	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.i
-	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/Button/Button.s
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIManger.obj
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIManger.i
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIManger.s
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.obj
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.i
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.s
+	@echo ... Game/Visuals/Menu/OnScreenUI/OnScreenUI.obj
+	@echo ... Game/Visuals/Menu/OnScreenUI/OnScreenUI.i
+	@echo ... Game/Visuals/Menu/OnScreenUI/OnScreenUI.s
 	@echo ... Game/Visuals/Menu/TextManager/TextManager.obj
 	@echo ... Game/Visuals/Menu/TextManager/TextManager.i
 	@echo ... Game/Visuals/Menu/TextManager/TextManager.s
-	@echo ... Game/Visuals/Menu/UI_Controls/UIControls.obj
-	@echo ... Game/Visuals/Menu/UI_Controls/UIControls.i
-	@echo ... Game/Visuals/Menu/UI_Controls/UIControls.s
 	@echo ... Game/Visuals/Screen.obj
 	@echo ... Game/Visuals/Screen.i
 	@echo ... Game/Visuals/Screen.s

@@ -64,7 +64,7 @@ void renderUIButton(struct Button* button, struct GameData* gameData){
         renderForwardBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
     }
     else if (button->buttonTexture == MainButton){
-        renderScrollBar(gameData,  button->xCor, button->yCor, button->xScale, button->yScale);
+        renderScrollBar(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
     }
 }
 
@@ -132,7 +132,7 @@ void handleScrollWheelInputs(struct ScrollWheel* scrollWheel, struct GameData* g
 
 void renderScrollWheel(struct ScrollWheel* scrollWheel, struct GameData* gameData){
     //Render the bar
-    renderScrollBar(gameData, scrollWheel->xCor, scrollWheel->yCor, scrollWheel->xScale, scrollWheel->yScale);
+    renderScrollBar(gameData, false, scrollWheel->xCor, scrollWheel->yCor, scrollWheel->xScale, scrollWheel->yScale);
 
     //Pointer Offset
     renderScrollPointer(gameData, scrollWheel->pressed, scrollWheel->xCor + scrollWheel->currentX, scrollWheel->yCor, scrollWheel->yScale, scrollWheel->yScale);

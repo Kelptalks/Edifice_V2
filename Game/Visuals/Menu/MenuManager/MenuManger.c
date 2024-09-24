@@ -6,7 +6,6 @@
 #include "MenuManger.h"
 #include "../../Camera/Controls/CameraControls.h"
 #include "../../Camera/Camera.h"
-#include "../../InMenuWindow/InMenuWindow.h"
 #include "Menus/MainMenu/MainMenu.h"
 #include "Menus/SettingsMenu/SettingsMenu.h"
 
@@ -41,10 +40,6 @@ void renderCurrentMenu(struct GameData* gameData){
     else if (currentMenuType == CameraMenu) {
         //Render game world
         renderView(gameData);
-        //Render window if visible
-        if (gameData->cameraData->inMenuWindow->visible){
-            renderInMenuWindow(gameData, gameData->cameraData->inMenuWindow);
-        }
         //render debug menu if visible
         if (gameData->debugMenu->visible) {
             renderDebugMenu(gameData);

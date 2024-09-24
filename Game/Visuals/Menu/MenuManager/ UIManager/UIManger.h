@@ -16,7 +16,9 @@ enum ButtonTexture{
     CheckButton,
     BackButton,
     ForwardButton,
-    MainButton
+    MainButton,
+    AreaSelectButton,
+    InventoryButton,
 };
 
 struct Button{
@@ -56,6 +58,7 @@ struct ScrollWheel{
     int yScale;
 
     bool pressed;
+
     int lastX;
     int currentX;
 

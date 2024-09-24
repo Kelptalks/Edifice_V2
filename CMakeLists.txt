@@ -45,14 +45,10 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c
         Game/Visuals/Menu/TextManager/TextManager.c
         Game/Visuals/Menu/TextManager/TextManager.h
-        "Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.h"
-        "Game/Visuals/Menu/MenuManager/ UIManager/Button/Button.c"
         Game/Visuals/Camera/Controls/CameraControls.h
         Game/Visuals/Camera/Controls/CameraControls.c
         Game/Debuging/DebugMenu/DebugMenu.h
         Game/Debuging/DebugMenu/DebugMenu.c
-        Game/Visuals/InMenuWindow/InMenuWindow.h
-        Game/Visuals/InMenuWindow/InMenuWindow.c
         Assets/AssetManager.c
         Assets/AssetManager.h
         Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.h
@@ -103,8 +99,8 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c
         "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.c"
         "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.h"
-        "Game/Visuals/Menu/UI Controls/UIControls.c"
-        "Game/Visuals/Menu/UI Controls/UIControls.h"
+        Game/Visuals/Menu/OnScreenUI/OnScreenUI.h
+        Game/Visuals/Menu/OnScreenUI/OnScreenUI.c
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})
