@@ -8,15 +8,6 @@
 #include "SDL.h"
 #include <stdbool.h>
 
-
-
-struct Audio{
-    SDL_AudioSpec* wavSpec;
-    Uint32 wavLength;
-    Uint8 *wavBuffer;
-    SDL_AudioDeviceID deviceId;
-};
-
 struct Screen{
     //Basics
     int xRez;
@@ -38,7 +29,7 @@ struct Screen{
     bool run;
 };
 
-void playPlaceSound(struct Audio* audio);
+void updateScreen(struct Screen* screen);
 
 //Create the screen struct.
 struct Screen* createScreen();

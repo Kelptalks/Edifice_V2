@@ -7393,6 +7393,8 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: C:/Users
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h
 
+CMakeFiles/edifice.dir/Game/Visuals/Menu/UI_Controls/UIControls.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/UI\ Controls/UIControls.c
+
 CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
@@ -9155,6 +9157,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Controls/Controls.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/dpapi.h:
+
+C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/UI\ Controls/UIControls.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/driverspecs.h:
 

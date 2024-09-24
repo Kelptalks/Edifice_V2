@@ -5,9 +5,10 @@ Creating textTextures
 Creating DebugMenu
 Splicing textures 
 Building world
+Creating Menu Manager
 Creating cameraData 
  - Creating CastedPool
-Creating playerData 
+Creating PlayerData
 Creating Tik Manager 
 Creating Sound Manager
 Failed to open audio device: Unsupported number of audio channels.
