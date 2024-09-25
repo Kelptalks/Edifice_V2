@@ -7,9 +7,12 @@
 
 #include <stdbool.h>
 #include "../../GameData.h"
+#include "FrameRenderingData/FrameRenderingData.h"
 
 struct DebugMenu{
     bool visible;
+
+    struct FrameRenderingData* frameRenderingData;
 
     int xMouseCor;
     int yMouseCor;

@@ -8,7 +8,7 @@
 #include "../../Camera/Camera.h"
 #include "Menus/MainMenu/MainMenu.h"
 #include "Menus/SettingsMenu/SettingsMenu.h"
-
+#include "../OnScreenUI/OnScreenUI.h"
 
 
 struct MenuManager* createMenuManager(){
@@ -21,6 +21,7 @@ struct MenuManager* createMenuManager(){
     menuManager->currentMenuType = MainMenu;
     menuManager->mainMenu = createMainMenu();
     menuManager->settingsMenu = createSettingsMenu();
+    menuManager->onScreenUi = createOnScreenUI();
 
 
     return menuManager;
@@ -40,10 +41,17 @@ void renderCurrentMenu(struct GameData* gameData){
     else if (currentMenuType == CameraMenu) {
         //Render game world
         renderView(gameData);
+
+        //Render the Player UI
+        updateOnScreenUICords(gameData);
+        renderOnScreenUI(gameData);
+
+
         //render debug menu if visible
         if (gameData->debugMenu->visible) {
             renderDebugMenu(gameData);
         }
+
     }
     else if (currentMenuType == SettingsMenu){
         renderSettingsMenu(gameData);
@@ -56,7 +64,11 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
         handleInputMainMenu(gameData, event);
     }
     else if (currentMenuType == CameraMenu) {
-        cameraControlInput(gameData, event);
+        //Take on screen UI input
+        if (!handleOnScreenUIInput(gameData, event)) {
+            // if on screen UI is not hit then take camera control inputs.
+            cameraControlInput(gameData, event);
+        }
     }
     else if (currentMenuType == SettingsMenu){
         handleInputSettingsMenu(gameData, event);

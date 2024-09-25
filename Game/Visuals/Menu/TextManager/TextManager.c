@@ -171,6 +171,26 @@ SDL_Texture* getCharTexture(struct GameData* gameData, char character){
     }
 }
 
+int getStringLength(char *str){
+    int length = 0;
+
+    // Loop till the NULL character is found
+    while (*str != '\0')
+    {
+        length++;
+
+        // Move to the next character
+        str++;
+    }
+    return length;
+}
+
+
+void renderString(struct GameData* gameData, char string[], int xCor, int yCor, int scale){
+    int stringLen = getStringLength(string);
+    drawString(gameData, string, stringLen, xCor, yCor, scale);
+}
+
 void drawString(struct GameData* gameData, char string[], int stringLength, int xCor, int yCor, int scale){
     //Frame rate
     for (int x = 0; x < stringLength; x++) {

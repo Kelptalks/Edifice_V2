@@ -10,6 +10,10 @@
 
 struct PlayerData* createPlayerData(){
     struct PlayerData* playerData = malloc(sizeof (struct PlayerData));
+    playerData->hotBar = createHotBar(10);
+    int totalBlockCount = getTotalBlockCount();
+    playerData->blockSelectionMenu = createBlockSelectionMenu(getTotalBlockCount(), totalBlockCount / 5);
+
     playerData->block = 1;
     int lastMouseXCor = 0;
     int lastMouseYCor = 0;
@@ -123,6 +127,13 @@ void tikPlayer(struct GameData* gameData){
     }
     if (playerData->velY != 0){
         playerData->velY = playerData->velY / playerData->velResistance;
+    }
+
+    if (playerData->worldZ < - 100){
+        reportBug("relocating player that fell off the world\n");
+        playerData->worldZ = 100;
+        playerData->worldX = 0;
+        playerData->worldY = 0;
     }
 
     playerData->velZ -= playerData->gravity;

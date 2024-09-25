@@ -50,10 +50,10 @@ void renderPuffEntity(struct GameData* gameData, struct Entity* entity){
                    &srcRect, &destRect);
 
     //ReDraw Blocks in front of sprite
-    for (int x = -3; x < 1; x++){
-        for (int y = -3; y < 1; y++){
-            float relXCor = y + xEntityCamCor + 1;
-            float relYCor = x + yEntityCamCor + 1;
+    for (int x = -2; x < 2; x++){
+        for (int y = -2; y < 2; y++){
+            float relXCor = y + xEntityCamCor;
+            float relYCor = x + yEntityCamCor;
             struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
             if (castedBlock != NULL) {
                 //Check if block is in front of sprite

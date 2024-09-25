@@ -47,7 +47,7 @@ struct World* createWorld(int scale){
     world->chunkOctreeDimension = getOctreeDimensions(world->chunkOctreeScale);
 
     //Calculate ground height
-    world->worldChunkHashMap = createWorldChunkHashMap(10000);
+    world->worldChunkHashMap = createWorldChunkHashMap(5000);
 
     createTerrainGenRules(world);
 
@@ -55,8 +55,8 @@ struct World* createWorld(int scale){
     world->entityCount = 50;
     world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
 
-    int worldXScale = 150;
-    int worldYScale = 150;
+    int worldXScale = 200;
+    int worldYScale = 200;
     genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
     for (int i = 0; i < world->entityCount; i++){
         int x = (rand() % (worldXScale * 2)) - worldXScale;

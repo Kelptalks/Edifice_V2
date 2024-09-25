@@ -101,6 +101,12 @@ add_executable(edifice main.c
         "Game/World/TerrainGen/Perlin Noise/PerlinGenerator.h"
         Game/Visuals/Menu/OnScreenUI/OnScreenUI.h
         Game/Visuals/Menu/OnScreenUI/OnScreenUI.c
+        Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.h
+        Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c
+        Game/PlayerData/Invintory/Hotbar/Hotbar.c
+        Game/PlayerData/Invintory/Hotbar/Hotbar.h
+        Game/PlayerData/Invintory/BlockMenu/BlockMenu.c
+        Game/PlayerData/Invintory/BlockMenu/BlockMenu.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

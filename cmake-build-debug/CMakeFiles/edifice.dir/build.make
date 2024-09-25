@@ -863,6 +863,51 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\OnScreenUI\OnScreenUI.c -o CMakeFiles\edifice.dir\Game\Visuals\Menu\OnScreenUI\OnScreenUI.c.s
 
+CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c
+CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj -MF CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.obj.d -o CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c
+
+CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c > CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.i
+
+CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c -o CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.s
+
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/Hotbar/Hotbar.c
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj -MF CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.obj.d -o CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\Hotbar\Hotbar.c
+
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\Hotbar\Hotbar.c > CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.i
+
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\Hotbar\Hotbar.c -o CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.s
+
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj -MF CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.obj.d -o CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c
+
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c > CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.i
+
+CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c -o CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.s
+
 # Object files for target edifice
 edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/main.c.obj" \
@@ -917,7 +962,10 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj" \
-"CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj"
+"CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj" \
+"CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj" \
+"CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj" \
+"CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj"
 
 # External object files for target edifice
 edifice_EXTERNAL_OBJECTS =
@@ -975,13 +1023,16 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRenderin
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/build.make
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
 edifice.exe: CMakeFiles/edifice.dir/objects1.rsp
 edifice.exe: CMakeFiles/edifice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Linking C executable edifice.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Linking C executable edifice.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\edifice.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

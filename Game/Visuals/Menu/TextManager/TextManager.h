@@ -71,6 +71,8 @@ struct TextTextures* createTextTextures(SDL_Renderer* renderer);
 
 SDL_Texture* getCharTexture(struct GameData* gameData, char character);
 
+void renderString(struct GameData* gameData, char string[], int xCor, int yCor, int scale);
+
 void drawString(struct GameData* gameData, char string[], int stringLength, int xCor, int yCor, int scale);
 
 #endif //EDIFICE_TEXTMANAGER_H

@@ -176,9 +176,15 @@ void renderView(struct GameData* gameData){
 
     updateCameraCords(gameData);
 
-    int maxTexturingPerFrame = 15;
-    int maxNewChunksPerFrame = 15;
+    int maxTexturingPerFrame = 10;
+    int maxNewChunksPerFrame = 10;
+
+    //Timer values for timing rendering time.
+    Uint32 time1;
+    Uint32 time2;
+
     //Loop through a circular area of chunks
+    time1 = SDL_GetTicks();
     for (int i = 0; i < cameraData->totalDistanceCords; i++)
     {
         int x = cameraData->distanceSortedRelativeCords[i].x;
@@ -227,18 +233,26 @@ void renderView(struct GameData* gameData){
             }
         }
     }
+    renderMouseArea(gameData);
+    time2 = SDL_GetTicks();
+    gameData->debugMenu->frameRenderingData->chunkUpdatingTime = time2 - time1;
 
 
+    //RayCast chunks
+    time1 = SDL_GetTicks();
     executeAllTasks(cameraData->rayCastingThreadPool);
+    time2 = SDL_GetTicks();
+    gameData->debugMenu->frameRenderingData->rayCastingTime = time2 - time1;
 
 
+    //Render entitys
+    time1 = SDL_GetTicks();
     renderEntity(gameData);
     for (int i = 0; i < gameData->world->entityCount; i ++){
         if (gameData->world->tempEntityArray[i] != NULL){
             renderPuffEntity(gameData, gameData->world->tempEntityArray[i]);
         }
     }
-
-    //re raycast and texture the area around the mouse
-    renderMouseArea(gameData);
+    time2 = SDL_GetTicks();
+    gameData->debugMenu->frameRenderingData->entityRenderingTime = time2 - time1;
 }

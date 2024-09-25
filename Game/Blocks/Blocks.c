@@ -46,6 +46,17 @@ bool isTranslucent(enum Block block) {
     }
 }
 
+int getTotalBlockCount(){
+    return 54;
+}
+
+SDL_Rect getBlockSpriteSheetSrcRect(enum Block block){
+    int xSpriteSheetCor; int ySpriteSheetCor;
+    getBlockSpriteSheetCords(block, &xSpriteSheetCor, &ySpriteSheetCor);
+    SDL_Rect blockSrcRect = {xSpriteSheetCor, ySpriteSheetCor, 64, 64};
+    return blockSrcRect;
+};
+
 char* getBlockName(enum Block block){
     switch (block) {
         case Dirt:
@@ -118,6 +129,10 @@ char* getBlockName(enum Block block){
 
 void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
     switch (block) {
+        case Air:
+            *x = 256;
+            *y = 0;
+            break;
         case Dirt:
             *x = 0;
             *y = 0;

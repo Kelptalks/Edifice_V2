@@ -8,9 +8,15 @@
 #include "../Blocks/Blocks.h"
 #include "../InGameTime/TikEvent/EntityManager/EntityManager.h"
 #include "../GameData.h"
+#include "Invintory/Hotbar/Hotbar.h"
+#include "Invintory/BlockMenu/BlockMenu.h"
 
 struct PlayerData{
     enum Block block;
+    struct HotBar* hotBar;
+    struct BlockSelectionMenu* blockSelectionMenu;
+
+
     int lastMouseXCor;
     int lastMouseYCor;
 

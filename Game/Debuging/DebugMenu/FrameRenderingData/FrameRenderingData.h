@@ -1,0 +1,22 @@
+//
+// Created by Spencer on 9/24/2024.
+//
+
+#ifndef EDIFICE_FRAMERENDERINGDATA_H
+#define EDIFICE_FRAMERENDERINGDATA_H
+
+#include <SDL_stdinc.h>
+#include "../../../GameData.h"
+
+struct FrameRenderingData{
+    Uint32 totalFrameTime;
+    Uint32 chunkUpdatingTime;
+    Uint32 rayCastingTime;
+    Uint32 entityRenderingTime;
+};
+
+struct FrameRenderingData* createFrameRenderingData();
+
+void renderFrameRenderingData(struct GameData* gameData);
+
+#endif //EDIFICE_FRAMERENDERINGDATA_H

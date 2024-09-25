@@ -6,6 +6,7 @@
 #define BLOCKS_H
 
 #include <stdbool.h>
+#include <SDL_rect.h>
 
 #define numOfBlocks = 18;
 
@@ -80,17 +81,17 @@ enum Block {
     ConveyorBelt,
     Furnace,
 
-    //Shaders
-    GreyShader,
-    RedShader,
-    WhiteShader,
-    GreenShader,
-
     //Creature
     WormBody,
     WormEyesLevel,
     WormEyesUp,
     WormMouth,
+
+    //Shaders
+    GreyShader,
+    RedShader,
+    WhiteShader,
+    GreenShader,
 
     //Test
     HalfBlockTest,
@@ -99,6 +100,10 @@ enum Block {
     MaskingBlock,
     ShadowMaskingBlock
 };
+
+int getTotalBlockCount();
+
+SDL_Rect getBlockSpriteSheetSrcRect(enum Block block);
 
 bool isTransparent(enum Block);
 

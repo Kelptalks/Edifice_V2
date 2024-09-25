@@ -248,6 +248,30 @@ Game/Debuging/DebugMenu/DebugMenu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.s
 .PHONY : Game/Debuging/DebugMenu/DebugMenu.c.s
 
+Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.obj: Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj
+.PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.obj
+
+# target to build an object file
+Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj
+.PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj
+
+Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.i: Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i
+.PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.i
+
+# target to preprocess a source file
+Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i
+.PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i
+
+Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.s: Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s
+.PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.s
+
+# target to generate assembly for a file
+Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s
+.PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s
+
 Game/Debuging/Test_Main.obj: Game/Debuging/Test_Main.c.obj
 .PHONY : Game/Debuging/Test_Main.obj
 
@@ -415,6 +439,54 @@ Game/InGameTime/TikManager.s: Game/InGameTime/TikManager.c.s
 Game/InGameTime/TikManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.s
 .PHONY : Game/InGameTime/TikManager.c.s
+
+Game/PlayerData/Invintory/BlockMenu/BlockMenu.obj: Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj
+.PHONY : Game/PlayerData/Invintory/BlockMenu/BlockMenu.obj
+
+# target to build an object file
+Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj
+.PHONY : Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj
+
+Game/PlayerData/Invintory/BlockMenu/BlockMenu.i: Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i
+.PHONY : Game/PlayerData/Invintory/BlockMenu/BlockMenu.i
+
+# target to preprocess a source file
+Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i
+.PHONY : Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i
+
+Game/PlayerData/Invintory/BlockMenu/BlockMenu.s: Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.s
+.PHONY : Game/PlayerData/Invintory/BlockMenu/BlockMenu.s
+
+# target to generate assembly for a file
+Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.s
+.PHONY : Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.s
+
+Game/PlayerData/Invintory/Hotbar/Hotbar.obj: Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj
+.PHONY : Game/PlayerData/Invintory/Hotbar/Hotbar.obj
+
+# target to build an object file
+Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj
+.PHONY : Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj
+
+Game/PlayerData/Invintory/Hotbar/Hotbar.i: Game/PlayerData/Invintory/Hotbar/Hotbar.c.i
+.PHONY : Game/PlayerData/Invintory/Hotbar/Hotbar.i
+
+# target to preprocess a source file
+Game/PlayerData/Invintory/Hotbar/Hotbar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.i
+.PHONY : Game/PlayerData/Invintory/Hotbar/Hotbar.c.i
+
+Game/PlayerData/Invintory/Hotbar/Hotbar.s: Game/PlayerData/Invintory/Hotbar/Hotbar.c.s
+.PHONY : Game/PlayerData/Invintory/Hotbar/Hotbar.s
+
+# target to generate assembly for a file
+Game/PlayerData/Invintory/Hotbar/Hotbar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.s
+.PHONY : Game/PlayerData/Invintory/Hotbar/Hotbar.c.s
 
 Game/PlayerData/PlayerData.obj: Game/PlayerData/PlayerData.c.obj
 .PHONY : Game/PlayerData/PlayerData.obj
@@ -1424,6 +1496,9 @@ help:
 	@echo ... Game/Debuging/DebugMenu/DebugMenu.obj
 	@echo ... Game/Debuging/DebugMenu/DebugMenu.i
 	@echo ... Game/Debuging/DebugMenu/DebugMenu.s
+	@echo ... Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.obj
+	@echo ... Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.i
+	@echo ... Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.s
 	@echo ... Game/Debuging/Test_Main.obj
 	@echo ... Game/Debuging/Test_Main.i
 	@echo ... Game/Debuging/Test_Main.s
@@ -1445,6 +1520,12 @@ help:
 	@echo ... Game/InGameTime/TikManager.obj
 	@echo ... Game/InGameTime/TikManager.i
 	@echo ... Game/InGameTime/TikManager.s
+	@echo ... Game/PlayerData/Invintory/BlockMenu/BlockMenu.obj
+	@echo ... Game/PlayerData/Invintory/BlockMenu/BlockMenu.i
+	@echo ... Game/PlayerData/Invintory/BlockMenu/BlockMenu.s
+	@echo ... Game/PlayerData/Invintory/Hotbar/Hotbar.obj
+	@echo ... Game/PlayerData/Invintory/Hotbar/Hotbar.i
+	@echo ... Game/PlayerData/Invintory/Hotbar/Hotbar.s
 	@echo ... Game/PlayerData/PlayerData.obj
 	@echo ... Game/PlayerData/PlayerData.i
 	@echo ... Game/PlayerData/PlayerData.s

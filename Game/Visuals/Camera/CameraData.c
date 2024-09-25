@@ -99,8 +99,8 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
 
 
     //Set camera world cords
-    cameraData->worldX = 0;
-    cameraData->worldY = 0;
+    cameraData->worldX = 300;
+    cameraData->worldY = 300;
     cameraData->worldZ = 300;
 
     //Create viewport

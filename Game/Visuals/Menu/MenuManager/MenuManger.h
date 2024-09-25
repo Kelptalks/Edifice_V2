@@ -19,6 +19,7 @@ struct MenuManager{
     enum MenuType currentMenuType;
     struct MainMenu* mainMenu;
     struct SettingsMenu* settingsMenu;
+    struct OnScreenUI* onScreenUi;
 
 };
 

@@ -25,18 +25,17 @@ void expandTextureList(struct TextureList* textureList){
 struct TextureList* createTextureList(){
     struct TextureList* textureList = calloc(1,sizeof(struct TextureList));
     textureList->length = 0;
-    textureList->size = 15;
+    textureList->size = 10;
     textureList->nodes = calloc( textureList->size, sizeof(struct TextureNode));
     return textureList;
 }
 
 void addTexture(struct TextureList* textureList, enum Block block, enum Texture texture){
-    if (textureList->length == textureList->size){
-        return;
+    if (textureList->length < textureList->size){
+        textureList->nodes[textureList->length].texture = texture;
+        textureList->nodes[textureList->length].block = block;
+        textureList->length++;
     }
-    textureList->nodes[textureList->length].texture = texture;
-    textureList->nodes[textureList->length].block = block;
-    textureList->length++;
 }
 
 void clearTextureList(struct TextureList* textureList){

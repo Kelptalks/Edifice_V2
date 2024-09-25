@@ -17,6 +17,8 @@ struct DebugMenu* createDebugMenu(){
         reportBug("failed to create debugMenu \n");
         return NULL;
     }
+    debugMenu->frameRenderingData = createFrameRenderingData();
+
     debugMenu->xBlockSelectedCor = 0;
     debugMenu->yBlockSelectedCor = 0;
     debugMenu->xMouseCor = 0;
@@ -54,34 +56,36 @@ void renderDebugMenu(struct GameData* gameData){
     //Iso cords of mouse
     char mouseIsoCords[40] = {0};
     sprintf(mouseIsoCords, "Mouse Iso Cords : %d, %d Side : %s ", gameData->debugMenu->xBlockSelectedCor, gameData->debugMenu->yBlockSelectedCor, side);
-    drawString(gameData, mouseIsoCords, 40, 5, 55, 20);
+    renderString(gameData, mouseIsoCords, 5, 55, 20);
 
     //Iso cords of camera
     char camIsoCords[40] = {0};
     sprintf(camIsoCords, "Camera Iso Cords : %d, %d", gameData->cameraData->xIsoCamCenter, gameData->cameraData->yIsoCamCenter);
-    drawString(gameData, camIsoCords, 40, 5, 80, 20);
+    renderString(gameData, camIsoCords, 5, 80, 20);
 
     //Iso chunk cords of camera
     char camChunkIsoCords[40] = {0};
     sprintf(camChunkIsoCords, "Camera Chunk Cords : %d, %d", gameData->cameraData->xIsoChunkCamCenter, gameData->cameraData->yIsoChunkCamCenter);
-    drawString(gameData, camChunkIsoCords, 40, 5, 105, 20);
+    renderString(gameData, camChunkIsoCords, 5, 105, 20);
 
     //Iso chunk cords of camera
     char camRenderingDirection[40] = {0};
     sprintf(camRenderingDirection, getDirectionString(gameData->cameraData->direction));
-    drawString(gameData, camRenderingDirection, 40, 5, 130, 20);
+    renderString(gameData, camRenderingDirection, 5, 130, 20);
 
     //ChunkInformation
     int totalChunks = gameData->cameraData->castedPool->totalChunksCreated;
 
     char TotalChunkCount[40] = {0};
     sprintf(TotalChunkCount, "Total Casted Chunks : %i", totalChunks);
-    drawString(gameData, TotalChunkCount, 40, 5, 155, 20);
+    renderString(gameData, TotalChunkCount, 5, 155, 20);
 
     int freeChunks = gameData->cameraData->castedPool->freeChunkCount;
     char freeChunkCount[40] = {0};
     sprintf(freeChunkCount, "Total Free Chunks : %i", freeChunks);
-    drawString(gameData, freeChunkCount, 40, 5, 180, 20);
+    renderString(gameData, freeChunkCount, 5, 180, 20);
+
+    renderFrameRenderingData(gameData);
 }
 
 void toggleChunkBoarders(struct DebugMenu* debugMenu){

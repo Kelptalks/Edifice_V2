@@ -19,9 +19,7 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\PlayerData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_main.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rect.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_stdinc.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_config.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_platform.h \
@@ -37,18 +35,22 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_stdarg.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_error.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_pixels.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_endian.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_main.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_assert.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_atomic.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_audio.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_error.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_endian.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_mutex.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_thread.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/process.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_clipboard.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_cpuinfo.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/intrin.h \
@@ -155,7 +157,6 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cpuid.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_events.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_video.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_pixels.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rect.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_surface.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_blendmode.h \
@@ -192,6 +193,9 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.h \
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_stdinc.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
@@ -214,6 +218,10 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory/Hotbar/Hotbar.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory/BlockMenu/BlockMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
