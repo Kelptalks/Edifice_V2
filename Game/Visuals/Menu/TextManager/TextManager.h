@@ -64,12 +64,15 @@ enum CharTexture{
     CharPresent,
     CharClose,
     CharOpen,
-    CharSlash
+    CharSlash,
+    CharMinus,
 };
 
 struct TextTextures* createTextTextures(SDL_Renderer* renderer);
 
 SDL_Texture* getCharTexture(struct GameData* gameData, char character);
+
+void renderStringCentered(struct GameData* gameData, char string[], int xCor, int yCor, int scale);
 
 void renderString(struct GameData* gameData, char string[], int xCor, int yCor, int scale);
 

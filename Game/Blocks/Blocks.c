@@ -57,74 +57,121 @@ SDL_Rect getBlockSpriteSheetSrcRect(enum Block block){
     return blockSrcRect;
 };
 
-char* getBlockName(enum Block block){
+char* getBlockName(enum Block block) {
     switch (block) {
         case Dirt:
             return "Dirt";
-        case Stone:
-            return "Stone";
-        case BrownWood:
-            return "BrownWood";
-        case Leave:
-            return "Leave";
-        case Dandi:
-            return "Dandi";
-        case DandiStem:
-            return "DandiStem";
+        case CrackedEarth:
+            return "Cracked Earth";
         case Hive:
             return "Hive";
         case Cobble:
             return "Cobble";
-        case GreenGrass:
-            return "GreenGrass";
-        case Magma:
-            return "Magma";
         case Core:
             return "Core";
-        case LBM:
-            return "LBM";
-        case Metal:
-            return "Metal";
-        case Granite:
-            return "Granite";
         case Sand:
             return "Sand";
-        case Iron:
-            return "Iron";
-        case Fungi:
-            return "Fungi";
-        case BlueGrass:
-            return "BlueGrass";
-        case MushroomStem:
-            return "MushroomStem";
-        case BlueMushroomBlock:
-            return "BlueMushroomBlock";
         case Debug:
             return "Debug";
+        case Granite:
+            return "Granite";
+        case Stone:
+            return "Stone";
+        case Magma:
+            return "Magma";
+        case GreenGrass:
+            return "Green Grass";
+        case BlueGrass:
+            return "Blue Grass";
+        case Leave:
+            return "Leave";
+        case PurpleWood:
+            return "Purple Wood";
+        case PurpleWoodPlanks:
+            return "Purple Wood Planks";
+        case BrownWood:
+            return "Brown Wood";
+        case BrownWoodPlanks:
+            return "Brown Wood Planks";
+        case Dandi:
+            return "Dandi";
+        case DandiStem:
+            return "Dandi Stem";
+        case MushroomStem:
+            return "Mushroom Stem";
+        case BlueMushroomBlock:
+            return "Blue Mushroom Block";
+        case PinkMushroomBlock:
+            return "Pink Mushroom Block";
+        case Fungi:
+            return "Fungi";
         case Water:
             return "Water";
-        case Flour:
-            return "Flour";
-        case WhiteFlowers:
-            return "WhiteFlowers";
         case YellowFlowers:
-            return "YellowFlowers";
+            return "Yellow Flowers";
+        case WhiteFlowers:
+            return "White Flowers";
         case Mushroom:
             return "Mushroom";
-        case CrackedEarth:
-            return "CrackedEarth";
+        case Flour:
+            return "Flour";
+        case Glass:
+            return "Glass";
+        case Bulb:
+            return "Bulb";
+        case Rock:
+            return "Rock";
+        case Iron:
+            return "Iron";
+        case Copper:
+            return "Copper";
+        case MudBrick:
+            return "Mud Brick";
+        case ClayBrick:
+            return "Clay Brick";
+        case Coral:
+            return "Coral";
+        case StoneBrick:
+            return "Stone Brick";
+        case FloweringStoneBrick:
+            return "Flowering Stone Brick";
+        case LBM:
+            return "LBM";
+        case Factory:
+            return "Factory";
+        case Crate:
+            return "Crate";
+        case Metal:
+            return "Metal";
+        case ConveyorBelt:
+            return "Conveyor Belt";
+        case Furnace:
+            return "Furnace";
+        case WormBody:
+            return "Worm Body";
+        case WormEyesLevel:
+            return "Worm Eyes Level";
+        case WormEyesUp:
+            return "Worm Eyes Up";
+        case WormMouth:
+            return "Worm Mouth";
         case GreyShader:
-            return "GreyShader";
+            return "Grey Shader";
+        case RedShader:
+            return "Red Shader";
+        case WhiteShader:
+            return "White Shader";
         case GreenShader:
-            return "GreenShader";
-        case RedShader :
-            return "redShader";
-        case WhiteShader :
-            return "WhiteShader";
-        case Rock :
-            return "rock";
+            return "Green Shader";
+        case HalfBlockTest:
+            return "Half Block Test";
+        case MaskingBlock:
+            return "Masking Block";
+        case ShadowMaskingBlock:
+            return "Shadow Masking Block";
+        default:
+            return "unNamed";
     }
-    return "unNamed";
 }
 
 void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
@@ -358,7 +405,6 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             break;
     }
 }
-
 
 int getBlockRemoveSound(enum Block block){
     switch (block) {

@@ -52,7 +52,7 @@ struct World* createWorld(int scale){
     createTerrainGenRules(world);
 
 
-    world->entityCount = 50;
+    world->entityCount = 200;
     world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
 
     int worldXScale = 200;

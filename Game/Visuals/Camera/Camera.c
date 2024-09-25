@@ -176,8 +176,8 @@ void renderView(struct GameData* gameData){
 
     updateCameraCords(gameData);
 
-    int maxTexturingPerFrame = 10;
-    int maxNewChunksPerFrame = 10;
+    int maxTexturingPerFrame = 20;
+    int maxNewChunksPerFrame = 20;
 
     //Timer values for timing rendering time.
     Uint32 time1;

@@ -13,6 +13,7 @@ struct FrameRenderingData{
     Uint32 chunkUpdatingTime;
     Uint32 rayCastingTime;
     Uint32 entityRenderingTime;
+    Uint32 onScreenUIRenderingTime;
 };
 
 struct FrameRenderingData* createFrameRenderingData();

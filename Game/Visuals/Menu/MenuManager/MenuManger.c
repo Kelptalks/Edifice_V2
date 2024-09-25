@@ -35,17 +35,23 @@ void renderCurrentMenu(struct GameData* gameData){
     //Get the current Menu Type
     enum MenuType currentMenuType = gameData->menuManger->currentMenuType;
 
+    Uint32 time1;
+    Uint32 time2;
     if (currentMenuType == MainMenu){
         renderMainMenu(gameData);
     }
     else if (currentMenuType == CameraMenu) {
         //Render game world
+        time1 = SDL_GetTicks();
         renderView(gameData);
+        time2 = SDL_GetTicks();
+        gameData->debugMenu->frameRenderingData->totalFrameTime = time2 - time1;
 
         //Render the Player UI
-        updateOnScreenUICords(gameData);
+        time1 = SDL_GetTicks();
         renderOnScreenUI(gameData);
-
+        time2 = SDL_GetTicks();
+        gameData->debugMenu->frameRenderingData->onScreenUIRenderingTime = time2 - time1;
 
         //render debug menu if visible
         if (gameData->debugMenu->visible) {

@@ -10,7 +10,7 @@
 
 struct TextTextures* createTextTextures(SDL_Renderer* renderer){
     //Number of chars in enum for splicing
-    int numOfChars = 43;
+    int numOfChars = 47;
     int scale = 6;
     //Cords on the sprite sheet were the text is to be cropped from
     int spriteSheetTextYCords = 1274;
@@ -165,6 +165,7 @@ SDL_Texture* getCharTexture(struct GameData* gameData, char character){
         case ')' : return charTextures[CharClose];
         case '(' : return charTextures[CharOpen];
         case '/' : return charTextures[CharSlash];
+        case '-' : return charTextures[CharMinus];
 
         default:
             return NULL;
@@ -185,6 +186,11 @@ int getStringLength(char *str){
     return length;
 }
 
+void renderStringCentered(struct GameData* gameData, char string[], int xCor, int yCor, int scale){
+    int stringLen = getStringLength(string);
+    xCor -= (stringLen/2) * scale;
+    drawString(gameData, string, stringLen, xCor, yCor, scale);
+}
 
 void renderString(struct GameData* gameData, char string[], int xCor, int yCor, int scale){
     int stringLen = getStringLength(string);

@@ -10,24 +10,33 @@
 
 struct OnScreenUI{
     bool visible;
+    bool blockSelectionMenuVisible;
 
-    struct Button* areaSelectButton;
-    struct Button* blockEditingButton;
-    struct Button* openBluePrintsButton;
+    enum Block blockSelected;
 
 
     //Location and scaling vars
     int scale;
 
+    //Slot drawing
     int slotSpacedScale;
     int blockScale;
     int blockCenteringOffset;
 
+    //HotBar
     int hotBarCorX;
     int hotBarCorY;
+    int hotBarRezX;
+    int hotBarRezY;
 
+    //Block menu
+    int blockMenuRezX;
+    int blockMenuRezY;
     int blockMenuCorX;
     int blockMenuCorY;
+
+    //Text
+    int textScale;
 };
 
 void updateOnScreenUICords(struct GameData* gameData);
