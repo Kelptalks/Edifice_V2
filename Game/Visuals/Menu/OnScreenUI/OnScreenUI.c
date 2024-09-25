@@ -289,6 +289,7 @@ bool handleOnScreenUIMouseInputs(struct GameData* gameData, SDL_Event event){
                 //If in bounds of the block selection menu
                 if (blockRow < blockSelectionMenu->rowLength && blockColumn < blockSelectionMenu->columnLength) {
                     onScreenUi->blockSelected = blockSelectionMenu->blocks[blockRow][blockColumn];
+                    playSound(gameData->soundManager, SoundMenuButtonClick);
                 }
             }
             return true;
@@ -304,6 +305,7 @@ bool handleOnScreenUIMouseInputs(struct GameData* gameData, SDL_Event event){
             if (inHotBarXBounds && inHotBarYBounds){
                 int hotBarSlot = relativeMouseX / onScreenUi->slotSpacedScale;
                 setHotBarSlotBlockType(gameData->playerData->hotBar, hotBarSlot, onScreenUi->blockSelected);
+                playSound(gameData->soundManager, SoundMenuButtonClick);
             }
 
             //Clear to air

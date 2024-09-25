@@ -36,7 +36,7 @@ void my_audio_callback(void *userdata, Uint8 *stream, int len) {
     }
 }
 
-void playSound(struct SoundManager *soundManager, int soundIndex) {
+void playSound(struct SoundManager *soundManager, enum SoundType soundIndex) {
     if (soundIndex >= soundManager->soundCount) {
         reportBug("Invalid sound index\n");
         return;
@@ -96,12 +96,13 @@ struct SoundManager* createSoundManager(int soundCount) {
     loadSound("BlockRemoveSoundFactory.WAV", &soundManager->sounds[BlockRemoveSoundFactory]);
     loadSound("BlockRemoveSoundDefault.WAV", &soundManager->sounds[BlockRemoveSoundDefault]);
     loadSound("BlockPlaceSoundDefault.WAV", &soundManager->sounds[BlockPlaceSoundDefault]);
+    loadSound("MenuClick.WAV", &soundManager->sounds[SoundMenuButtonClick]);
 
     //Play sounds to set them up
 
 
     for (int i = 0; i < soundCount; i++){
-        playSound(soundManager, i);
+        resetSound(&soundManager->sounds[i]);
     }
 
 

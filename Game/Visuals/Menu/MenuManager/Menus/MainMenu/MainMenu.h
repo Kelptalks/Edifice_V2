@@ -12,6 +12,8 @@ struct MainMenu{
     struct Button* startButton;
     struct Button* settingsButton;
     struct Button* exitButton;
+
+    int textScale;
 };
 
 struct MainMenu* createMainMenu();

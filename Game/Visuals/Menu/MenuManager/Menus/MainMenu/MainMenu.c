@@ -4,6 +4,34 @@
 
 #include "MainMenu.h"
 
+void upDateMainMenuCords(struct GameData* gameData){
+    struct MainMenu* mainMenu = gameData->menuManger->mainMenu;
+
+    int buttonScale = gameData->screen->xRez / 24;
+
+    int xButtonScale = buttonScale * 8;
+    int yButtonScale = buttonScale;
+    int buttonSpacing = buttonScale + (buttonScale/2);
+
+    mainMenu->textScale = yButtonScale/3;
+
+
+    mainMenu->startButton->xScale = xButtonScale;
+    mainMenu->startButton->yScale = yButtonScale;
+    mainMenu->startButton->xCor = (gameData->screen->xRez/2) - (xButtonScale/2);
+    mainMenu->startButton->yCor = (gameData->screen->yRez/2) - (yButtonScale/2) - buttonSpacing;
+
+    mainMenu->settingsButton->xScale = xButtonScale;
+    mainMenu->settingsButton->yScale = yButtonScale;
+    mainMenu->settingsButton->xCor = (gameData->screen->xRez/2) - (xButtonScale/2);
+    mainMenu->settingsButton->yCor = (gameData->screen->yRez/2) - (yButtonScale/2);
+
+    mainMenu->exitButton->xScale = xButtonScale;
+    mainMenu->exitButton->yScale = yButtonScale;
+    mainMenu->exitButton->xCor = (gameData->screen->xRez/2) - (xButtonScale/2);
+    mainMenu->exitButton->yCor = (gameData->screen->yRez/2) - (yButtonScale/2) + buttonSpacing;
+}
+
 struct MainMenu* createMainMenu(){
     struct MainMenu* mainMenu = malloc(sizeof (struct MainMenu));
     if (mainMenu == NULL){
@@ -21,38 +49,34 @@ struct MainMenu* createMainMenu(){
 
     //Center the buttons and scale based on resolution
     mainMenu->startButton = createButton(MainButton, xOffset, yOffset, xButtonScale, yButtonScale);
-
     mainMenu->settingsButton = createButton(MainButton, xOffset, yOffset + 100, xButtonScale, yButtonScale);
-
     mainMenu->exitButton = createButton(MainButton, xOffset, yOffset + 200, xButtonScale, yButtonScale);
 
     return mainMenu;
 }
 
-
 void renderMainMenu(struct GameData* gameData){
     struct MainMenu* mainMenu = gameData->menuManger->mainMenu;
+    upDateMainMenuCords(gameData);
 
     //Render background
     SDL_Rect srcRect = {960, 0, 320, 175};
     SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
+    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
 
 
     //Render all the buttons with text
     struct Button* startButton = mainMenu->startButton;
     renderUIButton(startButton, gameData);
-    drawString(gameData, "Start", 5, startButton->xCor + startButton->xScale/4, startButton->yCor + (startButton->yScale/4), startButton->yScale/2);
-
+    renderStringCentered(gameData, "Start", startButton->xCor + startButton->xScale/2, startButton->yCor + (startButton->yScale/2), startButton->yScale/3);
 
     struct Button* settingsButton = mainMenu->settingsButton;
     renderUIButton(settingsButton, gameData);
-    drawString(gameData, "Settings", 8, settingsButton->xCor + settingsButton->xScale/4, settingsButton->yCor + (settingsButton->yScale/4), settingsButton->yScale/2);
-
+    renderStringCentered(gameData, "Settings", settingsButton->xCor + settingsButton->xScale/2, settingsButton->yCor + (settingsButton->yScale/2), settingsButton->yScale/3);
 
     struct Button* exitButton = mainMenu->exitButton;
     renderUIButton(exitButton, gameData);
-    drawString(gameData, "exit", 4, exitButton->xCor + exitButton->xScale/4, exitButton->yCor + (exitButton->yScale/4), exitButton->yScale/2);
-
+    renderStringCentered(gameData, "exit", exitButton->xCor + exitButton->xScale/2, exitButton->yCor + exitButton->yScale/2, exitButton->yScale/3);
 }
 
 void handleInputMainMenu(struct GameData* gameData, SDL_Event event){
@@ -62,6 +86,7 @@ void handleInputMainMenu(struct GameData* gameData, SDL_Event event){
     struct Button* startButton = mainMenu->startButton;
     handleButtonInputs(startButton, gameData, event);
     if (startButton->pressed){
+        playSound(gameData->soundManager, SoundMenuButtonClick);
         startButton->pressed = false;
         gameData->menuManger->currentMenuType = CameraMenu;
     }
@@ -69,6 +94,7 @@ void handleInputMainMenu(struct GameData* gameData, SDL_Event event){
     struct Button* settingsButton = mainMenu->settingsButton;
     handleButtonInputs(settingsButton, gameData, event);
     if (settingsButton->pressed){
+        playSound(gameData->soundManager, SoundMenuButtonClick);
         settingsButton->pressed = false;
         gameData->menuManger->currentMenuType = SettingsMenu;
     }
@@ -76,6 +102,7 @@ void handleInputMainMenu(struct GameData* gameData, SDL_Event event){
     struct Button* exitButton = mainMenu->exitButton;
     handleButtonInputs(exitButton, gameData, event);
     if (exitButton->pressed){
+        playSound(gameData->soundManager, SoundMenuButtonClick);
         exitButton->pressed = false;
         gameData->screen->run = false;
     }

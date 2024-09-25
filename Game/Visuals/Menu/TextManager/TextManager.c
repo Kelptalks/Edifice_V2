@@ -188,7 +188,9 @@ int getStringLength(char *str){
 
 void renderStringCentered(struct GameData* gameData, char string[], int xCor, int yCor, int scale){
     int stringLen = getStringLength(string);
-    xCor -= (stringLen/2) * scale;
+    int halfScale = scale/2;
+    xCor -= stringLen * halfScale;
+    yCor -= halfScale/2;
     drawString(gameData, string, stringLen, xCor, yCor, scale);
 }
 

@@ -10,6 +10,8 @@ enum SoundType{
     MusicSunn,
     MusicEdifice,
 
+    SoundMenuButtonClick,
+
     BlockPlaceSoundPlant,
     BlockRemoveSoundPlant,
 
@@ -22,6 +24,8 @@ enum SoundType{
 
     BlockRemoveSoundDefault,
     BlockPlaceSoundDefault,
+
+
 };
 
 struct Sound {
@@ -52,6 +56,6 @@ struct Sounds{
 };
 
 struct SoundManager* createSoundManager(int soundCount);
-void playSound(struct SoundManager *soundManager, int soundIndex);
+void playSound(struct SoundManager *soundManager, enum SoundType soundIndex);
 
 #endif //EDIFICE_SOUNDMANAGER_H
