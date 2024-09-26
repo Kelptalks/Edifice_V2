@@ -49,8 +49,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c" "CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.c" "CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.c" "CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj.d"
-  "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c" "CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj.d"
-  "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c" "CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.c" "CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.c" "CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.c" "CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj.d"
@@ -58,11 +56,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin Noise/PerlinNoise.c" "CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManager.c" "CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c" "CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj.d"
-  "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.c" "CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c" "CMakeFiles/edifice.dir/Game/World/World.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/World.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c" "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c" "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj.d"
-  "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.c" "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/main.c" "CMakeFiles/edifice.dir/main.c.obj" "gcc" "CMakeFiles/edifice.dir/main.c.obj.d"
   )
 

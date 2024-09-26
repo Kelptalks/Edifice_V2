@@ -1,12 +1,10 @@
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL.h \

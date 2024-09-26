@@ -5,9 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Octree/Octree.h"
-#include "Octree/OctreeNode.h"
 #include "World.h"
-#include "Octree/Tools/KeyMod.h"
 #include "TerrainGen/TerrainGen.h"
 #include "WorldChunk/WorldChunk.h"
 #include "../Debuging/Test_Main.h"
@@ -31,30 +29,19 @@ struct World* createWorld(int scale){
     world->name = malloc(sizeof (name));
     world->name = name;
 
-    //Create octree for world data
-    struct Octree* octree = createOctree(scale);
-    if (octree == NULL){
-        //append debug file
-        FILE * debug;
-        debug = fopen("debug", "a");
-        fprintf(debug, "World | failed to malloc memory for octree struct \n");
-        fclose(debug);
-        return NULL;
-    }
-
 
     world->chunkOctreeScale = 6;
     world->chunkOctreeDimension = getOctreeDimensions(world->chunkOctreeScale);
+    //reportBug("octree Dimentions %i\n", world->chunkOctreeDimension);
 
     //Calculate ground height
     world->worldChunkHashMap = createWorldChunkHashMap(5000);
 
+
+    world->debug = false;
     createTerrainGenRules(world);
-
-
-    world->entityCount = 200;
+    world->entityCount = 0;
     world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
-
     int worldXScale = 200;
     int worldYScale = 200;
     genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
@@ -68,6 +55,18 @@ struct World* createWorld(int scale){
     }
 
 
+    /*
+    for (int x = 0; x < 500; x++){
+        for (int y = 0; y < 500; y++){
+            for (int z = -50; z < 50; z++){
+                setBlockAtWorldCor(world, x, y, z, BlueGrass);
+            }
+        }
+
+    }
+     */
+
+    world->debug = true;
     return world;
 }
 
@@ -75,9 +74,7 @@ struct WorldChunk* getWorldChunk(struct World* world, int x, int y, int z){
     struct WorldChunk* worldChunk = getWordChunkFromMap(world->worldChunkHashMap, x, y, z);
 
     if (worldChunk == NULL){
-        worldChunk = createWorldChunk(x, y, z);
-        addWorldChunkToHashMap(world->worldChunkHashMap, worldChunk);
-        return worldChunk;
+        return NULL;
     }
     else{
         return worldChunk;
@@ -91,6 +88,9 @@ enum Block getBlockAtWorldCor(struct World* world, int x, int y, int z){
     int chunkZCor = z >> world->chunkOctreeScale;
 
     struct WorldChunk* worldChunk = getWorldChunk(world, chunkXCor, chunkYCor, chunkZCor);
+    if (worldChunk == NULL){
+        return Air;
+    }
 
     //Mod the cords by getting the remainder using the bitwise operations
     int chunkSubXCor = x & (world->chunkOctreeDimension - 1);
@@ -107,6 +107,13 @@ void setBlockAtWorldCor(struct World* world, int x, int y, int z, enum Block blo
     int chunkZCor = z >> world->chunkOctreeScale;
 
     struct WorldChunk* worldChunk = getWorldChunk(world, chunkXCor, chunkYCor, chunkZCor);
+    //Create world chunk if null
+    if (worldChunk == NULL){
+        worldChunk = createWorldChunk(chunkXCor, chunkYCor, chunkZCor);
+        addWorldChunkToHashMap(world->worldChunkHashMap, worldChunk);
+    }
+
+    worldChunk->octree->debug = world->debug;
 
     //Mod the cords by getting the remainder using the bitwise operations
     int chunkSubXCor = x & (world->chunkOctreeDimension - 1);
@@ -114,28 +121,8 @@ void setBlockAtWorldCor(struct World* world, int x, int y, int z, enum Block blo
     int chunkSubZCor = z & (world->chunkOctreeDimension - 1);
 
     setBlockInWorldChunk(worldChunk, chunkSubXCor, chunkSubYCor, chunkSubZCor, block);
-};
+}
 
 void testWorld(){
-    clearBugReports();
-    struct World* world = createWorld(12);
 
-    for (int x = -100; x < 100; x++){
-        for (int y = -100; y < 100; y++){
-            for (int z = -100; z < 100; z++){
-                setBlockAtWorldCor(world, x, y, z, Stone);
-            }
-        }
-    }
-
-    for (int x = -100; x < 100; x++){
-        for (int y = -100; y < 100; y++){
-            for (int z = -100; z < 100; z++){
-                enum Block block = getBlockAtWorldCor(world, x, y, z);
-                if (block != Stone){
-                    reportBug("failed to return correct value");
-                }
-            }
-        }
-    }
 }

@@ -27,10 +27,6 @@ struct MenuManager* createMenuManager(){
     return menuManager;
 }
 
-void setCurrentMenu(){
-
-}
-
 void renderCurrentMenu(struct GameData* gameData){
     //Get the current Menu Type
     enum MenuType currentMenuType = gameData->menuManger->currentMenuType;

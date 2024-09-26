@@ -241,15 +241,11 @@ CMakeFiles/edifice.dir/main.c.obj: \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/World/World.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/World/World\ Saving/WorldFileManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game/InGameTime/TikManager.h \

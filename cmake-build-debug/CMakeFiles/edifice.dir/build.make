@@ -323,26 +323,11 @@ CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Octree.c -o CMakeFiles\edifice.dir\Game\World\Octree\Octree.c.s
 
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\OctreeNode.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\OctreeNode.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeNode.c
-
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeNode.c > CMakeFiles\edifice.dir\Game\World\Octree\OctreeNode.c.i
-
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeNode.c -o CMakeFiles\edifice.dir\Game\World\Octree\OctreeNode.c.s
-
 CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c
 CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj -MF CMakeFiles\edifice.dir\Game\World\TerrainGen\TerrainGen.c.obj.d -o CMakeFiles\edifice.dir\Game\World\TerrainGen\TerrainGen.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\TerrainGen.c
 
 CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.i: cmake_force
@@ -357,7 +342,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBl
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockManager.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockManager.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.i: cmake_force
@@ -372,7 +357,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureL
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\TextureList\TextureList.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\TextureList\TextureList.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\TextureList\TextureList.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.i: cmake_force
@@ -387,7 +372,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj:
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\RayCaster.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\RayCaster.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\RayCasting\RayCaster.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.i: cmake_force
@@ -402,7 +387,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManage
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\RayCastingManager.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\RayCastingManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\RayCasting\RayCastingManager.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.i: cmake_force
@@ -417,7 +402,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/ca
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\CastingThread\castingThread.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\CastingThread\castingThread.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\RayCasting\CastingThread\castingThread.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.i: cmake_force
@@ -432,7 +417,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: CMakeFil
 CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\TextManager\TextManager.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\TextManager\TextManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\TextManager\TextManager.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.i: cmake_force
@@ -447,7 +432,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: CMakeF
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Controls\CameraControls.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Controls\CameraControls.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Controls\CameraControls.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.i: cmake_force
@@ -462,7 +447,7 @@ CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj: CMakeFiles/edifi
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.c
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj -MF CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\DebugMenu.c.obj.d -o CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\DebugMenu.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Debuging\DebugMenu\DebugMenu.c
 
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.i: cmake_force
@@ -477,7 +462,7 @@ CMakeFiles/edifice.dir/Assets/AssetManager.c.obj: CMakeFiles/edifice.dir/flags.m
 CMakeFiles/edifice.dir/Assets/AssetManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Assets/AssetManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Assets/AssetManager.c
 CMakeFiles/edifice.dir/Assets/AssetManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/edifice.dir/Assets/AssetManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/edifice.dir/Assets/AssetManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Assets/AssetManager.c.obj -MF CMakeFiles\edifice.dir\Assets\AssetManager.c.obj.d -o CMakeFiles\edifice.dir\Assets\AssetManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Assets\AssetManager.c
 
 CMakeFiles/edifice.dir/Assets/AssetManager.c.i: cmake_force
@@ -492,7 +477,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.i: cmake_force
@@ -507,7 +492,7 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: CMakeFiles/edifice.dir/
 CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.c
 CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj -MF CMakeFiles\edifice.dir\Game\PlayerData\PlayerData.c.obj.d -o CMakeFiles\edifice.dir\Game\PlayerData\PlayerData.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\PlayerData.c
 
 CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.i: cmake_force
@@ -518,41 +503,11 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\PlayerData.c -o CMakeFiles\edifice.dir\Game\PlayerData\PlayerData.c.s
 
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World\ Saving/WorldFileManager.c
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj -MF CMakeFiles\edifice.dir\Game\World\World_Saving\WorldFileManager.c.obj.d -o CMakeFiles\edifice.dir\Game\World\World_Saving\WorldFileManager.c.obj -c "C:\Users\Spencer\Desktop\Edifice_V2\Game\World\World Saving\WorldFileManager.c"
-
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Spencer\Desktop\Edifice_V2\Game\World\World Saving\WorldFileManager.c" > CMakeFiles\edifice.dir\Game\World\World_Saving\WorldFileManager.c.i
-
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Spencer\Desktop\Edifice_V2\Game\World\World Saving\WorldFileManager.c" -o CMakeFiles\edifice.dir\Game\World\World_Saving\WorldFileManager.c.s
-
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.c
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj -MF CMakeFiles\edifice.dir\Game\World\TerrainGen\WaterGen\WaterGen.c.obj.d -o CMakeFiles\edifice.dir\Game\World\TerrainGen\WaterGen\WaterGen.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\WaterGen\WaterGen.c
-
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\WaterGen\WaterGen.c > CMakeFiles\edifice.dir\Game\World\TerrainGen\WaterGen\WaterGen.c.i
-
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\WaterGen\WaterGen.c -o CMakeFiles\edifice.dir\Game\World\TerrainGen\WaterGen\WaterGen.c.s
-
 CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.c
 CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikManager.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikManager.c
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.i: cmake_force
@@ -567,7 +522,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBl
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockHighLighter\CastedBlockHighLighter.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockHighLighter\CastedBlockHighLighter.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockHighLighter\CastedBlockHighLighter.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.i: cmake_force
@@ -582,7 +537,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: C
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.c
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TerpManager\TerpManager.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TerpManager\TerpManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\TerpManager\TerpManager.c
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.i: cmake_force
@@ -597,7 +552,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj: CMakeFiles/edifi
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TikEvent.c
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TikEvent.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TikEvent.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\TikEvent.c
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.i: cmake_force
@@ -612,7 +567,7 @@ CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: CMakeFiles/
 CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.c
 CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\Tools\AdvancedKeyMod.c
 
 CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.i: cmake_force
@@ -627,7 +582,7 @@ CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: CMakeFiles/edifice.dir/fla
 CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.c
 CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj -MF CMakeFiles\edifice.dir\Game\Sound\SoundManager.c.obj.d -o CMakeFiles\edifice.dir\Game\Sound\SoundManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Sound\SoundManager.c
 
 CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.i: cmake_force
@@ -642,7 +597,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIManger.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIManger.c.obj -c "C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\ UIManager\UIManger.c"
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.i: cmake_force
@@ -657,7 +612,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: CMakeFile
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\MenuManger.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\MenuManger.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\MenuManger.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.i: cmake_force
@@ -672,7 +627,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.o
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\MainMenu\MainMenu.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\MainMenu\MainMenu.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\MainMenu\MainMenu.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.i: cmake_force
@@ -687,7 +642,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRen
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIRenderer/UIRenderer.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIRenderer\UIRenderer.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIRenderer\UIRenderer.c.obj -c "C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\ UIManager\UIRenderer\UIRenderer.c"
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.i: cmake_force
@@ -702,7 +657,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/Settings
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.i: cmake_force
@@ -717,7 +672,7 @@ CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: CMakeFiles/edific
 CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c
 CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj -MF CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.obj.d -o CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk\WorldChunk.c
 
 CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.i: cmake_force
@@ -728,26 +683,11 @@ CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunk\WorldChunk.c -o CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.s
 
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: CMakeFiles/edifice.dir/flags.make
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj -MF CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.obj.d -o CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c
-
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c > CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.i
-
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c -o CMakeFiles\edifice.dir\Game\World\Octree\OctreeBranchPool\OctreeNodePool.c.s
-
 CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: CMakeFiles/edifice.dir/flags.make
 CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c
 CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj -MF CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.obj.d -o CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\World\WorldChunkHashMap\WorldChunkHashMap.c
 
 CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.i: cmake_force
@@ -762,7 +702,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.o
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.i: cmake_force
@@ -777,7 +717,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextur
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\TextureManager\EntityTextures.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\TextureManager\EntityTextures.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\TextureManager\EntityTextures.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.i: cmake_force
@@ -792,7 +732,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.ob
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.c
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\EntityManager.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\EntityManager.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent\EntityManager\EntityManager.c
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.i: cmake_force
@@ -807,7 +747,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRende
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.i: cmake_force
@@ -822,7 +762,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/Casted
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.i: cmake_force
@@ -837,7 +777,7 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj:
 CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin\ Noise/PerlinGenerator.c
 CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj -MF CMakeFiles\edifice.dir\Game\World\TerrainGen\Perlin_Noise\PerlinGenerator.c.obj.d -o CMakeFiles\edifice.dir\Game\World\TerrainGen\Perlin_Noise\PerlinGenerator.c.obj -c "C:\Users\Spencer\Desktop\Edifice_V2\Game\World\TerrainGen\Perlin Noise\PerlinGenerator.c"
 
 CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.i: cmake_force
@@ -852,7 +792,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj: CMakeFiles
 CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c
 CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj -MF CMakeFiles\edifice.dir\Game\Visuals\Menu\OnScreenUI\OnScreenUI.c.obj.d -o CMakeFiles\edifice.dir\Game\Visuals\Menu\OnScreenUI\OnScreenUI.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\OnScreenUI\OnScreenUI.c
 
 CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.i: cmake_force
@@ -867,7 +807,7 @@ CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRendering
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj -MF CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.obj.d -o CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c
 
 CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.i: cmake_force
@@ -882,7 +822,7 @@ CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: CMakeFiles
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/Hotbar/Hotbar.c
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj -MF CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.obj.d -o CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\Hotbar\Hotbar.c
 
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.i: cmake_force
@@ -897,7 +837,7 @@ CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: CMak
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj -MF CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.obj.d -o CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c
 
 CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.i: cmake_force
@@ -927,7 +867,6 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Blocks/Blocks.c.obj" \
 "CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj" \
-"CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj" \
@@ -940,8 +879,6 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Assets/AssetManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj" \
 "CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj" \
-"CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj" \
-"CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj" \
@@ -954,7 +891,6 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj" \
-"CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj" \
 "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj" \
 "CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj" \
@@ -987,7 +923,6 @@ edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantMana
 edifice.exe: CMakeFiles/edifice.dir/Game/Blocks/Blocks.c.obj
 edifice.exe: CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj
@@ -1000,8 +935,6 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Assets/AssetManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj
@@ -1014,7 +947,6 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj
-edifice.exe: CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj
@@ -1032,7 +964,7 @@ edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
 edifice.exe: CMakeFiles/edifice.dir/objects1.rsp
 edifice.exe: CMakeFiles/edifice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Linking C executable edifice.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Linking C executable edifice.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\edifice.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

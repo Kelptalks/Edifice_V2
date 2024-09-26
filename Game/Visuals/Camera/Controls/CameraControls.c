@@ -6,15 +6,10 @@
 #include "../../../GameData.h"
 #include "../CameraData.h"
 #include "../../../World/World.h"
-#include "../../../World/Octree/Tools/KeyMod.h"
 #include "../IsoCordTool/IsoCordManager.h"
-#include "../../../World/Octree/Octree.h"
-#include "../../../World/Octree/OctreeNode.h"
-#include "../../../Debuging/Test_Main.h"
 #include "../../../PlayerData/PlayerData.h"
 #include "../Camera.h"
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
-#include "../../../Sound/SoundManager.h"
 #include <math.h>
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

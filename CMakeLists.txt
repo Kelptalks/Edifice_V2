@@ -30,7 +30,6 @@ add_executable(edifice main.c
         Game/Blocks/Blocks.c
         ArrayList/arrayList.c
         Game/World/Octree/Octree.c
-        Game/World/Octree/OctreeNode.c
         Game/World/TerrainGen/PlantManager/PlantManger.h
         Game/World/TerrainGen/TerrainGen.c
         Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h
@@ -55,10 +54,6 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c
         Game/PlayerData/PlayerData.h
         Game/PlayerData/PlayerData.c
-        "Game/World/World Saving/WorldFileManager.c"
-        "Game/World/World Saving/WorldFileManager.h"
-        Game/World/TerrainGen/WaterGen/WaterGen.h
-        Game/World/TerrainGen/WaterGen/WaterGen.c
         Game/InGameTime/TikManager.c
         Game/InGameTime/TikManager.h
         Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h
@@ -83,8 +78,6 @@ add_executable(edifice main.c
         Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h
         Game/World/WorldChunk/WorldChunk.c
         Game/World/WorldChunk/WorldChunk.h
-        Game/World/Octree/OctreeBranchPool/OctreeNodePool.c
-        Game/World/Octree/OctreeBranchPool/OctreeNodePool.h
         Game/World/WorldChunkHashMap/WorldChunkHashMap.c
         Game/World/WorldChunkHashMap/WorldChunkHashMap.h
         Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c

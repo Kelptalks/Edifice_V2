@@ -21,7 +21,7 @@ struct WorldChunk* createWorldChunk(int xCor, int yCor, int zCor){
         return NULL;
     }
 
-    worldChunk->octreeNode = createOctreeNode();
+    worldChunk->octree = createOctree(6);
 
     worldChunk->xCor = xCor;
     worldChunk->yCor = yCor;
@@ -31,13 +31,22 @@ struct WorldChunk* createWorldChunk(int xCor, int yCor, int zCor){
 }
 
 enum Block getBlockInWorldChunk(struct WorldChunk* worldChunk, int x, int y, int z){
-    unsigned long key = cordsToKey(6, x, y, z);
-    return getOctreeKeyVal(worldChunk->octreeNode, key, 6);
+    int key = cordsToKey(6, x, y, z);;
+    enum Block block = getOctreeValue(worldChunk->octree, 0, 6, key);
+    if (block > getTotalBlockCount()){
+        return Air;
+    }
+    return block;
 }
 
 void setBlockInWorldChunk(struct WorldChunk* worldChunk, int x, int y, int z, enum Block block){
-    unsigned long key = cordsToKey(6, x, y, z);
-    setOctreeKeyValue(worldChunk->octreeNode, key, 6, block);
+    int key = cordsToKey(6, x, y, z);
+    if (worldChunk->octree->debug){
+        reportBug("\n\nsetting block at (%i,%i,%i)\n",x,y,z);
+        printKeyIndex(key, 6);
+    }
+
+    setOctreeValue(worldChunk->octree,0, 6, key, block);
 }
 
 void testWorldChunk(){
@@ -48,4 +57,5 @@ void testWorldChunk(){
     setBlockInWorldChunk(worldChunk, 2, 12, 3, BlueMushroomBlock);
 
     reportBug("Octree Key Val %i\n", getBlockInWorldChunk(worldChunk, 2, 12, 3));
+    free(worldChunk);
 }

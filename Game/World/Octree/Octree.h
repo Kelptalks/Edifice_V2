@@ -5,23 +5,34 @@
 #ifndef OCTREE_H
 #define OCTREE_H
 
-struct Octree{
-    struct OctreeNode* root;
-    int RootDepth;
+#include <stdbool.h>
 
+struct Octree{
+    int depth;
+
+    unsigned int nextFreeIndex;
+
+    int nodeDataArrayLength;
+    unsigned int* branchData;
+
+    int octreeDataArrayLength;
+    unsigned int* octreeData;
+
+    int volume;
+    bool debug;
 };
 
+struct Octree* createOctree(int scale);
 
-long getSize(int scale);
+//Get the Dimension Of the octree
+int getOctreeDimensions(int depth);
 
-long getCenter(int scale);
+//Get the volume Of the octree
+long getOctreeVolume(int depth);
 
-struct Octree* createOctree(int maxDepth);
+void setOctreeValue(struct Octree* octree, unsigned int rootBranchIndex, int currentDepth, int key, unsigned int value);
 
-int getBlock(struct Octree* octree, long key);
-
-int setBlock(struct Octree* octree, long key, short value);
-
-int getOctreeDimensions(int maxDepth);
-
+unsigned int getOctreeValue(struct Octree* octree, unsigned int rootBranchIndex, int currentDepth, int key);
 #endif
+
+void testOctree();

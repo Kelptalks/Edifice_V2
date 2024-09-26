@@ -19,7 +19,7 @@ int getAxis(unsigned long key, int axis, int depth);
 
 void getCords(unsigned long key, int depth, int* x, int* y, int* z);
 
-unsigned long cordsToKey(int depth, int x, int y, int z);
+int cordsToKey(int depth, int x, int y, int z);
 
 //Add/Subtract bits from all axis
 unsigned long modKey(unsigned long key, int xMod, int yMod, int zMod, int depth);

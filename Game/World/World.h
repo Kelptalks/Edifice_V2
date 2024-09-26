@@ -2,7 +2,6 @@
 // Created by Spencer on 4/18/2024.
 //
 
-#include "Octree/OctreeBranchPool/OctreeNodePool.h"
 #include "WorldChunkHashMap/WorldChunkHashMap.h"
 
 #ifndef ENGINE_WORLD_H
@@ -16,13 +15,13 @@ struct World{
 
     struct TerrainGenRules* terrainGenRules;
 
-    //
-    struct OctreeNodePool* octreeNodePool;
     struct WorldChunkHashMap* worldChunkHashMap;
 
     //
     int entityCount;
     struct Entity** tempEntityArray;
+
+    bool debug;
 
 };
 

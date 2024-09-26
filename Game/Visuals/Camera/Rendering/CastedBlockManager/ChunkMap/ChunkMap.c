@@ -83,13 +83,11 @@ struct CastedChunk* getChunkFromMap(struct ChunkMap* chunkMap, int xCor, int yCo
         }
         chunkLinkListNode = chunkLinkListNode->nextNode;
     }
-
     return NULL;
 }
 
 void removeFromChunkMap(struct ChunkMap* chunkMap, int xCor, int yCor){
     int64_t encodedKey = encodeKey(chunkMap->offset, xCor, yCor);
-
     //Index the correct link list from the hashtable
     int mapIndex = encodedKey % chunkMap->size;
     struct ChunkLinkListNode* CurrentChunkLinkListNode = chunkMap->nodes[mapIndex];

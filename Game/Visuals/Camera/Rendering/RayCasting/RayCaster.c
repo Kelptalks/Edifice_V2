@@ -4,7 +4,6 @@
 
 #include "../TextureManager/IsoTextureManager.h"
 #include "../../../../Blocks/Blocks.h"
-#include "../../../../World/Octree/OctreeNode.h"
 #include "../../../../World/Octree/Tools/KeyMod.h"
 #include "../../CameraData.h"
 #include "../../../../World/Octree/Octree.h"
@@ -183,7 +182,6 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
-
 void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
     int currentX = castedBlock->worldRightBlockX;
     int currentY = castedBlock->worldRightBlockY;
@@ -288,7 +286,6 @@ void castRightShadow(struct CameraData* cameraData, struct CastedBlock* castedBl
     }
 }
 
-
 void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
     int currentX = castedBlock->worldLeftBlockX;
     int currentY = castedBlock->worldLeftBlockY;
@@ -309,7 +306,6 @@ void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlo
                 castedBlock->leftShader = TopLeftFace;
                 break;
             }
-
             //y++ side
             int tempY = currentY + 1;
             block = getBlockAtWorldCor(world, currentX, tempY, currentZ);
@@ -333,7 +329,6 @@ void castLeftShadow(struct CameraData* cameraData, struct CastedBlock* castedBlo
                     }
                 }
             }
-
             //x-- side
             currentX--;
             block = getBlockAtWorldCor(world, currentX, currentY, currentZ);

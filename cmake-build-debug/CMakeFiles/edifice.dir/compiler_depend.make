@@ -1516,7 +1516,7 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.h \
@@ -1539,7 +1539,6 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
@@ -1952,8 +1951,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.o
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
@@ -2169,8 +2167,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: C:/Users/Spencer/Deskto
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
@@ -2465,8 +2462,7 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: C:/Users/Spencer/Deskto
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
@@ -2879,8 +2875,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: C:/Users/Spencer/Deskto
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
@@ -3342,9 +3337,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: C:/Use
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
@@ -4817,8 +4809,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRende
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
@@ -5262,8 +5253,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj:
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
@@ -7733,64 +7722,15 @@ CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj: C:/Users/Spencer/Desktop/
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/math.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h
-
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/limits.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h
-
-CMakeFiles/edifice.dir/Game/World/Octree/OctreeNode.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/limits.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h
 
 CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.c
 
@@ -7849,8 +7789,7 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj: C:/U
   C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/close_code.h \
   C:/Users/Spencer/Desktop/Edifice_V2/ArrayList/ArrayList.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
@@ -8113,9 +8052,6 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj: C:
   C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/close_code.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
@@ -8326,8 +8262,6 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C:/Users/Spencer/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
@@ -8336,45 +8270,7 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C:/Users/Spencer/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin\ Noise/PerlinGenerator.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin\ Noise/PerlinNoise.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManger.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.h
-
-CMakeFiles/edifice.dir/Game/World/TerrainGen/WaterGen/WaterGen.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.c \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_stdarg.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdarg.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/winapifamily.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/winsdkver.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_config.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_endian.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_error.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_pixels.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_platform.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rect.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_stdinc.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/begin_code.h \
-  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/close_code.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h
 
 CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
@@ -8580,15 +8476,11 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
@@ -8635,8 +8527,7 @@ CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C:/Users/Spencer/
   C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/close_code.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
@@ -8666,36 +8557,7 @@ CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: C:/
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
-
-CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World\ Saving/WorldFileManager.c \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/io.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sys/stat.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
@@ -8906,8 +8768,7 @@ CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
@@ -8930,7 +8791,6 @@ CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World\ Saving/WorldFileManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
@@ -9021,8 +8881,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vp2intersectvlintrin.h:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512ifmavlintrin.h:
 
@@ -9258,8 +9116,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h:
 
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.h:
-
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h:
@@ -9328,8 +9184,6 @@ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_metal.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_timeval.h:
 
-C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sys/stat.h:
-
 C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_scancode.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/apiset.h:
@@ -9341,8 +9195,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/basetsd.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/bcrypt.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/io.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/bemapiset.h:
 
@@ -9385,8 +9237,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/guiddef.h:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/heapapi.h:
 
@@ -9567,8 +9417,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stralign.h:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/WaterGen/WaterGen.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.h:
 
@@ -9764,8 +9612,6 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h:
 
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h:
-
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h:
@@ -9808,11 +9654,7 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c:
 
-C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h:
-
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/\ UIManager/UIManger.c:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.c:
 
@@ -9827,5 +9669,3 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h:
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c:
-
-C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World\ Saving/WorldFileManager.c:

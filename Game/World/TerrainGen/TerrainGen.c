@@ -6,12 +6,10 @@
 #include "TerrainGen.h"
 #include "Perlin Noise/PerlinNoise.h"
 #include "../Octree/Tools/KeyMod.h"
-#include "../Octree/OctreeNode.h"
 #include "../Octree/Octree.h"
 #include "LairManager/LairManager.h"
 #include "PlantManager/PlantManger.h"
 #include "../../../ArrayList/ArrayList.h"
-#include "WaterGen/WaterGen.h"
 #include "Perlin Noise/PerlinGenerator.h"
 
 void createTerrainGenRules(struct World* world){

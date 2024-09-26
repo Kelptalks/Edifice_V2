@@ -11,6 +11,7 @@
 
 int main(int argc, char* argv[]) {
 
+    //testOctree();
 
     if (true) {
         struct GameData *gameData = createGameData();
@@ -40,7 +41,6 @@ int main(int argc, char* argv[]) {
             gameData->screen->currentFrame++;
 
         }
-        openWorldFile(gameData->world);
     }
     return 0;
 }

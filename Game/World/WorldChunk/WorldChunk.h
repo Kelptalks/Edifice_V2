@@ -5,10 +5,10 @@
 #ifndef EDIFICE_WORLDCHUNK_H
 #define EDIFICE_WORLDCHUNK_H
 
-#include "../Octree/OctreeNode.h"
+#include "../Octree/Octree.h"
 
 struct WorldChunk{
-    struct OctreeNode* octreeNode;
+    struct Octree* octree;
 
     int xCor;
     int yCor;

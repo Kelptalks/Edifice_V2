@@ -226,9 +226,7 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/BlockMenu/BlockMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeBranchPool/OctreeNodePool.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/OctreeNode.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent/EntityManager/EntityManager.h

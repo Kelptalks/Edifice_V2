@@ -6,6 +6,5 @@
 #ifndef EDIFICE_WORLDFILEMANAGER_H
 #define EDIFICE_WORLDFILEMANAGER_H
 
-void openWorldFile(struct World*);
 
 #endif //EDIFICE_WORLDFILEMANAGER_H

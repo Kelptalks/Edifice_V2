@@ -212,7 +212,7 @@ void renderView(struct GameData* gameData){
                     castedChunk->direction = cameraData->direction;
                     castedChunk->rayCast = false;
                     castedChunk->textured = false;
-                    clearChunkTexture(gameData, castedChunk);
+                    //clearChunkTexture(gameData, castedChunk);
                 }
                 //Render the chunk texture if needed
                 if (!castedChunk->rayCast) {

@@ -108,8 +108,8 @@ void getCords(unsigned long key, int depth, int* x, int* y, int* z){
     }
 }
 
-unsigned long cordsToKey(int depth, int x, int y, int z){
-    unsigned long key = 0;
+int cordsToKey(int depth, int x, int y, int z){
+    int key = 0;
     for (int i = 0; i < depth; i++){
         //Mask each bit of cords and create key
         key = key | (((x >> i) & 1) << (i * 3 + 0));
