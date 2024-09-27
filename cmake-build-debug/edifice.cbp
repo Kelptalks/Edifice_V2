@@ -368,6 +368,12 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h">
 			<Option target="edifice"/>
 		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.h">
+			<Option target="edifice"/>
+		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c">
 			<Option target="edifice"/>
 		</Unit>

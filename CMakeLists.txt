@@ -100,6 +100,7 @@ add_executable(edifice main.c
         Game/PlayerData/Invintory/Hotbar/Hotbar.h
         Game/PlayerData/Invintory/BlockMenu/BlockMenu.c
         Game/PlayerData/Invintory/BlockMenu/BlockMenu.h
+        "Game/World/World Saving/WorldFileManager.c"
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

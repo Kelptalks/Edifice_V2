@@ -11,7 +11,8 @@
 
 int main(int argc, char* argv[]) {
 
-    //testOctree();
+    //int temp = getOctreeVolume(6);
+    //reportBug("Octree volume %i", temp);
 
     if (true) {
         struct GameData *gameData = createGameData();
@@ -41,6 +42,7 @@ int main(int argc, char* argv[]) {
             gameData->screen->currentFrame++;
 
         }
+        safeWorldToFile(gameData->world);
     }
     return 0;
 }

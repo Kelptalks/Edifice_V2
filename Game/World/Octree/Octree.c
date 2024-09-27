@@ -38,124 +38,151 @@ int getOctreeDataArrayLength(int depth){
  * Branch Management
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
-
-// Sets or clears the 'has child' flag for a branch at a specific child index
-unsigned int  markBranchHasChild(unsigned int branch, int child, bool hasChildren) {
-    if (hasChildren) {
-        return branch | (1 << child);
-    } else {
-        return branch & ~(1 << child);
-    }
+//====================================================================== Branch In use
+// Mark the branch as in use
+void markBranchAsInUse(unsigned int *branch){
+    *branch = *branch | (1 << 8);
+};
+// Check if branch is in use
+bool ifBranchInUse(unsigned int branch){
+    return (branch >> 8) & 1;
 }
 
+//====================================================================== Branch Depth
+//Setting the Depth of a branch
+void markBranchDepth(unsigned int *branch, int depth){
+    *branch = *branch | ((depth & 7) << 11);
+}
+//Get the depth of a branch
+unsigned int getBranchDepth(int branch){
+    return (branch >> 11) & 7;
+}
+
+//====================================================================== Branch child
+// Sets or clears the 'has child' flag for a branch at a specific child index
+void markBranchHasChild(unsigned int *branch, int child, bool hasChildren) {
+    if (hasChildren) {
+        *branch = *branch | (1 << child);
+    } else {
+        *branch = *branch & ~(1 << child);
+    }
+}
 // Checks if the branch has a child at the given child index
 bool ifBranchHasChild(unsigned int branch, int child) {
     return (branch >> child) & 1;
 }
 
-unsigned int  markBranchAsInUse(unsigned int branch){
-    return branch | (1 << 8);
-};
+//Create a branch at the location of the child and set the proper variables
+void createBranchChild(struct Octree* octree, unsigned int branchIndex, int child, int childDepth){
+    unsigned int *branch = &octree->branchData[branchIndex];
+    if (!ifBranchHasChild(*branch, child)) {
+        //Set up the roots branch connections
+        unsigned int octreeDataIndex = (branchIndex << 3) + child;
 
-bool ifBranchInUse(unsigned int branch){
-    return (branch >> 8) & 1;
+        //Create the new branch at the location
+        unsigned int newBranchIndex = octree->nextFreeIndex;
+        unsigned int *newBranch = &octree->branchData[newBranchIndex];
+        markBranchDepth(newBranch, childDepth);
+        octree->octreeData[octreeDataIndex] = newBranchIndex;
+        octree->nextFreeIndex = octree->nextFreeIndex + 1;
+
+        markBranchHasChild(branch, child, true);
+    }
+    else{
+        reportBug("!!!!!!!!!!\n");
+        reportBug("!!ERROR!!! \nAttempted to add child to branch that already has one\n");
+        reportBug("!!!!!!!!!!\n");
+    }
 }
 
-unsigned int markBranchDepth(unsigned int branch, int depth){
-    return branch | ((depth & 7) << 11);
-}
-
-unsigned int getBranchDepth(unsigned int branch){
-    return (branch >> 11) & 7;
+unsigned int getBranchChildIndex(struct Octree* octree, unsigned int branchIndex, int indexOfChild){
+    return octree->octreeData[(branchIndex << 3) + indexOfChild];
 }
 
 // Creates a new child node for the specified branch and sets the child index to point to it
 void createOctreeNodeOnBranch(struct Octree* octree, int branchIndex, int childIndex, int depth) {
-    // Mark branch as having a child
-    octree->branchData[branchIndex] = markBranchHasChild(octree->branchData[branchIndex], childIndex, true);
 
-    // Allocate a new branch in octreeData
-    unsigned int  newBranchIndex = octree->nextFreeIndex++;
-
-    if (ifBranchInUse(octree->branchData[newBranchIndex])){
-        reportBug("branch was utilized while still in use\n");
-    }
-
-
-    if (octree->debug) {
-        reportBug("Creating new branch from branch index(%i) to new branch index (%i)\n", branchIndex, newBranchIndex);
-    }
-
-    unsigned int  rootOctreeDataIndex = (branchIndex << 3) + childIndex;
-
-    // Store the new branch index at the octree data location
-    octree->octreeData[rootOctreeDataIndex] = newBranchIndex;
-    octree->branchData[newBranchIndex] = markBranchDepth(octree->branchData[newBranchIndex], depth - 1);
-    octree->branchData[newBranchIndex] = markBranchAsInUse(octree->branchData[newBranchIndex]);
-
-    //octree->branchData[newBranchIndex] = markBranchAsInUse(octree->branchData[newBranchIndex]);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Branch Management
+ * Debug
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+void printKeyIndexes(int key, int depth){
+    reportBug("%i, ", (key >> (depth * 3)) & 7);
+    if (depth >= 0) {
+        printKeyIndexes(key, depth - 1);
+    }
+    else{
+        reportBug("\n");
+    }
+}
+
+void printBranchDepth(struct Octree* octree, unsigned int branchIndex){
+    unsigned int branch = octree->branchData[branchIndex];
+    unsigned int depth = getBranchDepth(branch);
+    reportBug("Branch saved depth : %i\n", depth);
+}
+
+
+void printIfBranchHasChildren(struct Octree* octree, unsigned int branchIndex){
+    unsigned int *branch = &octree->branchData[branchIndex];
+    for (int x = 0; x < 8; x++){
+        if(ifBranchHasChild(*branch, x)){
+            reportBug("True, ");
+        }
+        else{
+            reportBug("False, ");
+        }
+    }
+    reportBug("\n");
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Octree Management
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
 // Sets the value in the octree at the given depth and key
-void setOctreeValue(struct Octree* octree, unsigned int  rootBranchIndex, int currentDepth, int key, unsigned int value) {
+void setOctreeValue(struct Octree* octree, unsigned int  indexOfCurrentBranch, int currentDepth, int key, unsigned int value) {
+    unsigned int *currentBranch = &octree->branchData[indexOfCurrentBranch];
+    int indexOfCurrentBranchChild = (key >> (currentDepth * 3)) & 7;
 
-    unsigned int  indexOfChild = (key >> (currentDepth * 3)) & 7;
-    unsigned int  octreeDataIndexAtRootBranch = (rootBranchIndex << 3) + indexOfChild;
-    unsigned int  octreeDataValue = octree->octreeData[octreeDataIndexAtRootBranch];
-
-    if (octree->debug) {
-        reportBug("Depth: %d | Key: %d | IndexOfChild: %d | octreeDataIndexAtRootBranch: %d\n", currentDepth, key,
-               indexOfChild, octreeDataIndexAtRootBranch);
-
-        reportBug("RootBranchIndexDepth : %i\n", getBranchDepth(octree->branchData[rootBranchIndex]));
-    }
 
     if (currentDepth > 0) {
-        // Check if branch has a child
-        if (ifBranchHasChild(octree->branchData[rootBranchIndex], indexOfChild)) {
-            unsigned int indexNextBranch = octreeDataValue;
-            // Traverse further down the tree
-            setOctreeValue(octree, indexNextBranch, currentDepth - 1, key, value);
-        } else {
-            // Create a child and continue setting the value
-            createOctreeNodeOnBranch(octree, rootBranchIndex, indexOfChild, currentDepth);
-            unsigned int  newBranchIndex = octree->octreeData[octreeDataIndexAtRootBranch];
+        if (ifBranchHasChild(*currentBranch, indexOfCurrentBranchChild)) {
+            unsigned int newBranchIndex = getBranchChildIndex(octree, indexOfCurrentBranch, indexOfCurrentBranchChild);
+            setOctreeValue(octree, newBranchIndex, currentDepth - 1, key, value);
+        } else
+        {
+            createBranchChild(octree, indexOfCurrentBranch, indexOfCurrentBranchChild, currentDepth - 1);
+            unsigned int newBranchIndex = getBranchChildIndex(octree, indexOfCurrentBranch, indexOfCurrentBranchChild);
             setOctreeValue(octree, newBranchIndex, currentDepth - 1, key, value);
         }
     }
-    else {
-        // Set the value at the leaf node
-        octree->octreeData[octreeDataIndexAtRootBranch] = value;
+    else{
+        octree->octreeData[(indexOfCurrentBranch << 3) + indexOfCurrentBranchChild] = value;
     }
 }
 
 // Retrieves the value from the octree at the given depth and key
-unsigned int getOctreeValue(struct Octree* octree, unsigned int rootBranchIndex, int currentDepth, int key) {
-    int indexOfChild = (key >> (currentDepth * 3)) & 7;
-    int octreeDataIndexAtRootBranch = (rootBranchIndex << 3) + indexOfChild;
-    int octreeDataValue = octree->octreeData[octreeDataIndexAtRootBranch];
+unsigned int getOctreeValue(struct Octree* octree, unsigned int  indexOfCurrentBranch, int currentDepth, int key) {
+    unsigned int *currentBranch = &octree->branchData[indexOfCurrentBranch];
+    int indexOfCurrentBranchChild = (key >> (currentDepth * 3)) & 7;
 
     if (currentDepth > 0) {
-        // If the branch has a child, traverse further down
-        if (ifBranchHasChild(octree->branchData[rootBranchIndex], indexOfChild)) {
-            return getOctreeValue(octree, octreeDataValue, currentDepth - 1, key);
-        }
-        else{
-            return 0;
+        if (ifBranchHasChild(*currentBranch, indexOfCurrentBranchChild)) {
+            unsigned int newBranchIndex = getBranchChildIndex(octree, indexOfCurrentBranch, indexOfCurrentBranchChild);
+            return getOctreeValue(octree, newBranchIndex, currentDepth - 1, key);
+        } else
+        {
+            return octree->octreeData[(indexOfCurrentBranch << 3) + indexOfCurrentBranchChild];
         }
     }
-
-    // Return the value if it's a leaf or no children exist
-    if (currentDepth == 0) {
-        return octreeDataValue;
+    else{
+        return octree->octreeData[(indexOfCurrentBranch << 3) + indexOfCurrentBranchChild];
     }
-
-    return 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -182,7 +209,7 @@ struct Octree* createOctree(int depth){
 
     //Create Octree Node Data
     octree->nodeDataArrayLength = octree->octreeDataArrayLength;
-    octree->branchData = calloc(octree->nodeDataArrayLength, sizeof (unsigned int));
+    octree->branchData = calloc(octree->nodeDataArrayLength << 3, sizeof (unsigned int));
     if (octree->branchData == NULL){
         printf("failed to create Octree node Data of length : %i\n", octree->nodeDataArrayLength);
         free(octree->octreeData);
@@ -196,49 +223,66 @@ struct Octree* createOctree(int depth){
     octree->volume =  octree->octreeDataArrayLength;
     octree->depth = depth;
 
-    for (int i = 0; i < 8; i++) {
-        //createOctreeNodeOnBranch(octree, 0, i);
-    }
+    //Create root node
+    unsigned int *rootBranch = &octree->branchData[0];
+    markBranchDepth(rootBranch, depth);
+    markBranchAsInUse(rootBranch);
+
+    octree->nextFreeIndex++;
+
     return octree;
 }
 
-void printKeyIndexes(int key, int depth){
-    printf("%i, ", (key >> (depth * 3)) & 7);
-    if (depth >= 0) {
-        printKeyIndexes(key, depth - 1);
-    }
-    else{
-        printf("\n");
-    }
-}
-
-
 void testOctree(){
-    struct Octree* octree = createOctree(6);
+    int depth = 6;
+    struct Octree* octree = createOctree(depth);
 
     clearBugReports();
 
     octree->debug = true;
 
-    octree->branchData[0];
-    octree->branchData[0] = markBranchAsInUse(octree->branchData[0]);
-    if (ifBranchInUse( octree->branchData[0])){
-        reportBug("pass1\n");
-    }
 
-    octree->branchData[0] = markBranchDepth(octree->branchData[0], 6);
-    if (getBranchDepth(octree->branchData[0]) == 4){
-        reportBug("pass2\n");
-    }
-    else{
-        reportBug("Expected %i, but was %i", 4, getBranchDepth(octree->branchData[0]));
+    // Tests branch in use marking
+    unsigned int branch = 0;
+    markBranchAsInUse(&branch);
+    if (ifBranchInUse(branch)){
+        reportBug("pass : in use marking\n");
     }
 
 
+    // Test depth reading
+    int fails = 0;
+    for (int x = 0; x < 6; x++) {
+        int depth = x;
+        branch = 0;
+        markBranchDepth(&branch, depth);
+        if (getBranchDepth(branch) != depth) {
+            reportBug("fail : Depth marking\n");
+            fails++;
+        }
+    }
+    if (fails == 0){
+        reportBug("Pass : depth Reading\n");
+    }
+
+
+    for (int x = 0; x < 8; x++) {
+        createBranchChild(octree, 0, x, octree->depth - 1);
+    }
+
+    octree->debug = false;
     for (int x = 0; x < octree->volume; x++){
-        //setOctreeValue(octree, 0, octree->depth, x, rand() % 70);
+        setOctreeValue(octree, 0, depth, 6, x);
     }
 
+    int key = 39424;
+    printKeyIndexes(key, depth);
 
+
+    setOctreeValue(octree, 0, depth, key, 5);
+    reportBug("\n##############################################################################################################\n");
+    unsigned int value = getOctreeValue(octree, 0, depth, key);
+
+    reportBug("Value : %i", value);
     free(octree);
 }

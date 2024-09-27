@@ -59,6 +59,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c" "CMakeFiles/edifice.dir/Game/World/World.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/World.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c" "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c" "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj.d"
+  "C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World Saving/WorldFileManager.c" "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj" "gcc" "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj.d"
   "C:/Users/Spencer/Desktop/Edifice_V2/main.c" "CMakeFiles/edifice.dir/main.c.obj" "gcc" "CMakeFiles/edifice.dir/main.c.obj.d"
   )
 

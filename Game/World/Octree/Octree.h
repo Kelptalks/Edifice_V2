@@ -30,7 +30,7 @@ int getOctreeDimensions(int depth);
 //Get the volume Of the octree
 long getOctreeVolume(int depth);
 
-void setOctreeValue(struct Octree* octree, unsigned int rootBranchIndex, int currentDepth, int key, unsigned int value);
+void setOctreeValue(struct Octree* octree, unsigned int indexOfCurrentBranch, int currentDepth, int key, unsigned int value);
 
 unsigned int getOctreeValue(struct Octree* octree, unsigned int rootBranchIndex, int currentDepth, int key);
 #endif

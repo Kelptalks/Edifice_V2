@@ -25,7 +25,7 @@ struct World* createWorld(int scale){
     }
 
     //Name the world
-    char name[] = "World";
+    char name[] = "First_World";
     world->name = malloc(sizeof (name));
     world->name = name;
 
@@ -42,8 +42,8 @@ struct World* createWorld(int scale){
     createTerrainGenRules(world);
     world->entityCount = 0;
     world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
-    int worldXScale = 200;
-    int worldYScale = 200;
+    int worldXScale = 100;
+    int worldYScale = 100;
     genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
     for (int i = 0; i < world->entityCount; i++){
         int x = (rand() % (worldXScale * 2)) - worldXScale;
@@ -66,7 +66,7 @@ struct World* createWorld(int scale){
     }
      */
 
-    world->debug = true;
+    world->debug = false;
     return world;
 }
 

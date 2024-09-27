@@ -38,14 +38,14 @@ void clearBugReports(){
     clearFrameBugReports();
     clearTikBugReports();
     FILE * debug;
-    debug = fopen("debug", "w");
+    debug = fopen("Debug/debug", "w");
     fprintf(debug, "Cleared \n");
     fclose(debug);
 }
 
 void reportBug(const char* format, ...) { // Accept a format string and variable arguments
     FILE *debug;
-    debug = fopen("debug", "a");
+    debug = fopen("Debug/debug", "a");
     if (debug != NULL) {
         va_list args; // Define a variable of type va_list to hold the variable arguments
         va_start(args, format); // Initialize the va_list with the arguments after the format string

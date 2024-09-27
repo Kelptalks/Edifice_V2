@@ -101,6 +101,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj.d"
   "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj"
   "CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj.d"
+  "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj"
+  "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj.d"
   "CMakeFiles/edifice.dir/main.c.obj"
   "CMakeFiles/edifice.dir/main.c.obj.d"
   "edifice.exe"

@@ -1352,6 +1352,30 @@ Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
 .PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
 
+Game/World/World_Saving/WorldFileManager.obj: Game/World/World_Saving/WorldFileManager.c.obj
+.PHONY : Game/World/World_Saving/WorldFileManager.obj
+
+# target to build an object file
+Game/World/World_Saving/WorldFileManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj
+.PHONY : Game/World/World_Saving/WorldFileManager.c.obj
+
+Game/World/World_Saving/WorldFileManager.i: Game/World/World_Saving/WorldFileManager.c.i
+.PHONY : Game/World/World_Saving/WorldFileManager.i
+
+# target to preprocess a source file
+Game/World/World_Saving/WorldFileManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.i
+.PHONY : Game/World/World_Saving/WorldFileManager.c.i
+
+Game/World/World_Saving/WorldFileManager.s: Game/World/World_Saving/WorldFileManager.c.s
+.PHONY : Game/World/World_Saving/WorldFileManager.s
+
+# target to generate assembly for a file
+Game/World/World_Saving/WorldFileManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.s
+.PHONY : Game/World/World_Saving/WorldFileManager.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -1538,6 +1562,9 @@ help:
 	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.obj
 	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.i
 	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.s
+	@echo ... Game/World/World_Saving/WorldFileManager.obj
+	@echo ... Game/World/World_Saving/WorldFileManager.i
+	@echo ... Game/World/World_Saving/WorldFileManager.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

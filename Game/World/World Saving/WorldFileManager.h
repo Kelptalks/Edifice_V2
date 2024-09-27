@@ -7,4 +7,6 @@
 #define EDIFICE_WORLDFILEMANAGER_H
 
 
+void safeWorldToFile(struct World* world);
+
 #endif //EDIFICE_WORLDFILEMANAGER_H
