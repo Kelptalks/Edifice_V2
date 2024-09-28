@@ -89,6 +89,10 @@ struct WorldChunkHashMap* createWorldChunkHashMap(int maxChunks){
 
 void addWorldChunkToHashMap(struct WorldChunkHashMap* worldChunkHashMap, struct WorldChunk* worldChunk){
     //Setup New node
+    if (worldChunkHashMap->worldChunkHashMapNodePool->freeNodesCount == 0){
+        reportBug("Out of Nodes!!!\n");
+        return;
+    }
     struct WorldChunkHashMapNode* node = getNodeFromWorldChunkHashMapNodePool(worldChunkHashMap->worldChunkHashMapNodePool);
     node->worldChunk = worldChunk;
 

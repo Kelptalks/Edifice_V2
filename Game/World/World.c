@@ -35,16 +35,18 @@ struct World* createWorld(int scale){
     //reportBug("octree Dimentions %i\n", world->chunkOctreeDimension);
 
     //Calculate ground height
-    world->worldChunkHashMap = createWorldChunkHashMap(5000);
+    world->worldChunkHashMap = createWorldChunkHashMap(20000);
 
 
     world->debug = false;
     createTerrainGenRules(world);
-    world->entityCount = 0;
+    world->entityCount = 500;
     world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
-    int worldXScale = 100;
-    int worldYScale = 100;
+    int worldXScale = 150;
+    int worldYScale = 150;
+    reportBug("  - Generating Terrain : \n");
     genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
+    reportBug(" - Creating Entity's : %i \n");
     for (int i = 0; i < world->entityCount; i++){
         int x = (rand() % (worldXScale * 2)) - worldXScale;
         int y = (rand() % (worldYScale * 2)) - worldYScale;

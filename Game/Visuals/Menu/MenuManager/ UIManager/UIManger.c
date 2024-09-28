@@ -29,7 +29,6 @@ struct Button* createButton(enum ButtonTexture buttonTexture, int xCor, int yCor
 }
 
 void handleButtonInputs(struct Button* button, struct GameData* gameData, SDL_Event event){
-    bool mouseLeftPressed = event.button.button == SDL_BUTTON_LEFT;
 
     //Mouse input Controls
     int xCor, yCor;
@@ -41,7 +40,7 @@ void handleButtonInputs(struct Button* button, struct GameData* gameData, SDL_Ev
 
     if (inXrange && inYrange){
         button->mouseOn = true;
-        if (mouseLeftPressed){
+        if (event.type == SDL_MOUSEBUTTONDOWN){
             button->pressed = true;
         }
     }

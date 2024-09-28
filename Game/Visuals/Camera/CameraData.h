@@ -23,6 +23,7 @@ struct DistanceCord
 };
 
 struct CameraData{
+
     //Drawing location
     float xRenderingOffset;
     float yRenderingOffset;

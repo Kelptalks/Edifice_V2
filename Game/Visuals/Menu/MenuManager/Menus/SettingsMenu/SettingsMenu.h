@@ -7,12 +7,13 @@
 
 #include "../../MenuManger.h"
 
-struct SettingsMenu* createSettingsMenu();
-
 struct SettingsMenu{
     struct ScrollWheel* viewDistanceScrollWheel;
     struct Button* backButton;
+    struct Button** resolutionButtons;
 };
+
+struct SettingsMenu* createSettingsMenu();
 
 void renderSettingsMenu(struct GameData* gameData);
 

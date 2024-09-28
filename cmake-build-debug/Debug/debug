@@ -5,9 +5,55 @@ Creating textTextures
 Creating DebugMenu
 Splicing textures 
 Building world
+  - Generating Terrain : 
+     - Building World : 5%
+     - Building World : 10%
+     - Building World : 15%
+     - Building World : 20%
+     - Building World : 25%
+     - Building World : 30%
+     - Building World : 35%
+     - Building World : 40%
+     - Building World : 45%
+     - Building World : 50%
+     - Building World : 55%
+     - Building World : 60%
+     - Building World : 65%
+     - Building World : 70%
+     - Building World : 75%
+     - Building World : 80%
+     - Building World : 85%
+     - Building World : 90%
+     - Building World : 95%
+     - Building World : 100%
+     - Building World : 105%
+     - Building World : 110%
+     - Building World : 115%
+     - Building World : 120%
+     - Building World : 125%
+     - Building World : 130%
+     - Building World : 135%
+     - Building World : 140%
+     - Building World : 145%
+     - Building World : 150%
+     - Building World : 155%
+     - Building World : 160%
+     - Building World : 165%
+     - Building World : 170%
+     - Building World : 175%
+     - Building World : 180%
+     - Building World : 185%
+     - Building World : 190%
+     - Building World : 195%
+     - Building World : 200%
+     - Building World : 205%
+     - Building World : 210%
+     - Building World : 215%
+ - Creating Entity's : 69 
 Creating Menu Manager
 Creating cameraData 
  - Creating CastedPool
+Test4
 Creating PlayerData
 Creating Tik Manager 
 Creating Sound Manager

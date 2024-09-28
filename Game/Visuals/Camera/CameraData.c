@@ -18,7 +18,7 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
 
     cameraData->totalDistanceCords = totalCords;
 
-    struct DistanceCord distanceCords[totalCords];
+    struct DistanceCord* distanceCords = malloc(sizeof (struct DistanceCord) * totalCords);
 
     //Calculate the distances for all the cords
     for (int x = -radius; x < radius; x++)
@@ -49,6 +49,7 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
         distanceCords[i] = distanceCords[minValueIndex];
         distanceCords[minValueIndex] = tempDistanceCord;
     }
+    reportBug("Test4\n");
 
     //Create the array based off distance
     struct DistanceCord* distanceSortedRelativeCords = malloc(totalCords * sizeof(struct DistanceCord));
@@ -57,6 +58,7 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
         distanceSortedRelativeCords[x] = distanceCords[x];
     }
 
+    free(distanceCords);
     return distanceSortedRelativeCords;
 }
 

@@ -11,6 +11,8 @@
 
 struct DebugMenu{
     bool visible;
+    bool tikDataVisible;
+    bool frameDataVisible;
 
     struct FrameRenderingData* frameRenderingData;
 

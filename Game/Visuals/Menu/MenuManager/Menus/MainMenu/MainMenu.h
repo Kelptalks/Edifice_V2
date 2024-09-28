@@ -13,7 +13,7 @@ struct MainMenu{
     struct Button* settingsButton;
     struct Button* exitButton;
 
-    int textScale;
+    int animationFrame;
 };
 
 struct MainMenu* createMainMenu();

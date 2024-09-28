@@ -172,6 +172,7 @@ void renderMouseArea(struct GameData* gameData){
 
 void renderView(struct GameData* gameData){
     struct CameraData* cameraData = gameData->cameraData;
+    struct FrameRenderingData* frameRenderingData = gameData->debugMenu->frameRenderingData;
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
 
     updateCameraCords(gameData);
@@ -235,14 +236,14 @@ void renderView(struct GameData* gameData){
     }
     renderMouseArea(gameData);
     time2 = SDL_GetTicks();
-    gameData->debugMenu->frameRenderingData->chunkUpdatingTime = time2 - time1;
+    frameRenderingData->chunkUpdatingTime = time2 - time1;
 
 
     //RayCast chunks
     time1 = SDL_GetTicks();
     executeAllTasks(cameraData->rayCastingThreadPool);
     time2 = SDL_GetTicks();
-    gameData->debugMenu->frameRenderingData->rayCastingTime = time2 - time1;
+    frameRenderingData->rayCastingTime = time2 - time1;
 
 
     //Render entitys
@@ -254,5 +255,16 @@ void renderView(struct GameData* gameData){
         }
     }
     time2 = SDL_GetTicks();
-    gameData->debugMenu->frameRenderingData->entityRenderingTime = time2 - time1;
+    frameRenderingData->entityRenderingTime = time2 - time1;
+
+    frameRenderingData->averageRenderTime = addToAndGetAverageFrameRenderTime(frameRenderingData, frameRenderingData->totalFrameTime);
+
+    //Render FPS
+    int FPS = 9999;
+    if (frameRenderingData->averageRenderTime != 0) {
+        FPS = 1000 / frameRenderingData->averageRenderTime;
+    }
+    char framePerSecondString[40] = {0};
+    sprintf(framePerSecondString, "FPS : %i", FPS);
+    renderString(gameData, framePerSecondString, 5, 5, 15);
 }

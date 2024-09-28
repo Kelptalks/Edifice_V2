@@ -14,6 +14,12 @@ void updateScreen(struct Screen* screen){
     SDL_RenderClear(screen->renderer);
 }
 
+void setScreenResolution(struct Screen* screen, int xRez, int yRez){
+    screen->xRez = xRez;
+    screen->yRez = yRez;
+    SDL_SetWindowSize(screen->window, screen->xRez, screen->yRez);
+}
+
 struct Screen* createScreen(){
     struct Screen* screen =  malloc(sizeof (struct Screen));
     if (screen == NULL){
@@ -24,8 +30,8 @@ struct Screen* createScreen(){
         return NULL;
     }
 
-    screen->xRez = 2048;
-    screen->yRez = 1152;
+    screen->xRez = 1920;
+    screen->yRez = 1080;
 
     //set run to true
     screen->run = true;

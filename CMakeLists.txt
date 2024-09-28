@@ -60,8 +60,6 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c
         Game/InGameTime/TikEvent/TerpManager/TerpManager.c
         Game/InGameTime/TikEvent/TerpManager/TerpManager.h
-        Game/InGameTime/TikEvent/TikEvent.c
-        Game/InGameTime/TikEvent/TikEvent.h
         Game/World/Octree/Tools/AdvancedKeyMod.c
         Game/World/Octree/Tools/AdvancedKeyMod.h
         Game/Sound/SoundManager.c
@@ -101,6 +99,8 @@ add_executable(edifice main.c
         Game/PlayerData/Invintory/BlockMenu/BlockMenu.c
         Game/PlayerData/Invintory/BlockMenu/BlockMenu.h
         "Game/World/World Saving/WorldFileManager.c"
+        Game/Debuging/DebugMenu/TikData/TickData.c
+        Game/Debuging/DebugMenu/TikData/TickData.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

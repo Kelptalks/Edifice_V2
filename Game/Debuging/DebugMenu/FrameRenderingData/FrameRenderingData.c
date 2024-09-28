@@ -17,9 +17,24 @@ struct FrameRenderingData* createFrameRenderingData(){
     frameRenderingData->rayCastingTime = 0;
     frameRenderingData->entityRenderingTime = 0;
     frameRenderingData->onScreenUIRenderingTime = 0;
-
+    frameRenderingData->currentCalcAverageIndex = 0;
 
     return frameRenderingData;
+}
+
+Uint32 addToAndGetAverageFrameRenderTime(struct FrameRenderingData* frameRenderingData, Uint32 renderTime){
+    if (frameRenderingData->currentCalcAverageIndex == 30){
+        frameRenderingData->currentCalcAverageIndex = 0;
+    }
+    frameRenderingData->averageRenderTimeArray[frameRenderingData->currentCalcAverageIndex] = renderTime;
+    frameRenderingData->currentCalcAverageIndex++;
+
+    Uint32 combinedValues = 0;
+    for (int i = 0; i < 30; i++) {
+        combinedValues += frameRenderingData->averageRenderTimeArray[i];
+    }
+
+    return combinedValues / 30;
 }
 
 void renderFrameRenderingData(struct GameData* gameData){
@@ -37,11 +52,13 @@ void renderFrameRenderingData(struct GameData* gameData){
     sprintf(entityRendering, "Entity Rendering Time : %i ms", frameRenderingData->entityRenderingTime);
     renderString(gameData, entityRendering, 5, gameData->screen->yRez - 75, 20);
 
-    char totalFrameTime[40] = {0};
-    sprintf(totalFrameTime, "Total Frame Time : %i ms", frameRenderingData->totalFrameTime);
-    renderString(gameData, totalFrameTime, 5, gameData->screen->yRez - 100, 20);
+    char averageFrameTimeString[40] = {0};
+    int averageFrameRenderTime = addToAndGetAverageFrameRenderTime(frameRenderingData, frameRenderingData->totalFrameTime);
+    sprintf(averageFrameTimeString, "Average Frame Time : %i ms", averageFrameRenderTime);
+    renderString(gameData, averageFrameTimeString, 5, gameData->screen->yRez - 100, 20);
 
     char onScreenUIRenderingTime[40] = {0};
     sprintf(onScreenUIRenderingTime, "On screen UI rendering Time : %i ms", frameRenderingData->onScreenUIRenderingTime);
     renderString(gameData, onScreenUIRenderingTime, 5, gameData->screen->yRez - 125, 20);
+
 }

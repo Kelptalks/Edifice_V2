@@ -31,6 +31,8 @@ struct Screen{
 
 void updateScreen(struct Screen* screen);
 
+void setScreenResolution(struct Screen* screen, int xRez, int yRez);
+
 //Create the screen struct.
 struct Screen* createScreen();
 

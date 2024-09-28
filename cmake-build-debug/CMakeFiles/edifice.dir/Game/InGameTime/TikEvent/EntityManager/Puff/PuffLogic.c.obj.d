@@ -219,4 +219,6 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.o
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

@@ -57,7 +57,13 @@ void genArea(struct World* world, unsigned long key, int xStart, int yStart, int
     struct ArrayList* lairRulesInArea = getLairRulesInArea(world->terrainGenRules->lairRules, zStart, zEnd);
 
     //Loop through keys in the area
+    int progressUpdate = (int) ((float) xArea * 0.05);
+    int percentComplete = 0;
     for (int x = xStart; x < xArea; x++){
+        if (x % progressUpdate == 0){
+            percentComplete +=5;
+            reportBug("     - Building World : %i%\n", percentComplete);
+        }
         for (int y = yStart; y < yArea; y++){
             for (int z = zStart; z < zArea; z++) {
                 //Set Lair Shifting rule

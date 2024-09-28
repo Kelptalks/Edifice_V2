@@ -391,6 +391,12 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
                 toggleDebugMenu(gameData->debugMenu);
                 break;
             case SDLK_F4 :
+                gameData->debugMenu->tikDataVisible = !gameData->debugMenu->tikDataVisible;
+                break;
+            case SDLK_F5 :
+                gameData->debugMenu->frameDataVisible = !gameData->debugMenu->frameDataVisible;
+                break;
+            case SDLK_F6 :
                 toggleChunkBoarders(gameData->debugMenu);
                 break;
         }

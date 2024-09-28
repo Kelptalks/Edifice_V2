@@ -9,6 +9,7 @@
 #include "SDL.h"
 #include "../../Visuals/Camera/CameraData.h"
 #include "../../GameData.h"
+#include "TikData/TickData.h"
 
 
 struct DebugMenu* createDebugMenu(){
@@ -24,20 +25,16 @@ struct DebugMenu* createDebugMenu(){
     debugMenu->xMouseCor = 0;
     debugMenu->yMouseCor = 0;
 
-    debugMenu->chunkBoarders = false;
     debugMenu->visible = false;
+    debugMenu->frameDataVisible = false;
+    debugMenu->tikDataVisible = false;
+    debugMenu->chunkBoarders = false;
 
     return debugMenu;
 }
 
 void renderDebugMenu(struct GameData* gameData){
-    //Frame rate
-    char FrameRate[40] = {0};
-    if (gameData->screen->frameRenderTime > 0) {
-        Uint32 fps = 1000 / gameData->screen->frameRenderTime;
-        sprintf(FrameRate, "FPS : %u  CAP : %i ", fps, gameData->screen->targetFPS);
-        drawString(gameData, FrameRate, 40, 5, 5, 20);
-    }
+    struct DebugMenu* debugMenu = gameData->debugMenu;
 
     //Mouse cords
     char MouseCords[40] = {0};
@@ -85,7 +82,12 @@ void renderDebugMenu(struct GameData* gameData){
     sprintf(freeChunkCount, "Total Free Chunks : %i", freeChunks);
     renderString(gameData, freeChunkCount, 5, 180, 20);
 
-    renderFrameRenderingData(gameData);
+    if (debugMenu->frameDataVisible) {
+        renderFrameRenderingData(gameData);
+    }
+    if (debugMenu->tikDataVisible) {
+        renderTickData(gameData);
+    }
 }
 
 void toggleChunkBoarders(struct DebugMenu* debugMenu){

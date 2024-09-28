@@ -272,6 +272,30 @@ Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s
 .PHONY : Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.s
 
+Game/Debuging/DebugMenu/TikData/TickData.obj: Game/Debuging/DebugMenu/TikData/TickData.c.obj
+.PHONY : Game/Debuging/DebugMenu/TikData/TickData.obj
+
+# target to build an object file
+Game/Debuging/DebugMenu/TikData/TickData.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj
+.PHONY : Game/Debuging/DebugMenu/TikData/TickData.c.obj
+
+Game/Debuging/DebugMenu/TikData/TickData.i: Game/Debuging/DebugMenu/TikData/TickData.c.i
+.PHONY : Game/Debuging/DebugMenu/TikData/TickData.i
+
+# target to preprocess a source file
+Game/Debuging/DebugMenu/TikData/TickData.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.i
+.PHONY : Game/Debuging/DebugMenu/TikData/TickData.c.i
+
+Game/Debuging/DebugMenu/TikData/TickData.s: Game/Debuging/DebugMenu/TikData/TickData.c.s
+.PHONY : Game/Debuging/DebugMenu/TikData/TickData.s
+
+# target to generate assembly for a file
+Game/Debuging/DebugMenu/TikData/TickData.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.s
+.PHONY : Game/Debuging/DebugMenu/TikData/TickData.c.s
+
 Game/Debuging/Test_Main.obj: Game/Debuging/Test_Main.c.obj
 .PHONY : Game/Debuging/Test_Main.obj
 
@@ -391,30 +415,6 @@ Game/InGameTime/TikEvent/TerpManager/TerpManager.s: Game/InGameTime/TikEvent/Ter
 Game/InGameTime/TikEvent/TerpManager/TerpManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.s
 .PHONY : Game/InGameTime/TikEvent/TerpManager/TerpManager.c.s
-
-Game/InGameTime/TikEvent/TikEvent.obj: Game/InGameTime/TikEvent/TikEvent.c.obj
-.PHONY : Game/InGameTime/TikEvent/TikEvent.obj
-
-# target to build an object file
-Game/InGameTime/TikEvent/TikEvent.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.obj
-.PHONY : Game/InGameTime/TikEvent/TikEvent.c.obj
-
-Game/InGameTime/TikEvent/TikEvent.i: Game/InGameTime/TikEvent/TikEvent.c.i
-.PHONY : Game/InGameTime/TikEvent/TikEvent.i
-
-# target to preprocess a source file
-Game/InGameTime/TikEvent/TikEvent.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.i
-.PHONY : Game/InGameTime/TikEvent/TikEvent.c.i
-
-Game/InGameTime/TikEvent/TikEvent.s: Game/InGameTime/TikEvent/TikEvent.c.s
-.PHONY : Game/InGameTime/TikEvent/TikEvent.s
-
-# target to generate assembly for a file
-Game/InGameTime/TikEvent/TikEvent.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TikEvent.c.s
-.PHONY : Game/InGameTime/TikEvent/TikEvent.c.s
 
 Game/InGameTime/TikManager.obj: Game/InGameTime/TikManager.c.obj
 .PHONY : Game/InGameTime/TikManager.obj
@@ -1427,6 +1427,9 @@ help:
 	@echo ... Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.obj
 	@echo ... Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.i
 	@echo ... Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.s
+	@echo ... Game/Debuging/DebugMenu/TikData/TickData.obj
+	@echo ... Game/Debuging/DebugMenu/TikData/TickData.i
+	@echo ... Game/Debuging/DebugMenu/TikData/TickData.s
 	@echo ... Game/Debuging/Test_Main.obj
 	@echo ... Game/Debuging/Test_Main.i
 	@echo ... Game/Debuging/Test_Main.s
@@ -1442,9 +1445,6 @@ help:
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.obj
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.i
 	@echo ... Game/InGameTime/TikEvent/TerpManager/TerpManager.s
-	@echo ... Game/InGameTime/TikEvent/TikEvent.obj
-	@echo ... Game/InGameTime/TikEvent/TikEvent.i
-	@echo ... Game/InGameTime/TikEvent/TikEvent.s
 	@echo ... Game/InGameTime/TikManager.obj
 	@echo ... Game/InGameTime/TikManager.i
 	@echo ... Game/InGameTime/TikManager.s

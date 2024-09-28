@@ -8,28 +8,28 @@
 
 int Test_Main(){
     FILE * debug;
-    debug = fopen("debug", "a");
+    debug = fopen("Debug/debug", "a");
     fprintf(debug, "Tests\n");
     fclose(debug);
 }
 
 void clearFrameBugReports(){
     FILE * frameBug;
-    frameBug = fopen("frameManager", "w");
+    frameBug = fopen("Debug/frameManager", "w");
     fprintf(frameBug, "Cleared \n");
     fclose(frameBug);
 }
 
 void clearTikBugReports(){
     FILE * tikBug;
-    tikBug = fopen("tikManager", "w");
+    tikBug = fopen("Debug/tikManager", "w");
     fprintf(tikBug, "Cleared \n");
     fclose(tikBug);
 }
 
 void clearWorldBugs(){
     FILE * worldBug;
-    worldBug = fopen("worldBug", "w");
+    worldBug = fopen("Debug/worldBug", "w");
     fprintf(worldBug, "Cleared \n");
     fclose(worldBug);
 }
@@ -59,7 +59,7 @@ void reportBug(const char* format, ...) { // Accept a format string and variable
 
 void reportWorldBug(const char* format, ...){
     FILE *debug;
-    debug = fopen("worldBug", "a");
+    debug = fopen("Debug/worldBug", "a");
     if (debug != NULL) {
         va_list args; // Define a variable of type va_list to hold the variable arguments
         va_start(args, format); // Initialize the va_list with the arguments after the format string
@@ -73,7 +73,7 @@ void reportWorldBug(const char* format, ...){
 
 void reportTikBug(const char* format, ...) { // Accept a format string and variable arguments
     FILE *debug;
-    debug = fopen("tikManager", "a");
+    debug = fopen("Debug/tikManager", "a");
     if (debug != NULL) {
         va_list args; // Define a variable of type va_list to hold the variable arguments
         va_start(args, format); // Initialize the va_list with the arguments after the format string
@@ -87,7 +87,7 @@ void reportTikBug(const char* format, ...) { // Accept a format string and varia
 
 void reportFrameBug(const char* format, ...) { // Accept a format string and variable arguments
     FILE *debug;
-    debug = fopen("frameManager", "a");
+    debug = fopen("Debug/frameManager", "a");
     if (debug != NULL) {
         va_list args; // Define a variable of type va_list to hold the variable arguments
         va_start(args, format); // Initialize the va_list with the arguments after the format string

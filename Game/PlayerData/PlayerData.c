@@ -24,15 +24,15 @@ struct PlayerData* createPlayerData(){
     playerData->walkingTexture = 0;
     playerData->sprinting = false;
 
-    playerData->worldX = -98;
-    playerData->worldY = -96;
-    playerData->worldZ = 52;
+    playerData->worldX = 0;
+    playerData->worldY = 0;
+    playerData->worldZ = 100;
 
     playerData->sizeX = +0.5f;
     playerData->sizeY = +0.5f;
 
 
-    playerData->velResistance = 1.85f;
+    playerData->velResistance = 1.2;
     playerData->velX = 0;
     playerData->velY = 0;
     playerData->velZ = 0;
@@ -130,7 +130,7 @@ void tikPlayer(struct GameData* gameData){
     }
 
     if (playerData->worldZ < - 100){
-        reportBug("relocating player that fell off the world\n");
+        reportTikBug("relocating player that fell off the world\n");
         playerData->worldZ = 100;
         playerData->worldX = 0;
         playerData->worldY = 0;

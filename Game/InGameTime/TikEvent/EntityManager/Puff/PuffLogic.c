@@ -4,6 +4,7 @@
 #include "../EntityManager.h"
 #include "PuffLogic.h"
 #include "../../../../World/World.h"
+#include "../../../TikManager.h"
 
 struct Entity* createPuffEntity(){
     struct Entity* entity = malloc(sizeof (struct Entity));
@@ -135,7 +136,7 @@ void tickPuffEntity(struct GameData* gameData, struct Entity* entity){
     }
 
     if (entity->worldZ < -10){
-        reportBug("relocating puff that fell off the world\n");
+        reportTikBug("relocating puff that fell off the world at tick Time %i\n", gameData->tikManager->tikTime);
         entity->worldX = 0;
         entity->worldY = 0;
         entity->worldZ = 45;

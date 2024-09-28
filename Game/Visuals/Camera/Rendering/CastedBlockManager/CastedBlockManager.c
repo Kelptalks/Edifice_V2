@@ -116,7 +116,7 @@ struct CastedPool* createCastedPool(struct CameraData* cameraData, struct SDL_Re
     struct CastedPool* castedPool = malloc(sizeof (struct CastedPool));
     //Create the Casted Pool array based on the square of the view distance
     castedPool->chunkMap = createChunkMap(9000);
-    castedPool->maxChunks = 10000;
+    castedPool->maxChunks = (cameraData->maxViewDistance * 2) * (cameraData->maxViewDistance * 2);
 
     castedPool->freeChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);
     castedPool->allChunks = malloc(sizeof (struct CastedChunk*) * castedPool->maxChunks);

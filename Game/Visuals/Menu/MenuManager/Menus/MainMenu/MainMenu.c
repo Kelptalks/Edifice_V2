@@ -13,8 +13,6 @@ void upDateMainMenuCords(struct GameData* gameData){
     int yButtonScale = buttonScale;
     int buttonSpacing = buttonScale + (buttonScale/2);
 
-    mainMenu->textScale = yButtonScale/3;
-
 
     mainMenu->startButton->xScale = xButtonScale;
     mainMenu->startButton->yScale = yButtonScale;
@@ -51,6 +49,7 @@ struct MainMenu* createMainMenu(){
     mainMenu->startButton = createButton(MainButton, xOffset, yOffset, xButtonScale, yButtonScale);
     mainMenu->settingsButton = createButton(MainButton, xOffset, yOffset + 100, xButtonScale, yButtonScale);
     mainMenu->exitButton = createButton(MainButton, xOffset, yOffset + 200, xButtonScale, yButtonScale);
+    mainMenu->animationFrame = 0;
 
     return mainMenu;
 }
@@ -63,7 +62,6 @@ void renderMainMenu(struct GameData* gameData){
     SDL_Rect srcRect = {960, 0, 320, 175};
     SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
     SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
-
 
     //Render all the buttons with text
     struct Button* startButton = mainMenu->startButton;

@@ -31,7 +31,6 @@ void updateTikTime(struct GameData* gameData){
 
     tikManager->sdlTime = SDL_GetTicks();
     if (tikManager->sdlTime > (tikManager->tik * tikManager->tikTime)){
-        reportTikBug("current tik %i \n", tikManager->tik);
         tikManager->tik++;
         tikPlayer(gameData);
         tickAllEntityInWorld(gameData);
