@@ -8,17 +8,21 @@
 #include "../../../GameData.h"
 #include "Menus/SettingsMenu/SettingsMenu.h"
 #include " UIManager/UIManger.h"
+#include "Menus/WorldSelectMenu/WorldSelectMenu.h"
 
 enum MenuType{
     MainMenu,
     CameraMenu,
-    SettingsMenu
+    SettingsMenu,
+    WorldSelectMenu
 };
 
 struct MenuManager{
     enum MenuType currentMenuType;
     struct MainMenu* mainMenu;
     struct SettingsMenu* settingsMenu;
+    struct WorldSelectMenu* worldSelectMenu;
+
     struct OnScreenUI* onScreenUi;
 
 };

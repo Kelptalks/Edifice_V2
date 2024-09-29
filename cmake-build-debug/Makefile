@@ -968,6 +968,30 @@ Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s
 .PHONY : Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.s
 
+Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.obj: Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj
+.PHONY : Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.obj
+
+# target to build an object file
+Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj
+.PHONY : Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj
+
+Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.i: Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.i
+.PHONY : Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.i
+
+# target to preprocess a source file
+Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.i
+.PHONY : Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.i
+
+Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.s: Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.s
+.PHONY : Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.s
+
+# target to generate assembly for a file
+Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.s
+.PHONY : Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.s
+
 Game/Visuals/Menu/MenuManager/_UIManager/UIManger.obj: Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj
 .PHONY : Game/Visuals/Menu/MenuManager/_UIManager/UIManger.obj
 
@@ -1514,6 +1538,9 @@ help:
 	@echo ... Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.obj
 	@echo ... Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.i
 	@echo ... Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.s
+	@echo ... Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.obj
+	@echo ... Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.i
+	@echo ... Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.s
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIManger.obj
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIManger.i
 	@echo ... Game/Visuals/Menu/MenuManager/_UIManager/UIManger.s

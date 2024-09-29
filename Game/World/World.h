@@ -8,25 +8,27 @@
 #define ENGINE_WORLD_H
 
 struct World{
-    char* name;
+    char *name;
 
     int chunkOctreeScale;
     int chunkOctreeDimension;
 
     struct TerrainGenRules* terrainGenRules;
 
+    int maxWorldChunks;
     struct WorldChunkHashMap* worldChunkHashMap;
+    int totalChunksCreated;
+    struct WorldChunk** allCreatedWorldChunks;
 
     //
     int entityCount;
     struct Entity** tempEntityArray;
 
     bool debug;
-
 };
 
 //Create a world
-struct World* createWorld(int scale);
+struct World* createWorld(char *worldName);
 
 enum Block getBlockAtWorldCor(struct World* world, int x, int y, int z);
 void setBlockAtWorldCor(struct World* world, int x, int y, int z, enum Block block);

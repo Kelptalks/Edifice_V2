@@ -18,6 +18,7 @@ struct SettingsMenu* createSettingsMenu(){
     int yOffset = 64;
 
     settingsMenu->viewDistanceScrollWheel = createScrollWheel(xOffset, yOffset, xButtonScale, yButtonScale, 64);
+    settingsMenu->viewDistanceScrollWheel->currentVal = 16;
     settingsMenu->backButton = createButton(ExitButton, 1920 - 64, 1080 - 64, 64, 64);
 
     settingsMenu->resolutionButtons = malloc(sizeof (struct Button*) * 3);

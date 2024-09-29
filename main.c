@@ -13,12 +13,12 @@ int main(int argc, char* argv[]) {
 
     //int temp = getOctreeVolume(6);
     //reportBug("Octree volume %i", temp);
-
+    //testWorldSaving();
     if (true) {
         struct GameData *gameData = createGameData();
 
         //Play start music
-        //playSound(gameData->soundManager, MusicSunn);
+        playSound(gameData->soundManager, MusicSunn);
 
         while (gameData->screen->run) {
             //Get start time
@@ -29,20 +29,27 @@ int main(int argc, char* argv[]) {
 
             SDL_SetRenderDrawColor(gameData->screen->renderer, 150, 255, 248, 255);
             SDL_RenderPresent(gameData->screen->renderer);
-            SDL_RenderClear(gameData->screen->renderer);
+
+            SDL_Rect srcRect = {896, 64, 64, 64};
+            SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
+            SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
+
+
 
             //Handle game inputs
             handleInput(gameData);
-            updateTikTime(gameData);
 
             //end frame render time tracker
             Uint32 time2 = SDL_GetTicks();
             gameData->screen->frameRenderTime = time2 - time1;
             //Update current frame
             gameData->screen->currentFrame++;
-
         }
-        safeWorldToFile(gameData->world);
+
+
+        if (gameData->world != NULL) {
+            saveWorldToFile(gameData->world);
+        }
     }
     return 0;
 }

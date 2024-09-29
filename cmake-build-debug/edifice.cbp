@@ -302,6 +302,12 @@
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.h">
 			<Option target="edifice"/>
 		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c">
+			<Option target="edifice"/>
+		</Unit>
+		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h">
+			<Option target="edifice"/>
+		</Unit>
 		<Unit filename="C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c">
 			<Option target="edifice"/>
 		</Unit>

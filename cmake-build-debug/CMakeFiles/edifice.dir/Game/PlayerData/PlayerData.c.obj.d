@@ -216,6 +216,8 @@ CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\PlayerData\Invintory/Hotbar/Hotbar.h \

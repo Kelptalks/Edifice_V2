@@ -172,6 +172,7 @@ void renderMouseArea(struct GameData* gameData){
 
 void renderView(struct GameData* gameData){
     struct CameraData* cameraData = gameData->cameraData;
+
     struct FrameRenderingData* frameRenderingData = gameData->debugMenu->frameRenderingData;
     SDL_SetRenderDrawBlendMode(gameData->screen->renderer, SDL_BLENDMODE_BLEND);
 

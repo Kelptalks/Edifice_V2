@@ -9,6 +9,8 @@
 #include "Menus/MainMenu/MainMenu.h"
 #include "Menus/SettingsMenu/SettingsMenu.h"
 #include "../OnScreenUI/OnScreenUI.h"
+#include "Menus/WorldSelectMenu/WorldSelectMenu.h"
+#include "../../../InGameTime/TikManager.h"
 
 
 struct MenuManager* createMenuManager(){
@@ -22,7 +24,7 @@ struct MenuManager* createMenuManager(){
     menuManager->mainMenu = createMainMenu();
     menuManager->settingsMenu = createSettingsMenu();
     menuManager->onScreenUi = createOnScreenUI();
-
+    menuManager->worldSelectMenu = createWorldSelectMenu();
 
     return menuManager;
 }
@@ -49,14 +51,18 @@ void renderCurrentMenu(struct GameData* gameData){
         time2 = SDL_GetTicks();
         gameData->debugMenu->frameRenderingData->onScreenUIRenderingTime = time2 - time1;
 
+        updateTikTime(gameData);
+
         //render debug menu if visible
         if (gameData->debugMenu->visible) {
             renderDebugMenu(gameData);
         }
-
     }
     else if (currentMenuType == SettingsMenu){
         renderSettingsMenu(gameData);
+    }
+    else if (currentMenuType == WorldSelectMenu){
+        renderWorldSelectMenu(gameData);
     }
 }
 
@@ -74,6 +80,9 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
     }
     else if (currentMenuType == SettingsMenu){
         handleInputSettingsMenu(gameData, event);
+    }
+    else if (currentMenuType == WorldSelectMenu){
+        handleWorldSelectMenuInputs(gameData, event);
     }
 
 }

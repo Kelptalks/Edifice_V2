@@ -11,7 +11,7 @@
 #include "../Debuging/Test_Main.h"
 #include "../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
 
-struct World* createWorld(int scale){
+struct World* createWorld(char *worldName){
     //Create world struct
     struct World* world = malloc(sizeof (struct World));
     if (world == NULL){
@@ -25,28 +25,30 @@ struct World* createWorld(int scale){
     }
 
     //Name the world
-    char name[] = "First_World";
-    world->name = malloc(sizeof (name));
-    world->name = name;
-
+    world->name = malloc(strlen(worldName) + 1);
+    strcpy(world->name, worldName);
 
     world->chunkOctreeScale = 6;
     world->chunkOctreeDimension = getOctreeDimensions(world->chunkOctreeScale);
-    //reportBug("octree Dimentions %i\n", world->chunkOctreeDimension);
 
-    //Calculate ground height
-    world->worldChunkHashMap = createWorldChunkHashMap(20000);
+    //Create world chunk storage
+    world->maxWorldChunks = 20000;
+    world->worldChunkHashMap = createWorldChunkHashMap(world->maxWorldChunks);
+    world->totalChunksCreated = 0;
+    world->allCreatedWorldChunks = malloc(sizeof (struct WorldChunk*) * world->maxWorldChunks);
 
-
+    //Build world terrain
     world->debug = false;
     createTerrainGenRules(world);
-    world->entityCount = 500;
-    world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
     int worldXScale = 150;
     int worldYScale = 150;
     reportBug("  - Generating Terrain : \n");
     genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
+
+    //Create world entity's
     reportBug(" - Creating Entity's : %i \n");
+    world->entityCount = 150;
+    world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
     for (int i = 0; i < world->entityCount; i++){
         int x = (rand() % (worldXScale * 2)) - worldXScale;
         int y = (rand() % (worldYScale * 2)) - worldYScale;
@@ -56,20 +58,23 @@ struct World* createWorld(int scale){
         world->tempEntityArray[i]->worldY = y;
     }
 
-
-    /*
-    for (int x = 0; x < 500; x++){
-        for (int y = 0; y < 500; y++){
-            for (int z = -50; z < 50; z++){
-                setBlockAtWorldCor(world, x, y, z, BlueGrass);
-            }
-        }
-
-    }
-     */
-
     world->debug = false;
     return world;
+}
+
+struct WorldChunk* createWorldChunkInWorld(struct World* world, int x, int y, int z){
+    if (world->totalChunksCreated < world->maxWorldChunks) {
+        //Create the world chunk
+        struct WorldChunk *worldChunk = createWorldChunk(x, y, z);
+        //Add the world chunk to hashmap
+        addWorldChunkToHashMap(world->worldChunkHashMap, worldChunk);
+        //Add world chunk to all chunk array
+        world->allCreatedWorldChunks[world->totalChunksCreated] = worldChunk;
+        world->totalChunksCreated++;
+        return worldChunk;
+    }
+    reportBug("ERROR : max world chunks created\n");
+    return NULL;
 }
 
 struct WorldChunk* getWorldChunk(struct World* world, int x, int y, int z){
@@ -111,7 +116,7 @@ void setBlockAtWorldCor(struct World* world, int x, int y, int z, enum Block blo
     struct WorldChunk* worldChunk = getWorldChunk(world, chunkXCor, chunkYCor, chunkZCor);
     //Create world chunk if null
     if (worldChunk == NULL){
-        worldChunk = createWorldChunk(chunkXCor, chunkYCor, chunkZCor);
+        worldChunk = createWorldChunkInWorld(world, chunkXCor, chunkYCor, chunkZCor);
         addWorldChunkToHashMap(world->worldChunkHashMap, worldChunk);
     }
 

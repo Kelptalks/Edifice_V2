@@ -101,6 +101,8 @@ add_executable(edifice main.c
         "Game/World/World Saving/WorldFileManager.c"
         Game/Debuging/DebugMenu/TikData/TickData.c
         Game/Debuging/DebugMenu/TikData/TickData.h
+        Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c
+        Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

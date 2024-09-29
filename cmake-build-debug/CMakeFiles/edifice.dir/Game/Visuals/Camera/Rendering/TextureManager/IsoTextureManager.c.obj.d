@@ -215,6 +215,8 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureMa
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Assets/AssetManager.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_surface.h \

@@ -102,7 +102,7 @@ struct SoundManager* createSoundManager(int soundCount) {
 
 
     for (int i = 0; i < soundCount; i++){
-        resetSound(&soundManager->sounds[i]);
+        playSound(soundManager, i);
     }
 
 

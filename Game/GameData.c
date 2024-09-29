@@ -13,6 +13,7 @@
 #include "InGameTime/TikManager.h"
 #include "Sound/SoundManager.h"
 #include "Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h"
+#include "World/World Saving/WorldFileManager.h"
 
 
 struct GameData* createGameData(){
@@ -57,8 +58,22 @@ struct GameData* createGameData(){
     updateScreen(gameData->screen);
 
     reportBug("Building world\n");
-    gameData->world = createWorld(12);
 
+    if (false){
+        gameData->world = createWorld("Saves/world0.bin");
+    }
+    else{
+        gameData->world = readWorldData("Saves/World0.bin");
+    }
+
+    /*\
+    if (ifFileExists("Saves/world0.bin")) {
+        gameData->world = readWorldData("Saves/world0.bin");
+    }
+    else{
+        gameData->world = createWorld("Saves/world0.bin");
+    }
+     */
 
     //CreateMenuManager
     drawString(gameData, "Creating Menu Manager...", 24, 0, 0, 50);
