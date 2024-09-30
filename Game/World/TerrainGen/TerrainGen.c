@@ -45,21 +45,20 @@ void genChunk(struct World world, int worldX, int worldY, int worldZ){
 
 }
 
-void genArea(struct World* world, unsigned long key, int xStart, int yStart, int xArea, int yArea, int zArea){
+void genArea(struct World* world, int xStart, int yStart, int xEnd, int yEnd, int roughNess){
     int zStart = -30;
-
-    int xEnd = xStart + xArea;
-    int yEnd = yStart + yArea;
-    int zEnd = zStart + zArea;
+    int zEnd = 100;
 
 
     //Get an array of only rules applicable to area
     struct ArrayList* lairRulesInArea = getLairRulesInArea(world->terrainGenRules->lairRules, zStart, zEnd);
 
+    float RoughNess = 0.01f * ((float)roughNess / 5.0f);
+
     //Loop through keys in the area
-    for (int x = xStart; x < xArea; x++){
-        for (int y = yStart; y < yArea; y++){
-            for (int z = zStart; z < zArea; z++) {
+    for (int x = xStart; x < xEnd; x++){
+        for (int y = yStart; y < yEnd; y++){
+            for (int z = zStart; z < zEnd; z++) {
                 //Set Lair Shifting rule
 
                 //Set lair rules
@@ -68,10 +67,10 @@ void genArea(struct World* world, unsigned long key, int xStart, int yStart, int
                     struct LairRule *lairRule = (struct LairRule *) indexList(lairRulesInArea, rule);
                     if (zInRuleBounds(lairRule, zStart + z)) {
 
-                        int heightMod = perlinAt(x * 0.02, y * 0.02) * 25;
+                        int heightMod = perlinAt(x * RoughNess, y * RoughNess) * (50);
 
 
-                        int oceanLevel = 15;
+                        int oceanLevel = 30;
                         if (heightMod > oceanLevel){
                             int currentHeightMod = heightMod;
                             while (currentHeightMod > oceanLevel) {

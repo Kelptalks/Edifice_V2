@@ -21,6 +21,8 @@ enum Block getBlockInWorldChunk(struct WorldChunk* worldChunk, int x, int y, int
 
 void setBlockInWorldChunk(struct WorldChunk* worldChunk, int x, int y, int z, enum Block block);
 
+void freeWorldChunk(struct WorldChunk* worldChunk);
+
 void testWorldChunk();
 
 #endif //EDIFICE_WORLDCHUNK_H

@@ -59,21 +59,7 @@ struct GameData* createGameData(){
 
     reportBug("Building world\n");
 
-    if (false){
-        gameData->world = createWorld("Saves/world0.bin");
-    }
-    else{
-        gameData->world = readWorldData("Saves/World0.bin");
-    }
-
-    /*\
-    if (ifFileExists("Saves/world0.bin")) {
-        gameData->world = readWorldData("Saves/world0.bin");
-    }
-    else{
-        gameData->world = createWorld("Saves/world0.bin");
-    }
-     */
+    gameData->world = NULL;
 
     //CreateMenuManager
     drawString(gameData, "Creating Menu Manager...", 24, 0, 0, 50);

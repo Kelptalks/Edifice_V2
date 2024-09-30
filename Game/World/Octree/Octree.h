@@ -37,4 +37,6 @@ void setOctreeValue(struct Octree* octree, unsigned int indexOfCurrentBranch, in
 unsigned int getOctreeValue(struct Octree* octree, unsigned int rootBranchIndex, int currentDepth, int key);
 #endif
 
+void freeOctree(struct Octree* octree);
+
 void testOctree();

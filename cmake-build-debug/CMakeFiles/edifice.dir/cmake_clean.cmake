@@ -69,6 +69,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj.d"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj.d"
+  "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj"
+  "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj.d"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj.d"
   "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj"

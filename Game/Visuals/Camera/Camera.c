@@ -269,3 +269,21 @@ void renderView(struct GameData* gameData){
     sprintf(framePerSecondString, "FPS : %i", FPS);
     renderString(gameData, framePerSecondString, 5, 5, 15);
 }
+
+void clearCameraRendering(struct GameData* gameData){
+    struct CameraData* cameraData = gameData->cameraData;
+    for (int i = 0; i < cameraData->totalDistanceCords; i++) {
+        int x = cameraData->distanceSortedRelativeCords[i].x;
+        int y = cameraData->distanceSortedRelativeCords[i].y;
+
+        int xChunkWorldCords = (x) + cameraData->xIsoChunkCamCenter;
+        int yChunkWorldCords = (y) + cameraData->yIsoChunkCamCenter;
+
+        //Attempt to retrieve the chunk at the chunks world cords
+        struct CastedChunk *castedChunk = getChunkFromMap(cameraData->castedPool->chunkMap, xChunkWorldCords,
+                                                          yChunkWorldCords);
+        if (castedChunk != NULL){
+            unloadChunk(gameData, castedChunk);
+        }
+    }
+}

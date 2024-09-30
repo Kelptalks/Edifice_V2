@@ -33,6 +33,10 @@ struct World* createWorld(char *worldName);
 enum Block getBlockAtWorldCor(struct World* world, int x, int y, int z);
 void setBlockAtWorldCor(struct World* world, int x, int y, int z, enum Block block);
 
+void generateWorldTerrain(struct World* world, int xScale, int yScale, int roughness);
+
+void freeWorld(struct World* world);
+
 void testWorld();
 
 #endif //ENGINE_WORLD_H

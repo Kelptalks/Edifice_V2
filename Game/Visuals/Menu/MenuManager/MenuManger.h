@@ -14,7 +14,8 @@ enum MenuType{
     MainMenu,
     CameraMenu,
     SettingsMenu,
-    WorldSelectMenu
+    WorldSelectMenu,
+    WorldCreateMenu
 };
 
 struct MenuManager{
@@ -22,6 +23,7 @@ struct MenuManager{
     struct MainMenu* mainMenu;
     struct SettingsMenu* settingsMenu;
     struct WorldSelectMenu* worldSelectMenu;
+    struct WorldCreateMenu* worldCreateMenu;
 
     struct OnScreenUI* onScreenUi;
 

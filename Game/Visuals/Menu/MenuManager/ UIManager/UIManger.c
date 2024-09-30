@@ -50,20 +50,30 @@ void handleButtonInputs(struct Button* button, struct GameData* gameData, SDL_Ev
 }
 
 void renderUIButton(struct Button* button, struct GameData* gameData){
-    if (button->buttonTexture == ExitButton){
-        renderXBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
-    }
-    else if (button->buttonTexture == CheckButton){
-        renderCheckBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
-    }
-    else if (button->buttonTexture == BackButton){
-        renderBackBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
-    }
-    else if (button->buttonTexture == ForwardButton){
-        renderForwardBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
-    }
-    else if (button->buttonTexture == MainButton){
-        renderScrollBar(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+    switch(button->buttonTexture) {
+        case ExitButton:
+            renderXBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+            break;
+        case CheckButton :
+            renderCheckBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+            break;
+        case BackButton :
+            renderBackBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+            break;
+        case ForwardButton :
+            renderForwardBox(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+            break;
+        case MainButton :
+            renderScrollBar(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+            break;
+        case AreaSelectButton :
+            break;
+        case InventoryButton :
+            renderInventoryButton(gameData, button->mouseOn, button->xCor, button->yCor, button->xScale, button->yScale);
+            break;
+
+        default:
+            reportBug("Error no button of value %i\n", button->buttonTexture);
     }
 }
 
@@ -120,6 +130,9 @@ void handleScrollWheelInputs(struct ScrollWheel* scrollWheel, struct GameData* g
             scrollWheel->lastX = xCor;
             //Update scroll wheel value
             scrollWheel->currentVal = (scrollWheel->lastX - scrollWheel->xCor) / (scrollWheel->xScale/scrollWheel->maxVal);
+            if (scrollWheel->currentVal > scrollWheel->maxVal){
+                scrollWheel->currentVal = scrollWheel->maxVal;
+            }
         }
     }
     else{

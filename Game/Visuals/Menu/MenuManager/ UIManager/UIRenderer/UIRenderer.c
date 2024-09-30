@@ -54,6 +54,18 @@ void renderBackBox(struct GameData* gameData, bool pressed, int xCor, int yCor, 
     SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &destRect);
 }
 
+void renderInventoryButton(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale){
+    //Get X sprite from sprite sheet
+    SDL_Rect srcRect = {1216, 352, 32 ,32};
+    if (pressed){
+        srcRect.y += 32;
+    }
+    //Get location and scale to draw
+    SDL_Rect destRect = {xCor, yCor, xScale ,yScale};
+    //Render the sprite
+    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &destRect);
+}
+
 void renderScrollBar(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale){
     //Get X sprite from sprite sheet
     SDL_Rect srcRect = {1137, 208, 128 ,16};

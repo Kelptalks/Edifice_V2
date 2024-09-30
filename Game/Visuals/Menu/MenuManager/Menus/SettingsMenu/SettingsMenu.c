@@ -19,7 +19,7 @@ struct SettingsMenu* createSettingsMenu(){
 
     settingsMenu->viewDistanceScrollWheel = createScrollWheel(xOffset, yOffset, xButtonScale, yButtonScale, 64);
     settingsMenu->viewDistanceScrollWheel->currentVal = 16;
-    settingsMenu->backButton = createButton(ExitButton, 1920 - 64, 1080 - 64, 64, 64);
+    settingsMenu->backButton = createButton(BackButton, 1920 - 64, 1080 - 64, 64, 64);
 
     settingsMenu->resolutionButtons = malloc(sizeof (struct Button*) * 3);
     for (int x = 0; x < 3; x++){
@@ -32,13 +32,13 @@ struct SettingsMenu* createSettingsMenu(){
 void updateButtonRenderCords(struct GameData* gameData){
     struct SettingsMenu* settingsMenu = gameData->menuManger->settingsMenu;
 
-    int buttonScaleX = gameData->screen->xRez/32;
+    int buttonScaleX = gameData->screen->xRez/24;
     int buttonScaleY = buttonScaleX;
     int buttonSpacing = (buttonScaleX / 3) + buttonScaleX;
 
     settingsMenu->backButton->xScale = buttonScaleX;
     settingsMenu->backButton->yScale = buttonScaleY;
-    settingsMenu->backButton->xCor = gameData->screen->xRez - buttonSpacing;
+    settingsMenu->backButton->xCor = buttonScaleX / 3;
     settingsMenu->backButton->yCor = gameData->screen->yRez - buttonSpacing;
 
 
@@ -59,7 +59,8 @@ void updateButtonRenderCords(struct GameData* gameData){
 
 void renderSettingsMenu(struct GameData* gameData){
     updateButtonRenderCords(gameData);
-    SDL_Rect srcRect = {960, 0, 320, 175};
+    //Render background
+    SDL_Rect srcRect = {656, 0, 240, 128};
     SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
     SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
 
@@ -108,9 +109,15 @@ void handleInputSettingsMenu(struct GameData* gameData, SDL_Event event){
 
     struct Button* backButton = settingsMenu->backButton;
     handleButtonInputs(backButton, gameData, event);
-    if (backButton->pressed){
+    if (backButton->pressed || event.key.keysym.sym == SDLK_ESCAPE){
+        playSound(gameData->soundManager, SoundMenuButtonClick);
         backButton->pressed = false;
-        gameData->menuManger->currentMenuType = MainMenu;
+        if (gameData->world == NULL) {
+            gameData->menuManger->currentMenuType = MainMenu;
+        }
+        else{
+            gameData->menuManger->currentMenuType = CameraMenu;
+        }
     }
 
 
@@ -121,15 +128,18 @@ void handleInputSettingsMenu(struct GameData* gameData, SDL_Event event){
     if (button->pressed){
         button->pressed = false;
         setScreenResolution(gameData->screen, 1280, 720);
+        playSound(gameData->soundManager, SoundMenuButtonClick);
     }
     button = settingsMenu->resolutionButtons[1];
     if (button->pressed){
         button->pressed = false;
         setScreenResolution(gameData->screen, 1920, 1080);
+        playSound(gameData->soundManager, SoundMenuButtonClick);
     }
     button = settingsMenu->resolutionButtons[2];
     if (button->pressed){
         button->pressed = false;
         setScreenResolution(gameData->screen, 2560, 1440);
+        playSound(gameData->soundManager, SoundMenuButtonClick);
     }
 }

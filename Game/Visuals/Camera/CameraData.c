@@ -49,7 +49,6 @@ struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* camera
         distanceCords[i] = distanceCords[minValueIndex];
         distanceCords[minValueIndex] = tempDistanceCord;
     }
-    reportBug("Test4\n");
 
     //Create the array based off distance
     struct DistanceCord* distanceSortedRelativeCords = malloc(totalCords * sizeof(struct DistanceCord));

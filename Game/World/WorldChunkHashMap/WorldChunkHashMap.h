@@ -36,6 +36,7 @@ void addWorldChunkToHashMap(struct WorldChunkHashMap* worldChunkHashMap, struct 
 
 struct WorldChunk* getWordChunkFromMap(struct WorldChunkHashMap* hashMap, int xCor, int yCor, int zCor);
 
+void freeWorldHashMap(struct WorldChunkHashMap* worldChunkHashMap);
 
 void testWorldChunkHashMap();
 #endif //EDIFICE_WORLDCHUNKHASHMAP_H

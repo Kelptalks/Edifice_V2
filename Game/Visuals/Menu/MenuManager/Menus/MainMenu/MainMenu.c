@@ -3,6 +3,11 @@
 //
 
 #include "MainMenu.h"
+#include "../../../../../World/World.h"
+#include "../../../../../Visuals/Camera/CameraData.h"
+#include "../../../../../Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h"
+#include "../../../../../World/World Saving/WorldFileManager.h"
+#include "../../../../Camera/Camera.h"
 
 void upDateMainMenuCords(struct GameData* gameData){
     struct MainMenu* mainMenu = gameData->menuManger->mainMenu;
@@ -55,6 +60,21 @@ struct MainMenu* createMainMenu(){
 }
 
 void renderMainMenu(struct GameData* gameData){
+    //If sent to the main menu unload the world if it's null
+    if (gameData->world != NULL){
+        saveWorldToFile(gameData->world);
+
+        //Clear current world rendering
+        clearCameraRendering(gameData);
+        gameData->cameraData->world = NULL;
+
+        //Free world
+        freeWorld(gameData->world);
+        gameData->world = NULL;
+    }
+
+
+
     struct MainMenu* mainMenu = gameData->menuManger->mainMenu;
     upDateMainMenuCords(gameData);
 
@@ -86,7 +106,7 @@ void handleInputMainMenu(struct GameData* gameData, SDL_Event event){
     if (startButton->pressed){
         playSound(gameData->soundManager, SoundMenuButtonClick);
         startButton->pressed = false;
-        gameData->menuManger->currentMenuType = CameraMenu;
+        gameData->menuManger->currentMenuType = WorldSelectMenu;
     }
 
     struct Button* settingsButton = mainMenu->settingsButton;

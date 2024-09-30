@@ -18,5 +18,6 @@ void renderCastedBlock(struct GameData* gameData, struct CastedBlock* castedBloc
 void clearChunkTexture(struct GameData* gameData, struct CastedChunk* castedChunk);
 
 void renderView(struct GameData* gameData);
+void clearCameraRendering(struct GameData* gameData);
 
 #endif //EDIFICE_CAMERA_H

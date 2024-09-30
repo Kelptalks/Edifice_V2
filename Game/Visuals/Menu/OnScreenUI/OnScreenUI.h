@@ -11,9 +11,9 @@
 struct OnScreenUI{
     bool visible;
     bool blockSelectionMenuVisible;
+    bool escapeMenuVisible;
 
     enum Block blockSelected;
-
 
     //Location and scaling vars
     int scale;
@@ -35,8 +35,13 @@ struct OnScreenUI{
     int blockMenuCorX;
     int blockMenuCorY;
 
+    struct Button* inventoryButton;
+
     //Text
     int textScale;
+
+    //Escape Menu
+    struct Button** escapeMenuButtons;
 };
 
 void updateOnScreenUICords(struct GameData* gameData);

@@ -14,6 +14,11 @@ struct WorldSelectMenu{
 
     struct Button* backButton;
 
+
+    bool confirmDeleteVisible;
+    int worldToDelete;
+    struct Button* cancelDeleteButton;
+    struct Button* confirmDeleteButton;
 };
 
 struct WorldSelectMenu* createWorldSelectMenu();

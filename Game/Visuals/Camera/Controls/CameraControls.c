@@ -378,9 +378,6 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
         switch (event.key.keysym.sym) {
             case SDLK_TAB :
                 break;
-            case SDLK_ESCAPE :
-                gameData->menuManger->currentMenuType = MainMenu;
-                break;
             case SDLK_q :
                 rotateCamLeft(gameData->cameraData);
                 break;

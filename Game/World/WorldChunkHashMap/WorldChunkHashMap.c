@@ -141,6 +141,63 @@ struct WorldChunk* getWordChunkFromMap(struct WorldChunkHashMap* hashMap, int xC
     return NULL;
 }
 
+void removeWorldChunkFromMap(struct WorldChunkHashMap* hashMap, int xCor, int yCor, int zCor){
+    uint64_t key = hashCords(xCor, yCor, zCor);
+    int index = key % hashMap->hashArraySize;
+
+    struct WorldChunkHashMapNode* currentNode = hashMap->worldChunkHashArray[index];
+    struct WorldChunkHashMapNode* lastNode = NULL;
+
+    while(currentNode != NULL){
+        if (currentNode->worldChunk->xCor == xCor && currentNode->worldChunk->yCor == yCor && currentNode->worldChunk->zCor == zCor){
+
+            if (currentNode->nextNode == NULL){
+                if (lastNode == NULL){
+                    hashMap->worldChunkHashArray[index] = NULL;
+                }
+                else{
+                    lastNode->nextNode = NULL;
+                }
+            }
+            else{
+                if (lastNode == NULL){
+                    hashMap->worldChunkHashArray[index] = currentNode->nextNode;
+                }
+                else{
+                    lastNode->nextNode = currentNode->nextNode;
+                }
+            }
+            currentNode->worldChunk = NULL;
+            freeNodeToWorldChunkHashMapNodePool(hashMap->worldChunkHashMapNodePool, currentNode);
+        }
+        else{
+            lastNode = currentNode;
+            currentNode = currentNode->nextNode;
+        }
+    }
+}
+
+
+void freeWorldHashMap(struct WorldChunkHashMap* worldChunkHashMap){
+    for (int i = 0; i < worldChunkHashMap->hashArraySize; i++){
+        if (worldChunkHashMap->worldChunkHashArray[i] != NULL){
+            struct WorldChunkHashMapNode* currentNode = worldChunkHashMap->worldChunkHashArray[i];
+            while (currentNode != NULL){
+                freeNodeToWorldChunkHashMapNodePool(worldChunkHashMap->worldChunkHashMapNodePool, currentNode);
+                currentNode = currentNode->nextNode;
+            }
+        }
+    }
+    free(worldChunkHashMap->worldChunkHashArray);
+
+    for (int i = 0; i < worldChunkHashMap->worldChunkHashMapNodePool->freeNodesCount; i++){
+        free(worldChunkHashMap->worldChunkHashMapNodePool->freeNodes[i]);
+    }
+    free(worldChunkHashMap->worldChunkHashMapNodePool->freeNodes);
+    free(worldChunkHashMap->worldChunkHashMapNodePool);
+    free(worldChunkHashMap);
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Testing
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

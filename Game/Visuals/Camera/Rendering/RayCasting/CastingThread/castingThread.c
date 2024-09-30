@@ -46,8 +46,10 @@ void *rayCastingThreadWorker(void* arg){
 
             //Ray cast the chunk
             pthread_mutex_lock(&task.castedChunk->lock);
-            rayCastChunk(threadPool->cameraData, task.castedChunk);
-            task.castedChunk->rayCast = true;
+            if (threadPool->cameraData->world != NULL) {
+                rayCastChunk(threadPool->cameraData, task.castedChunk);
+                task.castedChunk->rayCast = true;
+            }
 
             pthread_mutex_unlock(&task.castedChunk->lock);
 

@@ -10,7 +10,7 @@
 
 struct PlayerData* createPlayerData(){
     struct PlayerData* playerData = malloc(sizeof (struct PlayerData));
-    playerData->hotBar = createHotBar(10);
+    playerData->hotBar = createHotBar(9);
     int totalBlockCount = getTotalBlockCount();
     playerData->blockSelectionMenu = createBlockSelectionMenu(getTotalBlockCount(), totalBlockCount / 5);
 

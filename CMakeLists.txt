@@ -103,6 +103,8 @@ add_executable(edifice main.c
         Game/Debuging/DebugMenu/TikData/TickData.h
         Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c
         Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h
+        Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c
+        Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})

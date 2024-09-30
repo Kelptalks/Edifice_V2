@@ -21,8 +21,17 @@ struct OnScreenUI* createOnScreenUI(){
 
     onScreenUi->visible = true;
     onScreenUi->blockSelectionMenuVisible = false;
+    onScreenUi->escapeMenuVisible = false;
+
     onScreenUi->blockSelected = Air;
 
+    onScreenUi->escapeMenuButtons = malloc(sizeof (struct Button*) * 2);
+    for (int i = 0; i < 3; i++){
+        onScreenUi->escapeMenuButtons[i] = createButton(MainButton, 0, 0, 0, 0);
+    }
+
+
+    onScreenUi->inventoryButton = createButton(InventoryButton, 0, 0, 0, 0);
     return onScreenUi;
 }
 
@@ -49,6 +58,20 @@ void updateOnScreenUICords(struct GameData* gameData){
 
     //Text
     onScreenUi->textScale = onScreenUi->scale/4;
+
+    //EscapeMenu
+    for (int i = 0; i < 3; i++){
+        struct Button* button = onScreenUi->escapeMenuButtons[i];
+        button->xScale = onScreenUi->scale * 16;
+        button->yScale = onScreenUi->scale * 2;
+        button->xCor = (gameData->screen->xRez/2) - (button->xScale/2);
+        button->yCor = (gameData->screen->yRez/2) - ((i) * onScreenUi->slotSpacedScale * 2);
+    }
+
+    onScreenUi->inventoryButton->xScale = onScreenUi->scale;
+    onScreenUi->inventoryButton->yScale = onScreenUi->scale;
+    onScreenUi->inventoryButton->xCor = onScreenUi->hotBarCorX - onScreenUi->scale * 1.5;
+    onScreenUi->inventoryButton->yCor = onScreenUi->hotBarCorY;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -206,11 +229,35 @@ void renderOnScreenUI(struct GameData* gameData){
     struct OnScreenUI* onScreenUi = gameData->menuManger->onScreenUi;
     if (onScreenUi->visible) {
         renderHotBar(gameData);
+        renderUIButton(onScreenUi->inventoryButton, gameData);
 
         //Render block selection menu if on
         if (onScreenUi->blockSelectionMenuVisible) {
             renderBlockSelectionMenu(gameData);
             renderSelectedBlock(gameData);
+        }
+    }
+
+    if (onScreenUi->escapeMenuVisible){
+        for (int i = 0; i < 3; i++){
+            struct Button* button = onScreenUi->escapeMenuButtons[i];
+            renderUIButton(button, gameData);
+
+            if (i == 2) {
+                renderStringCentered(gameData, "Resume", button->xCor + (button->xScale/2),
+                                     button->yCor + (button->yScale/2),
+                                     onScreenUi->scale);
+            }
+            else if (i == 1){
+                renderStringCentered(gameData, "Settings", button->xCor + (button->xScale/2),
+                                     button->yCor + (button->yScale/2),
+                                     onScreenUi->scale);
+            }
+            else if (i == 0){
+                renderStringCentered(gameData, "Main Menu", button->xCor + (button->xScale/2),
+                                     button->yCor + (button->yScale/2),
+                                     onScreenUi->scale);
+            }
         }
     }
 }
@@ -261,6 +308,15 @@ void handleOnScreenUIKeyInputs(struct GameData* gameData, SDL_Event event){
             case SDLK_TAB:
                 onScreenUi->blockSelectionMenuVisible = !onScreenUi->blockSelectionMenuVisible;
                 break;
+            case SDLK_ESCAPE:
+                if (onScreenUi->blockSelectionMenuVisible){
+                    onScreenUi->blockSelectionMenuVisible = false;
+                }
+                else{
+                    onScreenUi->visible = !onScreenUi->visible;
+                    onScreenUi->escapeMenuVisible = !onScreenUi->escapeMenuVisible;
+                }
+
         }
         gameData->playerData->block = getHotBarSlotBlockType(gameData->playerData->hotBar, gameData->playerData->hotBar->selectedSlot);
     }
@@ -325,12 +381,44 @@ bool handleOnScreenUIInput(struct GameData* gameData, SDL_Event event){
     //Handle Key inputs
     handleOnScreenUIKeyInputs(gameData, event);
 
+    if (onScreenUi->escapeMenuVisible){
+        for (int i = 0; i < 3; i++){
+            struct Button* button = onScreenUi->escapeMenuButtons[i];
+            handleButtonInputs(button, gameData, event);
+            if (button->pressed){
+                button->pressed = false;
+                UIElementClicked = true;
+
+                if (i == 2){
+                    onScreenUi->visible = !onScreenUi->visible;
+                    onScreenUi->escapeMenuVisible = !onScreenUi->escapeMenuVisible;
+                }
+                else if (i == 1){
+                    gameData->menuManger->currentMenuType = SettingsMenu;
+                }
+                else if (i == 0){
+                    gameData->menuManger->currentMenuType = MainMenu;
+                }
+                playSound(gameData->soundManager, SoundMenuButtonClick);
+            }
+        }
+    }
+
     //HandleMouse Inputs
     if (onScreenUi->blockSelectionMenuVisible){
         UIElementClicked = handleOnScreenUIMouseInputs(gameData, event);
     }
     else if (onScreenUi->blockSelected != Air){
         onScreenUi->blockSelected = Air;
+    }
+
+    struct Button* inventoryButton = onScreenUi->inventoryButton;
+    handleButtonInputs(inventoryButton, gameData, event);
+    if (inventoryButton->pressed){
+        inventoryButton->pressed = false;
+        UIElementClicked = true;
+        onScreenUi->blockSelectionMenuVisible = !onScreenUi->blockSelectionMenuVisible;
+        playSound(gameData->soundManager, SoundMenuButtonClick);
     }
     return UIElementClicked;
 }

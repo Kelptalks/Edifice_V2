@@ -60,3 +60,8 @@ void testWorldChunk(){
     reportBug("Octree Key Val %i\n", getBlockInWorldChunk(worldChunk, 2, 12, 3));
     free(worldChunk);
 }
+
+void freeWorldChunk(struct WorldChunk* worldChunk){
+    freeOctree(worldChunk->octree);
+    free(worldChunk);
+}

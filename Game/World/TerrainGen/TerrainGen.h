@@ -21,7 +21,7 @@ struct TerrainGenRules{
 
 void createTerrainGenRules(struct World* world);
 
-void genArea(struct World* world, unsigned long key, int xStart, int yStart, int xArea, int yArea, int zArea);
+void genArea(struct World* world, int xStart, int yStart, int xEnd, int yEnd, int roughNess);
 
 void genTree(struct World* world);
 

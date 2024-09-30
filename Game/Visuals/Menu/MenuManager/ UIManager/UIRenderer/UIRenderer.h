@@ -16,6 +16,8 @@ void renderForwardBox(struct GameData* gameData, bool pressed, int xCor, int yCo
 
 void renderBackBox(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale);
 
+void renderInventoryButton(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale);
+
 void renderScrollBar(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale);
 
 void renderScrollPointer(struct GameData* gameData, bool pressed, int xCor, int yCor, int xScale, int yScale);

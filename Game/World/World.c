@@ -37,13 +37,18 @@ struct World* createWorld(char *worldName){
     world->totalChunksCreated = 0;
     world->allCreatedWorldChunks = malloc(sizeof (struct WorldChunk*) * world->maxWorldChunks);
 
+    world->debug = false;
+    return world;
+}
+
+void generateWorldTerrain(struct World* world, int xScale, int yScale, int roughness){
     //Build world terrain
     world->debug = false;
     createTerrainGenRules(world);
-    int worldXScale = 150;
-    int worldYScale = 150;
+    int worldXScale = xScale;
+    int worldYScale = yScale;
     reportBug("  - Generating Terrain : \n");
-    genArea(world, 0, -worldXScale, -worldYScale, worldXScale, worldYScale, 100);
+    genArea(world, -worldXScale, -worldYScale, worldXScale, worldYScale, roughness);
 
     //Create world entity's
     reportBug(" - Creating Entity's : %i \n");
@@ -57,9 +62,6 @@ struct World* createWorld(char *worldName){
         world->tempEntityArray[i]->worldX = x;
         world->tempEntityArray[i]->worldY = y;
     }
-
-    world->debug = false;
-    return world;
 }
 
 struct WorldChunk* createWorldChunkInWorld(struct World* world, int x, int y, int z){
@@ -130,6 +132,23 @@ void setBlockAtWorldCor(struct World* world, int x, int y, int z, enum Block blo
     setBlockInWorldChunk(worldChunk, chunkSubXCor, chunkSubYCor, chunkSubZCor, block);
 }
 
-void testWorld(){
+void freeWorld(struct World* world){
+    for (int i = 1; i < world->totalChunksCreated; i++){
+        if (world->allCreatedWorldChunks[i] != NULL) {
+            freeWorldChunk(world->allCreatedWorldChunks[i]);
+        }
+    }
+    free(world->allCreatedWorldChunks);
+
+    for (int i = 1; i < world->entityCount; i++){
+        if (world->tempEntityArray[i] != NULL) {
+            free(world->tempEntityArray[i]);
+        }
+    }
+    free(world->tempEntityArray);
+    free(world->name);
+    freeWorldHashMap(world->worldChunkHashMap);
+
+    free(world);
 
 }

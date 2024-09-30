@@ -11,6 +11,7 @@
 #include "../OnScreenUI/OnScreenUI.h"
 #include "Menus/WorldSelectMenu/WorldSelectMenu.h"
 #include "../../../InGameTime/TikManager.h"
+#include "Menus/WorldCreateMenu/WorldCreateMenu.h"
 
 
 struct MenuManager* createMenuManager(){
@@ -25,6 +26,7 @@ struct MenuManager* createMenuManager(){
     menuManager->settingsMenu = createSettingsMenu();
     menuManager->onScreenUi = createOnScreenUI();
     menuManager->worldSelectMenu = createWorldSelectMenu();
+    menuManager->worldCreateMenu = createWorldCreateMenu();
 
     return menuManager;
 }
@@ -64,6 +66,9 @@ void renderCurrentMenu(struct GameData* gameData){
     else if (currentMenuType == WorldSelectMenu){
         renderWorldSelectMenu(gameData);
     }
+    else if (currentMenuType == WorldCreateMenu){
+        renderWorldCreateMenu(gameData);
+    }
 }
 
 void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
@@ -83,6 +88,9 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
     }
     else if (currentMenuType == WorldSelectMenu){
         handleWorldSelectMenuInputs(gameData, event);
+    }
+    else if (currentMenuType == WorldCreateMenu){
+        handleWorldCreateMenuInputs(gameData, event);
     }
 
 }

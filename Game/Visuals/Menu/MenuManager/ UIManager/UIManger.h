@@ -18,7 +18,7 @@ enum ButtonTexture{
     ForwardButton,
     MainButton,
     AreaSelectButton,
-    InventoryButton,
+    InventoryButton
 };
 
 struct Button{

@@ -233,6 +233,18 @@ struct Octree* createOctree(int depth){
     return octree;
 }
 
+void freeOctree(struct Octree* octree){
+    if (octree != NULL) {
+        if (octree->branchData != NULL && octree->octreeData != NULL) {
+            free(octree->branchData);
+        }
+        if (octree->octreeData != NULL) {
+            free(octree->octreeData);
+        }
+        free(octree);
+    }
+}
+
 void testOctree(){
     int depth = 6;
     struct Octree* octree = createOctree(depth);
