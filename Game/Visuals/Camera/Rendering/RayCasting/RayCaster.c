@@ -35,6 +35,9 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
     int rightZ = currentZ;
     bool rightFaceStruck = false;
 
+    castedBlock->struckLeftTranslucent = false;
+    castedBlock->struckRightTranslucent = false;
+
     for (int d = 0; d < cameraData->castingDistance; d++) {
         //RightModdedKey to check if leftFace was struck
         //x--
@@ -45,6 +48,13 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
         if (!isTransparent(currentBlock) && !leftFaceStruck) {
             if (isTranslucent(currentBlock)){
                 addTexture(castedBlock->leftTextureList, currentBlock, RightTopFace);
+                if (!castedBlock->struckLeftTranslucent){
+                    castedBlock->struckLeftTranslucent = true;
+                    castedBlock->worldLeftTranslucentX = leftX;
+                    castedBlock->worldLeftTranslucentY = leftY;
+                    castedBlock->worldLeftTranslucentZ = leftZ;
+                }
+
             }
             else {
                 addTexture(castedBlock->leftTextureList, currentBlock, RightTopFace);
@@ -67,6 +77,12 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
         if (!isTransparent(currentBlock) && !rightFaceStruck) {
             if (isTranslucent(currentBlock)){
                 addTexture(castedBlock->rightTextureList, currentBlock, LeftTopFace);
+                if (!castedBlock->struckRightTranslucent){
+                    castedBlock->struckRightTranslucent = true;
+                    castedBlock->worldRightTranslucentX = rightX;
+                    castedBlock->worldRightTranslucentY = rightY;
+                    castedBlock->worldRightTranslucentZ = rightZ;
+                }
             }
             else {
                 addTexture(castedBlock->rightTextureList, currentBlock, LeftTopFace);
@@ -93,6 +109,12 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
             if (!leftFaceStruck) {
                 if (isTranslucent(currentBlock)){
                     addTexture(castedBlock->leftTextureList, currentBlock, LeftBotFace);
+                    if (!castedBlock->struckLeftTranslucent){
+                        castedBlock->struckLeftTranslucent = true;
+                        castedBlock->worldLeftTranslucentX = currentX;
+                        castedBlock->worldLeftTranslucentY = currentY;
+                        castedBlock->worldLeftTranslucentZ = currentZ;
+                    }
                 }
                 else {
                     addTexture(castedBlock->leftTextureList, currentBlock, LeftBotFace);
@@ -110,6 +132,12 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
             if (!rightFaceStruck) {
                 if (isTranslucent(currentBlock)){
                     addTexture(castedBlock->rightTextureList, currentBlock, RightBotFace);
+                    if (!castedBlock->struckRightTranslucent){
+                        castedBlock->struckRightTranslucent = true;
+                        castedBlock->worldRightTranslucentX = currentX;
+                        castedBlock->worldRightTranslucentY = currentY;
+                        castedBlock->worldRightTranslucentZ = currentZ;
+                    }
                 }
                 else {
                     addTexture(castedBlock->rightTextureList, currentBlock, RightBotFace);
@@ -135,6 +163,12 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
             if (!leftFaceStruck) {
                 if (isTranslucent(currentBlock)){
                     addTexture(castedBlock->leftTextureList, currentBlock, TopLeftFace);
+                    if (!castedBlock->struckLeftTranslucent){
+                        castedBlock->struckLeftTranslucent = true;
+                        castedBlock->worldLeftTranslucentX = currentX;
+                        castedBlock->worldLeftTranslucentY = currentY;
+                        castedBlock->worldLeftTranslucentZ = currentZ;
+                    }
                 }
                 else {
                     addTexture(castedBlock->leftTextureList, currentBlock, TopLeftFace);
@@ -148,6 +182,12 @@ void castBlock(struct CameraData* cameraData, struct CastedBlock* castedBlock) {
             if (!rightFaceStruck) {
                 if (isTranslucent(currentBlock)){
                     addTexture(castedBlock->rightTextureList, currentBlock, TopRightFace);
+                    if (!castedBlock->struckRightTranslucent){
+                        castedBlock->struckRightTranslucent = true;
+                        castedBlock->worldRightTranslucentX = currentX;
+                        castedBlock->worldRightTranslucentY = currentY;
+                        castedBlock->worldRightTranslucentZ = currentZ;
+                    }
                 }
                 else {
                     addTexture(castedBlock->rightTextureList, currentBlock, TopRightFace);

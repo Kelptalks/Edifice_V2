@@ -7,6 +7,7 @@
 #include "PlayerData.h"
 #include "../World/World.h"
 #include "../InGameTime/TikManager.h"
+#include "../Visuals/Camera/CameraData.h"
 
 struct PlayerData* createPlayerData(){
     struct PlayerData* playerData = malloc(sizeof (struct PlayerData));
@@ -137,4 +138,78 @@ void tikPlayer(struct GameData* gameData){
     }
 
     playerData->velZ -= playerData->gravity;
+}
+
+void handlePlayerControls(struct GameData* gameData){
+    //Camera Movement Controls
+    const Uint8 *keystate = SDL_GetKeyboardState(NULL);
+    struct CameraData* cameraData = gameData->cameraData;
+    // Check each key of interest and update accordingly
+    bool w = false;
+    bool a = false;
+    bool s = false;
+    bool d = false;
+    bool shift = false;
+    gameData->playerData->sprinting = false;
+    if (keystate[SDL_SCANCODE_UP]) {
+        w = true;
+    }
+    if (keystate[SDL_SCANCODE_DOWN]) {
+        s = true;
+    }
+    if (keystate[SDL_SCANCODE_LEFT]) {
+        a = true;
+    }
+    if (keystate[SDL_SCANCODE_RIGHT]) {
+        d = true;
+    }
+    if (keystate[SDL_SCANCODE_SPACE]) {
+        gameData->playerData->velZ = 0.5f;
+    }
+    if (keystate[SDL_SCANCODE_LSHIFT]){
+        shift = true;
+        gameData->playerData->sprinting = true;
+    }
+
+    float shiftMod = 0;
+    float halfWalk = gameData->playerData->walkingSpeed;
+    if (shift){
+        shiftMod = gameData->playerData->sprintMod;
+    }
+    if (!w && !a && s && !d){
+        gameData->playerData->playerDirection = EntityNorth;
+        gameData->playerData->velX = +(halfWalk+ shiftMod) * cameraData->xDirection;
+        gameData->playerData->velY = +(halfWalk+ shiftMod) * cameraData->yDirection;
+    }
+    else if (!w && a && s && !d){
+        gameData->playerData->playerDirection = EntityNorthEast;
+        gameData->playerData->velY = +(gameData->playerData->walkingSpeed + shiftMod) * cameraData->yDirection;;
+    }
+    else if (!w && a && !s && !d){
+        gameData->playerData->playerDirection = EntityEast;
+        gameData->playerData->velY = +(halfWalk + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velX = -(halfWalk + shiftMod) * cameraData->xDirection;
+    }
+    else if (w && a && !s && !d){
+        gameData->playerData->playerDirection = EntitySouthEast;
+        gameData->playerData->velX = -(gameData->playerData->walkingSpeed + shiftMod) * cameraData->xDirection;;
+    }
+    else if (w && !a && !s && !d){
+        gameData->playerData->playerDirection = EntitySouth;
+        gameData->playerData->velX = -(halfWalk + shiftMod) * cameraData->xDirection;
+        gameData->playerData->velY = -(halfWalk + shiftMod) * cameraData->yDirection;
+    }
+    else if (w && !a && !s && d){
+        gameData->playerData->playerDirection = EntitySouthWest;
+        gameData->playerData->velY = -(gameData->playerData->walkingSpeed + shiftMod) * cameraData->yDirection;
+    }
+    else if (!w && !a && !s && d){
+        gameData->playerData->playerDirection = EntityWest;
+        gameData->playerData->velY = -(halfWalk + shiftMod) * cameraData->yDirection;
+        gameData->playerData->velX = +(halfWalk + shiftMod) * cameraData->xDirection;
+    }
+    else if (!w && !a && s && d){
+        gameData->playerData->playerDirection = EntityNorthWest;
+        gameData->playerData->velX = +(gameData->playerData->walkingSpeed + shiftMod) * cameraData->xDirection;
+    }
 }

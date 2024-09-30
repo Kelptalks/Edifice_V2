@@ -238,4 +238,9 @@ CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World\ Saving/WorldFileManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h

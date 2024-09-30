@@ -68,6 +68,11 @@ struct CameraData{
     int totalDistanceCords;
     struct DistanceCord* distanceSortedRelativeCords;
 
+    //Movment
+    float camVelX;
+    float camVelY;
+    float camVelResist;
+
     struct World* world;
 };
 

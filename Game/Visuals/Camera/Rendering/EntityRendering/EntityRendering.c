@@ -52,8 +52,8 @@ void renderPuffEntity(struct GameData* gameData, struct Entity* entity){
     //ReDraw Blocks in front of sprite
     for (int x = -3; x < 2; x++){
         for (int y = -3; y < 2; y++){
-            float relXCor = y + xEntityCamCor;
-            float relYCor = x + yEntityCamCor;
+            float relXCor = (x + xEntityCamCor);
+            float relYCor = (y + yEntityCamCor);
             struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
             if (castedBlock != NULL) {
                 //Check if block is in front of sprite
@@ -68,10 +68,10 @@ void renderPuffEntity(struct GameData* gameData, struct Entity* entity){
         }
     }
     //ReDraw Blocks in front of Shadow
-    for (int x = -2; x < 2; x++){
-        for (int y = -2; y < 2; y++){
-            float relXCor = x + xEntityCamCor + (shadowDrawDistance) + 1;
-            float relYCor = y + yEntityCamCor + (shadowDrawDistance) + 1;
+    for (int x = -3; x < 3; x++){
+        for (int y = -3; y < 3; y++){
+            float relXCor = x + xEntityCamCor + (shadowDrawDistance);
+            float relYCor = y + yEntityCamCor + (shadowDrawDistance);
             struct CastedBlock* castedBlock = getCastedBlockAtCords(cameraData, relXCor, relYCor);
             if (castedBlock != NULL) {
                 //Check if block is in front of sprite

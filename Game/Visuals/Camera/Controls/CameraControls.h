@@ -8,6 +8,8 @@
 #include "SDL.h"
 #include "../../../GameData.h"
 
+void tickCamera(struct GameData* gameData);
+
 void cameraControlInput(struct GameData* gameData, SDL_Event event);
 
 #endif //EDIFICE_CAMERACONTROLS_H

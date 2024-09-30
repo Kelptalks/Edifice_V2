@@ -46,4 +46,7 @@ struct PlayerData{
 struct PlayerData* createPlayerData();
 
 void tikPlayer(struct GameData* gameData);
+
+void handlePlayerControls(struct GameData* gameData);
+
 #endif //EDIFICE_PLAYERDATA_H

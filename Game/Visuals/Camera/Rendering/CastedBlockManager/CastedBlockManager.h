@@ -31,9 +31,19 @@ struct CastedBlock{
     int worldLeftBlockY;
     int worldLeftBlockZ;
 
+    bool struckLeftTranslucent;
+    int worldLeftTranslucentX;
+    int worldLeftTranslucentY;
+    int worldLeftTranslucentZ;
+
     int worldRightBlockX;
     int worldRightBlockY;
     int worldRightBlockZ;
+
+    bool struckRightTranslucent;
+    int worldRightTranslucentX;
+    int worldRightTranslucentY;
+    int worldRightTranslucentZ;
 
     //World cords
     int worldX;

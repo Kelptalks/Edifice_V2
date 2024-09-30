@@ -231,4 +231,6 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
- C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent/EntityManager/EntityManager.h
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\TikEvent/EntityManager/EntityManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h

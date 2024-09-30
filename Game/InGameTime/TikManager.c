@@ -10,6 +10,7 @@
 #include "../PlayerData/PlayerData.h"
 #include "../World/World.h"
 #include "TikEvent/EntityManager/EntityManager.h"
+#include "../Visuals/Camera/Controls/CameraControls.h"
 
 struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
@@ -35,5 +36,7 @@ void updateTikTime(struct GameData* gameData){
         tikPlayer(gameData);
         tickAllEntityInWorld(gameData);
     }
+
+    tickCamera(gameData);
 
 }

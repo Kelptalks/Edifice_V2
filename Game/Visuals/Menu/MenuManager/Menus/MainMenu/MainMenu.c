@@ -62,6 +62,13 @@ struct MainMenu* createMainMenu(){
 void renderMainMenu(struct GameData* gameData){
     //If sent to the main menu unload the world if it's null
     if (gameData->world != NULL){
+        //Loading For saving file
+        SDL_Rect srcRect = {896, 64, 64, 64};
+        SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
+        SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
+        renderStringCentered(gameData, "Saving World...", gameData->screen->xRez/2, gameData->screen->yRez/2, gameData->screen->xRez/32);
+        updateScreen(gameData->screen);
+
         saveWorldToFile(gameData->world);
 
         //Clear current world rendering

@@ -7,6 +7,7 @@
 #include "Controls.h"
 #include "SDL.h"
 #include "../Visuals/Camera/CameraData.h"
+#include "../World/World Saving/WorldFileManager.h"
 
 void handleInput(struct GameData* gameData){
     //Handling close event
@@ -22,6 +23,15 @@ void handleInput(struct GameData* gameData){
             //Exit the game when the x is pressed
             case SDL_QUIT:
                 gameData->screen->run = false;
+                if (gameData->world != NULL) {
+                    //Loading screen
+                    SDL_Rect srcRect = {896, 64, 64, 64};
+                    SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
+                    SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
+                    renderStringCentered(gameData, "SavingWorld...", gameData->screen->xRez/2, gameData->screen->yRez/2, gameData->screen->xRez/32);
+                    updateScreen(gameData->screen);
+                    saveWorldToFile(gameData->world);
+                }
                 break;
         }
     }

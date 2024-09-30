@@ -117,6 +117,11 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
     cameraData->world = world;
     cameraData->rayCastingThreadPool = createRayCastingThreadPool(200, cameraData);
 
+    cameraData->camVelX = 0;
+    cameraData->camVelY = 0;
+    cameraData->camVelResist = 1.5f;
+
+
     return cameraData;
 }
 

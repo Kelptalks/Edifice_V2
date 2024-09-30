@@ -129,11 +129,6 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
         return;
     }
 
-    //Unpack the casted block data.
-    int castedBlockCamWorldX = castedBlock->worldX;
-    int castedBlockCamWorldY = castedBlock->worldY;
-    int castedBlockCamWorldZ = castedBlock->worldZ;
-
     struct World *world = cameraData->world;
     short block = 0;
 
@@ -146,50 +141,22 @@ void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SD
     }
 
     if (leftSide) {
-        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-            castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
-            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-            if (!isTransparent(block)) {
-                break;
-            }
-
-            castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
-            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-            if (!isTransparent(block)) {
-                break;
-            }
-
-            castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
-            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-            if (!isTransparent(block)) {
-                break;
-            }
+        if (castedBlock->struckLeftTranslucent){
+            setBlockAtWorldCor(world, castedBlock->worldLeftTranslucentX, castedBlock->worldLeftTranslucentY, castedBlock->worldLeftTranslucentZ, Air);
+        }
+        else{
+            setBlockAtWorldCor(world, castedBlock->worldLeftBlockX, castedBlock->worldLeftBlockY, castedBlock->worldLeftBlockZ, Air);
         }
     }
     else{
-        for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
-            castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
-            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-            if (!isTransparent(block)) {
-                break;
-            }
-
-            castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
-            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-            if (!isTransparent(block)) {
-                break;
-            }
-
-            castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
-            block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-            if (!isTransparent(block)) {
-                break;
-            }
+        if (castedBlock->struckRightTranslucent){
+            setBlockAtWorldCor(world, castedBlock->worldRightTranslucentX, castedBlock->worldRightTranslucentY, castedBlock->worldRightTranslucentZ, Air);
+        }
+        else{
+            setBlockAtWorldCor(world, castedBlock->worldRightBlockX, castedBlock->worldRightBlockY, castedBlock->worldRightBlockZ, Air);
         }
     }
-    setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ, Air);
     playSound(gameData->soundManager, getBlockRemoveSound(gameData->playerData->block));
-    reportBug("block broken at(%i, %i, %i)\n", castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
 }
 
 void mouseCamMovement(struct GameData* gameData, int currentMouseXCor, int currentMouseYCor){
@@ -244,79 +211,39 @@ void updateZoomScale(struct GameData* gameData, SDL_Event event){
 
 }
 
-void keyboardCamMovement(struct GameData* gameData){
+void tickCamera(struct GameData* gameData){
+    struct CameraData* cameraData = gameData->cameraData;
+
+    cameraData->xRenderingOffset += cameraData->camVelX;
+    cameraData->yRenderingOffset += cameraData->camVelY;
+
+    cameraData->camVelX = cameraData->camVelX/cameraData->camVelResist;
+    cameraData->camVelY = cameraData->camVelY/cameraData->camVelResist;
+
+}
+
+void keyboardCamMovement(struct GameData* gameData, SDL_Event event){
     //Camera Movement Controls
     float camSpeed = 10;
     const Uint8 *keystate = SDL_GetKeyboardState(NULL);
     struct CameraData* cameraData = gameData->cameraData;
     // Check each key of interest and update accordingly
-    bool w = false;
-    bool a = false;
-    bool s = false;
-    bool d = false;
-    bool shift = false;
     gameData->playerData->sprinting = false;
+
+
     if (keystate[SDL_SCANCODE_W]) {
-        w = true;
+        cameraData->camVelY += 5.0;
     }
     if (keystate[SDL_SCANCODE_S]) {
-        s = true;
+        cameraData->camVelY -= 5.0;
     }
     if (keystate[SDL_SCANCODE_A]) {
-        a = true;
+        cameraData->camVelX += 5.0;
     }
     if (keystate[SDL_SCANCODE_D]) {
-        d = true;
-    }
-    if (keystate[SDL_SCANCODE_SPACE]) {
-        gameData->playerData->velZ = 0.5f;
-    }
-    if (keystate[SDL_SCANCODE_LSHIFT]){
-        shift = true;
-        gameData->playerData->sprinting = true;
+        cameraData->camVelX -= 5.0;
     }
 
-    float shiftMod = 0;
-    float halfWalk = gameData->playerData->walkingSpeed;
-    if (shift){
-        shiftMod = gameData->playerData->sprintMod;
-    }
-    if (!w && !a && s && !d){
-        gameData->playerData->playerDirection = EntityNorth;
-        gameData->playerData->velX = +(halfWalk+ shiftMod);
-        gameData->playerData->velY = +(halfWalk+ shiftMod);
-    }
-    else if (!w && a && s && !d){
-        gameData->playerData->playerDirection = EntityNorthEast;
-        gameData->playerData->velY = +(gameData->playerData->walkingSpeed + shiftMod);
-    }
-    else if (!w && a && !s && !d){
-        gameData->playerData->playerDirection = EntityEast;
-        gameData->playerData->velY = +(halfWalk + shiftMod);
-        gameData->playerData->velX = -(halfWalk + shiftMod);
-    }
-    else if (w && a && !s && !d){
-        gameData->playerData->playerDirection = EntitySouthEast;
-        gameData->playerData->velX = -(gameData->playerData->walkingSpeed + shiftMod);
-    }
-    else if (w && !a && !s && !d){
-        gameData->playerData->playerDirection = EntitySouth;
-        gameData->playerData->velX = -(halfWalk + shiftMod);
-        gameData->playerData->velY = -(halfWalk + shiftMod);
-    }
-    else if (w && !a && !s && d){
-        gameData->playerData->playerDirection = EntitySouthWest;
-        gameData->playerData->velY = -(gameData->playerData->walkingSpeed + shiftMod);
-    }
-    else if (!w && !a && !s && d){
-        gameData->playerData->playerDirection = EntityWest;
-        gameData->playerData->velY = -(halfWalk + shiftMod);
-        gameData->playerData->velX = +(halfWalk + shiftMod);
-    }
-    else if (!w && !a && s && d){
-        gameData->playerData->playerDirection = EntityNorthWest;
-        gameData->playerData->velX = +(gameData->playerData->walkingSpeed + shiftMod);
-    }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -372,7 +299,7 @@ void cameraControlInput(struct GameData* gameData, SDL_Event event){
         mouseCamMovement(gameData, xCor, yCor);
     }
 
-    keyboardCamMovement(gameData);
+    keyboardCamMovement(gameData, event);
 
     if (event.type == SDL_KEYDOWN) {
         switch (event.key.keysym.sym) {

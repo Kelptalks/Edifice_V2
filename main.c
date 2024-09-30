@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
         struct GameData *gameData = createGameData();
 
         //Play start music
-        //playSound(gameData->soundManager, MusicSunn);
+        playSound(gameData->soundManager, MusicEdifice);
 
         while (gameData->screen->run) {
             //Get start time
