@@ -10,7 +10,8 @@
 #include "../../../PlayerData/PlayerData.h"
 #include "../Camera.h"
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
-#include <math.h>
+#include "../../../InGameTime/Drone/Drone.h"
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Getters
@@ -70,26 +71,28 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
         leftSide = false;
     }
 
+    enum Block playerSelectedBlock = gameData->playerData->block;
+
     if (leftSide) {
         for (int drawDistance = 300; drawDistance > 0; drawDistance--) {
             castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
             block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                setBlockAtWorldCor(world, castedBlockCamWorldX + cameraData->xDirection, castedBlockCamWorldY, castedBlockCamWorldZ, gameData->playerData->block);
+                castedBlockCamWorldX = castedBlockCamWorldX + cameraData->xDirection;
                 break;
             }
 
             castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
             block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY + cameraData->yDirection, castedBlockCamWorldZ, gameData->playerData->block);
+                castedBlockCamWorldY = castedBlockCamWorldY + cameraData->yDirection;
                 break;
             }
 
             castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
             block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ + 1, gameData->playerData->block);
+                castedBlockCamWorldZ = castedBlockCamWorldZ + 1;
                 break;
             }
         }
@@ -99,26 +102,34 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
             castedBlockCamWorldY = castedBlockCamWorldY - cameraData->yDirection;
             block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY + cameraData->yDirection, castedBlockCamWorldZ, gameData->playerData->block);
+                castedBlockCamWorldY = castedBlockCamWorldY + cameraData->yDirection;
                 break;
             }
 
             castedBlockCamWorldX = castedBlockCamWorldX - cameraData->xDirection;
             block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                setBlockAtWorldCor(world, castedBlockCamWorldX + cameraData->xDirection, castedBlockCamWorldY, castedBlockCamWorldZ, gameData->playerData->block);
+                castedBlockCamWorldX = castedBlockCamWorldX + cameraData->xDirection;
                 break;
             }
 
             castedBlockCamWorldZ = castedBlockCamWorldZ - 1;
             block = getBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
             if (!isTransparent(block)) {
-                setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ + 1, gameData->playerData->block);
+                castedBlockCamWorldZ++;
                 break;
             }
         }
     }
-    playSound(gameData->soundManager, getBlockPlaceSound(gameData->playerData->block));
+    setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ, playerSelectedBlock);
+
+    if (playerSelectedBlock == DroneLeftForward || playerSelectedBlock == DroneRightForward || playerSelectedBlock == DroneLeftBack || playerSelectedBlock == DroneRightBack){
+        world->drones[world->droneCount] = createDrone(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+        world->drones[world->droneCount]->id = world->droneCount;
+        world->droneCount++;
+    }
+
+    playSound(gameData->soundManager, getBlockPlaceSound(playerSelectedBlock));
 }
 
 void mouseBreakBlock(struct GameData* gameData, int xMouseCor, int yMouseCor, SDL_Event event){

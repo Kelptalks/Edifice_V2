@@ -11,11 +11,12 @@
 #include "../World/World.h"
 #include "TikEvent/EntityManager/EntityManager.h"
 #include "../Visuals/Camera/Controls/CameraControls.h"
+#include "Drone/Drone.h"
 
 struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
     tikManager->tik = 0;
-    tikManager->tikTime = 10;
+    tikManager->tikTime = 25;
     return tikManager;
 }
 
@@ -35,8 +36,12 @@ void updateTikTime(struct GameData* gameData){
         tikManager->tik++;
         tikPlayer(gameData);
         tickAllEntityInWorld(gameData);
+
+        struct World* world = gameData->world;
+        for (int i = 0; i < world->droneCount; i++){
+            tickDrone(world, world->drones[i]);
+        }
     }
 
     tickCamera(gameData);
-
 }

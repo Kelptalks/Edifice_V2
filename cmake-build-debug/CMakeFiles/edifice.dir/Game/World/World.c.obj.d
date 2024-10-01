@@ -21,6 +21,8 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\Octree/Octree.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:\Users\Spencer\Desktop\Edifice_V2\Game\World\World.h \
@@ -231,4 +233,9 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ /mingw/include/lua.h /mingw/include/luaconf.h /mingw/include/lauxlib.h \
+ /mingw/include/lua.h /mingw/include/lualib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h

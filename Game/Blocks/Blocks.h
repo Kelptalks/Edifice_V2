@@ -98,7 +98,14 @@ enum Block {
 
     //Masking blocks
     MaskingBlock,
-    ShadowMaskingBlock
+    ShadowMaskingBlock,
+
+    //Drone
+    DroneLeftForward,
+    DroneRightForward,
+    DroneRightBack,
+    DroneLeftBack,
+
 };
 
 int getTotalBlockCount();

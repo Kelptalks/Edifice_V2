@@ -27,6 +27,9 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -893,6 +896,36 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/World
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\Visuals\Menu\MenuManager\Menus\WorldCreateMenu\WorldCreateMenu.c -o CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\WorldCreateMenu\WorldCreateMenu.c.s
 
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.c
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\Drone\Drone.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\Drone\Drone.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\Drone.c
+
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\Drone.c > CMakeFiles\edifice.dir\Game\InGameTime\Drone\Drone.c.i
+
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\Drone.c -o CMakeFiles\edifice.dir\Game\InGameTime\Drone\Drone.c.s
+
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj: CMakeFiles/edifice.dir/flags.make
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj: CMakeFiles/edifice.dir/includes_C.rsp
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj: CMakeFiles/edifice.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj -MF CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c.obj.d -o CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c.obj -c C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c
+
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c > CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c.i
+
+CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c -o CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c.s
+
 # Object files for target edifice
 edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/main.c.obj" \
@@ -949,7 +982,9 @@ edifice_OBJECTS = \
 "CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj" \
 "CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj" \
 "CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj" \
-"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj"
+"CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj" \
+"CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj" \
+"CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj"
 
 # External object files for target edifice
 edifice_EXTERNAL_OBJECTS =
@@ -1009,13 +1044,15 @@ edifice.exe: CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.o
 edifice.exe: CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj
+edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj
 edifice.exe: CMakeFiles/edifice.dir/build.make
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
 edifice.exe: CMakeFiles/edifice.dir/objects1.rsp
 edifice.exe: CMakeFiles/edifice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Linking C executable edifice.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Spencer\Desktop\Edifice_V2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Linking C executable edifice.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\edifice.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

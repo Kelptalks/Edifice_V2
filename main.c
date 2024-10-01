@@ -8,9 +8,12 @@
 #include "Game/InGameTime/TikManager.h"
 #include "Game/World/WorldChunkHashMap/WorldChunkHashMap.h"
 #include "Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h"
+#include "Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
+#include "Game/InGameTime/Drone/Drone.h"
+
+#include <stdio.h>
 
 int main(int argc, char* argv[]) {
-
     //int temp = getOctreeVolume(6);
     //reportBug("Octree volume %i", temp);
     //testWorldSaving();

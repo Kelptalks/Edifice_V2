@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -343,6 +346,54 @@ Game/GameData.s: Game/GameData.c.s
 Game/GameData.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/GameData.c.s
 .PHONY : Game/GameData.c.s
+
+Game/InGameTime/Drone/Drone.obj: Game/InGameTime/Drone/Drone.c.obj
+.PHONY : Game/InGameTime/Drone/Drone.obj
+
+# target to build an object file
+Game/InGameTime/Drone/Drone.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj
+.PHONY : Game/InGameTime/Drone/Drone.c.obj
+
+Game/InGameTime/Drone/Drone.i: Game/InGameTime/Drone/Drone.c.i
+.PHONY : Game/InGameTime/Drone/Drone.i
+
+# target to preprocess a source file
+Game/InGameTime/Drone/Drone.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.i
+.PHONY : Game/InGameTime/Drone/Drone.c.i
+
+Game/InGameTime/Drone/Drone.s: Game/InGameTime/Drone/Drone.c.s
+.PHONY : Game/InGameTime/Drone/Drone.s
+
+# target to generate assembly for a file
+Game/InGameTime/Drone/Drone.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.s
+.PHONY : Game/InGameTime/Drone/Drone.c.s
+
+Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.obj: Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj
+.PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.obj
+
+# target to build an object file
+Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj
+.PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj
+
+Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.i: Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.i
+.PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.i
+
+# target to preprocess a source file
+Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.i
+.PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.i
+
+Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.s: Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s
+.PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.s
+
+# target to generate assembly for a file
+Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s
+.PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s
 
 Game/InGameTime/TikEvent/EntityManager/EntityManager.obj: Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
 .PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
@@ -1484,6 +1535,12 @@ help:
 	@echo ... Game/GameData.obj
 	@echo ... Game/GameData.i
 	@echo ... Game/GameData.s
+	@echo ... Game/InGameTime/Drone/Drone.obj
+	@echo ... Game/InGameTime/Drone/Drone.i
+	@echo ... Game/InGameTime/Drone/Drone.s
+	@echo ... Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.obj
+	@echo ... Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.i
+	@echo ... Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.s
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.i
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.s

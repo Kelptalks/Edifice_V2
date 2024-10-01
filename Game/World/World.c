@@ -4,12 +4,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Octree/Octree.h"
 #include "World.h"
 #include "TerrainGen/TerrainGen.h"
 #include "WorldChunk/WorldChunk.h"
 #include "../Debuging/Test_Main.h"
 #include "../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
+#include "../InGameTime/Drone/Drone.h"
+#include "../InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
 
 struct World* createWorld(char *worldName){
     //Create world struct
@@ -37,7 +40,16 @@ struct World* createWorld(char *worldName){
     world->totalChunksCreated = 0;
     world->allCreatedWorldChunks = malloc(sizeof (struct WorldChunk*) * world->maxWorldChunks);
 
+    world->droneCount = 0;
+    world->drones = malloc(sizeof(struct Drone*) * 100);
+
+    world->entityCount = 0;
+    world->tempEntityArray = NULL;
+
     world->debug = false;
+
+    world->luaCommandsData = setUpLuaFunctions(world);
+
     return world;
 }
 
@@ -49,19 +61,6 @@ void generateWorldTerrain(struct World* world, int xScale, int yScale, int rough
     int worldYScale = yScale;
     reportBug("  - Generating Terrain : \n");
     genArea(world, -worldXScale, -worldYScale, worldXScale, worldYScale, roughness);
-
-    //Create world entity's
-    reportBug(" - Creating Entity's : %i \n");
-    world->entityCount = 150;
-    world->tempEntityArray = calloc(sizeof (struct Entity**), world->entityCount);
-    for (int i = 0; i < world->entityCount; i++){
-        int x = (rand() % (worldXScale * 2)) - worldXScale;
-        int y = (rand() % (worldYScale * 2)) - worldYScale;
-        world->tempEntityArray[i] = createPuffEntity();
-        world->tempEntityArray[i]->worldZ = 50;
-        world->tempEntityArray[i]->worldX = x;
-        world->tempEntityArray[i]->worldY = y;
-    }
 }
 
 struct WorldChunk* createWorldChunkInWorld(struct World* world, int x, int y, int z){
@@ -145,10 +144,16 @@ void freeWorld(struct World* world){
             free(world->tempEntityArray[i]);
         }
     }
-    free(world->tempEntityArray);
+    if (world->tempEntityArray != NULL) {
+        free(world->tempEntityArray);
+    }
+
+    if (world->drones != NULL) {
+        free(world->drones);
+    }
+
     free(world->name);
     freeWorldHashMap(world->worldChunkHashMap);
-
     free(world);
 
 }

@@ -34,9 +34,6 @@ struct WorldChunk* createWorldChunk(int xCor, int yCor, int zCor){
 enum Block getBlockInWorldChunk(struct WorldChunk* worldChunk, int x, int y, int z){
     int key = cordsToKey(6, x, y, z);;
     enum Block block = getOctreeValue(worldChunk->octree, 0, worldChunk->octree->depth, key);
-    if (block > getTotalBlockCount()){
-        return Air;
-    }
     return block;
 }
 
@@ -65,3 +62,4 @@ void freeWorldChunk(struct WorldChunk* worldChunk){
     freeOctree(worldChunk->octree);
     free(worldChunk);
 }
+

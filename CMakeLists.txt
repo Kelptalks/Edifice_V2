@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.27)
 project(edifice C)
 
+set(CMAKE_C_STANDARD 11)
+
 #SDL2
 set(SDL2_DIR "C:/SDL2-2.30.2/x86_64-w64-mingw32")
 find_package(SDL2 REQUIRED HINTS ${SDL2_DIR})
 include_directories(${SDL2_INCLUDE_DIRS})
 
-set(CMAKE_C_STANDARD 11)
 
 add_executable(edifice main.c
         Game/Visuals/Camera/CameraData.h
@@ -105,6 +106,12 @@ add_executable(edifice main.c
         Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h
         Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c
         Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.h
+        Game/InGameTime/Drone/Drone.c
+        Game/InGameTime/Drone/Drone.h
+        Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c
+        Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h
 )
 
 target_link_libraries(edifice ${SDL2_LIBRARIES})
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
