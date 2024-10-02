@@ -25,6 +25,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include"/>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
@@ -46,6 +47,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include"/>
 					<Add directory="C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>

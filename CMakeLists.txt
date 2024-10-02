@@ -8,6 +8,14 @@ set(SDL2_DIR "C:/SDL2-2.30.2/x86_64-w64-mingw32")
 find_package(SDL2 REQUIRED HINTS ${SDL2_DIR})
 include_directories(${SDL2_INCLUDE_DIRS})
 
+# Lua include directory (headers)
+set(LUA_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/Lua542/include")
+include_directories(${LUA_INCLUDE_DIR})
+
+# Lua library directory
+set(LUA_LIBRARY_DIR "${PROJECT_SOURCE_DIR}/Lua542")
+set(LUA_LIBRARIES "${LUA_LIBRARY_DIR}/lua54.lib")  # Use the import library (lua54.lib)
+
 
 add_executable(edifice main.c
         Game/Visuals/Camera/CameraData.h
@@ -112,6 +120,6 @@ add_executable(edifice main.c
         Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h
 )
 
-target_link_libraries(edifice ${SDL2_LIBRARIES})
+target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES})
 
 set(CMAKE_VERBOSE_MAKEFILE ON)

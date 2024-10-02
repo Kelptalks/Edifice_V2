@@ -235,7 +235,10 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
- /mingw/include/lua.h /mingw/include/luaconf.h /mingw/include/lauxlib.h \
- /mingw/include/lua.h /mingw/include/lualib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h

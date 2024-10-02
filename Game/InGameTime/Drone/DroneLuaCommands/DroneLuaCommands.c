@@ -11,7 +11,7 @@
 #include <lualib.h>
 
 int lua_moveDrone(lua_State *L){
-    /*
+
     int worldId = luaL_checkinteger(L, 1);  // 1st argument: worldId
     int droneId = luaL_checkinteger(L, 2);  // 2nd argument: droneId (assuming it's an int for this example)
     int offsetX = luaL_checkinteger(L, 3);  // 3rd argument: x movement
@@ -27,11 +27,12 @@ int lua_moveDrone(lua_State *L){
     lua_pushinteger(L, result);
 
     return 1;
-     */
+
+
 }
 
 struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
-    /*
+
     struct DroneLuaCommandsData* luaCommandsData = malloc(sizeof (struct DroneLuaCommandsData));
     if (luaCommandsData == NULL){
         reportBug("failed to create lua command data\n");
@@ -46,5 +47,5 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
 
     lua_register(luaCommandsData->luaState, "moveDrone", lua_moveDrone);
     return luaCommandsData;
-     */
+
 }

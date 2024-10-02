@@ -12,8 +12,10 @@
 #include "Game/InGameTime/Drone/Drone.h"
 
 #include <stdio.h>
+#include "lua.h"
 
 int main(int argc, char* argv[]) {
+    //luaL_newstate();
     //int temp = getOctreeVolume(6);
     //reportBug("Octree volume %i", temp);
     //testWorldSaving();

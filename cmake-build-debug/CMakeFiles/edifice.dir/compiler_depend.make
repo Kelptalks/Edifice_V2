@@ -1763,10 +1763,6 @@ CMakeFiles/edifice.dir/Game/GameData.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.c \
-  /MinGW/include/lauxlib.h \
-  /MinGW/include/lua.h \
-  /MinGW/include/luaconf.h \
-  /MinGW/include/lualib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
@@ -1815,13 +1811,13 @@ CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: C:/Users/Spencer/Deskt
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h
 
 CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c \
-  /MinGW/include/lauxlib.h \
-  /MinGW/include/lua.h \
-  /MinGW/include/luaconf.h \
-  /MinGW/include/lualib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
@@ -1855,6 +1851,10 @@ CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.c \
@@ -2278,10 +2278,6 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.o
 CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.c
 
 CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.c \
-  /MinGW/include/lauxlib.h \
-  /MinGW/include/lua.h \
-  /MinGW/include/luaconf.h \
-  /MinGW/include/lualib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \
@@ -2493,6 +2489,10 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: C:/Users/Spencer/Deskto
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.h
@@ -3453,10 +3453,6 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: C:/Users/Spencer/De
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c \
-  /MinGW/include/lauxlib.h \
-  /MinGW/include/lua.h \
-  /MinGW/include/luaconf.h \
-  /MinGW/include/lualib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \
@@ -3684,7 +3680,11 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: C:/Use
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
-  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
+  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h
 
 CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
@@ -9113,10 +9113,6 @@ CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C:/Users/Spencer/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h
 
 CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c \
-  /MinGW/include/lauxlib.h \
-  /MinGW/include/lua.h \
-  /MinGW/include/luaconf.h \
-  /MinGW/include/lualib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \
@@ -9329,6 +9325,10 @@ CMakeFiles/edifice.dir/Game/World/World.c.obj: C:/Users/Spencer/Desktop/Edifice_
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.h \
@@ -9628,10 +9628,6 @@ CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: C:/Users/
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h
 
 CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
-  /MinGW/include/lauxlib.h \
-  /MinGW/include/lua.h \
-  /MinGW/include/luaconf.h \
-  /MinGW/include/lualib.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \
@@ -9842,6 +9838,10 @@ CMakeFiles/edifice.dir/main.c.obj: C:/Users/Spencer/Desktop/Edifice_V2/main.c \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Controls/Controls.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.h \
   C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.h \
@@ -10045,8 +10045,6 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512fintrin.h:
 
-/MinGW/include/lua.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512fp16intrin.h:
@@ -10218,6 +10216,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/fibersapi.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/vaesintrin.h:
+
+C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/vpclmulqdqintrin.h:
 
@@ -10431,6 +10431,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.c:
 
+C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h:
+
 C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h:
@@ -10496,6 +10498,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdarg.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h:
+
+C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stralign.h:
 
@@ -10586,6 +10590,8 @@ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_clipboard.h:
 C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c:
 
 C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_config.h:
+
+C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h:
 
 C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_cpuinfo.h:
 
@@ -10704,12 +10710,6 @@ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.c:
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.c:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h:
-
-/MinGW/include/lauxlib.h:
-
-/MinGW/include/luaconf.h:
-
-/MinGW/include/lualib.h:
 
 C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h:
 

@@ -1047,6 +1047,7 @@ edifice.exe: CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCre
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj
 edifice.exe: CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj
 edifice.exe: CMakeFiles/edifice.dir/build.make
+edifice.exe: C:/Users/Spencer/Desktop/Edifice_V2/Lua542/lua54.lib
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a
 edifice.exe: C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
 edifice.exe: CMakeFiles/edifice.dir/linkLibs.rsp
