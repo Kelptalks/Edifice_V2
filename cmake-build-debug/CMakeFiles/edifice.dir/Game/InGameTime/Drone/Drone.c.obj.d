@@ -53,4 +53,10 @@ CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_pixels.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_endian.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\DroneInventoryManager/DroneInventoryManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone\DroneToolManager/DroneToolManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h

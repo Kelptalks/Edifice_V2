@@ -118,6 +118,16 @@ add_executable(edifice main.c
         Game/InGameTime/Drone/Drone.h
         Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c
         Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h
+        "Game/World/World Saving/ChunkFileManager/ChunkFileManager.c"
+        "Game/World/World Saving/ChunkFileManager/ChunkFileManager.h"
+        Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c
+        Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h
+        Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c
+        Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.h
+        Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c
+        Game/InGameTime/Drone/DroneToolManager/DroneToolManager.h
+        Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c
+        Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES})

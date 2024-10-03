@@ -87,6 +87,12 @@ enum Block {
     WormEyesUp,
     WormMouth,
 
+    //Drone
+    DroneLeftForward,
+    DroneRightForward,
+    DroneRightBack,
+    DroneLeftBack,
+
     //Shaders
     GreyShader,
     RedShader,
@@ -99,12 +105,6 @@ enum Block {
     //Masking blocks
     MaskingBlock,
     ShadowMaskingBlock,
-
-    //Drone
-    DroneLeftForward,
-    DroneRightForward,
-    DroneRightBack,
-    DroneLeftBack,
 
 };
 

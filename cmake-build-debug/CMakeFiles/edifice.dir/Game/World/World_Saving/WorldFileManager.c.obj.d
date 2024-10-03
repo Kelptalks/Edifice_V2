@@ -230,4 +230,13 @@ CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\World\World\ Saving\ChunkFileManager/ChunkFileManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h

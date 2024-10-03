@@ -25,9 +25,10 @@ struct MenuManager* createMenuManager(){
     menuManager->currentMenuType = MainMenu;
     menuManager->mainMenu = createMainMenu();
     menuManager->settingsMenu = createSettingsMenu();
-    menuManager->onScreenUi = createOnScreenUI();
     menuManager->worldSelectMenu = createWorldSelectMenu();
     menuManager->worldCreateMenu = createWorldCreateMenu();
+    menuManager->onScreenUi = createOnScreenUI();
+    menuManager->droneOnScreenUi = createDroneOnScreenUI();
 
     return menuManager;
 }
@@ -49,10 +50,15 @@ void renderCurrentMenu(struct GameData* gameData){
         gameData->debugMenu->frameRenderingData->totalFrameTime = time2 - time1;
 
         //Render the Player UI
-        time1 = SDL_GetTicks();
-        renderOnScreenUI(gameData);
-        time2 = SDL_GetTicks();
-        gameData->debugMenu->frameRenderingData->onScreenUIRenderingTime = time2 - time1;
+        if (gameData->menuManger->onScreenUi->visible) {
+            time1 = SDL_GetTicks();
+            renderOnScreenUI(gameData);
+            time2 = SDL_GetTicks();
+            gameData->debugMenu->frameRenderingData->onScreenUIRenderingTime = time2 - time1;
+        }
+        if(gameData->menuManger->droneOnScreenUi->visible){
+            renderDroneOnScreenUI(gameData);
+        }
 
         updateTikTime(gameData);
 
@@ -79,7 +85,15 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
     }
     else if (currentMenuType == CameraMenu) {
         //Take on screen UI input
-        if (!handleOnScreenUIInput(gameData, event)) {
+        bool onScreenUIMouseOn = false;
+        if (gameData->menuManger->onScreenUi->visible){
+            onScreenUIMouseOn = handleOnScreenUIInput(gameData, event);
+        }
+        if (gameData->menuManger->droneOnScreenUi->visible){
+            onScreenUIMouseOn = handleDroneOnScreenUI(gameData, event);
+        }
+
+        if (!onScreenUIMouseOn) {
             // if on screen UI is not hit then take camera control inputs.
             cameraControlInput(gameData, event);
         }

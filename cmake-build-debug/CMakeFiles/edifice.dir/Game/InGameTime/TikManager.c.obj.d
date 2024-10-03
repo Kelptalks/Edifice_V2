@@ -217,6 +217,10 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.h \
@@ -240,4 +244,5 @@ CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:\Users\Spencer\Desktop\Edifice_V2\Game\InGameTime\Drone/DroneLuaCommands/DroneLuaCommands.h

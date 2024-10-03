@@ -220,6 +220,10 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRende
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
@@ -250,4 +254,12 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRende
  C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/Hotbar/Hotbar.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/BlockMenu/BlockMenu.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h

@@ -178,7 +178,7 @@ void renderView(struct GameData* gameData){
 
     updateCameraCords(gameData);
 
-    int maxTexturingPerFrame = 20;
+    int maxTexturingPerFrame = 30;
     int maxNewChunksPerFrame = 20;
 
     //Timer values for timing rendering time.
@@ -187,6 +187,13 @@ void renderView(struct GameData* gameData){
 
     //Loop through a circular area of chunks
     time1 = SDL_GetTicks();
+
+    //Re render area around drones
+    for (int x = 0; x < gameData->world->droneCount; x++) {
+        renderDrone(gameData, gameData->world->drones[x]);
+    }
+
+
     for (int i = 0; i < cameraData->totalDistanceCords; i++)
     {
         int x = cameraData->distanceSortedRelativeCords[i].x;
@@ -245,7 +252,6 @@ void renderView(struct GameData* gameData){
     executeAllTasks(cameraData->rayCastingThreadPool);
     time2 = SDL_GetTicks();
     frameRenderingData->rayCastingTime = time2 - time1;
-
 
     //Render entitys
     time1 = SDL_GetTicks();

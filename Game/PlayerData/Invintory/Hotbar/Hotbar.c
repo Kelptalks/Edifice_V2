@@ -24,6 +24,7 @@ struct HotBar* createHotBar(int length){
         return NULL;
     }
 
+    hotBar->slots[0] = DroneRightForward;
     return hotBar;
 }
 

@@ -217,6 +217,10 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/World
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World\ Saving/WorldFileManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.h \

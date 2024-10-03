@@ -12,6 +12,7 @@ struct DroneLuaCommandsData{
     struct World* world;
 };
 
+
 struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world);
 
 #endif //EDIFICE_DRONELUACOMMANDS_H

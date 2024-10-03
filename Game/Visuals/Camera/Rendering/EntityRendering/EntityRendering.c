@@ -6,6 +6,28 @@
 #include "../../Camera.h"
 #include "../../IsoCordTool/IsoCordManager.h"
 #include "../../../../PlayerData/PlayerData.h"
+#include "../../../../InGameTime/Drone/Drone.h"
+#include "../RayCasting/RayCastingManager.h"
+
+void renderDrone(struct GameData* gameData, struct Drone* drone){
+    struct CameraData* cameraData = gameData->cameraData;
+    float xDroneCamCor; float yDroneCamCor;
+    worldCordsToCameraCords(cameraData, drone->worldX, drone->worldY, drone->worldZ, &xDroneCamCor, &yDroneCamCor);
+    for (int x = -7; x < 7; x++){
+        for (int y = -7; y < 7; y++){
+            int xCor = x + xDroneCamCor;
+            int yCor = y + yDroneCamCor;
+            struct CastedChunk* castedChunk = getCastedChunkAtCords(cameraData, xCor, yCor);
+            if (castedChunk != NULL) {
+                castedChunk->textured = false;
+                struct CastedBlock *castedBlock = getCastedBlockAtCords(cameraData, xCor, yCor);
+                if (castedBlock != NULL) {
+                    rayCastBlock(cameraData, castedBlock);
+                }
+            }
+        }
+    }
+}
 
 void renderPuffEntity(struct GameData* gameData, struct Entity* entity){
     struct CameraData* cameraData = gameData->cameraData;

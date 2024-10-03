@@ -1,0 +1,124 @@
+//
+// Created by Spencer on 10/2/2024.
+//
+
+#include "DroneInventoryManager.h"
+
+SDL_Rect getSrcRectOfItemSprite(enum DroneItem item){
+    SDL_Rect srcRect = {item * 16, 1216, 16, 16};
+    return srcRect;
+}
+
+enum DroneItem getBlockTypeToItem(enum Block block){
+    switch (block) {
+
+        //Dirt
+        case Dirt:
+        case MudBrick:
+        case BlueGrass:
+        case GreenGrass:
+        case CrackedEarth:
+            return ItemDirt;
+
+
+        //Stone
+        case Stone:
+        case Granite:
+        case Cobble:
+        case Rock:
+            return ItemStone;
+        case Sand:
+            ItemSand;
+
+        //Plant Matter
+        case Leave:
+        case Dandi:
+        case DandiStem:
+        case MushroomStem:
+        case BlueMushroomBlock:
+        case PinkMushroomBlock:
+        case Fungi:
+        case YellowFlowers:
+        case WhiteFlowers:
+        case Mushroom:
+        case Flour:
+            ItemPlantMatter;
+
+        //Log
+        case PurpleWood:
+        case PurpleWoodPlanks:
+        case BrownWood:
+        case BrownWoodPlanks:
+            return ItemLog;
+
+        //Glass
+        case Glass:
+            return ItemGlass;
+
+
+        //IronOar
+        case Iron:
+            return ItemIronOar;
+
+        //CopperOar
+        case Copper:
+            return ItemCopperOar;
+
+        //Brick
+        case ClayBrick:
+            return ItemBrick;
+
+        //Stone Brick
+        case StoneBrick:
+        case Furnace:
+        case FloweringStoneBrick:
+            return ItemStoneBrick;
+
+        //IronBar
+        case LBM:
+        case Factory:
+        case Crate:
+        case Metal:
+        case DroneLeftForward:
+        case DroneRightForward:
+        case DroneRightBack:
+        case DroneLeftBack:
+            return ItemIronBar;
+
+        default:
+            return ItemNull;
+    }
+}
+
+void addItemToInventory(struct Drone* drone, enum DroneItem item){
+    //Look for item to stack to
+    for (int i = 0; i < 9; i++){
+        if (drone->items[i] == item){
+            drone->itemCounts[i]+=1;
+            return;
+        }
+    }
+
+
+    //Then if no stack look to add item to first free slot
+    for (int i = 0; i < 9; i++){
+        if (drone->items[i] == ItemNull){
+            drone->items[i] = item;
+            drone->itemCounts[i]+=1;
+            return;
+        }
+    }
+
+}
+
+enum DroneItem getItemInSlot(struct Drone* drone, int slot){
+    if (slot < 9) {
+        return drone->items[slot];
+    }
+}
+
+int getItemCountInSlot(struct Drone* drone, int slot){
+    if (slot < 9) {
+        return drone->itemCounts[slot];
+    }
+}

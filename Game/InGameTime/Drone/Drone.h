@@ -11,26 +11,47 @@
 #ifndef EDIFICE_DRONE_H
 #define EDIFICE_DRONE_H
 
+enum DroneTool{
+    ToolNull,
+    ToolStoneDrill,
+    ToolStoneSaw,
+    ToolIronDrill,
+    ToolIronSaw,
+    ToolIronBattery,
+    ToolIronReceptacle,
+    ToolIronCamera,
+    ToolTitaniumDrill,
+    ToolTitaniumSaw,
+    ToolTitaniumBattery,
+    ToolTitaniumReceptacle,
+    ToolTitaniumCamera,
+    ToolExplosiveCamera
+};
+
 enum DroneItem{
+    ItemNull,
     ItemDirt,
+    ItemPlantMatter,
     ItemLog,
     ItemStone,
     ItemStoneBrick,
     ItemBrick,
-    ItemIron,
+    ItemIronOar,
+    ItemIronBar,
+    ItemCopperOar,
+    ItemCopperBar,
+    ItemSand,
     ItemGlass,
-};
-
-enum DroneTools{
-    //Tools
-    StoneDrill,
-    IronDrill,
-    StoneSaw,
-    IronSaw
+    ItemTitaniumOre,
+    ItemTitaniumBar,
+    ItemPurpleLens,
+    ItemCharcoal,
+    ItemSulfur
 };
 
 struct Drone{
     int id;
+    int busyTime;
 
     int reachRange;
     int speed;
@@ -44,7 +65,7 @@ struct Drone{
     //Inventory
     enum DroneItem items[9];
     int itemCounts[9];
-    enum DroneTools tools[3];
+    enum DroneTool tools[3];
 };
 
 struct Drone* createDrone(struct World* world, int x, int y, int z);
@@ -52,12 +73,15 @@ struct Drone* createDrone(struct World* world, int x, int y, int z);
 int getBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int y, int z);
 int moveDrone(struct World* world, struct Drone* drone, int x, int y, int z);
 
-int mineBlockRelativeToDrone();
+int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int y, int z);
+
 int placeBlockRelativeToDrone();
 
 int useItemForFuel();
 
 void tickDrone(struct World* world, struct Drone* drone);
+
+
 
 
 #endif //EDIFICE_DRONE_H

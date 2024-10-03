@@ -371,6 +371,30 @@ Game/InGameTime/Drone/Drone.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.s
 .PHONY : Game/InGameTime/Drone/Drone.c.s
 
+Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.obj: Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj
+.PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.obj
+
+# target to build an object file
+Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj
+.PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj
+
+Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.i: Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.i
+.PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.i
+
+# target to preprocess a source file
+Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.i
+.PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.i
+
+Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.s: Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.s
+.PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.s
+
+# target to generate assembly for a file
+Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.s
+.PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.s
+
 Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.obj: Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj
 .PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.obj
 
@@ -394,6 +418,30 @@ Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.s: Game/InGameTime/Drone
 Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s
 .PHONY : Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.s
+
+Game/InGameTime/Drone/DroneToolManager/DroneToolManager.obj: Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj
+.PHONY : Game/InGameTime/Drone/DroneToolManager/DroneToolManager.obj
+
+# target to build an object file
+Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj
+.PHONY : Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj
+
+Game/InGameTime/Drone/DroneToolManager/DroneToolManager.i: Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.i
+.PHONY : Game/InGameTime/Drone/DroneToolManager/DroneToolManager.i
+
+# target to preprocess a source file
+Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.i
+.PHONY : Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.i
+
+Game/InGameTime/Drone/DroneToolManager/DroneToolManager.s: Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.s
+.PHONY : Game/InGameTime/Drone/DroneToolManager/DroneToolManager.s
+
+# target to generate assembly for a file
+Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.s
+.PHONY : Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.s
 
 Game/InGameTime/TikEvent/EntityManager/EntityManager.obj: Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj
 .PHONY : Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
@@ -947,6 +995,54 @@ Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.s
 .PHONY : Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.s
 
+Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.obj: Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.obj
+
+# target to build an object file
+Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj
+
+Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.i: Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.i
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.i
+
+# target to preprocess a source file
+Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.i
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.i
+
+Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.s: Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.s
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.s
+
+# target to generate assembly for a file
+Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.s
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.s
+
+Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.obj: Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.obj
+
+# target to build an object file
+Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj
+
+Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.i: Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.i
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.i
+
+# target to preprocess a source file
+Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.i
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.i
+
+Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.s: Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.s
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.s
+
+# target to generate assembly for a file
+Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.s
+.PHONY : Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.s
+
 Game/Visuals/Menu/MenuManager/MenuManger.obj: Game/Visuals/Menu/MenuManager/MenuManger.c.obj
 .PHONY : Game/Visuals/Menu/MenuManager/MenuManger.obj
 
@@ -1451,6 +1547,30 @@ Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
 .PHONY : Game/World/WorldChunkHashMap/WorldChunkHashMap.c.s
 
+Game/World/World_Saving/ChunkFileManager/ChunkFileManager.obj: Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj
+.PHONY : Game/World/World_Saving/ChunkFileManager/ChunkFileManager.obj
+
+# target to build an object file
+Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj
+.PHONY : Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj
+
+Game/World/World_Saving/ChunkFileManager/ChunkFileManager.i: Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.i
+.PHONY : Game/World/World_Saving/ChunkFileManager/ChunkFileManager.i
+
+# target to preprocess a source file
+Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.i
+.PHONY : Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.i
+
+Game/World/World_Saving/ChunkFileManager/ChunkFileManager.s: Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.s
+.PHONY : Game/World/World_Saving/ChunkFileManager/ChunkFileManager.s
+
+# target to generate assembly for a file
+Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.s
+.PHONY : Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.s
+
 Game/World/World_Saving/WorldFileManager.obj: Game/World/World_Saving/WorldFileManager.c.obj
 .PHONY : Game/World/World_Saving/WorldFileManager.obj
 
@@ -1538,9 +1658,15 @@ help:
 	@echo ... Game/InGameTime/Drone/Drone.obj
 	@echo ... Game/InGameTime/Drone/Drone.i
 	@echo ... Game/InGameTime/Drone/Drone.s
+	@echo ... Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.obj
+	@echo ... Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.i
+	@echo ... Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.s
 	@echo ... Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.obj
 	@echo ... Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.i
 	@echo ... Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.s
+	@echo ... Game/InGameTime/Drone/DroneToolManager/DroneToolManager.obj
+	@echo ... Game/InGameTime/Drone/DroneToolManager/DroneToolManager.i
+	@echo ... Game/InGameTime/Drone/DroneToolManager/DroneToolManager.s
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.obj
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.i
 	@echo ... Game/InGameTime/TikEvent/EntityManager/EntityManager.s
@@ -1610,6 +1736,12 @@ help:
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.obj
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.i
 	@echo ... Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.s
+	@echo ... Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.obj
+	@echo ... Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.i
+	@echo ... Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.s
+	@echo ... Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.obj
+	@echo ... Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.i
+	@echo ... Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.s
 	@echo ... Game/Visuals/Menu/MenuManager/MenuManger.obj
 	@echo ... Game/Visuals/Menu/MenuManager/MenuManger.i
 	@echo ... Game/Visuals/Menu/MenuManager/MenuManger.s
@@ -1673,6 +1805,9 @@ help:
 	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.obj
 	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.i
 	@echo ... Game/World/WorldChunkHashMap/WorldChunkHashMap.s
+	@echo ... Game/World/World_Saving/ChunkFileManager/ChunkFileManager.obj
+	@echo ... Game/World/World_Saving/ChunkFileManager/ChunkFileManager.i
+	@echo ... Game/World/World_Saving/ChunkFileManager/ChunkFileManager.s
 	@echo ... Game/World/World_Saving/WorldFileManager.obj
 	@echo ... Game/World/World_Saving/WorldFileManager.i
 	@echo ... Game/World/World_Saving/WorldFileManager.s
