@@ -7,6 +7,7 @@
 #include <lualib.h>         // Standard Lua libraries
 
 #include "../../World/World.h"
+#include "../../Blocks/Blocks.h"
 
 #ifndef EDIFICE_DRONE_H
 #define EDIFICE_DRONE_H
@@ -66,6 +67,13 @@ struct Drone{
     enum DroneItem items[9];
     int itemCounts[9];
     enum DroneTool tools[3];
+
+    //BlockToMine
+    bool mining;
+    enum Block blockCurrentlyMining;
+    int blockToMineX;
+    int blockToMineY;
+    int blockToMineZ;
 };
 
 struct Drone* createDrone(struct World* world, int x, int y, int z);

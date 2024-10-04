@@ -47,4 +47,5 @@ CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventor
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_error.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_pixels.h \
  C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_endian.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h

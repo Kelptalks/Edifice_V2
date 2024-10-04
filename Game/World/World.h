@@ -24,10 +24,9 @@ struct World{
     int entityCount;
     struct Entity** tempEntityArray;
 
-    int droneCount;
-    struct Drone** drones;
 
-    struct DroneLuaCommandsData* luaCommandsData;
+    struct DroneData* droneData;
+
 
     bool debug;
 };

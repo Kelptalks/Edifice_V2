@@ -199,4 +199,5 @@ CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
- C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rect.h
+ C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2/SDL_rect.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h

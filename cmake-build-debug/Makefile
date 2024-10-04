@@ -371,6 +371,30 @@ Game/InGameTime/Drone/Drone.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.s
 .PHONY : Game/InGameTime/Drone/Drone.c.s
 
+Game/InGameTime/Drone/DroneData.obj: Game/InGameTime/Drone/DroneData.c.obj
+.PHONY : Game/InGameTime/Drone/DroneData.obj
+
+# target to build an object file
+Game/InGameTime/Drone/DroneData.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj
+.PHONY : Game/InGameTime/Drone/DroneData.c.obj
+
+Game/InGameTime/Drone/DroneData.i: Game/InGameTime/Drone/DroneData.c.i
+.PHONY : Game/InGameTime/Drone/DroneData.i
+
+# target to preprocess a source file
+Game/InGameTime/Drone/DroneData.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.i
+.PHONY : Game/InGameTime/Drone/DroneData.c.i
+
+Game/InGameTime/Drone/DroneData.s: Game/InGameTime/Drone/DroneData.c.s
+.PHONY : Game/InGameTime/Drone/DroneData.s
+
+# target to generate assembly for a file
+Game/InGameTime/Drone/DroneData.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\edifice.dir\build.make CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.s
+.PHONY : Game/InGameTime/Drone/DroneData.c.s
+
 Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.obj: Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj
 .PHONY : Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.obj
 
@@ -1658,6 +1682,9 @@ help:
 	@echo ... Game/InGameTime/Drone/Drone.obj
 	@echo ... Game/InGameTime/Drone/Drone.i
 	@echo ... Game/InGameTime/Drone/Drone.s
+	@echo ... Game/InGameTime/Drone/DroneData.obj
+	@echo ... Game/InGameTime/Drone/DroneData.i
+	@echo ... Game/InGameTime/Drone/DroneData.s
 	@echo ... Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.obj
 	@echo ... Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.i
 	@echo ... Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.s

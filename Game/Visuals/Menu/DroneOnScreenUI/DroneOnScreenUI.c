@@ -9,6 +9,7 @@
 #include "../../Camera/CameraData.h"
 #include "../../../InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.h"
 #include "../../../InGameTime/Drone/DroneToolManager/DroneToolManager.h"
+#include "../../../InGameTime/Drone/DroneData.h"
 
 void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone, int xCor, int yCor, float scale){
     SDL_Rect srcRect = {1162, 420, 120, 28};
@@ -69,7 +70,9 @@ bool handleDroneSelectionIconsInputs(struct GameData* gameData, struct Drone* dr
                 droneOnScreenUi->currentDroneWindowCount++;
             }
             else{
-                droneOnScreenUi->dronePopOutWindow[drone->id]->visible = true;
+                droneOnScreenUi->dronePopOutWindow[drone->id]->visible = !droneOnScreenUi->dronePopOutWindow[drone->id]->visible;
+                droneOnScreenUi->dronePopOutWindow[drone->id]->xCor = xCor + xScale;
+                droneOnScreenUi->dronePopOutWindow[drone->id]->yCor = yCor;
             }
         }
         return true;
@@ -107,9 +110,9 @@ void renderDroneOnScreenUI(struct GameData* gameData){
     struct World* world = gameData->world;
     struct DroneOnScreenUI* droneOnScreenUi = gameData->menuManger->droneOnScreenUi;
 
-    if (world->droneCount > 0){
-        for (int i = 0; i < world->droneCount; i++){
-            struct Drone* drone = world->drones[i];
+    if (world->droneData->droneCount > 0){
+        for (int i = 0; i < world->droneData->droneCount; i++){
+            struct Drone* drone = world->droneData->drones[i];
             renderDroneSelectIcon(gameData, drone, 0, i * (28 * 2), 2);
         }
 
@@ -127,8 +130,8 @@ bool handleDroneOnScreenUI(struct GameData* gameData, SDL_Event event){
     bool onDroneScreenUIMouseOn = false;
 
     struct World* world = gameData->world;
-    for (int i = 0; i < world->droneCount; i++){
-        struct Drone* drone = world->drones[i];
+    for (int i = 0; i < world->droneData->droneCount; i++){
+        struct Drone* drone = world->droneData->drones[i];
         handleDroneSelectionIconsInputs(gameData, drone, 0, i * (28 * 2), 2, event);
     }
 

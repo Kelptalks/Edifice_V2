@@ -92,7 +92,6 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
         if (gameData->menuManger->droneOnScreenUi->visible){
             onScreenUIMouseOn = handleDroneOnScreenUI(gameData, event);
         }
-
         if (!onScreenUIMouseOn) {
             // if on screen UI is not hit then take camera control inputs.
             cameraControlInput(gameData, event);

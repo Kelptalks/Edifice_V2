@@ -22,6 +22,7 @@ struct DronePopOutWindow* createDronePopOutWindow(struct Drone* drone, int xCor,
     dronePopOutWindow->visible = true;
     dronePopOutWindow->mouseOnExitButton = false;
     dronePopOutWindow->grabbed = false;
+    dronePopOutWindow->direction = 0;
 
     return dronePopOutWindow;
 }
@@ -71,7 +72,7 @@ void renderDroneWindow(struct GameData* gameData, struct DronePopOutWindow* dron
 void renderDronesInventory(struct GameData* gameData, struct DronePopOutWindow* droneWindow){
     float scale = droneWindow->scale;
     int xDrawCor = droneWindow->xCor + (200 * scale);
-    int yDrawCor = droneWindow->yCor + (54 * scale);
+    int yDrawCor = droneWindow->yCor + (57 * scale);
 
     int itemSpacing = 19 * scale;
     int itemScale = 16 * scale;
@@ -195,9 +196,42 @@ void updatePopOutWindowDirection(struct DronePopOutWindow* dronePopOutWindow){
     }
 }
 
+bool handleDroneArrowInput(struct DronePopOutWindow* dronePopOutWindow, int mouseCorX, int mouseCorY, SDL_Event event){
+    int xArrowScale = 24 * dronePopOutWindow->scale;
+    int yArrowScale = 24 * dronePopOutWindow->scale;
+
+    int yArrowCor = dronePopOutWindow->yCor + (dronePopOutWindow->yRez - yArrowScale);
+    int xArrowRightCor = (170 * dronePopOutWindow->scale) + dronePopOutWindow->xCor;
+    int xArrowLeftCor = dronePopOutWindow->xCor;
+
+    bool inYRotateBounds = (mouseCorY < (yArrowCor + yArrowScale)) && (mouseCorY > yArrowCor);
+    bool inRightRotateBoundsX = (mouseCorX < (xArrowRightCor + xArrowScale)) && (mouseCorX > xArrowRightCor);
+    bool inLeftRotateBoundsX = (mouseCorX < (xArrowLeftCor + xArrowScale)) && (mouseCorX > xArrowLeftCor);
+
+
+    if (event.type == SDL_MOUSEBUTTONDOWN) {
+        if (inYRotateBounds) {
+            if (inLeftRotateBoundsX) {
+                dronePopOutWindow->direction++;
+                updatePopOutWindowDirection(dronePopOutWindow);
+                return true;
+            } else if (inRightRotateBoundsX) {
+                dronePopOutWindow->direction--;
+                updatePopOutWindowDirection(dronePopOutWindow);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 bool HandleDronePopOutMenuInputs(struct GameData* gameData, struct DronePopOutWindow* dronePopOutWindow, SDL_Event event){
+    bool MouseOnDronePopOut = false;
+
     int mouseCorX; int mouseCorY;
     SDL_GetMouseState(&mouseCorX, &mouseCorY);
+
+    MouseOnDronePopOut = handleDroneArrowInput(dronePopOutWindow, mouseCorX, mouseCorY, event);
 
     int exitButtonRezX = 9 * dronePopOutWindow->scale;
     int exitButtonRezY = 9 * dronePopOutWindow->scale;
@@ -218,16 +252,7 @@ bool HandleDronePopOutMenuInputs(struct GameData* gameData, struct DronePopOutWi
     int xBarRez = 61 * dronePopOutWindow->scale;
     bool inBarXBounds = (mouseCorX < (xBarCor + xBarRez)) && (mouseCorX > xBarCor);
 
-    int xArrowScale = 24;
-    int yArrowScale = 24;
 
-    int yArrowCor = dronePopOutWindow->yCor + (dronePopOutWindow->yRez - (yArrowScale * dronePopOutWindow->scale));
-    int xArrowRightCor = (170 * dronePopOutWindow->scale) + dronePopOutWindow->xCor;
-    int xArrowLeftCor = dronePopOutWindow->xCor;
-
-    bool inYRotateBounds = (mouseCorY < (yArrowCor + yArrowScale)) && (mouseCorY > yArrowCor);
-    bool inRightRotateBoundsX = (mouseCorX < (xArrowRightCor + xArrowScale)) && (mouseCorX > xArrowRightCor);
-    bool inLeftRotateBoundsX = (mouseCorX < (xArrowLeftCor + xArrowScale)) && (mouseCorX > xArrowLeftCor);
 
     if (event.type == SDL_MOUSEBUTTONDOWN){
         if (inBarXBounds && exitButtonInYBounds){
@@ -238,16 +263,6 @@ bool HandleDronePopOutMenuInputs(struct GameData* gameData, struct DronePopOutWi
         if (dronePopOutWindow->mouseOnExitButton){
             dronePopOutWindow->visible = false;
         }
-        if (inYRotateBounds){
-            if (inLeftRotateBoundsX){
-                dronePopOutWindow->direction++;
-                updatePopOutWindowDirection(dronePopOutWindow);
-            }
-            else if (inRightRotateBoundsX){
-                dronePopOutWindow->direction--;
-                updatePopOutWindowDirection(dronePopOutWindow);
-            }
-        }
     }
     if (event.type == SDL_MOUSEBUTTONUP){
         dronePopOutWindow->grabbed = false;
@@ -256,5 +271,5 @@ bool HandleDronePopOutMenuInputs(struct GameData* gameData, struct DronePopOutWi
         dronePopOutWindow->xCor = mouseCorX - dronePopOutWindow->xGrabCor;
         dronePopOutWindow->yCor = mouseCorY - dronePopOutWindow->yGrabCor;
     }
-
+    return MouseOnDronePopOut;
 }

@@ -13,6 +13,7 @@
 #include "../../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
 #include "ChunkFileManager/ChunkFileManager.h"
 #include "../../InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
+#include "../../InGameTime/Drone/DroneData.h"
 
 
 FILE* openWorldFile(char *filePath){
@@ -133,11 +134,7 @@ struct World* readWorldData(char* fileName){
     world->tempEntityArray = calloc(sizeof (struct Entity*), world->entityCount);
 
     //Set up drone array
-    world->droneCount = 0;
-    world->drones = malloc(sizeof (struct Drone*) * 100);
-
-    //Create drone lua commands
-    world->luaCommandsData = setUpLuaFunctions(world);
+    world->droneData = createDroneData(world, 100);
 
     fclose(file);
     return world;

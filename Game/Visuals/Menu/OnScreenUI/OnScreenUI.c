@@ -313,7 +313,6 @@ void handleOnScreenUIKeyInputs(struct GameData* gameData, SDL_Event event){
                     onScreenUi->blockSelectionMenuVisible = false;
                 }
                 else{
-                    onScreenUi->visible = !onScreenUi->visible;
                     onScreenUi->escapeMenuVisible = !onScreenUi->escapeMenuVisible;
                 }
 

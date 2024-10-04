@@ -8,6 +8,7 @@
 #include "../../Debuging/Test_Main.h"
 #include "DroneInventoryManager/DroneInventoryManager.h"
 #include "DroneToolManager/DroneToolManager.h"
+#include "../Drone/DroneData.h"
 
 
 struct Drone* createDrone(struct World* world, int x, int y, int z){
@@ -18,6 +19,7 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     drone->reachRange = 1;
     drone->health = 50;
     drone->speed = 1;
+    drone->busyTime = 0;
 
     drone->fuel = 5000;
     drone->worldX = x;
@@ -34,26 +36,6 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
         drone->items[i] = ItemNull;
         drone->itemCounts[i] = 0;
     }
-
-    addItemToInventory(drone, ItemGlass);
-    addItemToInventory(drone, ItemGlass);
-    addItemToInventory(drone, ItemGlass);
-
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-    addItemToInventory(drone, ItemDirt);
-
-    addItemToInventory(drone, ItemBrick);
-    addItemToInventory(drone, ItemPlantMatter);
-    addItemToInventory(drone, ItemPlantMatter);
-    addItemToInventory(drone, ItemPlantMatter);
-
-    addToolToDone(drone, ToolStoneDrill);
 
     return drone;
 }
@@ -135,12 +117,14 @@ int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, in
         int blockToMineY = drone->worldY + y;
         int blockToMineZ = drone->worldZ + z;
 
-        enum Block mined = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
-        setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, Air);
-        addItemToInventory(drone, getBlockTypeToItem(mined));
+        enum Block blockToMine = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
 
-        drone->busyTime = 20;
-        drone->fuel-=5;
+        drone->busyTime = getBlockMineTime(world->droneData->droneToolData, drone, blockToMine);
+        drone->mining = true;
+        drone->blockCurrentlyMining = blockToMine;
+        drone->blockToMineX = blockToMineX;
+        drone->blockToMineY = blockToMineY;
+        drone->blockToMineZ = blockToMineZ;
     }
 }
 
@@ -175,18 +159,25 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
 int useItemForFuel();
 
 void tickDrone(struct World* world, struct Drone* drone){
-    if (drone->busyTime > 0) {
-        drone->busyTime--;
-    }
-
     //Make drone fall if possible
     enum Block blockUnderDrone = getBlockAtWorldCor(world, drone->worldX, drone->worldY, drone->worldZ - 1);
     if (drone->health == 0){
         drone->speed = 0;
         drone->reachRange = 0;
     }
-
     if (blockUnderDrone == Air){
+        drone->busyTime = 0;
+        drone->health-=1;
         moveDrone(world, drone, 0, 0, -1);
+        drone->busyTime++;
+    }
+
+    if (drone->busyTime > 0) {
+        drone->busyTime--;
+    }
+    if (drone->mining && drone->busyTime == 0){
+        setBlockAtWorldCor(world, drone->blockToMineX, drone->blockToMineY, drone->blockToMineZ, Air);
+        addItemToInventory(drone, getBlockTypeToItem(drone->blockCurrentlyMining));
+        drone->mining = false;
     }
 }

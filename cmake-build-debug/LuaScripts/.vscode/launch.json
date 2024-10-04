@@ -8,7 +8,6 @@
             "type": "lua",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/Main.lua"
         }
     ]
 }

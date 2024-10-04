@@ -239,4 +239,17 @@ CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/luaconf.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lauxlib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h

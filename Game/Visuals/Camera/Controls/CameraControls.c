@@ -11,6 +11,7 @@
 #include "../Camera.h"
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
 #include "../../../InGameTime/Drone/Drone.h"
+#include "../../../InGameTime/Drone/DroneData.h"
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,9 +125,9 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
     setBlockAtWorldCor(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ, playerSelectedBlock);
 
     if (playerSelectedBlock == DroneLeftForward || playerSelectedBlock == DroneRightForward || playerSelectedBlock == DroneLeftBack || playerSelectedBlock == DroneRightBack){
-        world->drones[world->droneCount] = createDrone(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
-        world->drones[world->droneCount]->id = world->droneCount;
-        world->droneCount++;
+        world->droneData->drones[world->droneData->droneCount] = createDrone(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+        world->droneData->drones[world->droneData->droneCount]->id = world->droneData->droneCount;
+        world->droneData->droneCount++;
     }
 
     playSound(gameData->soundManager, getBlockPlaceSound(playerSelectedBlock));

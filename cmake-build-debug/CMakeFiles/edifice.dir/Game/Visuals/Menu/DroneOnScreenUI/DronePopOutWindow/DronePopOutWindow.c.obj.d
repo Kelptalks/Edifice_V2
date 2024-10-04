@@ -233,6 +233,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/Drone
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \

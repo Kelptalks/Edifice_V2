@@ -189,9 +189,11 @@ void renderView(struct GameData* gameData){
     time1 = SDL_GetTicks();
 
     //Re render area around drones
+    /*
     for (int x = 0; x < gameData->world->droneCount; x++) {
         renderDrone(gameData, gameData->world->drones[x]);
     }
+    */
 
 
     for (int i = 0; i < cameraData->totalDistanceCords; i++)

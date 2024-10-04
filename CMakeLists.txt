@@ -128,6 +128,8 @@ add_executable(edifice main.c
         Game/InGameTime/Drone/DroneToolManager/DroneToolManager.h
         Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c
         Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h
+        Game/InGameTime/Drone/DroneData.c
+        Game/InGameTime/Drone/DroneData.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES})

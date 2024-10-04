@@ -232,6 +232,7 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj: 
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.h \
@@ -257,4 +258,9 @@ CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj: 
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.h \
- C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneData.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h

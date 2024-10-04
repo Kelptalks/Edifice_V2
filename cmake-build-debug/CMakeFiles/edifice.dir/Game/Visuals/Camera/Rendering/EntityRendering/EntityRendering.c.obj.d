@@ -262,4 +262,5 @@ CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRende
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lua.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include/lualib.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.h \
+ C:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.h \
  C:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h

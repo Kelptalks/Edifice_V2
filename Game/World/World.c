@@ -13,6 +13,7 @@
 #include "../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
 #include "../InGameTime/Drone/Drone.h"
 #include "../InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
+#include "../InGameTime/Drone/DroneData.h"
 
 struct World* createWorld(char *worldName){
     //Create world struct
@@ -40,15 +41,12 @@ struct World* createWorld(char *worldName){
     world->totalChunksCreated = 0;
     world->allCreatedWorldChunks = malloc(sizeof (struct WorldChunk*) * world->maxWorldChunks);
 
-    world->droneCount = 0;
-    world->drones = malloc(sizeof(struct Drone*) * 100);
-
     world->entityCount = 0;
     world->tempEntityArray = NULL;
 
-    world->debug = false;
+    world->droneData = createDroneData(world, 100);
 
-    world->luaCommandsData = setUpLuaFunctions(world);
+    world->debug = false;
 
     return world;
 }
@@ -146,10 +144,6 @@ void freeWorld(struct World* world){
     }
     if (world->tempEntityArray != NULL) {
         free(world->tempEntityArray);
-    }
-
-    if (world->drones != NULL) {
-        free(world->drones);
     }
 
     free(world->name);

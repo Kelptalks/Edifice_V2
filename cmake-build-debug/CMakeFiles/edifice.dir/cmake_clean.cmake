@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/edifice.dir/Game/GameData.c.obj.d"
   "CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj"
   "CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj.d"
+  "CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj"
+  "CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj.d"
   "CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj"
   "CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj.d"
   "CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj"

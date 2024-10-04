@@ -9,6 +9,7 @@
 #include <lua.h>
 #include <lauxlib.h>
 #include <lualib.h>
+#include "../DroneData.h"
 
 int luaGetDroneCount(lua_State *L){
     lua_getglobal(L, "world");  // Get the global 'world'
@@ -16,7 +17,9 @@ int luaGetDroneCount(lua_State *L){
     if (world == NULL){
         lua_pushinteger(L, -1);
     }
-    lua_pushinteger(L, world->droneCount);
+    else {
+        lua_pushinteger(L, world->droneData->droneCount);
+    }
     return 1;
 }
 
@@ -31,7 +34,7 @@ int luaMoveDrone(lua_State *L){
     if (world == NULL){
         return -1;
     }
-    struct Drone* drone = world->drones[droneId];
+    struct Drone* drone = world->droneData->drones[droneId];
 
     int result = moveDrone(world, drone, offsetX, offsetY, offsetZ);
 
@@ -52,12 +55,38 @@ int luaGetRelativeBlock(lua_State *L){
         return -1;
     }
 
-    struct Drone* drone = world->drones[droneId];
+    struct Drone* drone = world->droneData->drones[droneId];
     int result = getBlockRelativeToDrone(world, drone, offsetX, offsetY, offsetZ);
 
     lua_pushinteger(L, result);
 
     return 1;
+}
+
+int luaMineRelativeBlock(lua_State *L){
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+    int offsetX = luaL_checkinteger(L, 2);  // 2rd argument: x movement
+    int offsetY = luaL_checkinteger(L, 3);  // 3th argument: y movement
+    int offsetZ = luaL_checkinteger(L, 4);  // 4th argument: z movement
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = mineBlockRelativeToDrone(world, drone, offsetX, offsetY, offsetZ);
+
+    lua_pushinteger(L, result);
+
+    return 1;
+}
+
+void luaGetItemInInventorySlot(lua_State *L){
+
+
+    getItemInSlot()
 }
 
 
@@ -76,9 +105,10 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_pushlightuserdata(luaCommandsData->luaState, world);
     lua_setglobal(luaCommandsData->luaState, "world");
 
-    lua_register(luaCommandsData->luaState, "moveDrone", luaMoveDrone);
-    lua_register(luaCommandsData->luaState, "getBlockRelativeToDrone", luaGetRelativeBlock);
-    lua_register(luaCommandsData->luaState, "getDroneCount", luaGetDroneCount);
+    lua_register(luaCommandsData->luaState, "luaMoveDrone", luaMoveDrone);
+    lua_register(luaCommandsData->luaState, "luaGetRelativeBlock", luaGetRelativeBlock);
+    lua_register(luaCommandsData->luaState, "luaGetDroneCount", luaGetDroneCount);
+    lua_register(luaCommandsData->luaState, "luaMineRelativeBlock", luaMineRelativeBlock);
 
     //open Drone file
     if (luaL_dofile(luaCommandsData->luaState, "LuaScripts/Main.lua") != LUA_OK) {
