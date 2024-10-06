@@ -42,7 +42,7 @@ enum DroneItem getBlockTypeToItem(enum Block block){
         case WhiteFlowers:
         case Mushroom:
         case Flour:
-            ItemPlantMatter;
+            return ItemPlantMatter;
 
         //Log
         case PurpleWood:

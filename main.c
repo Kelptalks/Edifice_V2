@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
         struct GameData *gameData = createGameData();
 
         //Play start music
-        playSound(gameData->soundManager, MusicEdifice);
+        playSound(gameData->soundManager, MusicSunn);
 
         while (gameData->screen->run) {
             //Get start time

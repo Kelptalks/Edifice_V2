@@ -8,6 +8,7 @@
 #include "Camera.h"
 #include "Rendering/RayCasting/RayCastingManager.h"
 #include "math.h"
+#include "IsoCordTool/IsoCordManager.h"
 #include "Rendering/RayCasting/CastingThread/castingThread.h"
 
 struct DistanceCord* createDistanceSortedRelativeCords(struct CameraData* cameraData)
@@ -141,7 +142,6 @@ char* getDirectionString(enum Direction direction){
 }
 
 void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY){
-
     float heightDif = cameraData->worldZ - worldZ;
 
     worldX += (heightDif * cameraData->xDirection);
@@ -149,4 +149,21 @@ void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float 
 
     *camX = (worldX - cameraData->worldX) * cameraData->xDirection;
     *camY = (worldY - cameraData->worldY) * cameraData->yDirection;
+}
+
+void worldCordsToScreenCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY) {
+    //Get Sprite Cords
+    float chunkRenderScale = (cameraData->renderScale / cameraData->baseBlockScale);
+    float xCamCor; float yCamCor;
+    worldCordsToCameraCords(cameraData, worldX, worldY, worldZ, &xCamCor, &yCamCor);
+
+    int xScreenCor;
+    int yScreenCor;
+    floatIsoToScreen(cameraData->renderScale, xCamCor, yCamCor, &xScreenCor, &yScreenCor);
+
+
+
+    *camX = xScreenCor + cameraData->xRenderingOffset - (cameraData->renderScale / 2);
+    *camY = yScreenCor + cameraData->yRenderingOffset - (cameraData->renderScale - (cameraData->renderScale/4));
+
 }

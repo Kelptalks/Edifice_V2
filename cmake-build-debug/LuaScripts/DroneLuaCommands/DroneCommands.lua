@@ -9,7 +9,7 @@ end
 
 -- Lua wrapper for getting the block relative to a drone
 function getDroneBlock(droneId, offsetX, offsetY, offsetZ)
-    return luaGetRelativeBlock(droneId, offsetX, offsetY, offsetZ)
+    return luaGetRelativeBlock(droneId, offsetX, offsetY, offsetZ) + 1
 end
 
 -- Lua wrapper for mining a block relative to a drone
@@ -24,4 +24,9 @@ end
 -- Lua wrapper for getting the drone count
 function getDroneCount()
     return luaGetDroneCount()
+end
+
+-- Lua wrapper for getting the drones cords
+function getDroneCords(droneID)
+    return luaGetDroneCords(droneID)
 end

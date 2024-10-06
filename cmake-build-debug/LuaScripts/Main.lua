@@ -4,10 +4,10 @@ package.path = package.path .. ";./LuaScripts/?.lua"
 require("DroneLuaCommands.DroneCommands")
 require("DroneLuaCommands.BlockData")
 require("DroneMiner.BlockMiner")
+require("DroneNavigator.DroneNavigator")
 
 print("Starting Lua");
 local test = 0;
-
 
 function ON_TICK()
 
@@ -15,22 +15,12 @@ function ON_TICK()
     
     for i = 0, droneCount - 1, 1
     do
-        mineRocksAroundDrone(i, Block.Rock)
-        local xMod = 1;
-        local yMod = 0;
-        local zMod = 0;
+        mineBlockAroundDrone(i, Block.Rock)
+        mineBlockAroundDrone(i, Block.Flour)
+        mineBlockAroundDrone(i, Block.WhiteFlowers)
+        mineBlockAroundDrone(i, Block.YellowFlowers)
+        mineBlockAroundDrone(i, Block.Mushroom)
 
-        if luaGetRelativeBlock(i, xMod, yMod, zMod) ~= 0
-        then
-            xMod = 0;
-            yMod = 1;
-            if luaGetRelativeBlock(i, xMod, yMod, zMod) ~= 0
-            then
-                xMod = 0;
-                yMod = -1;
-            end
-        end
-        
-        luaMoveDrone(i, xMod, yMod, zMod)
+        navigateToCords(i, 0, 0, 0);
     end
 end

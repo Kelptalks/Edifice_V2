@@ -83,10 +83,26 @@ int luaMineRelativeBlock(lua_State *L){
     return 1;
 }
 
-void luaGetItemInInventorySlot(lua_State *L){
+int luaGetItemInInventorySlot(lua_State *L){
 
+}
 
-    getItemInSlot()
+int luaGetDroneCords(lua_State *L) {
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+
+    lua_pushinteger(L, drone->worldX);
+    lua_pushinteger(L, drone->worldY);
+    lua_pushinteger(L, drone->worldZ);
+
+    return 3;
 }
 
 
@@ -109,6 +125,7 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaGetRelativeBlock", luaGetRelativeBlock);
     lua_register(luaCommandsData->luaState, "luaGetDroneCount", luaGetDroneCount);
     lua_register(luaCommandsData->luaState, "luaMineRelativeBlock", luaMineRelativeBlock);
+    lua_register(luaCommandsData->luaState, "luaGetDroneCords", luaGetDroneCords);
 
     //open Drone file
     if (luaL_dofile(luaCommandsData->luaState, "LuaScripts/Main.lua") != LUA_OK) {

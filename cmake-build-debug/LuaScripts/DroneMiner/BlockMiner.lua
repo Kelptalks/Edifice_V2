@@ -3,10 +3,12 @@ require("DroneLuaCommands.DroneCommands")
 require("DroneLuaCommands.BlockData")
 
 function mineBlockAroundDrone(droneId, block) 
-    for x = -1, 1, 1 do
+    for z = -1, 1, 1 do
         for y = -1, 1, 1 do
-            if getDroneBlock(droneId, x, y, 0) == (block - 1) then
-                mineDroneBlock(droneId, x, y, 0)
+            for x = -1, 1, 1 do
+                if getDroneBlock(droneId, x, y, z) == (block) then
+                    mineDroneBlock(droneId, x, y, z)
+                end
             end
         end
     end

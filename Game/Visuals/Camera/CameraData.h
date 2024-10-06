@@ -29,33 +29,33 @@ struct CameraData{
     float yRenderingOffset;
 
     //Camera world location
-    int worldX;
-    int worldY;
-    int worldZ;
+    float worldX;
+    float worldY;
+    float worldZ;
 
     //Dimensions
-    int baseBlockScale;
-    int blockPixelScale;
-    int viewDistance;
-    int maxViewDistance;
-    int mouseUpdateDistance;
+    float baseBlockScale;
+    float blockPixelScale;
+    float viewDistance;
+    float maxViewDistance;
+    float mouseUpdateDistance;
     int chunksScale;
-    int chunkPixelScale;
+    float chunkPixelScale;
     float renderScale;
     float fractionalScale;
 
     //Chunk management
     struct CastedPool* castedPool;
-    int xIsoCamCenter;
-    int yIsoCamCenter;
+    float xIsoCamCenter;
+    float yIsoCamCenter;
 
-    int xIsoChunkCamCenter;
-    int yIsoChunkCamCenter;
+    float xIsoChunkCamCenter;
+    float yIsoChunkCamCenter;
 
-    int xChunkScaledTextureRez;
-    int yChunkScaledTextureRez;
+    float xChunkScaledTextureRez;
+    float yChunkScaledTextureRez;
 
-    //Raycasting
+    //Ray casting
     int castingDistance;
     struct RayCastingData* rayCastingData;
     struct RayCastingThreadPool* rayCastingThreadPool;
@@ -64,11 +64,11 @@ struct CameraData{
     int yDirection;
     int zDirection;
 
-    //sorted reltive cords for center based rendering
+    //sorted relative cords for center based rendering
     int totalDistanceCords;
     struct DistanceCord* distanceSortedRelativeCords;
 
-    //Movment
+    //Movement
     float camVelX;
     float camVelY;
     float camVelResist;
@@ -81,5 +81,7 @@ struct CameraData* createCameraData(SDL_Renderer* renderer, struct World* world)
 char* getDirectionString(enum Direction direction);
 
 void worldCordsToCameraCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY);
+
+void worldCordsToScreenCords(struct CameraData* cameraData, float worldX, float worldY, float worldZ, float* camX, float* camY);
 
 #endif //EDIFICE_CAMERADATA_H

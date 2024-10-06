@@ -11,8 +11,22 @@
 #include "../../../InGameTime/Drone/DroneToolManager/DroneToolManager.h"
 #include "../../../InGameTime/Drone/DroneData.h"
 
-void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone, int xCor, int yCor, float scale){
-    SDL_Rect srcRect = {1162, 420, 120, 28};
+void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone){
+
+    float scale = 2;
+    float xCor;
+    float yCor;
+
+    worldCordsToScreenCords(gameData->cameraData, drone->worldX, drone->worldY, drone->worldZ, &xCor, &yCor);
+
+    int xScale = 120 * scale;
+    int yScale = 28 * scale;
+    xCor += xScale/4;
+    yCor += yScale/2;
+
+
+
+    SDL_Rect srcRect = {1160, 420, 120, 28};
     SDL_Rect desRect = {xCor, yCor, 120 * scale, 28 * scale};
     SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
 
@@ -41,7 +55,6 @@ void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone, int x
     int itemSpacing = 19 * scale;
     int itemScale = 16 * scale;
 
-
     SDL_Texture* texture = gameData->textures->spriteSheet;
     for (int i = 0; i < 3; i++){
         SDL_Rect srcRect = getToolSrcRect(drone->tools[i]);
@@ -51,9 +64,17 @@ void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone, int x
 
 }
 
-bool handleDroneSelectionIconsInputs(struct GameData* gameData, struct Drone* drone, int xCor, int yCor, float scale, SDL_Event event){
+bool handleDroneSelectionIconsInputs(struct GameData* gameData, struct Drone* drone, SDL_Event event){
+    float scale = 2;
+    float xCor;
+    float yCor;
+
+    worldCordsToScreenCords(gameData->cameraData, drone->worldX, drone->worldY, drone->worldZ, &xCor, &yCor);
+
     int xScale = 120 * scale;
     int yScale = 28 * scale;
+    xCor += xScale/4;
+    yCor += yScale/2;
 
     struct DroneOnScreenUI* droneOnScreenUi = gameData->menuManger->droneOnScreenUi;
 
@@ -66,7 +87,7 @@ bool handleDroneSelectionIconsInputs(struct GameData* gameData, struct Drone* dr
         if (event.type == SDL_MOUSEBUTTONDOWN) {
             if (droneOnScreenUi->dronePopOutWindow[drone->id] == NULL){
                 droneOnScreenUi->dronePopOutWindow[droneOnScreenUi->currentDroneWindowCount] = createDronePopOutWindow(
-                        drone, xCor + xScale, yCor, scale);
+                        drone, xCor + xScale, yCor, 2);
                 droneOnScreenUi->currentDroneWindowCount++;
             }
             else{
@@ -113,7 +134,7 @@ void renderDroneOnScreenUI(struct GameData* gameData){
     if (world->droneData->droneCount > 0){
         for (int i = 0; i < world->droneData->droneCount; i++){
             struct Drone* drone = world->droneData->drones[i];
-            renderDroneSelectIcon(gameData, drone, 0, i * (28 * 2), 2);
+            renderDroneSelectIcon(gameData, drone);
         }
 
         for (int i = 0; i < droneOnScreenUi->currentDroneWindowCount; i++) {
@@ -132,7 +153,7 @@ bool handleDroneOnScreenUI(struct GameData* gameData, SDL_Event event){
     struct World* world = gameData->world;
     for (int i = 0; i < world->droneData->droneCount; i++){
         struct Drone* drone = world->droneData->drones[i];
-        handleDroneSelectionIconsInputs(gameData, drone, 0, i * (28 * 2), 2, event);
+        handleDroneSelectionIconsInputs(gameData, drone, event);
     }
 
     struct DroneOnScreenUI* droneOnScreenUi = gameData->menuManger->droneOnScreenUi;

@@ -167,7 +167,6 @@ void tickDrone(struct World* world, struct Drone* drone){
     }
     if (blockUnderDrone == Air){
         drone->busyTime = 0;
-        drone->health-=1;
         moveDrone(world, drone, 0, 0, -1);
         drone->busyTime++;
     }
@@ -180,4 +179,6 @@ void tickDrone(struct World* world, struct Drone* drone){
         addItemToInventory(drone, getBlockTypeToItem(drone->blockCurrentlyMining));
         drone->mining = false;
     }
+
+    //reportBug("drone %i\n", drone->mining);
 }

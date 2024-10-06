@@ -389,8 +389,8 @@ bool handleOnScreenUIInput(struct GameData* gameData, SDL_Event event){
                 UIElementClicked = true;
 
                 if (i == 2){
-                    onScreenUi->visible = !onScreenUi->visible;
-                    onScreenUi->escapeMenuVisible = !onScreenUi->escapeMenuVisible;
+                    onScreenUi->visible = true;
+                    onScreenUi->escapeMenuVisible = false;
                 }
                 else if (i == 1){
                     gameData->menuManger->currentMenuType = SettingsMenu;

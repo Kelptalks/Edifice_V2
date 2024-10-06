@@ -56,6 +56,12 @@ void renderDroneWindow(struct GameData* gameData, struct DronePopOutWindow* dron
     sprintf(idString, "%i", drone->id);
     renderString(gameData, idString, idTextCorX, idTextCorY, scale * 5);
 
+    int busyTextCorX = windowCorX + (226 * scale);
+    int busyTextCorY = windowCorY + (162 * scale);
+    char busyString[10] = {0};
+    sprintf(busyString, "%i +", drone->busyTime);
+    renderString(gameData, busyString, busyTextCorX, busyTextCorY, scale * 5);
+
     int exitButtonRezX = 9 * droneWindow->scale;
     int exitButtonRezY = 9 * droneWindow->scale;
     int exitButtonCorX = droneWindow->xCor + (droneWindow->xRez - (exitButtonRezX));
@@ -261,10 +267,12 @@ bool HandleDronePopOutMenuInputs(struct GameData* gameData, struct DronePopOutWi
             dronePopOutWindow->yGrabCor = (mouseCorY - dronePopOutWindow->yCor);
         }
         if (dronePopOutWindow->mouseOnExitButton){
+            MouseOnDronePopOut = true;
             dronePopOutWindow->visible = false;
         }
     }
     if (event.type == SDL_MOUSEBUTTONUP){
+        MouseOnDronePopOut = true;
         dronePopOutWindow->grabbed = false;
     }
     if (dronePopOutWindow->grabbed){
