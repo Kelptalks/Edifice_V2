@@ -83,10 +83,6 @@ int luaMineRelativeBlock(lua_State *L){
     return 1;
 }
 
-int luaGetItemInInventorySlot(lua_State *L){
-
-}
-
 int luaGetDroneCords(lua_State *L) {
     int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
 
@@ -105,6 +101,73 @@ int luaGetDroneCords(lua_State *L) {
     return 3;
 }
 
+int luaCraftDroneTool(lua_State *L) {
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+    enum DroneTool tool = luaL_checkinteger(L, 2);  // 2rd argument: x movement
+
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = droneCraftTool(world, drone, tool);
+
+    lua_pushinteger(L, result);
+
+    return 1;
+}
+
+int luaGetDroneToolSlot(lua_State *L) {
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+    int slot = luaL_checkinteger(L, 2);  // 2rd argument: x movement
+
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = getDroneToolSlot(drone, slot);
+
+    if (result <= 0) {
+        lua_pushinteger(L, -1);
+    }
+    else {
+        lua_pushinteger(L, result);
+    }
+
+    return 1;
+}
+
+int luaGetDroneInventoryItemCount(lua_State *L) {
+
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+    enum DroneItem item = luaL_checkinteger(L, 2);  // 2rd argument: x movement
+
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = getDroneInventoryItemCount(drone, item);
+
+    if (result <= 0) {
+        lua_pushinteger(L, -1);
+    }
+    else {
+        lua_pushinteger(L, result);
+    }
+
+    return 1;
+}
 
 struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     reportBug("creating lua\n");
@@ -126,6 +189,10 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaGetDroneCount", luaGetDroneCount);
     lua_register(luaCommandsData->luaState, "luaMineRelativeBlock", luaMineRelativeBlock);
     lua_register(luaCommandsData->luaState, "luaGetDroneCords", luaGetDroneCords);
+    lua_register(luaCommandsData->luaState, "luaCraftDroneTool", luaCraftDroneTool);
+    lua_register(luaCommandsData->luaState, "luaGetDroneToolSlot", luaGetDroneToolSlot);
+    lua_register(luaCommandsData->luaState, "luaGetDroneInventoryItemCount", luaGetDroneInventoryItemCount);
+
 
     //open Drone file
     if (luaL_dofile(luaCommandsData->luaState, "LuaScripts/Main.lua") != LUA_OK) {

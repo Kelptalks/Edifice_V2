@@ -55,8 +55,10 @@ struct Drone{
     int busyTime;
 
     int reachRange;
+    int viewRange;
     int speed;
     int health;
+    int inventorySize;
 
     int worldX;
     int worldY;
@@ -86,6 +88,12 @@ int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, in
 int placeBlockRelativeToDrone();
 
 int useItemForFuel();
+
+int droneCraftTool(struct World* world, struct Drone* drone, enum DroneTool tool) ;
+
+int getDroneToolSlot(struct Drone* drone, int slot);
+
+int getDroneInventoryItemCount(struct Drone* drone, enum DroneItem item);
 
 void tickDrone(struct World* world, struct Drone* drone);
 

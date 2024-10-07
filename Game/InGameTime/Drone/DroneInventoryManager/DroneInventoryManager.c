@@ -108,7 +108,21 @@ void addItemToInventory(struct Drone* drone, enum DroneItem item){
             return;
         }
     }
+}
 
+void removeItemFromInventory(struct Drone* drone, enum DroneItem item, int count) {
+    //Loop through drone inventory and check for ingredient
+    for (int i = 0; i < drone->inventorySize; i++) {
+        if (drone->items[i] == item) {
+            if (drone->itemCounts[i] >= count) {
+                drone->itemCounts[i] -= count;
+                if (drone->itemCounts[i] <= 0) {
+                    drone->items[i] = ItemNull;
+                }
+                return;
+            }
+        }
+    }
 }
 
 enum DroneItem getItemInSlot(struct Drone* drone, int slot){

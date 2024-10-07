@@ -95,6 +95,44 @@ Block = {
     ShadowMaskingBlock = 60,
 }
 
+DroneTool = {
+    ToolNull = 0,
+    ToolStoneDrill = 1,
+    ToolStoneSaw = 2,
+    ToolIronDrill = 3,
+    ToolIronSaw = 4,
+    ToolIronBattery = 5,
+    ToolIronReceptacle = 6,
+    ToolIronCamera = 7,
+    ToolTitaniumDrill = 8,
+    ToolTitaniumSaw = 9,
+    ToolTitaniumBattery = 10,
+    ToolTitaniumReceptacle = 11,
+    ToolTitaniumCamera = 12,
+    ToolExplosiveCamera = 13
+}
+
+DroneItem = {
+    ItemNull = 0,
+    ItemDirt = 1,
+    ItemPlantMatter = 2,
+    ItemLog = 3,
+    ItemStone = 4,
+    ItemStoneBrick = 5,
+    ItemBrick = 6,
+    ItemIronOar = 7,
+    ItemIronBar = 8,
+    ItemCopperOar = 9,
+    ItemCopperBar = 10,
+    ItemSand = 11,
+    ItemGlass = 12,
+    ItemTitaniumOre = 13,
+    ItemTitaniumBar = 14,
+    ItemPurpleLens = 15,
+    ItemCharcoal = 16,
+    ItemSulfur = 17
+}
+
 -- Reverse lookup table
 local BlockReverseLookup = {}
 for name, value in pairs(Block) do

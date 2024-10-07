@@ -2,8 +2,60 @@ package.path = package.path .. ";./LuaScripts/?.lua"
 require("DroneLuaCommands.DroneCommands")
 require("DroneLuaCommands.BlockData")
 
+function getCordsOfBlock(droneID, block)
+    local viewRange = getDroneViewRange();
+    local worldX, worldY, worldZ = getDroneCords(droneID)
+
+    for z = -viewRange, viewRange, 1 do
+        for y = -viewRange, viewRange, 1 do
+            for x = -viewRange, viewRange, 1 do
+                
+                if getDroneBlock(droneID, x, y, z) == block then
+                    return worldX + x, worldY + y, worldZ + z
+                end
+            end
+        end
+    end
+end
+
+function DigStairsDown(droneID, depth)
+    local x, y, z = getDroneCords(droneID)
+    if z > depth then
+        if getDroneBlock(droneID, 1, 0, 0) == Block.Air then
+            moveDrone(droneID, 1, 0, 0)
+        else
+            if getDroneBlock(droneID, -1, 0, 0) == Block.Air then
+                mineDroneBlock(droneID, 0, 0, -1)
+            else
+                mineDroneBlock(droneID, 1, 0, 0)
+            end
+        end
+        return true;
+    end
+    return false;
+end
+
+function StripMine(droneID)
+    if getDroneBlock(droneID, 1, 1, 1) == Block.Air then
+        moveDrone(droneID, 1, 0, 0)
+    else
+        for z = 0, 1, 1 do
+            for y = -1, 1, 1 do
+                if getDroneBlock(droneID, 1, y, z) then
+                    mineDroneBlock(droneID, 1, y, z)
+                end
+            end
+        end
+    end
+end
+
 function navigateToCords(droneID, xCor, yCor, zCor)
     local x, y, z = getDroneCords(droneID)
+
+
+    local xCor = xCor or 0
+    local yCor = yCor or 0
+    local zCor = zCor or 0
 
     local xDistance = x - xCor
     local yDistance = y - yCor

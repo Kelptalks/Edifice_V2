@@ -17,9 +17,11 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     reportBug("Creating Drone at (%i, %i, %i)\n", x, y, z);
 
     drone->reachRange = 1;
+    drone->viewRange = 4;
     drone->health = 50;
     drone->speed = 1;
     drone->busyTime = 0;
+    drone->inventorySize = 9;
 
     drone->fuel = 5000;
     drone->worldX = x;
@@ -41,8 +43,8 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
 }
 
 int getBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int y, int z){
-    bool inPositiveRange = x <= drone->reachRange && y <= drone->reachRange && z <= drone->reachRange;
-    bool inNegativeRange = x >= -drone->reachRange && y >= -drone->reachRange && z >= -drone->reachRange;
+    bool inPositiveRange = x <= drone->viewRange && y <= drone->viewRange && z <= drone->viewRange;
+    bool inNegativeRange = x >= -drone->viewRange && y >= -drone->viewRange && z >= -drone->viewRange;
     if (inPositiveRange && inNegativeRange) {
         return getBlockAtWorldCor(world, drone->worldX + x, drone->worldY + y, drone->worldZ + z);
     }
@@ -109,8 +111,8 @@ int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, in
         return -4;
     }
 
-    bool inPositiveRange = x <= drone->speed && y <= drone->speed && z <= drone->speed;
-    bool inNegativeRange = x >= -drone->speed && y >= -drone->speed && z >= -drone->speed;
+    bool inPositiveRange = x <= drone->reachRange && y <= drone->reachRange && z <= drone->reachRange;
+    bool inNegativeRange = x >= -drone->reachRange && y >= -drone->reachRange && z >= -drone->reachRange;
 
     if (inPositiveRange && inNegativeRange) {
         int blockToMineX = drone->worldX + x;
@@ -119,13 +121,19 @@ int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, in
 
         enum Block blockToMine = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
 
-        drone->busyTime = getBlockMineTime(world->droneData->droneToolData, drone, blockToMine);
-        drone->mining = true;
-        drone->blockCurrentlyMining = blockToMine;
-        drone->blockToMineX = blockToMineX;
-        drone->blockToMineY = blockToMineY;
-        drone->blockToMineZ = blockToMineZ;
+        if (blockToMine != Air) {
+            drone->busyTime = getBlockMineTime(world->droneData->droneToolData, drone, blockToMine);
+            drone->mining = true;
+            drone->blockCurrentlyMining = blockToMine;
+            drone->blockToMineX = blockToMineX;
+            drone->blockToMineY = blockToMineY;
+            drone->blockToMineZ = blockToMineZ;
+        }
+        else {
+            return -2;
+        }
     }
+    return -1;
 }
 
 int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int y, int z, enum Block block){
@@ -156,7 +164,64 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
     return -1;
 }
 
-int useItemForFuel();
+int useItemForFuel() {
+
+}
+
+int droneCraftTool(struct World* world, struct Drone* drone, enum DroneTool tool) {
+    struct DroneItemRecipe* droneItemRecipe = world->droneData->droneToolData->itemRecipes[tool];
+
+    int hasIngredient = 0;
+    //Loop through all needed ingredients
+    for (int i = 0; i < droneItemRecipe->totalItemTypes; i++) {
+        enum DroneItem itemTypeNeeded = droneItemRecipe->itemsNeeded[i];
+        int itemCountNeeded = droneItemRecipe->itemCounts[i];
+
+        //Loop through drone inventory and check for ingredient
+        for (int t = 0; t < drone->inventorySize; t++) {
+            if (drone->items[t] == itemTypeNeeded) {
+                if (drone->itemCounts[t] >= itemCountNeeded) {
+                    hasIngredient++;
+                }
+            }
+        }
+    }
+
+    if (hasIngredient >= droneItemRecipe->totalItemTypes) {
+        for (int i = 0; i < droneItemRecipe->totalItemTypes; i++) {
+            enum DroneItem itemTypeNeeded = droneItemRecipe->itemsNeeded[i];
+            int itemCountNeeded = droneItemRecipe->itemCounts[i];
+            removeItemFromInventory(drone, itemTypeNeeded, itemCountNeeded);
+        }
+        addToolToDone(drone, tool);
+        drone->busyTime += 50;
+        return 1;
+    }
+    else {
+        return -1;
+    }
+}
+
+int getDroneToolSlot(struct Drone* drone, int slot){
+    if (slot < 3) {
+        if (drone->tools[slot] == ToolNull) {
+            return -1;
+        }
+        else {
+            return drone->tools[slot];
+        }
+    }
+    return -1;
+}
+
+int getDroneInventoryItemCount(struct Drone* drone, enum DroneItem item){
+    for (int t = 0; t < drone->inventorySize; t++) {
+        if (drone->items[t] == item) {
+            return drone->itemCounts[t];
+        }
+    }
+    return -1;
+}
 
 void tickDrone(struct World* world, struct Drone* drone){
     //Make drone fall if possible

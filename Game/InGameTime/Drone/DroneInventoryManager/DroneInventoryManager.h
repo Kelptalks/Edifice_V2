@@ -15,6 +15,8 @@ enum DroneItem getBlockTypeToItem(enum Block block);
 
 void addItemToInventory(struct Drone* drone, enum DroneItem item);
 
+void removeItemFromInventory(struct Drone* drone, enum DroneItem item, int count);
+
 enum DroneItem getItemInSlot(struct Drone* drone, int slot);
 
 int getItemCountInSlot(struct Drone* drone, int slot);

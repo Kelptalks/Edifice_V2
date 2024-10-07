@@ -55,8 +55,6 @@ build CMakeFiles/edifice.dir/main.c.obj: C_COMPILER__edifice_unscanned_Debug C$:
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/CameraData.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\CameraData.c.obj.d
@@ -64,8 +62,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj: C_COMPILER__e
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/GameData.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/GameData.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\GameData.c.obj.d
@@ -73,8 +69,6 @@ build CMakeFiles/edifice.dir/Game/GameData.c.obj: C_COMPILER__edifice_unscanned_
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Camera.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Camera.c.obj.d
@@ -82,8 +76,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj: C_COMPILER__edifi
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Screen.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Screen.c.obj.d
@@ -91,8 +83,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj: C_COMPILER__edifice_unsc
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\IsoCordTool\IsoCordManager.c.obj.d
@@ -100,8 +90,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.ob
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\IsoCordTool
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Controls/Controls.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Controls\Controls.c.obj.d
@@ -109,8 +97,6 @@ build CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj: C_COMPILER__edifice_u
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Controls
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\TextureManager\IsoTextureManager.c.obj.d
@@ -118,8 +104,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTex
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\TextureManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/Test_Main.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Debuging\Test_Main.c.obj.d
@@ -127,8 +111,6 @@ build CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj: C_COMPILER__edifice_
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Debuging
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/KeyMod.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\Octree\Tools\KeyMod.c.obj.d
@@ -136,8 +118,6 @@ build CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj: C_COMPILER__e
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\Octree\Tools
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/World.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/World.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\World.c.obj.d
@@ -145,8 +125,6 @@ build CMakeFiles/edifice.dir/Game/World/World.c.obj: C_COMPILER__edifice_unscann
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/LairManager/LairManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\TerrainGen\LairManager\LairManager.c.obj.d
@@ -154,8 +132,6 @@ build CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\TerrainGen\LairManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin$ Noise/PerlinNoise.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\TerrainGen\Perlin_Noise\PerlinNoise.c.obj.d
@@ -163,8 +139,6 @@ build CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.ob
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\TerrainGen\Perlin_Noise
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/PlantManager/PlantManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\TerrainGen\PlantManager\PlantManager.c.obj.d
@@ -172,8 +146,6 @@ build CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.o
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\TerrainGen\PlantManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Blocks/Blocks.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Blocks/Blocks.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Blocks\Blocks.c.obj.d
@@ -181,8 +153,6 @@ build CMakeFiles/edifice.dir/Game/Blocks/Blocks.c.obj: C_COMPILER__edifice_unsca
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Blocks
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/ArrayList/arrayList.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\ArrayList\arrayList.c.obj.d
@@ -190,8 +160,6 @@ build CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj: C_COMPILER__edifice_unsc
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\ArrayList
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Octree.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\Octree\Octree.c.obj.d
@@ -199,8 +167,6 @@ build CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj: C_COMPILER__edifice
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\Octree
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/TerrainGen.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\TerrainGen\TerrainGen.c.obj.d
@@ -208,8 +174,6 @@ build CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj: C_COMPILER_
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\TerrainGen
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockManager.c.obj.d
@@ -217,8 +181,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/Ca
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\TextureList\TextureList.c.obj.d
@@ -226,8 +188,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/Te
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\TextureList
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\RayCaster.c.obj.d
@@ -235,8 +195,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\RayCastingManager.c.obj.d
@@ -244,8 +202,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCasting
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\CastingThread\castingThread.c.obj.d
@@ -253,8 +209,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThr
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\RayCasting\CastingThread
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/TextManager/TextManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\TextManager\TextManager.c.obj.d
@@ -262,8 +216,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj: C_
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\TextManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Controls/CameraControls.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Controls\CameraControls.c.obj.d
@@ -271,8 +223,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj: 
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Controls
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/DebugMenu.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\DebugMenu.c.obj.d
@@ -280,8 +230,6 @@ build CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj: C_COMPILER
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Debuging\DebugMenu
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Assets/AssetManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Assets/AssetManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Assets\AssetManager.c.obj.d
@@ -289,8 +237,6 @@ build CMakeFiles/edifice.dir/Assets/AssetManager.c.obj: C_COMPILER__edifice_unsc
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Assets
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap\ChunkMap.c.obj.d
@@ -298,8 +244,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/Ch
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\ChunkMap
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/PlayerData.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\PlayerData\PlayerData.c.obj.d
@@ -307,8 +251,6 @@ build CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj: C_COMPILER__edifi
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\PlayerData
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\TikManager.c.obj.d
@@ -316,8 +258,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj: C_COMPILER__edifi
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockHighLighter\CastedBlockHighLighter.c.obj.d
@@ -325,8 +265,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/Ca
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockManager\CastedBlockHighLighter
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/TerpManager/TerpManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TerpManager\TerpManager.c.obj.d
@@ -334,8 +272,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\TerpManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/Octree/Tools/AdvancedKeyMod.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\Octree\Tools\AdvancedKeyMod.c.obj.d
@@ -343,8 +279,6 @@ build CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj: C_COM
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\Octree\Tools
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Sound/SoundManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Sound\SoundManager.c.obj.d
@@ -352,8 +286,6 @@ build CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj: C_COMPILER__edifice_
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Sound
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/$ UIManager/UIManger.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIManger.c.obj.d
@@ -361,8 +293,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/MenuManger.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\MenuManger.c.obj.d
@@ -370,8 +300,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj: C_C
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\MainMenu\MainMenu.c.obj.d
@@ -379,8 +307,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMe
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\MainMenu
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/$ UIManager/UIRenderer/UIRenderer.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIRenderer\UIRenderer.c.obj.d
@@ -388,8 +314,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\_UIManager\UIRenderer
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu\SettingsMenu.c.obj.d
@@ -397,8 +321,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/Se
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\SettingsMenu
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunk/WorldChunk.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\WorldChunk\WorldChunk.c.obj.d
@@ -406,8 +328,6 @@ build CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj: C_COMPILER_
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\WorldChunk
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/WorldChunkHashMap/WorldChunkHashMap.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap\WorldChunkHashMap.c.obj.d
@@ -415,8 +335,6 @@ build CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.ob
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\WorldChunkHashMap
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff\PuffLogic.c.obj.d
@@ -424,8 +342,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLog
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\Puff
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\TextureManager\EntityTextures.c.obj.d
@@ -433,8 +349,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/Entity
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\TextureManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/TikEvent/EntityManager/EntityManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager\EntityManager.c.obj.d
@@ -442,8 +356,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManage
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\TikEvent\EntityManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering\EntityRendering.c.obj.d
@@ -451,8 +363,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/Entit
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\EntityRendering
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering\CastedBlockRendering.c.obj.d
@@ -460,8 +370,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Camera\Rendering\CastedBlockRendering
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/Perlin$ Noise/PerlinGenerator.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\TerrainGen\Perlin_Noise\PerlinGenerator.c.obj.d
@@ -469,8 +377,6 @@ build CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\TerrainGen\Perlin_Noise
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\OnScreenUI\OnScreenUI.c.obj.d
@@ -478,8 +384,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj: C_CO
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\OnScreenUI
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData\FrameRenderingData.c.obj.d
@@ -487,8 +391,6 @@ build CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRen
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\FrameRenderingData
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/Hotbar/Hotbar.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar\Hotbar.c.obj.d
@@ -496,8 +398,6 @@ build CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj: C_CO
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\PlayerData\Invintory\Hotbar
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu\BlockMenu.c.obj.d
@@ -505,8 +405,6 @@ build CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\PlayerData\Invintory\BlockMenu
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/World$ Saving/WorldFileManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\World_Saving\WorldFileManager.c.obj.d
@@ -514,8 +412,6 @@ build CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj: C_C
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\World_Saving
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Debuging/DebugMenu/TikData/TickData.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\TikData\TickData.c.obj.d
@@ -523,8 +419,6 @@ build CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj: C_C
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Debuging\DebugMenu\TikData
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\WorldSelectMenu\WorldSelectMenu.c.obj.d
@@ -532,8 +426,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\WorldSelectMenu
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\WorldCreateMenu\WorldCreateMenu.c.obj.d
@@ -541,8 +433,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\MenuManager\Menus\WorldCreateMenu
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/Drone.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\Drone\Drone.c.obj.d
@@ -550,8 +440,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj: C_COMPILER__edif
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\Drone
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneLuaCommands\DroneLuaCommands.c.obj.d
@@ -559,8 +447,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaComm
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneLuaCommands
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/World$ Saving/ChunkFileManager/ChunkFileManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\World\World_Saving\ChunkFileManager\ChunkFileManager.c.obj.d
@@ -568,8 +454,6 @@ build CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileM
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\World_Saving\ChunkFileManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\DroneOnScreenUI\DroneOnScreenUI.c.obj.d
@@ -577,8 +461,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\DroneOnScreenUI
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneInventoryManager\DroneInventoryManager.c.obj.d
@@ -586,8 +468,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneIn
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneInventoryManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneToolManager\DroneToolManager.c.obj.d
@@ -595,8 +475,6 @@ build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolMan
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneToolManager
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\Visuals\Menu\DroneOnScreenUI\DronePopOutWindow\DronePopOutWindow.c.obj.d
@@ -604,8 +482,6 @@ build CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\Visuals\Menu\DroneOnScreenUI\DronePopOutWindow
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
 
 build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/InGameTime/Drone/DroneData.c || cmake_object_order_depends_target_edifice
   DEP_FILE = CMakeFiles\edifice.dir\Game\InGameTime\Drone\DroneData.c.obj.d
@@ -613,8 +489,13 @@ build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj: C_COMPILER__
   INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\edifice.dir
   OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\InGameTime\Drone
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
-  TARGET_PDB = edifice.pdb
+
+build CMakeFiles/edifice.dir/Game/World/TerrainGen/StoneManager/StoneManager.c.obj: C_COMPILER__edifice_unscanned_Debug C$:/Users/Spencer/Desktop/Edifice_V2/Game/World/TerrainGen/StoneManager/StoneManager.c || cmake_object_order_depends_target_edifice
+  DEP_FILE = CMakeFiles\edifice.dir\Game\World\TerrainGen\StoneManager\StoneManager.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/SDL2-2.30.2/x86_64-w64-mingw32/include -IC:/Users/Spencer/Desktop/Edifice_V2/Lua542/include -isystem C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2
+  OBJECT_DIR = CMakeFiles\edifice.dir
+  OBJECT_FILE_DIR = CMakeFiles\edifice.dir\Game\World\TerrainGen\StoneManager
 
 
 # =============================================================================
@@ -624,7 +505,7 @@ build CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj: C_COMPILER__
 #############################################
 # Link the executable edifice.exe
 
-build edifice.exe: C_EXECUTABLE_LINKER__edifice_Debug CMakeFiles/edifice.dir/main.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj CMakeFiles/edifice.dir/Game/GameData.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.obj CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.obj CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj CMakeFiles/edifice.dir/Game/World/World.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj CMakeFiles/edifice.dir/Game/Blocks/Blocks.c.obj CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj CMakeFiles/edifice.dir/Assets/AssetManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj | C$:/Users/Spencer/Desktop/Edifice_V2/Lua542/lua54.lib C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
+build edifice.exe: C_EXECUTABLE_LINKER__edifice_Debug CMakeFiles/edifice.dir/main.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/CameraData.c.obj CMakeFiles/edifice.dir/Game/GameData.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Camera.c.obj CMakeFiles/edifice.dir/Game/Visuals/Screen.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.obj CMakeFiles/edifice.dir/Game/Controls/Controls.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.c.obj CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj CMakeFiles/edifice.dir/Game/World/World.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinNoise.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj CMakeFiles/edifice.dir/Game/Blocks/Blocks.c.obj CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj CMakeFiles/edifice.dir/Game/World/Octree/Octree.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/TerrainGen.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/TextureList/TextureList.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCaster.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Controls/CameraControls.c.obj CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/DebugMenu.c.obj CMakeFiles/edifice.dir/Assets/AssetManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj CMakeFiles/edifice.dir/Game/PlayerData/PlayerData.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/TerpManager/TerpManager.c.obj CMakeFiles/edifice.dir/Game/World/Octree/Tools/AdvancedKeyMod.c.obj CMakeFiles/edifice.dir/Game/Sound/SoundManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIManger.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/MenuManger.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/MainMenu/MainMenu.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/_UIManager/UIRenderer/UIRenderer.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/SettingsMenu/SettingsMenu.c.obj CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunk.c.obj CMakeFiles/edifice.dir/Game/World/WorldChunkHashMap/WorldChunkHashMap.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/Puff/PuffLogic.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/TextureManager/EntityTextures.c.obj CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/EntityRendering/EntityRendering.c.obj CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockRendering/CastedBlockRendering.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/Perlin_Noise/PerlinGenerator.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/OnScreenUI/OnScreenUI.c.obj CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj CMakeFiles/edifice.dir/Game/PlayerData/Invintory/Hotbar/Hotbar.c.obj CMakeFiles/edifice.dir/Game/PlayerData/Invintory/BlockMenu/BlockMenu.c.obj CMakeFiles/edifice.dir/Game/World/World_Saving/WorldFileManager.c.obj CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/TikData/TickData.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldSelectMenu/WorldSelectMenu.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/MenuManager/Menus/WorldCreateMenu/WorldCreateMenu.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/Drone.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.c.obj CMakeFiles/edifice.dir/Game/World/World_Saving/ChunkFileManager/ChunkFileManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DroneOnScreenUI.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.c.obj CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj CMakeFiles/edifice.dir/Game/World/TerrainGen/StoneManager/StoneManager.c.obj | C$:/Users/Spencer/Desktop/Edifice_V2/Lua542/lua54.lib C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a
   FLAGS = -g
   LINK_FLAGS = -Wl,--undefined=WinMain
   LINK_LIBRARIES = C:/Users/Spencer/Desktop/Edifice_V2/Lua542/lua54.lib  C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2main.a  C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/libSDL2.dll.a  -mwindows  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -632,10 +513,9 @@ build edifice.exe: C_EXECUTABLE_LINKER__edifice_Debug CMakeFiles/edifice.dir/mai
   OBJECT_DIR = CMakeFiles\edifice.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\edifice.dir\
   TARGET_FILE = edifice.exe
   TARGET_IMPLIB = libedifice.dll.a
-  TARGET_PDB = edifice.pdb
+  TARGET_PDB = edifice.exe.dbg
 
 
 #############################################
@@ -682,14 +562,14 @@ build all: phony edifice.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FeatureSummary.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config-version.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config.cmake C$:/Users/Spencer/Desktop/Edifice_V2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FeatureSummary.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config-version.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config.cmake C$:/Users/Spencer/Desktop/Edifice_V2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FeatureSummary.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config-version.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config.cmake C$:/Users/Spencer/Desktop/Edifice_V2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FeatureSummary.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config-version.cmake C$:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2/sdl2-config.cmake C$:/Users/Spencer/Desktop/Edifice_V2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
 
 
 #############################################

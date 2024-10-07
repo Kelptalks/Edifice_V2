@@ -101,14 +101,12 @@ void renderDronesInventory(struct GameData* gameData, struct DronePopOutWindow* 
             SDL_RenderCopy(gameData->screen->renderer, texture, &srcRect, &destRect);
 
             //Render string if mouse is on cord
-            bool inMouseRangeX = (xMouseCor > xSlotCor) && (xMouseCor < (xSlotCor + itemScale));
-            bool inMouseRangeY = (yMouseCor > ySlotCor) && (yMouseCor < (ySlotCor + itemScale));
-            if (inMouseRangeX && inMouseRangeY){
+            int itemCountInSlot = getItemCountInSlot(drone, itemIndex);
+            if (itemCountInSlot > 0) {
                 char itemCount[10] = {0};
-                sprintf(itemCount, "%i", getItemCountInSlot(drone, itemIndex));
-                renderString(gameData, itemCount, xMouseCor, yMouseCor, scale * 20);
+                sprintf(itemCount, "%i", itemCountInSlot);
+                renderStringCentered(gameData, itemCount, xSlotCor + (itemScale/2), ySlotCor + (itemScale/2), scale * 5);
             }
-
 
         }
     }
@@ -232,52 +230,54 @@ bool handleDroneArrowInput(struct DronePopOutWindow* dronePopOutWindow, int mous
 }
 
 bool HandleDronePopOutMenuInputs(struct GameData* gameData, struct DronePopOutWindow* dronePopOutWindow, SDL_Event event){
-    bool MouseOnDronePopOut = false;
-
     int mouseCorX; int mouseCorY;
     SDL_GetMouseState(&mouseCorX, &mouseCorY);
 
-    MouseOnDronePopOut = handleDroneArrowInput(dronePopOutWindow, mouseCorX, mouseCorY, event);
 
-    int exitButtonRezX = 9 * dronePopOutWindow->scale;
-    int exitButtonRezY = 9 * dronePopOutWindow->scale;
-    int exitButtonCorX = dronePopOutWindow->xCor + (dronePopOutWindow->xRez - (exitButtonRezX));
-    int exitButtonCorY = dronePopOutWindow->yCor;
-
-    bool exitButtonInXBounds = (mouseCorX < (exitButtonCorX + exitButtonRezX)) && (mouseCorX > exitButtonCorX);
-    bool exitButtonInYBounds = (mouseCorY < (exitButtonCorY + exitButtonRezY)) && (mouseCorY > exitButtonCorY);
-
-    if (exitButtonInXBounds && exitButtonInYBounds){
-        dronePopOutWindow->mouseOnExitButton = true;
-    }
-    else{
-        dronePopOutWindow->mouseOnExitButton = false;
-    }
-
-    int xBarCor = dronePopOutWindow->xCor + (193 * dronePopOutWindow->scale);
-    int xBarRez = 61 * dronePopOutWindow->scale;
-    bool inBarXBounds = (mouseCorX < (xBarCor + xBarRez)) && (mouseCorX > xBarCor);
-
-
-
-    if (event.type == SDL_MOUSEBUTTONDOWN){
-        if (inBarXBounds && exitButtonInYBounds){
-            dronePopOutWindow->grabbed = true;
-            dronePopOutWindow->xGrabCor = (mouseCorX - dronePopOutWindow->xCor);
-            dronePopOutWindow->yGrabCor = (mouseCorY - dronePopOutWindow->yCor);
-        }
-        if (dronePopOutWindow->mouseOnExitButton){
-            MouseOnDronePopOut = true;
-            dronePopOutWindow->visible = false;
-        }
-    }
     if (event.type == SDL_MOUSEBUTTONUP){
-        MouseOnDronePopOut = true;
         dronePopOutWindow->grabbed = false;
     }
     if (dronePopOutWindow->grabbed){
         dronePopOutWindow->xCor = mouseCorX - dronePopOutWindow->xGrabCor;
         dronePopOutWindow->yCor = mouseCorY - dronePopOutWindow->yGrabCor;
     }
-    return MouseOnDronePopOut;
+
+    bool inWindowXBounds = (dronePopOutWindow->xCor < mouseCorX) && (mouseCorX < dronePopOutWindow->xCor + dronePopOutWindow->xRez);
+    bool inWindowYBounds = (dronePopOutWindow->yCor < mouseCorY) && (mouseCorY < dronePopOutWindow->yCor + dronePopOutWindow->yRez);
+    if (inWindowXBounds && inWindowYBounds) {
+        handleDroneArrowInput(dronePopOutWindow, mouseCorX, mouseCorY, event);
+
+        int exitButtonRezX = 9 * dronePopOutWindow->scale;
+        int exitButtonRezY = 9 * dronePopOutWindow->scale;
+        int exitButtonCorX = dronePopOutWindow->xCor + (dronePopOutWindow->xRez - (exitButtonRezX));
+        int exitButtonCorY = dronePopOutWindow->yCor;
+
+        bool exitButtonInXBounds = (mouseCorX < (exitButtonCorX + exitButtonRezX)) && (mouseCorX > exitButtonCorX);
+        bool exitButtonInYBounds = (mouseCorY < (exitButtonCorY + exitButtonRezY)) && (mouseCorY > exitButtonCorY);
+
+        if (exitButtonInXBounds && exitButtonInYBounds){
+            dronePopOutWindow->mouseOnExitButton = true;
+        }
+        else{
+            dronePopOutWindow->mouseOnExitButton = false;
+        }
+
+        int xBarCor = dronePopOutWindow->xCor + (193 * dronePopOutWindow->scale);
+        int xBarRez = 61 * dronePopOutWindow->scale;
+        bool inBarXBounds = (mouseCorX < (xBarCor + xBarRez)) && (mouseCorX > xBarCor);
+
+        if (event.type == SDL_MOUSEBUTTONDOWN){
+            if (inBarXBounds && exitButtonInYBounds){
+                dronePopOutWindow->grabbed = true;
+                dronePopOutWindow->xGrabCor = (mouseCorX - dronePopOutWindow->xCor);
+                dronePopOutWindow->yGrabCor = (mouseCorY - dronePopOutWindow->yCor);
+            }
+            if (dronePopOutWindow->mouseOnExitButton){
+                dronePopOutWindow->visible = false;
+            }
+        }
+        return true;
+    }
+
+    return false;
 }

@@ -11,6 +11,7 @@
 #include "PlantManager/PlantManger.h"
 #include "../../../ArrayList/ArrayList.h"
 #include "Perlin Noise/PerlinGenerator.h"
+#include "StoneManager/StoneManager.h"
 
 void createTerrainGenRules(struct World* world){
     struct TerrainGenRules* terrainGenRules = malloc(sizeof (struct TerrainGenRules));
@@ -80,10 +81,10 @@ void genArea(struct World* world, int xStart, int yStart, int xEnd, int yEnd, in
                             setBlockAtWorldCor(world, x, y, z - heightMod, Sand);
                         }
                         else{
-                            setBlockAtWorldCor(world, x, y, z - heightMod,lairRule->blockType);\
-                            if (lairRule->blockType == GreenGrass){
-                                generatePlant(world, x, y, z - heightMod, GreenGrass);
-                            }
+                            setBlockAtWorldCor(world, x, y, z - heightMod,lairRule->blockType);
+
+                            generatePlant(world, x, y, z - heightMod, lairRule->blockType);
+                            generateStone(world, x, y, z - heightMod, lairRule->blockType);
                         }
                     }
                 }

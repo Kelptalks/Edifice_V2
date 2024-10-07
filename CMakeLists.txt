@@ -130,6 +130,8 @@ add_executable(edifice main.c
         Game/Visuals/Menu/DroneOnScreenUI/DronePopOutWindow/DronePopOutWindow.h
         Game/InGameTime/Drone/DroneData.c
         Game/InGameTime/Drone/DroneData.h
+        Game/World/TerrainGen/StoneManager/StoneManager.c
+        Game/World/TerrainGen/StoneManager/StoneManager.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES})

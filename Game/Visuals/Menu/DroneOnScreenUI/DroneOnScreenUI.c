@@ -5,11 +5,11 @@
 #include "DroneOnScreenUI.h"
 #include "../../../World/World.h"
 #include "../../../InGameTime/Drone/Drone.h"
-#include "../../Camera/IsoCordTool/IsoCordManager.h"
 #include "../../Camera/CameraData.h"
 #include "../../../InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.h"
 #include "../../../InGameTime/Drone/DroneToolManager/DroneToolManager.h"
 #include "../../../InGameTime/Drone/DroneData.h"
+#include "DronePopOutWindow/DronePopOutWindow.h"
 
 void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone){
 
@@ -84,7 +84,7 @@ bool handleDroneSelectionIconsInputs(struct GameData* gameData, struct Drone* dr
     bool inMouseBoundsX = mouseCorX < (xCor + xScale) && mouseCorX > xCor;
     bool inMouseBoundsY = mouseCorY < (yCor + yScale) && mouseCorY > yCor;
     if (inMouseBoundsX && inMouseBoundsY) {
-        if (event.type == SDL_MOUSEBUTTONDOWN) {
+        if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) {
             if (droneOnScreenUi->dronePopOutWindow[drone->id] == NULL){
                 droneOnScreenUi->dronePopOutWindow[droneOnScreenUi->currentDroneWindowCount] = createDronePopOutWindow(
                         drone, xCor + xScale, yCor, 2);
@@ -153,12 +153,14 @@ bool handleDroneOnScreenUI(struct GameData* gameData, SDL_Event event){
     struct World* world = gameData->world;
     for (int i = 0; i < world->droneData->droneCount; i++){
         struct Drone* drone = world->droneData->drones[i];
-        handleDroneSelectionIconsInputs(gameData, drone, event);
+        onDroneScreenUIMouseOn = onDroneScreenUIMouseOn || handleDroneSelectionIconsInputs(gameData, drone, event);
     }
 
     struct DroneOnScreenUI* droneOnScreenUi = gameData->menuManger->droneOnScreenUi;
     for (int i = 0; i < droneOnScreenUi->currentDroneWindowCount; i++) {
-        onDroneScreenUIMouseOn = HandleDronePopOutMenuInputs(gameData, droneOnScreenUi->dronePopOutWindow[i], event);
+        if (droneOnScreenUi->dronePopOutWindow[i]->visible) {
+            onDroneScreenUIMouseOn = onDroneScreenUIMouseOn || HandleDronePopOutMenuInputs(gameData, droneOnScreenUi->dronePopOutWindow[i], event);
+        }
     }
 
     return onDroneScreenUIMouseOn;

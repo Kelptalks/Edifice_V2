@@ -5,6 +5,32 @@
 #include "SDL.h"
 #include "DroneToolManager.h"
 #include "../../../Blocks/Blocks.h"
+#include "../../../Debuging/Test_Main.h"
+
+struct DroneItemRecipe* createItemRecipe(int totalItemTypes) {
+    struct DroneItemRecipe* itemRecipe = malloc(sizeof(struct DroneItemRecipe));
+
+    itemRecipe->totalItemTypes = totalItemTypes;
+    itemRecipe->itemsNeeded = calloc(totalItemTypes, sizeof(struct Item*));
+    for (int i = 0; i < itemRecipe->totalItemTypes; i++) {
+        itemRecipe->itemsNeeded[i] = ItemNull;
+    }
+    itemRecipe->itemCounts = calloc(totalItemTypes, sizeof(int));
+
+    return itemRecipe;
+}
+
+void addItemToRecipe(struct DroneItemRecipe* itemRecipe, enum DroneItem item, int itemCount) {
+    for (int x = 0; x < itemRecipe->totalItemTypes; x++) {
+        if (itemRecipe->itemCounts[x] == 0) {
+            itemRecipe->itemsNeeded[x] = item;
+            itemRecipe->itemCounts[x] = itemCount;
+            return;
+        }
+    }
+    reportBug("Failed to add item to recipe\n");
+}
+
 
 int getTotalToolCount(){
     return 14;
@@ -92,7 +118,7 @@ struct DroneToolData* createDroneToolData(){
     droneToolData->blockMineTimes[Furnace] = 100;
 
 
-    //Set up block mine times
+    //Set up block Tool mine mods
     droneToolData->toolMineTimeMods = calloc(getTotalToolCount(), sizeof (int));
     droneToolData->toolMineTimeMods[ToolNull] = 0;
     droneToolData->toolMineTimeMods[ToolStoneDrill] = 4;
@@ -109,6 +135,39 @@ struct DroneToolData* createDroneToolData(){
     droneToolData->toolMineTimeMods[ToolTitaniumCamera] = 0;
     droneToolData->toolMineTimeMods[ToolExplosiveCamera] = 0;
 
+    droneToolData->itemRecipes = malloc(sizeof(struct DroneItemRecipe*) * getTotalToolCount());
+
+    droneToolData->itemRecipes[ToolNull] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolStoneDrill] = createItemRecipe(1);
+    addItemToRecipe(droneToolData->itemRecipes[ToolStoneDrill], ItemStone, 3);
+
+    droneToolData->itemRecipes[ToolStoneSaw] = createItemRecipe(1);
+    addItemToRecipe(droneToolData->itemRecipes[ToolStoneSaw], ItemStone, 3);
+
+    droneToolData->itemRecipes[ToolIronDrill] = createItemRecipe(1);
+    addItemToRecipe(droneToolData->itemRecipes[ToolIronDrill], ItemIronBar, 3);
+
+    droneToolData->itemRecipes[ToolIronSaw] = createItemRecipe(1);
+    addItemToRecipe(droneToolData->itemRecipes[ToolIronSaw], ItemIronBar, 3);
+
+    droneToolData->itemRecipes[ToolIronBattery] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolIronReceptacle] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolIronCamera] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolTitaniumDrill] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolTitaniumSaw] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolTitaniumBattery] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolTitaniumReceptacle] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolTitaniumCamera] = createItemRecipe(1);
+
+    droneToolData->itemRecipes[ToolExplosiveCamera] = createItemRecipe(1);
 
     return droneToolData;
 }
