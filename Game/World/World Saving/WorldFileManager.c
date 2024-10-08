@@ -132,6 +132,13 @@ struct World* readWorldData(char* fileName){
     //Set up entity array
     world->entityCount = 150;
     world->tempEntityArray = calloc(sizeof (struct Entity*), world->entityCount);
+    for (int i = 0; i < 100; i++) {
+        world->tempEntityArray[i] = createPuffEntity();
+        world->tempEntityArray[i]->worldX = rand()%150;
+        world->tempEntityArray[i]->worldY = rand()%150;
+        world->tempEntityArray[i]->worldZ = 100;
+    }
+
 
     //Set up drone array
     world->droneData = createDroneData(world, 100);

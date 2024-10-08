@@ -83,6 +83,27 @@ int luaMineRelativeBlock(lua_State *L){
     return 1;
 }
 
+int luaPlaceRelativeBlock(lua_State *L){
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+    int offsetX = luaL_checkinteger(L, 2);  // 2rd argument: x movement
+    int offsetY = luaL_checkinteger(L, 3);  // 3th argument: y movement
+    int offsetZ = luaL_checkinteger(L, 4);  // 4th argument: z movement
+    enum Block block = luaL_checkinteger(L, 5);
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = placeBlockRelativeToDrone(world, drone, offsetX, offsetY, offsetZ, block);
+
+    lua_pushinteger(L, result);
+
+    return 1;
+}
+
 int luaGetDroneCords(lua_State *L) {
     int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
 
@@ -169,6 +190,33 @@ int luaGetDroneInventoryItemCount(lua_State *L) {
     return 1;
 }
 
+int luaDroneUseItemForFuel(lua_State *L) {
+
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+    enum DroneItem item = luaL_checkinteger(L, 2);  // 2rd argument: x movement
+    int quantity = luaL_checkinteger(L, 3);
+
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = useItemForFuel(drone, item, quantity);
+
+    if (result <= 0) {
+        lua_pushinteger(L, -1);
+    }
+    else {
+        lua_pushinteger(L, result);
+    }
+
+    return 1;
+}
+
+
 struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     reportBug("creating lua\n");
 
@@ -192,6 +240,8 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaCraftDroneTool", luaCraftDroneTool);
     lua_register(luaCommandsData->luaState, "luaGetDroneToolSlot", luaGetDroneToolSlot);
     lua_register(luaCommandsData->luaState, "luaGetDroneInventoryItemCount", luaGetDroneInventoryItemCount);
+    lua_register(luaCommandsData->luaState, "luaDroneUseItemForFuel", luaDroneUseItemForFuel);
+    lua_register(luaCommandsData->luaState, "luaPlaceRelativeBlock", luaPlaceRelativeBlock);
 
 
     //open Drone file

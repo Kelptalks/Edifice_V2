@@ -39,8 +39,8 @@ struct PlayerData* createPlayerData(){
     playerData->velZ = 0;
 
     playerData->gravity = 0.05f;
-    playerData->walkingSpeed = 0.04f;
-    playerData->sprintMod = 0.04f;
+    playerData->walkingSpeed = 0.1f;
+    playerData->sprintMod = 0.05f;
 
 
     return playerData;
@@ -49,7 +49,7 @@ struct PlayerData* createPlayerData(){
 void tikPlayer(struct GameData* gameData){
     struct PlayerData* playerData = gameData->playerData;
 
-    int walkingAnimationSpeed = 1;
+    int walkingAnimationSpeed = 6;
     if (playerData->sprinting){
         walkingAnimationSpeed = 2;
     }

@@ -16,6 +16,10 @@ function ON_TICK()
     
     for i = 0, droneCount - 1, 1
     do
+        if getDroneInventoryItemCount(i, DroneItem.ItemPlantMatter) >= 3 then
+            DroneUseItemForFuel(i, DroneItem.ItemPlantMatter, 3)
+        end
+
         -- Collect rocks for drill
         if getDroneToolSlot(i, 0) == 0 then
                 mineBlockAroundDrone(i, Block.Rock)
@@ -31,9 +35,8 @@ function ON_TICK()
             
             local x, y, z = getCordsOfBlock(i, Block.Rock);
             navigateToCords(i, x, y, z);
-
         -- Mine down 
-        else
+        else if getDroneInventoryItemCount(i, DroneItem.ItemIronOar) < 5 then
             -- Craft extra drill if possible
             if getDroneToolSlot(i, 2) == 0 then
                 if getDroneInventoryItemCount(i, DroneItem.ItemStone) == 3 then
@@ -41,13 +44,14 @@ function ON_TICK()
                 end
             end
 
-
             -- Start mineing down
-
-            if DigStairsDown(i, 10) == false then
+            if DigStairsDown(i, 20) == false then
                 StripMine(i)
             end
             
+        else
+
         end
+    end
     end
 end

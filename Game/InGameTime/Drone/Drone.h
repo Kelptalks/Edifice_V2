@@ -47,7 +47,8 @@ enum DroneItem{
     ItemTitaniumBar,
     ItemPurpleLens,
     ItemCharcoal,
-    ItemSulfur
+    ItemSulfur,
+    ItemDroneParts,
 };
 
 struct Drone{
@@ -85,9 +86,9 @@ int moveDrone(struct World* world, struct Drone* drone, int x, int y, int z);
 
 int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int y, int z);
 
-int placeBlockRelativeToDrone();
+int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int y, int z, enum Block block);
 
-int useItemForFuel();
+int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity);
 
 int droneCraftTool(struct World* world, struct Drone* drone, enum DroneTool tool) ;
 

@@ -11,7 +11,7 @@ struct DroneItemRecipe* createItemRecipe(int totalItemTypes) {
     struct DroneItemRecipe* itemRecipe = malloc(sizeof(struct DroneItemRecipe));
 
     itemRecipe->totalItemTypes = totalItemTypes;
-    itemRecipe->itemsNeeded = calloc(totalItemTypes, sizeof(struct Item*));
+    itemRecipe->itemsNeeded = calloc(totalItemTypes, sizeof(enum DroneItem*));
     for (int i = 0; i < itemRecipe->totalItemTypes; i++) {
         itemRecipe->itemsNeeded[i] = ItemNull;
     }
@@ -59,12 +59,25 @@ void removeToolToDone(struct Drone* drone, int index){
 
 int getBlockMineTime(struct DroneToolData* droneToolData, struct Drone* drone, enum Block block){
     int mineMod = 1;
-    for (int i = 0; i < 3; i++){
-        mineMod += droneToolData->toolMineTimeMods[drone->tools[i]];
+
+    if (block == BrownWood || block == PurpleWood || block == BrownWoodPlanks || block == PurpleWoodPlanks) {
+        for (int i = 0; i < 3; i++) {
+            enum DroneTool droneTool = drone->tools[i];
+            if (droneTool == ToolStoneSaw || droneTool == ToolIronSaw || droneTool == ToolTitaniumSaw) {
+                mineMod += droneToolData->toolMineTimeMods[drone->tools[i]];
+            }
+        }
+    }
+    else {
+        for (int i = 0; i < 3; i++){
+            enum DroneTool droneTool = drone->tools[i];
+            if (droneTool == ToolStoneDrill || droneTool == ToolIronDrill || droneTool == ToolTitaniumDrill) {
+                mineMod += droneToolData->toolMineTimeMods[drone->tools[i]];
+            }
+        }
     }
 
     return droneToolData->blockMineTimes[block] / mineMod;
-
 }
 
 struct DroneToolData* createDroneToolData(){
@@ -135,6 +148,146 @@ struct DroneToolData* createDroneToolData(){
     droneToolData->toolMineTimeMods[ToolTitaniumCamera] = 0;
     droneToolData->toolMineTimeMods[ToolExplosiveCamera] = 0;
 
+
+
+    //Set up block placement Costs
+    droneToolData->blockPlacementCostQuantities = calloc(getTotalBlockCount(), sizeof (int));
+    droneToolData->blockPlacementCostItems = calloc(getTotalBlockCount(), sizeof (enum DroneItem));
+
+    droneToolData->blockPlacementCostQuantities[Dirt] = 1;
+    droneToolData->blockPlacementCostItems[Dirt] = ItemDirt;
+
+    droneToolData->blockPlacementCostQuantities[CrackedEarth] = 1;
+    droneToolData->blockPlacementCostItems[CrackedEarth] = ItemDirt;
+
+    droneToolData->blockPlacementCostQuantities[Hive] = 1;
+    droneToolData->blockPlacementCostItems[Hive] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Cobble] = 1;
+    droneToolData->blockPlacementCostItems[Cobble] = ItemStone;
+
+    droneToolData->blockPlacementCostQuantities[Core] = 9999;
+    droneToolData->blockPlacementCostItems[Core] = ItemTitaniumBar;
+
+    droneToolData->blockPlacementCostQuantities[Sand] = 1;
+    droneToolData->blockPlacementCostItems[Sand] = ItemSand;
+
+    droneToolData->blockPlacementCostQuantities[Granite] = 5;
+    droneToolData->blockPlacementCostItems[Granite] = ItemStone;
+
+    droneToolData->blockPlacementCostQuantities[Stone] = 2;
+    droneToolData->blockPlacementCostItems[Stone] = ItemStone;
+
+    droneToolData->blockPlacementCostQuantities[Magma] = 10;
+    droneToolData->blockPlacementCostItems[Magma] = ItemStone;
+
+    droneToolData->blockPlacementCostQuantities[GreenGrass] = 2;
+    droneToolData->blockPlacementCostItems[GreenGrass] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[BlueGrass] = 5;
+    droneToolData->blockPlacementCostItems[BlueGrass] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Leave] = 1;
+    droneToolData->blockPlacementCostItems[Leave] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[PurpleWood] = 1;
+    droneToolData->blockPlacementCostItems[PurpleWood] = ItemLog;
+
+    droneToolData->blockPlacementCostQuantities[BrownWood] = 1;
+    droneToolData->blockPlacementCostItems[BrownWood] = ItemLog;
+
+    droneToolData->blockPlacementCostQuantities[PurpleWoodPlanks] = 1;
+    droneToolData->blockPlacementCostItems[PurpleWoodPlanks] = ItemLog;
+
+    droneToolData->blockPlacementCostQuantities[BrownWoodPlanks] = 1;
+    droneToolData->blockPlacementCostItems[BrownWoodPlanks] = ItemLog;
+
+    droneToolData->blockPlacementCostQuantities[Dandi] = 2;
+    droneToolData->blockPlacementCostItems[Dandi] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[DandiStem] = 1;
+    droneToolData->blockPlacementCostItems[DandiStem] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[MushroomStem] = 1;
+    droneToolData->blockPlacementCostItems[MushroomStem] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[BlueMushroomBlock] = 2;
+    droneToolData->blockPlacementCostItems[BlueMushroomBlock] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[PinkMushroomBlock] = 2;
+    droneToolData->blockPlacementCostItems[PinkMushroomBlock] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Fungi] = 3;
+    droneToolData->blockPlacementCostItems[Fungi] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Water] = 999;
+    droneToolData->blockPlacementCostItems[Water] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[YellowFlowers] = 1;
+    droneToolData->blockPlacementCostItems[YellowFlowers] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[WhiteFlowers] = 1;
+    droneToolData->blockPlacementCostItems[WhiteFlowers] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Mushroom] = 1;
+    droneToolData->blockPlacementCostItems[Mushroom] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Flour] = 1;
+    droneToolData->blockPlacementCostItems[Flour] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[Glass] = 2;
+    droneToolData->blockPlacementCostItems[Glass] = ItemGlass;
+
+    droneToolData->blockPlacementCostQuantities[Bulb] = 1;
+    droneToolData->blockPlacementCostItems[Bulb] = ItemGlass;
+
+    droneToolData->blockPlacementCostQuantities[Rock] = 1;
+    droneToolData->blockPlacementCostItems[Rock] = ItemStone;
+
+    droneToolData->blockPlacementCostQuantities[Iron] = 1;
+    droneToolData->blockPlacementCostItems[Iron] = ItemIronOar;
+
+    droneToolData->blockPlacementCostQuantities[Copper] = 1;
+    droneToolData->blockPlacementCostItems[Copper] = ItemCopperOar;
+
+    droneToolData->blockPlacementCostQuantities[MudBrick] = 2;
+    droneToolData->blockPlacementCostItems[MudBrick] = ItemDirt;
+
+    droneToolData->blockPlacementCostQuantities[ClayBrick] = 2;
+    droneToolData->blockPlacementCostItems[ClayBrick] = ItemBrick;
+
+    droneToolData->blockPlacementCostQuantities[Coral] = 20;
+    droneToolData->blockPlacementCostItems[Coral] = ItemPlantMatter;
+
+    droneToolData->blockPlacementCostQuantities[StoneBrick] = 2;
+    droneToolData->blockPlacementCostItems[StoneBrick] = ItemStoneBrick;
+
+    droneToolData->blockPlacementCostQuantities[FloweringStoneBrick] = 3;
+    droneToolData->blockPlacementCostItems[FloweringStoneBrick] = ItemStoneBrick;
+
+    droneToolData->blockPlacementCostQuantities[LBM] = 50;
+    droneToolData->blockPlacementCostItems[LBM] = ItemTitaniumBar;
+
+    droneToolData->blockPlacementCostQuantities[Factory] = 20;
+    droneToolData->blockPlacementCostItems[Factory] = ItemIronBar;
+
+    droneToolData->blockPlacementCostQuantities[Crate] = 10;
+    droneToolData->blockPlacementCostItems[Crate] = ItemIronBar;
+
+    droneToolData->blockPlacementCostQuantities[Metal] = 5;
+    droneToolData->blockPlacementCostItems[Metal] = ItemIronBar;
+
+    droneToolData->blockPlacementCostQuantities[ConveyorBelt] = 100;
+    droneToolData->blockPlacementCostItems[ConveyorBelt] = ItemIronBar;
+
+    droneToolData->blockPlacementCostQuantities[Furnace] = 10;
+    droneToolData->blockPlacementCostItems[Furnace] = ItemStoneBrick;
+
+    droneToolData->blockPlacementCostQuantities[DroneLeftForward] = 3;
+    droneToolData->blockPlacementCostItems[DroneLeftForward] = ItemDroneParts;
+
+
+    //Item Crafting
     droneToolData->itemRecipes = malloc(sizeof(struct DroneItemRecipe*) * getTotalToolCount());
 
     droneToolData->itemRecipes[ToolNull] = createItemRecipe(1);

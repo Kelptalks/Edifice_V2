@@ -18,7 +18,7 @@
 struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
     tikManager->tik = 0;
-    tikManager->tikTime = 100;
+    tikManager->tikTime = 25;
     return tikManager;
 }
 
@@ -55,8 +55,10 @@ void updateTikTime(struct GameData* gameData){
             reportBug("Error running onTick: %s\n", lua_tostring(commandsData->luaState, -1));
         }
 
-        for (int i = 0; i < world->droneData->droneCount; i++){
-            tickDrone(world, world->droneData->drones[i]);
+        if (tikManager->tik % 5 == 0) {
+            for (int i = 0; i < world->droneData->droneCount; i++){
+                tickDrone(world, world->droneData->drones[i]);
+            }
         }
     }
 

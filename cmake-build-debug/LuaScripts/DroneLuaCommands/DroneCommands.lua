@@ -15,9 +15,6 @@ end
 -- Lua wrapper for mining a block relative to a drone
 function mineDroneBlock(droneId, offsetX, offsetY, offsetZ)
     local result = luaMineRelativeBlock(droneId, offsetX, offsetY, offsetZ)
-    if result == -1 then
-        error("Failed to mine block. Invalid drone ID or position")
-    end
     return result
 end
 
@@ -53,4 +50,12 @@ end
 
 function getDroneViewRange()
     return 4
+end
+
+function DroneUseItemForFuel(droneId, item, quantity)
+    luaDroneUseItemForFuel(droneId, item, quantity)
+end
+
+function PlaceRelativeBlock(droneId, offsetX, offsetY, offsetZ, block)
+    luaPlaceRelativeBlock(droneId, offsetX, offsetY, offsetZ, block - 1)
 end

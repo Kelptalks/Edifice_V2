@@ -21,6 +21,10 @@ void addItemToRecipe(struct DroneItemRecipe* item_recipe, enum DroneItem item, i
 struct DroneToolData{
     int* blockMineTimes;
     int* toolMineTimeMods;
+
+    enum DroneItem* blockPlacementCostItems;
+    int* blockPlacementCostQuantities;
+
     struct DroneItemRecipe** itemRecipes;
 };
 

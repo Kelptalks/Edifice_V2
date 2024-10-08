@@ -23,7 +23,7 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     drone->busyTime = 0;
     drone->inventorySize = 9;
 
-    drone->fuel = 5000;
+    drone->fuel = 10;
     drone->worldX = x;
     drone->worldY = y;
     drone->worldZ = z;
@@ -143,19 +143,26 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
     if (drone->fuel < 0){
         return -4;
     }
-    bool inPositiveRange = x <= drone->speed && y <= drone->speed && z <= drone->speed;
-    bool inNegativeRange = x >= -drone->speed && y >= -drone->speed && z >= -drone->speed;
+    bool inPositiveRange = x <= drone->reachRange && y <= drone->reachRange && z <= drone->reachRange;
+    bool inNegativeRange = x >= -drone->reachRange && y >= -drone->reachRange && z >= -drone->reachRange;
 
     if (inPositiveRange && inNegativeRange) {
+        struct DroneToolData* droneToolData = world->droneData->droneToolData;
         int blockToMineX = drone->worldX + x;
         int blockToMineY = drone->worldY + y;
         int blockToMineZ = drone->worldZ + z;
 
         enum Block placeLocationBlock = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
         if (placeLocationBlock == Air){
-            setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, block);
-            drone->busyTime = 20;
-            drone->fuel-=5;
+            if (removeItemFromInventory(drone, droneToolData->blockPlacementCostItems[block], droneToolData->blockPlacementCostQuantities[block]) == 1) {
+                setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, block);
+                drone->busyTime = 30;
+                drone->fuel-=5;
+                return 1;
+            }
+            else {
+                return -5;
+            }
         }
         else{
             return -2;
@@ -164,7 +171,20 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
     return -1;
 }
 
-int useItemForFuel() {
+int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity) {
+
+    if (removeItemFromInventory(drone, item, quantity) == 1) {
+        if (item == ItemPlantMatter) {
+            drone->fuel+=25;
+            return 1;
+        }
+        else if (item == ItemLog) {
+            drone->fuel += 200;
+            return 1;
+        }
+    }
+    return -1;
+
 
 }
 
