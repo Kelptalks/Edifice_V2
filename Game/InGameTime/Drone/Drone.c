@@ -23,7 +23,7 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     drone->busyTime = 0;
     drone->inventorySize = 9;
 
-    drone->fuel = 10;
+    drone->fuel = 9999;
     drone->worldX = x;
     drone->worldY = y;
     drone->worldZ = z;
@@ -38,6 +38,9 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
         drone->items[i] = ItemNull;
         drone->itemCounts[i] = 0;
     }
+
+    addItemToInventory(drone, ItemDirt, 9999);
+    addItemToInventory(drone, ItemPlantMatter, 9999);
 
     return drone;
 }
@@ -122,6 +125,7 @@ int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, in
         enum Block blockToMine = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
 
         if (blockToMine != Air) {
+            drone->fuel--;
             drone->busyTime = getBlockMineTime(world->droneData->droneToolData, drone, blockToMine);
             drone->mining = true;
             drone->blockCurrentlyMining = blockToMine;
@@ -175,11 +179,11 @@ int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity) {
 
     if (removeItemFromInventory(drone, item, quantity) == 1) {
         if (item == ItemPlantMatter) {
-            drone->fuel+=25;
+            drone->fuel+=50;
             return 1;
         }
         else if (item == ItemLog) {
-            drone->fuel += 200;
+            drone->fuel += 300;
             return 1;
         }
     }
@@ -261,7 +265,7 @@ void tickDrone(struct World* world, struct Drone* drone){
     }
     if (drone->mining && drone->busyTime == 0){
         setBlockAtWorldCor(world, drone->blockToMineX, drone->blockToMineY, drone->blockToMineZ, Air);
-        addItemToInventory(drone, getBlockTypeToItem(drone->blockCurrentlyMining));
+        addItemToInventory(drone, getBlockTypeToItem(drone->blockCurrentlyMining), 1);
         drone->mining = false;
     }
 

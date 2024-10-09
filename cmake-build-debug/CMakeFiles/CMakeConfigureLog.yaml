@@ -227,3 +227,305 @@ events:
       Running the C compiler's linker: "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.40
 ...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1178 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1178 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1178 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1178 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1178 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1178 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_3_0"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3vxi1t"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3vxi1t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_3_0"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3vxi1t'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_fe366
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_fe366.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3vxi1t/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_fe366.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_fe366.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3vxi1t/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3vxi1t/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_2_2"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yxrpen"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yxrpen"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_2_2"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yxrpen'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_d4957
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_d4957.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yxrpen/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_d4957.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_d4957.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yxrpen/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yxrpen/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_2_1"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4yr1a7"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4yr1a7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_2_1"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4yr1a7'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_03fb8
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_03fb8.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4yr1a7/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_03fb8.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_03fb8.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4yr1a7/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4yr1a7/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_2_0"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o69l8r"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o69l8r"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_2_0"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o69l8r'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_b3991
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_b3991.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o69l8r/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_b3991.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_b3991.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o69l8r/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o69l8r/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_1_2"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o9p1z2"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o9p1z2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_1_2"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o9p1z2'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_a9570
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_a9570.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o9p1z2/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_a9570.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_a9570.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o9p1z2/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o9p1z2/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_1_1"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3dp5kk"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3dp5kk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_1_1"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3dp5kk'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_45133
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_45133.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3dp5kk/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_45133.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_45133.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3dp5kk/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3dp5kk/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_1_0"
+    directories:
+      source: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sqt46v"
+      binary: "C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sqt46v"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_1_0"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sqt46v'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -v cmTC_02712
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_02712.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sqt46v/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_02712.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_02712.dir/CheckSymbolExists.c.obj -c C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sqt46v/CheckSymbolExists.c
+        C:/Users/Spencer/Desktop/Edifice_V2/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sqt46v/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+            2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

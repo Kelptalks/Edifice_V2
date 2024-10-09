@@ -165,6 +165,24 @@ int luaGetDroneToolSlot(lua_State *L) {
     return 1;
 }
 
+int luaGetDroneFuelCount(lua_State *L) {
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = drone->fuel;
+
+    lua_pushinteger(L, result);
+
+    return 1;
+}
+
 int luaGetDroneInventoryItemCount(lua_State *L) {
 
     int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
@@ -242,6 +260,7 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaGetDroneInventoryItemCount", luaGetDroneInventoryItemCount);
     lua_register(luaCommandsData->luaState, "luaDroneUseItemForFuel", luaDroneUseItemForFuel);
     lua_register(luaCommandsData->luaState, "luaPlaceRelativeBlock", luaPlaceRelativeBlock);
+    lua_register(luaCommandsData->luaState, "luaGetDroneFuelCount", luaGetDroneFuelCount);
 
 
     //open Drone file

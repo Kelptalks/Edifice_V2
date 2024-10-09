@@ -302,8 +302,9 @@ void handleOnScreenUIKeyInputs(struct GameData* gameData, SDL_Event event){
             case SDLK_0 :
                 gameData->playerData->hotBar->selectedSlot = 9;
                 break;
-            case SDLK_F1 :
-                onScreenUi->visible = !onScreenUi->visible;
+            case SDLK_F2 :
+                onScreenUi->visible = false;
+                gameData->menuManger->droneOnScreenUi->visible = true;
                 break;
             case SDLK_TAB:
                 onScreenUi->blockSelectionMenuVisible = !onScreenUi->blockSelectionMenuVisible;

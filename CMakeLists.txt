@@ -3,6 +3,11 @@ project(edifice C)
 
 set(CMAKE_C_STANDARD 11)
 
+set(OpenCL_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/OCL_SDK_Light/include")
+set(OpenCL_LIBRARY "${CMAKE_SOURCE_DIR}/OCL_SDK_Light/lib/x86_64/OpenCL.lib")
+include_directories(${OpenCL_INCLUDE_DIR})
+find_package(OpenCL REQUIRED)
+
 #SDL2
 set(SDL2_DIR "C:/SDL2-2.30.2/x86_64-w64-mingw32")
 find_package(SDL2 REQUIRED HINTS ${SDL2_DIR})
@@ -15,7 +20,6 @@ include_directories(${LUA_INCLUDE_DIR})
 # Lua library directory
 set(LUA_LIBRARY_DIR "${PROJECT_SOURCE_DIR}/Lua542")
 set(LUA_LIBRARIES "${LUA_LIBRARY_DIR}/lua54.lib")  # Use the import library (lua54.lib)
-
 
 add_executable(edifice main.c
         Game/Visuals/Camera/CameraData.h
@@ -134,6 +138,6 @@ add_executable(edifice main.c
         Game/World/TerrainGen/StoneManager/StoneManager.h
 )
 
-target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES})
+target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES} ${OpenCL_LIBRARY})
 
 set(CMAKE_VERBOSE_MAKEFILE ON)

@@ -3,12 +3,15 @@
 //
 
 #include "DroneOnScreenUI.h"
+
+#include "../../../InGameTime/TikManager.h"
 #include "../../../World/World.h"
 #include "../../../InGameTime/Drone/Drone.h"
 #include "../../Camera/CameraData.h"
 #include "../../../InGameTime/Drone/DroneInventoryManager/DroneInventoryManager.h"
 #include "../../../InGameTime/Drone/DroneToolManager/DroneToolManager.h"
 #include "../../../InGameTime/Drone/DroneData.h"
+#include "../OnScreenUI/OnScreenUI.h"
 #include "DronePopOutWindow/DronePopOutWindow.h"
 
 void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone){
@@ -160,6 +163,27 @@ bool handleDroneOnScreenUI(struct GameData* gameData, SDL_Event event){
     for (int i = 0; i < droneOnScreenUi->currentDroneWindowCount; i++) {
         if (droneOnScreenUi->dronePopOutWindow[i]->visible) {
             onDroneScreenUIMouseOn = onDroneScreenUIMouseOn || HandleDronePopOutMenuInputs(gameData, droneOnScreenUi->dronePopOutWindow[i], event);
+        }
+    }
+
+    if (event.type == SDL_KEYDOWN) {
+        switch (event.key.keysym.sym) {
+            case SDLK_F1 :
+                droneOnScreenUi->visible = false;
+                gameData->menuManger->onScreenUi->visible = true;
+                break;
+            case SDLK_MINUS :
+                if (gameData->tikManager->droneTickInterval > 1) {
+                    gameData->tikManager->tikTime -= 5;
+                    gameData->tikManager->droneTickInterval -= 1;
+                }
+                break;
+            case SDLK_PLUS :
+                if (gameData->tikManager->droneTickInterval < 5) {
+                    gameData->tikManager->droneTickInterval += 1;
+                    gameData->tikManager->tikTime += 5;
+                }
+            break;
         }
     }
 

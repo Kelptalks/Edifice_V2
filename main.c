@@ -1,15 +1,9 @@
 #include "SDL.h"
 #include "Game/GameData.h"
 #include "Game/Controls/Controls.h"
-#include "Game/Visuals/Camera/Camera.h"
 #include "Game/Visuals/Camera/Rendering/TextureManager/IsoTextureManager.h"
-#include "Game/World/World.h"
 #include "Game/World/World Saving/WorldFileManager.h"
-#include "Game/InGameTime/TikManager.h"
-#include "Game/World/WorldChunkHashMap/WorldChunkHashMap.h"
-#include "Game/Visuals/Camera/Rendering/RayCasting/RayCastingManager.h"
-#include "Game/InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
-#include "Game/InGameTime/Drone/Drone.h"
+#include "CL/cl.h"
 
 #include <stdio.h>
 #include "lua.h"
@@ -23,7 +17,7 @@ int main(int argc, char* argv[]) {
         struct GameData *gameData = createGameData();
 
         //Play start music
-        playSound(gameData->soundManager, MusicSunn);
+        //playSound(gameData->soundManager, MusicSunn);
 
         while (gameData->screen->run) {
             //Get start time

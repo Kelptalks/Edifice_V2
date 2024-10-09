@@ -32,19 +32,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 137,
+				"line" : 141,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 8,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
@@ -60,13 +60,19 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 9,
+				"line" : 8,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 13,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 18,
 				"parent" : 0
 			}
 		]
@@ -84,14 +90,18 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "C:/SDL2-2.30.2/x86_64-w64-mingw32/include"
+					"path" : "C:/Users/Spencer/Desktop/Edifice_V2/OCL_SDK_Light/include"
 				},
 				{
 					"backtrace" : 7,
+					"path" : "C:/SDL2-2.30.2/x86_64-w64-mingw32/include"
+				},
+				{
+					"backtrace" : 8,
 					"path" : "C:/Users/Spencer/Desktop/Edifice_V2/Lua542/include"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "C:/SDL2-2.30.2/x86_64-w64-mingw32/include/SDL2"
 				}
@@ -210,6 +220,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "C:\\SDL2-2.30.2\\x86_64-w64-mingw32\\lib\\libSDL2.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Users\\Spencer\\Desktop\\Edifice_V2\\OCL_SDK_Light\\lib\\x86_64\\OpenCL.lib",
 				"role" : "libraries"
 			},
 			{

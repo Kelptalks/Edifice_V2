@@ -19,6 +19,7 @@ struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
     tikManager->tik = 0;
     tikManager->tikTime = 25;
+    tikManager->droneTickInterval = 5;
     return tikManager;
 }
 
@@ -42,24 +43,22 @@ void updateTikTime(struct GameData* gameData){
         struct DroneLuaCommandsData* commandsData = world->droneData->droneLuaCommandsData;
 
         //Run lua tick function
+        if (tikManager->tik % tikManager->droneTickInterval == 0) {
+            lua_getglobal(commandsData->luaState, "ON_TICK");  // Get the onTick function from Lua
+            if (!lua_isfunction(commandsData->luaState, -1)) {  // Check if onTick is a valid function
+                reportBug("Error: ON_TICK is not a function\n");
+                return;
+            }
 
+            if (lua_pcall(commandsData->luaState, 0, 0, 0) != LUA_OK) {  // Call it with no arguments, no return values
+                reportBug("Error running onTick: %s\n", lua_tostring(commandsData->luaState, -1));
+            }
 
-
-        lua_getglobal(commandsData->luaState, "ON_TICK");  // Get the onTick function from Lua
-        if (!lua_isfunction(commandsData->luaState, -1)) {  // Check if onTick is a valid function
-            reportBug("Error: ON_TICK is not a function\n");
-            return;
-        }
-
-        if (lua_pcall(commandsData->luaState, 0, 0, 0) != LUA_OK) {  // Call it with no arguments, no return values
-            reportBug("Error running onTick: %s\n", lua_tostring(commandsData->luaState, -1));
-        }
-
-        if (tikManager->tik % 5 == 0) {
-            for (int i = 0; i < world->droneData->droneCount; i++){
+            for (int i = 0; i < world->droneData->droneCount; i++) {
                 tickDrone(world, world->droneData->drones[i]);
             }
         }
+
     }
 
     tickCamera(gameData);

@@ -13,7 +13,7 @@ SDL_Rect getSrcRectOfItemSprite(enum DroneItem item);
 
 enum DroneItem getBlockTypeToItem(enum Block block);
 
-void addItemToInventory(struct Drone* drone, enum DroneItem item);
+void addItemToInventory(struct Drone* drone, enum DroneItem item, int quantity);
 
 int removeItemFromInventory(struct Drone* drone, enum DroneItem item, int count);
 

@@ -90,11 +90,11 @@ enum DroneItem getBlockTypeToItem(enum Block block){
     }
 }
 
-void addItemToInventory(struct Drone* drone, enum DroneItem item){
+void addItemToInventory(struct Drone* drone, enum DroneItem item, int quantity){
     //Look for item to stack to
     for (int i = 0; i < 9; i++){
         if (drone->items[i] == item){
-            drone->itemCounts[i]+=1;
+            drone->itemCounts[i] += quantity;
             return;
         }
     }
@@ -104,7 +104,7 @@ void addItemToInventory(struct Drone* drone, enum DroneItem item){
     for (int i = 0; i < 9; i++){
         if (drone->items[i] == ItemNull){
             drone->items[i] = item;
-            drone->itemCounts[i]+=1;
+            drone->itemCounts[i]+=quantity;
             return;
         }
     }

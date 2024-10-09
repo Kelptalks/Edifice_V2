@@ -190,14 +190,16 @@ void renderView(struct GameData* gameData){
 
     //Re render area around drones
     /*
-    for (int x = 0; x < gameData->world->droneCount; x++) {
-        renderDrone(gameData, gameData->world->drones[x]);
+    for (int x = 0; x < gameData->world->droneData->droneCount; x++) {
+        renderDrone(gameData, gameData->world->droneData->drones[x]);
     }
     */
 
 
+
     for (int i = 0; i < cameraData->totalDistanceCords; i++)
     {
+
         int x = cameraData->distanceSortedRelativeCords[i].x;
         int y = cameraData->distanceSortedRelativeCords[i].y;
 

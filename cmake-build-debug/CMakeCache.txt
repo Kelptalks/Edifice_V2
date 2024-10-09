@@ -27,6 +27,9 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable colored diagnostics throughout.
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
+//CUDA compiler
+CMAKE_CUDA_COMPILER:FILEPATH=CMAKE_CUDA_COMPILER-NOTFOUND
+
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/bin/gcc.exe
 
@@ -213,6 +216,12 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a file.
+OpenCL_INCLUDE_DIR:PATH=OpenCL_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+OpenCL_LIBRARY:FILEPATH=OpenCL_LIBRARY-NOTFOUND
+
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=C:/SDL2-2.30.2/x86_64-w64-mingw32/lib/cmake/SDL2
 
@@ -248,6 +257,8 @@ CMAKE_COMMAND:INTERNAL=C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x
 CMAKE_CPACK_COMMAND:INTERNAL=C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/bin/cpack.exe
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/bin/ctest.exe
+//ADVANCED property for variable: CMAKE_CUDA_COMPILER
+CMAKE_CUDA_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
@@ -366,6 +377,26 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCL:INTERNAL=[C:/Users/Spencer/Desktop/Edifice_V2/OCL_SDK_Light/lib/x86_64/OpenCL.lib][C:/Users/Spencer/Desktop/Edifice_V2/OCL_SDK_Light/include][v()]
+//Have symbol CL_VERSION_1_0
+OPENCL_VERSION_1_0:INTERNAL=
+//Have symbol CL_VERSION_1_1
+OPENCL_VERSION_1_1:INTERNAL=
+//Have symbol CL_VERSION_1_2
+OPENCL_VERSION_1_2:INTERNAL=
+//Have symbol CL_VERSION_2_0
+OPENCL_VERSION_2_0:INTERNAL=
+//Have symbol CL_VERSION_2_1
+OPENCL_VERSION_2_1:INTERNAL=
+//Have symbol CL_VERSION_2_2
+OPENCL_VERSION_2_2:INTERNAL=
+//Have symbol CL_VERSION_3_0
+OPENCL_VERSION_3_0:INTERNAL=
+//ADVANCED property for variable: OpenCL_INCLUDE_DIR
+OpenCL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCL_LIBRARY
+OpenCL_LIBRARY-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 
