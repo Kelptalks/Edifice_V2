@@ -23,5 +23,9 @@ function HarvestRocksAndPlantMatter(droneId)
     mineBlockAroundDrone(droneId, Block.Mushroom)
 
     local x, y, z = getCordsOfBlock(i, Block.Rock);
-    navigateToCords(i, x, y, z);
+    if x == nil and y == nil and z == nil then
+        BasicWalkInDirection(droneId, 100, 100, 0)
+    end
+
+    BasicWalkInDirection(droneId or 0, x or 0, y or 0, z or 0)
 end

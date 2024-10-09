@@ -23,7 +23,7 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     drone->busyTime = 0;
     drone->inventorySize = 9;
 
-    drone->fuel = 9999;
+    drone->fuel = 50;
     drone->worldX = x;
     drone->worldY = y;
     drone->worldZ = z;
@@ -39,8 +39,9 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
         drone->itemCounts[i] = 0;
     }
 
-    addItemToInventory(drone, ItemDirt, 9999);
-    addItemToInventory(drone, ItemPlantMatter, 9999);
+    //addItemToInventory(drone, ItemDirt, 9999);
+    //addItemToInventory(drone, ItemPlantMatter, 9999);
+    //drone->fuel = 9999;
 
     return drone;
 }

@@ -49,7 +49,7 @@ function StripMine(droneID)
     end
 end
 
-local function basicWalkInDirection(droneID, xCor, yCor, zCor)
+function BasicWalkInDirection(droneID, xCor, yCor, zCor)
     local x, y, z = getDroneCords(droneID)
     local xDistance = x - xCor
     local yDistance = y - yCor
@@ -113,6 +113,6 @@ function navigateToCords(droneID, xCor, yCor, zCor)
     end
 
     --Basic walk in direction
-    basicWalkInDirection(droneID or 0, xCor or 0, yCor or 0, zCor or 0)
+    BasicWalkInDirection(droneID or 0, xCor or 0, yCor or 0, zCor or 0)
 
 end
