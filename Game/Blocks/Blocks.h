@@ -87,11 +87,15 @@ enum Block {
     WormEyesUp,
     WormMouth,
 
+    Scaffolding,
+    Log,
+
     //Drone
     DroneLeftForward,
     DroneRightForward,
     DroneRightBack,
     DroneLeftBack,
+    DroneDead,
 
     //Shaders
     GreyShader,

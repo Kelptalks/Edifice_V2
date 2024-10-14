@@ -40,6 +40,7 @@ bool isTranslucent(enum Block block) {
         case Bulb :
         case Rock :
         case Furnace :
+        case Log:
             return true;
         default:
             return false; // Non-translucent blocks
@@ -415,6 +416,18 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 192;
             *y = 704;
             break;
+        case Scaffolding :
+            *x = 128;
+            *y = 768;
+        break;
+        case Log :
+            *x = 384;
+            *y = 960;
+        break;
+        case DroneDead:
+            *x = 0;
+            *y = 768;
+        break;
         default:
             *x = 64;
             *y = 320;

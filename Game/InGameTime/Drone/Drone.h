@@ -48,6 +48,7 @@ enum DroneItem{
     ItemPurpleLens,
     ItemCharcoal,
     ItemSulfur,
+    ItemScaffolding,
     ItemDroneParts,
 };
 

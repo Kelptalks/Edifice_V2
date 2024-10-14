@@ -21,20 +21,20 @@ void buildLeaves(struct World* world, int worldX, int worldY, int worldZ){
 
 //Build the branch of a tree
 void buildBranch(struct World* world, int worldX, int worldY, int worldZ, enum Block blockType){
-    int rand = rand % 4;
+    int random = rand() % 4;
     //select random direction
     int yMod = 0;
     int xMod = 0;
-    if (rand == 0){
+    if (random == 0){
         xMod = 1;
     }
-    else if (rand == 1){
+    else if (random == 1){
         xMod = -1;
     }
-    else if (rand == 2){
+    else if (random == 2){
         yMod = 1;
     }
-    else if (rand == 3){
+    else if (random == 3){
         yMod = -1;
     }
     for (int x = 1; x < 3; x++){
@@ -161,17 +161,20 @@ void generatePlant(struct World* world, int worldX, int worldY, int worldZ, enum
                 return;
             }
             //20% flower
-            else if (randomVal <= 95){
+            else if (randomVal <= 93){
                 //50% chance to be white or yellow
-                if (randomVal <= 80) {
+                if (randomVal <= 90) {
                     setBlockAtWorldCor(world, worldX, worldY, worldZ, WhiteFlowers);
                 }
-                else if (randomVal < 95){
+                else if (randomVal < 93){
                     setBlockAtWorldCor(world, worldX, worldY, worldZ, YellowFlowers);
                 }
-                else {
-                    setBlockAtWorldCor(world, worldX, worldY, worldZ, Rock);
-                }
+            }
+            else if (randomVal <= 95){
+                setBlockAtWorldCor(world, worldX, worldY, worldZ, Rock);
+            }
+            else if (randomVal <= 96){
+                setBlockAtWorldCor(world, worldX, worldY, worldZ, Log);
             }
             //10% flour / Mushroom
             else if (randomVal <= 97){

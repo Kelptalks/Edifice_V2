@@ -9,12 +9,12 @@ end
 
 -- Lua wrapper for getting the block relative to a drone
 function getDroneBlock(droneId, offsetX, offsetY, offsetZ)
-    return luaGetRelativeBlock(droneId  or 0, offsetX, offsetY, offsetZ) + 1
+    return luaGetRelativeBlock(droneId  or 0, offsetX or 0, offsetY or 0, offsetZ or 0) + 1
 end
 
 -- Lua wrapper for mining a block relative to a drone
 function mineDroneBlock(droneId, offsetX, offsetY, offsetZ)
-    local result = luaMineRelativeBlock(droneId or 0, offsetX, offsetY, offsetZ)
+    local result = luaMineRelativeBlock(droneId or 0, offsetX or 0, offsetY or 0, offsetZ or 0)
     return result
 end
 
@@ -62,4 +62,12 @@ end
 
 function GetFuelCount(droneId)
     return luaGetDroneFuelCount(droneId)
+end
+
+function ReportDroneBug(string)
+    luaReportDroneBug(string)
+end
+
+function GetDroneBusyTime(droneId)
+    return luaGetDroneBusyTime(droneId)
 end

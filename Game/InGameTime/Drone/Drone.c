@@ -23,7 +23,7 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     drone->busyTime = 0;
     drone->inventorySize = 9;
 
-    drone->fuel = 50;
+    drone->fuel = 100;
     drone->worldX = x;
     drone->worldY = y;
     drone->worldZ = z;
@@ -40,7 +40,6 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
     }
 
     //addItemToInventory(drone, ItemDirt, 9999);
-    //addItemToInventory(drone, ItemPlantMatter, 9999);
     //drone->fuel = 9999;
 
     return drone;
@@ -125,6 +124,9 @@ int mineBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, in
 
         enum Block blockToMine = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
 
+        if (blockToMine == DroneLeftBack || blockToMine == DroneRightBack || blockToMine == DroneLeftForward || blockToMine == DroneLeftForward) {
+            return -5;
+        }
         if (blockToMine != Air) {
             drone->fuel--;
             drone->busyTime = getBlockMineTime(world->droneData->droneToolData, drone, blockToMine);
@@ -158,6 +160,15 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
         int blockToMineZ = drone->worldZ + z;
 
         enum Block placeLocationBlock = getBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ);
+
+        if (x == 0 && y == 0 && z == 0) {
+            if (removeItemFromInventory(drone, droneToolData->blockPlacementCostItems[block], droneToolData->blockPlacementCostQuantities[block]) == 1) {
+                if (moveDrone(world, drone, 0, 0, 1) == 0) {
+                    setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, block);
+                    drone->busyTime += 30;
+                }
+            }
+        }
         if (placeLocationBlock == Air){
             if (removeItemFromInventory(drone, droneToolData->blockPlacementCostItems[block], droneToolData->blockPlacementCostQuantities[block]) == 1) {
                 setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, block);

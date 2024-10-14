@@ -76,23 +76,12 @@ Block = {
     WormMouth = 49,
 
     -- Drone
-    DroneLeftForward = 50,
-    DroneRightForward = 51,
-    DroneRightBack = 52,
-    DroneLeftBack = 53,
-
-    -- Shaders
-    GreyShader = 54,
-    RedShader = 55,
-    WhiteShader = 56,
-    GreenShader = 57,
-
-    -- Test
-    HalfBlockTest = 58,
-
-    -- Masking blocks
-    MaskingBlock = 59,
-    ShadowMaskingBlock = 60,
+    Log = 51,
+    DroneLeftForward = 52,
+    DroneRightForward = 53,
+    DroneRightBack = 54,
+    DroneLeftBack = 55,
+    DroneDead = 56,
 }
 
 DroneTool = {

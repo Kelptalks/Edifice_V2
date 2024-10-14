@@ -129,6 +129,9 @@ struct DroneToolData* createDroneToolData(){
     droneToolData->blockMineTimes[Metal] = 1000;
     droneToolData->blockMineTimes[ConveyorBelt] = 100;
     droneToolData->blockMineTimes[Furnace] = 100;
+    droneToolData->blockMineTimes[Log] = 10;
+    droneToolData->blockMineTimes[DroneDead] = 500;
+    droneToolData->blockMineTimes[Scaffolding] = 1;
 
 
     //Set up block Tool mine mods
@@ -285,6 +288,9 @@ struct DroneToolData* createDroneToolData(){
 
     droneToolData->blockPlacementCostQuantities[DroneLeftForward] = 3;
     droneToolData->blockPlacementCostItems[DroneLeftForward] = ItemDroneParts;
+
+    droneToolData->blockPlacementCostQuantities[Scaffolding] = 1;
+    droneToolData->blockPlacementCostItems[Scaffolding] = ItemScaffolding;
 
 
     //Item Crafting

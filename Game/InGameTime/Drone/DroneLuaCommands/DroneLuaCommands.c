@@ -234,6 +234,28 @@ int luaDroneUseItemForFuel(lua_State *L) {
     return 1;
 }
 
+int luaReportDroneBug(lua_State *L) {
+    const char* myString = luaL_checkstring(L, 1);
+    reportBug("%s\n", myString);
+    return 1;
+}
+
+int luaGetDroneBusyTime(lua_State *L) {
+    int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
+
+    lua_getglobal(L, "world");  // Get the global 'world'
+    struct World* world = lua_touserdata(L, -1);
+    if (world == NULL){
+        return -1;
+    }
+
+    struct Drone* drone = world->droneData->drones[droneId];
+    int result = drone->busyTime;
+
+    lua_pushinteger(L, result);
+
+    return 1;
+}
 
 struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     reportBug("creating lua\n");
@@ -261,6 +283,8 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaDroneUseItemForFuel", luaDroneUseItemForFuel);
     lua_register(luaCommandsData->luaState, "luaPlaceRelativeBlock", luaPlaceRelativeBlock);
     lua_register(luaCommandsData->luaState, "luaGetDroneFuelCount", luaGetDroneFuelCount);
+    lua_register(luaCommandsData->luaState, "luaReportDroneBug", luaReportDroneBug);
+    lua_register(luaCommandsData->luaState, "luaGetDroneBusyTime", luaGetDroneBusyTime);
 
 
     //open Drone file

@@ -49,6 +49,7 @@ enum DroneItem getBlockTypeToItem(enum Block block){
         case PurpleWoodPlanks:
         case BrownWood:
         case BrownWoodPlanks:
+        case Log:
             return ItemLog;
 
         //Glass
@@ -83,6 +84,7 @@ enum DroneItem getBlockTypeToItem(enum Block block){
         case DroneRightForward:
         case DroneRightBack:
         case DroneLeftBack:
+        case DroneDead:
             return ItemIronBar;
 
         default:

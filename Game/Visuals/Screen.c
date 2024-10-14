@@ -45,7 +45,7 @@ struct Screen* createScreen(){
     SDL_CreateWindowAndRenderer(screen->xRez, screen->yRez, 0, &window, &renderer);
     SDL_Init(SDL_INIT_VIDEO);
     SDL_SetWindowTitle(window, "Edifice");
-    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
+    //SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
     
 
     if (window == NULL || renderer == NULL){

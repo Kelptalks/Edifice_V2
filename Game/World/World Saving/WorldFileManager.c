@@ -5,6 +5,7 @@
 #include <mbstring.h>
 #include <stdio.h>
 #include <malloc.h>
+#include <windows.h>
 #include <sys/stat.h>
 
 #include "../World.h"
@@ -12,7 +13,7 @@
 #include "../../Blocks/Blocks.h"
 #include "../../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
 #include "ChunkFileManager/ChunkFileManager.h"
-#include "../../InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
+#include "../../InGameTime/Drone/Drone.h"
 #include "../../InGameTime/Drone/DroneData.h"
 
 
@@ -72,6 +73,14 @@ void clearWorldFile(){
 }
 
 void saveWorldToFile(struct World* world){
+
+    for (int i = 0; i < world->droneData->droneCount; i++) {
+        struct Drone* drone = world->droneData->drones[i];
+        if (world->droneData->drones[i] != NULL) {
+            setBlockAtWorldCor(world, drone->worldX, drone->worldY, drone->worldZ, DroneDead);
+        }
+    }
+
     FILE* file = openWorldFile(world->name);
     clearWorldFile();
     fseek(file, 0, SEEK_SET);
