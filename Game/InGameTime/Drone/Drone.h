@@ -52,6 +52,8 @@ enum DroneItem{
     ItemDroneParts,
 };
 
+int getTotalItemCount();
+
 struct Drone{
     int id;
     int busyTime;

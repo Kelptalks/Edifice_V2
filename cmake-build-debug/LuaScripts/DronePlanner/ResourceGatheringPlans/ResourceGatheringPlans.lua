@@ -39,6 +39,7 @@ function ExecuteScavangeForFuel(droneManager)
 end
 
 function PlanScavangeForFuel(droneManager, fuelGoal)
+    ReportDroneBug("Planned : scavangeForFuel")
     local dronePlan = {
         planType = DronePlanType.scavangeForFuel,
         goal = fuelGoal
@@ -123,6 +124,7 @@ function ExecuteDroneHarvestWood(droneManager)
 end
 
 function PlanDroneHarvestWood(droneManager, goalAmount)
+    ReportDroneBug("Planned : droneHarvestWood")
     --Check slots for saw
     local dronePlan = {
         planType = DronePlanType.droneHarvestWood,
@@ -197,6 +199,7 @@ function ExecuteBuildDigTunnel(droneManager)
 end
 
 function PlanDigTunnel(droneManager, xStart, yStart, zStart, xDirection, yDirection, length)
+    ReportDroneBug("Planned : DigTunnel")
     local dronePlan = {
         planType = DronePlanType.digTunnel,
         goal = 4;

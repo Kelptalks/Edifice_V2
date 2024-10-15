@@ -10,6 +10,7 @@
 #include <lauxlib.h>
 #include <lualib.h>
 #include "../DroneData.h"
+#include "DroneFurnaceLuaCommands/DroneFurnaceLuaCommands.h"
 
 int luaGetDroneCount(lua_State *L){
     lua_getglobal(L, "world");  // Get the global 'world'
@@ -252,8 +253,8 @@ int luaGetDroneBusyTime(lua_State *L) {
     struct Drone* drone = world->droneData->drones[droneId];
     int result = drone->busyTime;
 
-    lua_pushinteger(L, result);
 
+    lua_pushinteger(L, result);
     return 1;
 }
 
@@ -285,6 +286,11 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaGetDroneFuelCount", luaGetDroneFuelCount);
     lua_register(luaCommandsData->luaState, "luaReportDroneBug", luaReportDroneBug);
     lua_register(luaCommandsData->luaState, "luaGetDroneBusyTime", luaGetDroneBusyTime);
+
+    lua_register(luaCommandsData->luaState, "luaDroneAddSmeltingFuelToFurnace", luaDroneAddSmeltingFuelToFurnace);
+    lua_register(luaCommandsData->luaState, "luaDroneAddSmeltingItemToFurnace", luaDroneAddSmeltingItemToFurnace);
+    lua_register(luaCommandsData->luaState, "luaRemoveSmeltingItemFromFurnace", luaRemoveSmeltingItemFromFurnace);
+    lua_register(luaCommandsData->luaState, "luaGetRelativeFurnaceBusyTime", luaGetRelativeFurnaceBusyTime);
 
 
     //open Drone file

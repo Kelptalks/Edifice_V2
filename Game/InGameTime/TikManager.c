@@ -14,6 +14,7 @@
 #include "Drone/Drone.h"
 #include "Drone/DroneLuaCommands/DroneLuaCommands.h"
 #include "Drone/DroneData.h"
+#include "Furnace/FurnaceData.h"
 
 struct TikManager* createTikManager(){
     struct TikManager* tikManager = malloc(sizeof (struct TikManager));
@@ -56,6 +57,10 @@ void updateTikTime(struct GameData* gameData){
 
             for (int i = 0; i < world->droneData->droneCount; i++) {
                 tickDrone(world, world->droneData->drones[i]);
+            }
+
+            for (int i = 0; i < world->furnaceData->currentFurnaceCount; i++) {
+                tickFurnace(world, world->furnaceData->furnaces[i]);
             }
         }
 

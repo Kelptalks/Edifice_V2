@@ -25,6 +25,7 @@ struct World{
     struct Entity** tempEntityArray;
 
 
+    struct FurnaceData* furnaceData;
     struct DroneData* droneData;
 
 

@@ -286,6 +286,12 @@ struct DroneToolData* createDroneToolData(){
     droneToolData->blockPlacementCostQuantities[Furnace] = 10;
     droneToolData->blockPlacementCostItems[Furnace] = ItemStoneBrick;
 
+    droneToolData->blockPlacementCostQuantities[StoneFurnaceOff] = 10;
+    droneToolData->blockPlacementCostItems[StoneFurnaceOff] = ItemStoneBrick;
+
+    droneToolData->blockPlacementCostQuantities[StoneFurnaceOn] = 9999999;
+    droneToolData->blockPlacementCostItems[StoneFurnaceOn] = ItemTitaniumBar;
+
     droneToolData->blockPlacementCostQuantities[DroneLeftForward] = 3;
     droneToolData->blockPlacementCostItems[DroneLeftForward] = ItemDroneParts;
 

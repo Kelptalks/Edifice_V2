@@ -57,7 +57,7 @@ function DroneUseItemForFuel(droneId, item, quantity)
 end
 
 function PlaceRelativeBlock(droneId, offsetX, offsetY, offsetZ, block)
-    luaPlaceRelativeBlock(droneId or 0, offsetX, offsetY, offsetZ, block - 1)
+    return luaPlaceRelativeBlock(droneId or 0, offsetX, offsetY, offsetZ, block - 1)
 end
 
 function GetFuelCount(droneId)

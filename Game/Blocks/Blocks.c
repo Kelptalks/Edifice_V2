@@ -48,7 +48,7 @@ bool isTranslucent(enum Block block) {
 }
 
 int getTotalBlockCount(){
-    return 65;
+    return 67;
 }
 
 SDL_Rect getBlockSpriteSheetSrcRect(enum Block block){
@@ -428,10 +428,18 @@ void getBlockSpriteSheetCords(enum Block block, int* x, int* y) {
             *x = 0;
             *y = 768;
         break;
+        case StoneFurnaceOn:
+            *x = 128;
+            *y = 576;
+            break;
+        case StoneFurnaceOff:
+            *x = 64;
+            *y = 576;
+        break;
         default:
             *x = 64;
             *y = 320;
-            break;
+        break;
     }
 }
 

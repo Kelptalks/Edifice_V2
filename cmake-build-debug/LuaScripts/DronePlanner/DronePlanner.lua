@@ -1,6 +1,7 @@
 package.path = package.path .. ";./LuaScripts/?.lua"
 require("DronePlanner.BasicPlans.BasicDronePlans")
 require("DronePlanner.ResourceGatheringPlans.ResourceGatheringPlans")
+require("DronePlanner.CraftingPlans.CraftingPlans")
 
 -- Plan Types
 DronePlanType = {
@@ -8,7 +9,8 @@ DronePlanType = {
     scavangeForFuel = 2,
     droneHarvestWood = 3,
     spiralStairsOfHeight = 4,
-    digTunnel = 5
+    digTunnel = 5,
+    useFurnaceToSmeltItems = 6
 }
 
 -- Drone Plan structure
@@ -24,6 +26,7 @@ DronePlan = {
     yDirection = 0,
 
     goalItemCount = 0,
+    goalItemType = 0,
 }
 
 -- Drone Manager structure
@@ -50,21 +53,21 @@ local functionMap = {
     [DronePlanType.navigateToCords] = ExecuteNavigateToCords,
     [DronePlanType.scavangeForFuel] = ExecuteScavangeForFuel,
     [DronePlanType.droneHarvestWood] = ExecuteDroneHarvestWood,
-    [DronePlanType.spiralStairsOfHeight] = ExecuteBuildSpiralStairsOfHeight;
-    [DronePlanType.digTunnel] = ExecuteBuildDigTunnel
+    [DronePlanType.spiralStairsOfHeight] = ExecuteBuildSpiralStairsOfHeight,
+    [DronePlanType.digTunnel] = ExecuteBuildDigTunnel,
+    [DronePlanType.useFurnaceToSmeltItems] = ExecuteUseFurnaceToSmeltItems
 }
 
 -- Function to process drone plans on each tick
 function TickDroneManager(droneManager)
-    if (GetDroneBusyTime(droneManager.droneId) > 0) then
-        return
-    end
+    if (GetDroneBusyTime(droneManager.droneId) < 1) then
 
-    if droneManager.dronePlans[1] ~= nil then
-        local currentPlanType = droneManager.dronePlans[1].planType
-        local func = functionMap[currentPlanType]
-        if func then
-            func(droneManager)
+        if droneManager.dronePlans[1] ~= nil then
+            local currentPlanType = droneManager.dronePlans[1].planType
+            local func = functionMap[currentPlanType]
+            if func then
+                func(droneManager)
+            end
         end
     end
 end

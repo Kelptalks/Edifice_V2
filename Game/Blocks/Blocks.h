@@ -80,6 +80,8 @@ enum Block {
     //Transparent Factory
     ConveyorBelt,
     Furnace,
+    StoneFurnaceOn,
+    StoneFurnaceOff,
 
     //Creature
     WormBody,

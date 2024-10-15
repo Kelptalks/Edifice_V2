@@ -12,6 +12,7 @@
 #include "../Rendering/CastedBlockManager/CastedBlockHighLighter/CastedBlockHighLighter.h"
 #include "../../../InGameTime/Drone/Drone.h"
 #include "../../../InGameTime/Drone/DroneData.h"
+#include "../../../InGameTime/Furnace/FurnaceData.h"
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,6 +129,11 @@ void mousePlaceBlock(struct GameData* gameData, int xMouseCor, int yMouseCor){
         world->droneData->drones[world->droneData->droneCount] = createDrone(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
         world->droneData->drones[world->droneData->droneCount]->id = world->droneData->droneCount;
         world->droneData->droneCount++;
+    }
+
+    if (playerSelectedBlock == StoneFurnaceOn || playerSelectedBlock == StoneFurnaceOff){
+        world->furnaceData->furnaces[world->furnaceData->currentFurnaceCount] = createFurnace(world, castedBlockCamWorldX, castedBlockCamWorldY, castedBlockCamWorldZ);
+        world->furnaceData->currentFurnaceCount++;
     }
 
     playSound(gameData->soundManager, getBlockPlaceSound(playerSelectedBlock));

@@ -38,7 +38,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 141,
+				"line" : 149,
 				"parent" : 0
 			},
 			{
@@ -180,7 +180,11 @@
 				106,
 				108,
 				110,
-				112
+				112,
+				114,
+				116,
+				118,
+				120
 			]
 		}
 	],
@@ -315,7 +319,11 @@
 				106,
 				108,
 				110,
-				112
+				112,
+				114,
+				116,
+				118,
+				120
 			]
 		},
 		{
@@ -371,7 +379,11 @@
 				107,
 				109,
 				111,
-				113
+				113,
+				115,
+				117,
+				119,
+				121
 			]
 		}
 	],
@@ -1009,6 +1021,50 @@
 		{
 			"backtrace" : 1,
 			"path" : "Game/World/TerrainGen/StoneManager/StoneManager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/InGameTime/Furnace/FurnaceData.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/InGameTime/Furnace/FurnaceData.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/InGameTime/Furnace/Furnace.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/InGameTime/Furnace/Furnace.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/World/WorldChunk/WorldChunkEntityHashMap/WorldChunkEntityHashMap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/World/WorldChunk/WorldChunkEntityHashMap/WorldChunkEntityHashMap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/InGameTime/Drone/DroneLuaCommands/DroneFurnaceLuaCommands/DroneFurnaceLuaCommands.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/InGameTime/Drone/DroneLuaCommands/DroneFurnaceLuaCommands/DroneFurnaceLuaCommands.h",
 			"sourceGroupIndex" : 1
 		}
 	],

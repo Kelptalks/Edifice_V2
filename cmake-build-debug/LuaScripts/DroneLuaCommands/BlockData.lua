@@ -68,20 +68,22 @@ Block = {
     -- Transparent Factory
     ConveyorBelt = 44,
     Furnace = 45,
+    StoneFurnaceOn = 46,
+    StoneFurnaceOff = 47,
 
     -- Creature
-    WormBody = 46,
-    WormEyesLevel = 47,
-    WormEyesUp = 48,
-    WormMouth = 49,
+    WormBody = 48,
+    WormEyesLevel = 49,
+    WormEyesUp = 50,
+    WormMouth = 51,
 
     -- Drone
-    Log = 51,
-    DroneLeftForward = 52,
-    DroneRightForward = 53,
-    DroneRightBack = 54,
-    DroneLeftBack = 55,
-    DroneDead = 56,
+    Log = 52,
+    DroneLeftForward = 53,
+    DroneRightForward = 54,
+    DroneRightBack = 55,
+    DroneLeftBack = 56,
+    DroneDead = 57,
 }
 
 DroneTool = {

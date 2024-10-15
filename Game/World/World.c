@@ -14,6 +14,7 @@
 #include "../InGameTime/Drone/Drone.h"
 #include "../InGameTime/Drone/DroneLuaCommands/DroneLuaCommands.h"
 #include "../InGameTime/Drone/DroneData.h"
+#include "../InGameTime/Furnace/FurnaceData.h"
 
 struct World* createWorld(char *worldName){
     //Create world struct
@@ -45,6 +46,7 @@ struct World* createWorld(char *worldName){
     world->tempEntityArray = NULL;
 
     world->droneData = createDroneData(world, 100);
+    world->furnaceData = createFurnaceData(world, 100);
 
     world->debug = false;
 

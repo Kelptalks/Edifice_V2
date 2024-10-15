@@ -14,6 +14,7 @@
 #include "../../InGameTime/TikEvent/EntityManager/Puff/PuffLogic.h"
 #include "ChunkFileManager/ChunkFileManager.h"
 #include "../../InGameTime/Drone/Drone.h"
+#include "../../InGameTime/Furnace/FurnaceData.h"
 #include "../../InGameTime/Drone/DroneData.h"
 
 
@@ -151,6 +152,7 @@ struct World* readWorldData(char* fileName){
 
     //Set up drone array
     world->droneData = createDroneData(world, 100);
+    world->furnaceData = createFurnaceData(world, 100);
 
     fclose(file);
     return world;

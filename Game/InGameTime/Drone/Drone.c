@@ -9,7 +9,11 @@
 #include "DroneInventoryManager/DroneInventoryManager.h"
 #include "DroneToolManager/DroneToolManager.h"
 #include "../Drone/DroneData.h"
+#include "../Furnace/FurnaceData.h"
 
+int getTotalItemCount() {
+    return 19;
+}
 
 struct Drone* createDrone(struct World* world, int x, int y, int z){
     struct Drone* drone = malloc(sizeof (struct Drone));
@@ -39,8 +43,10 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
         drone->itemCounts[i] = 0;
     }
 
-    //addItemToInventory(drone, ItemDirt, 9999);
-    //drone->fuel = 9999;
+    addItemToInventory(drone, ItemStoneBrick, 15);
+    addItemToInventory(drone, ItemIronOar, 5);
+    addItemToInventory(drone, ItemLog, 100);
+    drone->fuel = 9999999;
 
     return drone;
 }
@@ -55,7 +61,6 @@ int getBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, int
         return -1;
     }
 }
-
 
 int moveDrone(struct World* world, struct Drone* drone, int x, int y, int z){
     if (drone->busyTime > 0){
@@ -171,9 +176,16 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
         }
         if (placeLocationBlock == Air){
             if (removeItemFromInventory(drone, droneToolData->blockPlacementCostItems[block], droneToolData->blockPlacementCostQuantities[block]) == 1) {
-                setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, block);
-                drone->busyTime = 30;
-                drone->fuel-=5;
+                if (block == StoneFurnaceOff) {
+                    createFurnaceInFurnaceData(world, blockToMineX, blockToMineY, blockToMineZ);
+                    drone->busyTime = 30;
+                    drone->fuel-=5;
+                }
+                else {
+                    setBlockAtWorldCor(world, blockToMineX, blockToMineY, blockToMineZ, block);
+                    drone->busyTime = 30;
+                    drone->fuel-=5;
+                }
                 return 1;
             }
             else {

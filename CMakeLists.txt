@@ -136,6 +136,14 @@ add_executable(edifice main.c
         Game/InGameTime/Drone/DroneData.h
         Game/World/TerrainGen/StoneManager/StoneManager.c
         Game/World/TerrainGen/StoneManager/StoneManager.h
+        Game/InGameTime/Furnace/FurnaceData.c
+        Game/InGameTime/Furnace/FurnaceData.h
+        Game/InGameTime/Furnace/furnace.c
+        Game/InGameTime/Furnace/furnace.h
+        Game/World/WorldChunk/WorldChunkEntityHashMap/WorldChunkEntityHashMap.c
+        Game/World/WorldChunk/WorldChunkEntityHashMap/WorldChunkEntityHashMap.h
+        Game/InGameTime/Drone/DroneLuaCommands/DroneFurnaceLuaCommands/DroneFurnaceLuaCommands.c
+        Game/InGameTime/Drone/DroneLuaCommands/DroneFurnaceLuaCommands/DroneFurnaceLuaCommands.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES} ${OpenCL_LIBRARY})

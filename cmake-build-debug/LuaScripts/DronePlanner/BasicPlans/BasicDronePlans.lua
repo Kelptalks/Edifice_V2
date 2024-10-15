@@ -26,7 +26,7 @@ function ExecuteNavigateToCords(droneManager)
 end
 
 function PlanDroneNavigateToCords(droneManager, goalXCor, goalYCor, goalZCor)
-    ReportDroneBug("planned navigateToCords")
+    ReportDroneBug("Planned : navigateToCords")
     local dronePlan = {
         planType = DronePlanType.navigateToCords,
         goal = 2;
@@ -71,7 +71,7 @@ function ExecuteBuildSpiralStairsOfHeight(droneManager)
 end
 
 function PlanSpiralStairsOfHeight(droneManager, goalAmount)
-    ReportDroneBug("planned BuildSpiralStairs")
+    ReportDroneBug("Planned : BuildSpiralStairs")
     local dronePlan = {
         planType = DronePlanType.spiralStairsOfHeight,
         goal = 1;
