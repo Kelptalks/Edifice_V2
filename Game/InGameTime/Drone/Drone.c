@@ -43,10 +43,10 @@ struct Drone* createDrone(struct World* world, int x, int y, int z){
         drone->itemCounts[i] = 0;
     }
 
-    addItemToInventory(drone, ItemStoneBrick, 15);
-    addItemToInventory(drone, ItemIronOar, 5);
-    addItemToInventory(drone, ItemLog, 100);
-    drone->fuel = 9999999;
+    //addItemToInventory(drone, ItemStoneBrick, 15);
+    //addItemToInventory(drone, ItemIronOar, 5);
+    //addItemToInventory(drone, ItemLog, 100);
+    //drone->fuel = 9999999;
 
     return drone;
 }

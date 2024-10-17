@@ -26,12 +26,14 @@ function ON_TICK()
         
         PlanUseFurnaceToSmeltItems(DroneManagers[droneCount], DroneItem.ItemIronOar, 3)
 
+        PlanDroneNavigateToCords(DroneManagers[droneCount], 0, 0, 30)
 
-        --PlanDroneHarvestWood(DroneManagers[droneCount], 100)
-        --PlanDigTunnel(DroneManagers[droneCount], -50, 0, 25, 1, 0, 50)
-        --PlanScavangeForFuel(DroneManagers[droneCount], 5000)
-        --PlanSpiralStairsOfHeight(DroneManagers[droneCount], 500)
-        --PlanDroneNavigateToCords(DroneManagers[droneCount], 0, 0, 25)
+        PlanDroneHarvestWood(DroneManagers[droneCount], 100)
+        
+        PlanDigTunnel(DroneManagers[droneCount], -100, 0, 5, 1, 0, 100)
+        
+        PlanScavangeForFuel(DroneManagers[droneCount], 5000)
+
     end
 
 

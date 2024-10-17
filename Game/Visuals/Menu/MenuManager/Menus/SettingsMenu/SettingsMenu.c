@@ -3,6 +3,7 @@
 //
 #include "../../MenuManger.h"
 #include "../../../../Camera/CameraData.h"
+#include "../../../../Camera/Camera.h"
 
 struct SettingsMenu* createSettingsMenu(){
     struct SettingsMenu* settingsMenu = malloc(sizeof (struct SettingsMenu));
@@ -127,18 +128,21 @@ void handleInputSettingsMenu(struct GameData* gameData, SDL_Event event){
     struct Button* button = settingsMenu->resolutionButtons[0];
     if (button->pressed){
         button->pressed = false;
+        clearCameraRendering(gameData);
         setScreenResolution(gameData->screen, 1280, 720);
         playSound(gameData->soundManager, SoundMenuButtonClick);
     }
     button = settingsMenu->resolutionButtons[1];
     if (button->pressed){
         button->pressed = false;
+        clearCameraRendering(gameData);
         setScreenResolution(gameData->screen, 1920, 1080);
         playSound(gameData->soundManager, SoundMenuButtonClick);
     }
     button = settingsMenu->resolutionButtons[2];
     if (button->pressed){
         button->pressed = false;
+        clearCameraRendering(gameData);
         setScreenResolution(gameData->screen, 2560, 1440);
         playSound(gameData->soundManager, SoundMenuButtonClick);
     }

@@ -33,7 +33,6 @@ struct TextTextures* createTextTextures(SDL_Renderer* renderer){
         reportBug("Failed to malloc char textures array\n");
         return NULL;
     }
-
     //Create the text surfaces
     for (int s = 0; s < numOfChars; s++) {
         SDL_Surface* charSurface = SDL_CreateRGBSurfaceWithFormat(0, scale, scale, 32, SDL_PIXELFORMAT_RGBA32);
@@ -50,17 +49,51 @@ struct TextTextures* createTextTextures(SDL_Renderer* renderer){
 
         //Convert surface into texture and save to the charTextureArray;
         chars[s] = SDL_CreateTextureFromSurface(renderer, charSurface);
+        SDL_FreeSurface(charSurface);
+    }
 
+
+    scale = 16;
+    spriteSheetTextYCords = 1248;
+    //Setup texture array
+    SDL_Texture** highRezChars = malloc(sizeof (SDL_Texture*) * numOfChars);
+    if (highRezChars == NULL){
+        reportBug("Failed to malloc highRezChars textures array\n");
+        return NULL;
+    }
+    //Create the text surfaces
+    for (int s = 0; s < numOfChars; s++) {
+        SDL_Surface* charSurface = SDL_CreateRGBSurfaceWithFormat(0, scale, scale, 32, SDL_PIXELFORMAT_RGBA32);
+        //Get pixels of new char surface
+        uint32_t *charSurfacePixels = charSurface->pixels;
+
+        //Copy pixels from spreadsheet to surface
+        int startingX = s * scale;
+        for (int y = 0; y < scale; y++){
+            for (int x = 0; x < scale; x++){
+                charSurfacePixels[x + (y * scale)] = spriteSheetPixels[(x + startingX) + ((y + spriteSheetTextYCords) * spriteSheet->w)];
+            }
+        }
+
+        //Convert surface into texture and save to the charTextureArray;
+        highRezChars[s] = SDL_CreateTextureFromSurface(renderer, charSurface);
         SDL_FreeSurface(charSurface);
     }
 
     SDL_FreeSurface(spriteSheet);
     textTextures->chars = chars;
+    textTextures->highRezChars = highRezChars;
     return textTextures;
 }
 
-SDL_Texture* getCharTexture(struct GameData* gameData, char character){
-    SDL_Texture** charTextures = gameData->textTextures->chars;
+SDL_Texture* getCharTexture(struct GameData* gameData, char character, int scale){
+    SDL_Texture** charTextures;
+    if (scale < 16) {
+        charTextures = gameData->textTextures->chars;
+    }
+    else {
+        charTextures = gameData->textTextures->highRezChars;
+    }
 
     switch (character) {
         //Letters
@@ -172,6 +205,7 @@ SDL_Texture* getCharTexture(struct GameData* gameData, char character){
     }
 }
 
+
 int getStringLength(char *str){
     int length = 0;
 
@@ -190,7 +224,7 @@ void renderStringCentered(struct GameData* gameData, char string[], int xCor, in
     int stringLen = getStringLength(string);
     int halfScale = scale/2;
     xCor -= stringLen * halfScale;
-    yCor -= halfScale/2;
+    yCor -= halfScale;
     drawString(gameData, string, stringLen, xCor, yCor, scale);
 }
 
@@ -200,9 +234,18 @@ void renderString(struct GameData* gameData, char string[], int xCor, int yCor, 
 }
 
 void drawString(struct GameData* gameData, char string[], int stringLength, int xCor, int yCor, int scale){
-    //Frame rate
-    for (int x = 0; x < stringLength; x++) {
-        SDL_Rect rect = {xCor + (x * scale), yCor, scale, scale};
-        SDL_RenderCopy(gameData->screen->renderer, getCharTexture(gameData, string[x]), NULL, &rect);
+
+    SDL_Renderer* renderer = gameData->screen->renderer;
+    if (scale < 16) {
+        for (int x = 0; x < stringLength; x++) {
+            SDL_Rect rect = {xCor + (x * scale), yCor, scale, scale};
+            SDL_RenderCopy(renderer, getCharTexture(gameData, string[x], scale), NULL, &rect);
+        }
+    }
+    else {
+        for (int x = 0; x < stringLength; x++) {
+            SDL_Rect rect = {xCor + (x * scale), yCor, scale, scale};
+            SDL_RenderCopy(renderer, getCharTexture(gameData, string[x], scale), NULL, &rect);
+        }
     }
 }

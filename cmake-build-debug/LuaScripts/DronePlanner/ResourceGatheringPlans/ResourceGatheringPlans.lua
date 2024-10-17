@@ -99,7 +99,7 @@ function ExecuteDroneHarvestWood(droneManager)
                 dronePlan.goal = 1
             end
         else
-            BlockUp(droneManager.droneId)
+            BlockUp(droneManager.droneId, Block.Cobble)
         end
     end
 
@@ -190,7 +190,7 @@ function ExecuteBuildDigTunnel(droneManager)
             end
 
         else
-            PlaceRelativeBlock(droneManager.droneId, dronePlan.xDirection, dronePlan.yDirection, -1, Block.Dirt)
+            PlaceRelativeBlock(droneManager.droneId, dronePlan.xDirection, dronePlan.yDirection, -1, Block.Cobble)
         end
     end
     if (dronePlan.goal == 0) then

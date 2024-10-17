@@ -13,4 +13,9 @@ void renderTickData(struct GameData* gameData){
     sprintf(totalFrameTime, "Current Tick : %i", tikManager->tik);
     renderString(gameData, totalFrameTime, 5, gameData->screen->yRez - 150, 20);
 
+
+    char timeToExecuteTick[40] = {0};
+    sprintf(timeToExecuteTick, "Time To Execute Tick : %i", gameData->debugMenu->tickTime);
+    renderString(gameData, timeToExecuteTick, 5, gameData->screen->yRez - 175, 20);
+
 }

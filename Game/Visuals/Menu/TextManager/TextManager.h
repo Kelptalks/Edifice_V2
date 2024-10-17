@@ -15,6 +15,7 @@
 struct TextTextures{
     //Array of char textures
     SDL_Texture** chars;
+    SDL_Texture** highRezChars;
 };
 
 //Chars for indexing the texture array
@@ -70,7 +71,7 @@ enum CharTexture{
 
 struct TextTextures* createTextTextures(SDL_Renderer* renderer);
 
-SDL_Texture* getCharTexture(struct GameData* gameData, char character);
+SDL_Texture* getCharTexture(struct GameData* gameData, char character, int scale);
 
 void renderStringCentered(struct GameData* gameData, char string[], int xCor, int yCor, int scale);
 

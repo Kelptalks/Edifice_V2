@@ -30,6 +30,8 @@ struct DebugMenu* createDebugMenu(){
     debugMenu->tikDataVisible = false;
     debugMenu->chunkBoarders = false;
 
+
+
     return debugMenu;
 }
 

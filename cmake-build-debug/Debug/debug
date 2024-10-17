@@ -4,13 +4,6 @@ Creating SDL Screen
 Creating textTextures
 Creating DebugMenu
 Splicing textures 
-Creating textTextures
-Building world
-Creating Menu Manager
-Creating cameraData 
- - Creating CastedPool
-Creating DebugMenu
-Splicing textures 
 Building world
 Creating Menu Manager
 Creating cameraData 
@@ -18,14 +11,4 @@ Creating cameraData
 Creating PlayerData
 Creating Tik Manager 
 Creating Sound Manager
-Creating PlayerData
-Creating Tik Manager 
-Creating Sound Manager
-File deleted successfully.
-creating lua
-  - Generating Terrain : 
-Creating Drone at (18, 20, 23)
-Planned : PlanToUseFurnaceToSmeltItems
-File does not exist. Creating it now...
-World File Created
 File deleted successfully.

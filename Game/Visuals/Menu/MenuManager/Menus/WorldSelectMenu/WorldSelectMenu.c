@@ -101,13 +101,13 @@ void renderWorldSelectMenu(struct GameData* gameData){
             renderStringCentered(gameData, worldName,
                                  worldButton->xCor + (worldButton->xScale/2),
                                  worldButton->yCor + worldButton->yScale/2,
-                                 worldButton->yScale/2);
+                                 worldButton->yScale/2.5);
         }
         else{
             renderStringCentered(gameData, "Empty Slot",
                                  worldButton->xCor + (worldButton->xScale/2),
                                  worldButton->yCor + worldButton->yScale/2,
-                                 worldButton->yScale/2);
+                                 worldButton->yScale/2.5);
         }
 
 

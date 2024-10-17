@@ -33,6 +33,7 @@ void tickAllEntityInWorld(struct GameData* gameData){
 }
 
 void updateTikTime(struct GameData* gameData){
+    Uint32 time1 = SDL_GetTicks();
     struct TikManager* tikManager = gameData->tikManager;
     tikManager->sdlTime = SDL_GetTicks();
     if (tikManager->sdlTime > (tikManager->tik * tikManager->tikTime)){
@@ -65,6 +66,8 @@ void updateTikTime(struct GameData* gameData){
         }
 
     }
+    Uint32 time2 = SDL_GetTicks();
+    gameData->debugMenu->tickTime = time2 - time1;
 
     tickCamera(gameData);
 }

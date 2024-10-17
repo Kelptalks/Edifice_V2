@@ -143,6 +143,9 @@ void unloadChunk(struct GameData* gameData, struct CastedChunk* castedChunk){
     //Reset values
     castedChunk->isoY = 0;
     castedChunk->isoX = 0;
+    castedChunk->rayCast = false;
+    castedChunk->textured = false;
+
     clearChunkTexture(gameData, castedChunk);
 
     //Add the chunk to the top of the free chunk array stack

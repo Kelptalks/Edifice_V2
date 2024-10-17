@@ -22,6 +22,12 @@ struct DebugMenu{
     bool LeftSide;
     bool chunkBoarders;
 
+    int mouseWorldXCor;
+    int mouseWorldYCor;
+    int mouseWorldZCor;
+
+    Uint32 tickTime;
+
     int xBlockSelectedCor;
     int yBlockSelectedCor;
 };

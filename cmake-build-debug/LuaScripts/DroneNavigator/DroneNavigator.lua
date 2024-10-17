@@ -19,11 +19,11 @@ function GetCordsOfBlock(droneID, block)
     return "NoBlocks"
 end
 
-function BlockUp(droneID)
+function BlockUp(droneID, block)
     if (getDroneBlock(droneID, 0, 0, 1)) ~= Block.Air then
         mineDroneBlock(droneID, 0, 0, 1)
     else 
-        PlaceRelativeBlock(droneID, 0, 0, 0, Block.Dirt)
+        PlaceRelativeBlock(droneID, 0, 0, 0, block)
     end
 end
 
