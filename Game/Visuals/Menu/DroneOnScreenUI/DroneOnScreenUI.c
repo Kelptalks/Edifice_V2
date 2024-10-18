@@ -60,7 +60,7 @@ void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone){
 
     SDL_Texture* texture = gameData->textures->spriteSheet;
     for (int i = 0; i < 3; i++){
-        SDL_Rect srcRect = getToolSrcRect(drone->tools[i]);
+        SDL_Rect srcRect = getDroneItemSrcRect(drone->equipment[i]);
         SDL_Rect destRect = {xDrawCor + (i * itemSpacing), yDrawCor, itemScale, itemScale};
         SDL_RenderCopy(gameData->screen->renderer, texture, &srcRect, &destRect);
     }

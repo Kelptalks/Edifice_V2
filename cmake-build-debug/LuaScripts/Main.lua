@@ -24,13 +24,13 @@ function ON_TICK()
     if #DroneManagers < droneCount then
         table.insert(DroneManagers, CreateDroneManager(droneCount - 1))
         
-        PlanUseFurnaceToSmeltItems(DroneManagers[droneCount], DroneItem.ItemIronOar, 3)
+        --PlanUseFurnaceToSmeltItems(DroneManagers[droneCount], DroneItem.ItemIronOar, 3)
 
-        PlanDroneNavigateToCords(DroneManagers[droneCount], 0, 0, 30)
+        --PlanDroneNavigateToCords(DroneManagers[droneCount], 0, 0, 30)
 
-        PlanDroneHarvestWood(DroneManagers[droneCount], 100)
+        --PlanDroneHarvestWood(DroneManagers[droneCount], 100)
         
-        PlanDigTunnel(DroneManagers[droneCount], -100, 0, 5, 1, 0, 100)
+        --PlanDigTunnel(DroneManagers[droneCount], -100, 0, 5, 1, 0, 100)
         
         PlanScavangeForFuel(DroneManagers[droneCount], 5000)
 

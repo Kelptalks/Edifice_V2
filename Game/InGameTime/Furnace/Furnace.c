@@ -81,14 +81,14 @@ int droneAddSmeltingItemToFurnace(struct Drone* drone, struct Furnace* furnace, 
 }
 
 
-int removeSmeltingItemFromFurnace(struct Drone* drone, struct Furnace* furnace){
+int removeSmeltingItemFromFurnace(struct DroneData* droneData, struct Drone* drone, struct Furnace* furnace){
     if (drone->busyTime > 0){
         return -3;
     }
     if (drone->fuel < 0){
         return -4;
     }
-    addItemToInventory(drone, furnace->itemBeingSmelted, 1);
+    addItemToInventory(droneData, drone, furnace->itemBeingSmelted, 1);
     furnace->itemBeingSmelted = ItemNull;
 
     return 1;

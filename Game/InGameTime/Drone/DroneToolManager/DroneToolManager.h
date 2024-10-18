@@ -5,37 +5,31 @@
 #ifndef EDIFICE_DRONETOOLMANAGER_H
 #define EDIFICE_DRONETOOLMANAGER_H
 #include "../Drone.h"
-#include "SDL.h"
 
 
-struct DroneItemRecipe {
-    int totalItemTypes;
-
-    int* itemCounts;
-    enum DroneItem* itemsNeeded;
-};
-
-struct DroneItemRecipe* createItemRecipe(int totalItemTypes);
-void addItemToRecipe(struct DroneItemRecipe* item_recipe, enum DroneItem item, int itemCount);
 
 struct DroneToolData{
-    int* blockMineTimes;
-    int* toolMineTimeMods;
+    int* toolLevel;
 
-    enum DroneItem* blockPlacementCostItems;
-    int* blockPlacementCostQuantities;
+    float* mineSpeed;
 
-    struct DroneItemRecipe** itemRecipes;
 };
-
-int addToolToDone(struct Drone* drone, enum DroneTool tool);
-
-void removeToolToDone(struct Drone* drone, int index);
-
-int getBlockMineTime(struct DroneToolData* droneToolData, struct Drone* drone, enum Block block);
 
 struct DroneToolData* createDroneToolData();
 
-SDL_Rect getToolSrcRect(enum DroneTool droneTool);
+enum DroneItem getDroneEquipmentAtSlot(struct Drone* drone, int slot);
+
+float getToolMineSpeed(struct DroneToolData* droneToolData, enum DroneItem tool);
+
+int getToolLevel(struct DroneToolData* droneToolData, enum DroneItem tool) ;
+
+int addToolToDone(struct Drone* drone, enum DroneItem tool);
+
+int removeEquipmentFromDrone(struct DroneData* droneData, struct Drone* drone, int index);
+bool ifToolCanMineBlock(struct DroneData* droneData, enum DroneItem tool, enum Block block);
+
+int getBlockToolMineTime(struct DroneData* droneData, enum Block block, enum DroneItem tool);
+
+enum DroneItem getDronesBestToolForBlock(struct DroneData* droneData, struct Drone* drone, enum Block block);
 
 #endif //EDIFICE_DRONETOOLMANAGER_H

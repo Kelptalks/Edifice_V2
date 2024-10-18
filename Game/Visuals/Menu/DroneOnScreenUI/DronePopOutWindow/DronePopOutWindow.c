@@ -92,7 +92,7 @@ void renderDronesInventory(struct GameData* gameData, struct DronePopOutWindow* 
     for (int y = 0; y < 3; y++){
         for (int x = 0; x < 3; x++){
             int itemIndex = x + (3 * y);
-            SDL_Rect srcRect = getSrcRectOfItemSprite(getItemInSlot(drone, itemIndex));
+            SDL_Rect srcRect = getDroneItemSrcRect(getItemInSlot(drone, itemIndex));
 
             int xSlotCor = xDrawCor + (x * itemSpacing);
             int ySlotCor = yDrawCor + (y * itemSpacing);
@@ -124,7 +124,7 @@ void renderDroneTools(struct GameData* gameData, struct DronePopOutWindow* drone
 
     SDL_Texture* texture = gameData->textures->spriteSheet;
     for (int i = 0; i < 3; i++){
-        SDL_Rect srcRect = getToolSrcRect(droneWindow->drone->tools[i]);
+        SDL_Rect srcRect = getDroneItemSrcRect(droneWindow->drone->equipment[i]);
         SDL_Rect destRect = {xDrawCor + (i * itemSpacing), yDrawCor, itemScale, itemScale};
         SDL_RenderCopy(gameData->screen->renderer, texture, &srcRect, &destRect);
     }

@@ -5,6 +5,7 @@
 #include <malloc.h>
 #include "DroneData.h"
 #include "../../Debuging/Test_Main.h"
+#include "DroneCraftingManager/DroneCraftingManager.h"
 
 
 struct DroneData* createDroneData(struct World* world,int maxDrones){
@@ -24,7 +25,14 @@ struct DroneData* createDroneData(struct World* world,int maxDrones){
     }
 
     droneData->droneToolData = createDroneToolData();
+
     droneData->droneLuaCommandsData = setUpLuaFunctions(world);
+
+    droneData->droneBlockProperties = createDroneBlockProperties();
+
+    droneData->droneItemData = createDroneItemData();
+
+    droneData->droneCraftingData = createDroneCraftingData();
 
     return droneData;
 }

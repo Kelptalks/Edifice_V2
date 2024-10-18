@@ -125,8 +125,7 @@ int luaGetDroneCords(lua_State *L) {
 
 int luaCraftDroneTool(lua_State *L) {
     int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
-    enum DroneTool tool = luaL_checkinteger(L, 2);  // 2rd argument: x movement
-
+    enum DroneItem tool = luaL_checkinteger(L, 2);  // 2rd argument: x movement
 
     lua_getglobal(L, "world");  // Get the global 'world'
     struct World* world = lua_touserdata(L, -1);
@@ -135,7 +134,7 @@ int luaCraftDroneTool(lua_State *L) {
     }
 
     struct Drone* drone = world->droneData->drones[droneId];
-    int result = droneCraftTool(world, drone, tool);
+    int result = droneCraftItem(world, drone, tool);
 
     lua_pushinteger(L, result);
 

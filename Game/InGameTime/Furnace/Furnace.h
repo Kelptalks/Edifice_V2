@@ -29,6 +29,6 @@ int droneAddSmeltingFuelToFurnace(struct Drone* drone, struct Furnace* furnace, 
 
 int droneAddSmeltingItemToFurnace(struct Drone* drone, struct Furnace* furnace, enum DroneItem item);
 
-int removeSmeltingItemFromFurnace(struct Drone* drone, struct Furnace* furnace);
+int removeSmeltingItemFromFurnace(struct DroneData* droneData, struct Drone* drone, struct Furnace* furnace);
 
 #endif //FURNACE_H

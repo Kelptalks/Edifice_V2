@@ -8,49 +8,11 @@
 
 #include "../../World/World.h"
 #include "../../Blocks/Blocks.h"
+#include "../../Visuals/Camera/CameraData.h"
+#include "DroneItemManager/DroneItemManager.h"
 
 #ifndef EDIFICE_DRONE_H
 #define EDIFICE_DRONE_H
-
-enum DroneTool{
-    ToolNull,
-    ToolStoneDrill,
-    ToolStoneSaw,
-    ToolIronDrill,
-    ToolIronSaw,
-    ToolIronBattery,
-    ToolIronReceptacle,
-    ToolIronCamera,
-    ToolTitaniumDrill,
-    ToolTitaniumSaw,
-    ToolTitaniumBattery,
-    ToolTitaniumReceptacle,
-    ToolTitaniumCamera,
-    ToolExplosiveCamera
-};
-
-enum DroneItem{
-    ItemNull,
-    ItemDirt,
-    ItemPlantMatter,
-    ItemLog,
-    ItemStone,
-    ItemStoneBrick,
-    ItemBrick,
-    ItemIronOar,
-    ItemIronBar,
-    ItemCopperOar,
-    ItemCopperBar,
-    ItemSand,
-    ItemGlass,
-    ItemTitaniumOre,
-    ItemTitaniumBar,
-    ItemPurpleLens,
-    ItemCharcoal,
-    ItemSulfur,
-    ItemScaffolding,
-    ItemDroneParts,
-};
 
 int getTotalItemCount();
 
@@ -72,7 +34,9 @@ struct Drone{
     //Inventory
     enum DroneItem items[9];
     int itemCounts[9];
-    enum DroneTool tools[3];
+    enum DroneItem equipment[3];
+
+    enum Direction direction;
 
     //BlockToMine
     bool mining;
@@ -93,7 +57,7 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
 
 int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity);
 
-int droneCraftTool(struct World* world, struct Drone* drone, enum DroneTool tool) ;
+int droneCraftItem(struct World* world, struct Drone* drone, enum DroneItem item) ;
 
 int getDroneToolSlot(struct Drone* drone, int slot);
 

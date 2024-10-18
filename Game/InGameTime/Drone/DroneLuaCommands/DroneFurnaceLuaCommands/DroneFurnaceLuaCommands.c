@@ -97,7 +97,7 @@ int luaRemoveSmeltingItemFromFurnace(lua_State *L) {
         return -1;
     }
 
-    lua_pushinteger(L, removeSmeltingItemFromFurnace(drone, furnace));
+    lua_pushinteger(L, removeSmeltingItemFromFurnace(world->droneData, drone, furnace));
     return 1;
 }
 

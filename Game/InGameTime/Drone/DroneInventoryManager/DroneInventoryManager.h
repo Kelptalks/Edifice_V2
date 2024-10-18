@@ -9,11 +9,11 @@
 #include "../../../Blocks/Blocks.h"
 
 
-SDL_Rect getSrcRectOfItemSprite(enum DroneItem item);
-
 enum DroneItem getBlockTypeToItem(enum Block block);
 
-void addItemToInventory(struct Drone* drone, enum DroneItem item, int quantity);
+void addItemToInventory(struct DroneData* droneData, struct Drone* drone, enum DroneItem item, int quantity);
+
+int getTotalItemCountInInventory(struct Drone* drone, enum DroneItem item);
 
 int removeItemFromInventory(struct Drone* drone, enum DroneItem item, int count);
 

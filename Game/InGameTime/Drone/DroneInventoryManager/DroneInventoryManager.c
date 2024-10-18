@@ -4,115 +4,74 @@
 
 #include "DroneInventoryManager.h"
 
-SDL_Rect getSrcRectOfItemSprite(enum DroneItem item){
-    SDL_Rect srcRect = {item * 16, 1216, 16, 16};
-    return srcRect;
-}
-
-enum DroneItem getBlockTypeToItem(enum Block block){
-    switch (block) {
-
-        //Dirt
-        case Dirt:
-        case MudBrick:
-        case BlueGrass:
-        case GreenGrass:
-        case CrackedEarth:
-            return ItemDirt;
+#include "../DroneData.h"
+#include "../DroneItemManager/DroneItemManager.h"
 
 
-        //Stone
-        case Stone:
-        case Granite:
-        case Cobble:
-        case Rock:
-            return ItemStone;
-        case Sand:
-            ItemSand;
-
-        //Plant Matter
-        case Leave:
-        case Dandi:
-        case DandiStem:
-        case MushroomStem:
-        case BlueMushroomBlock:
-        case PinkMushroomBlock:
-        case Fungi:
-        case YellowFlowers:
-        case WhiteFlowers:
-        case Mushroom:
-        case Flour:
-            return ItemPlantMatter;
-
-        //Log
-        case PurpleWood:
-        case PurpleWoodPlanks:
-        case BrownWood:
-        case BrownWoodPlanks:
-        case Log:
-            return ItemLog;
-
-        //Glass
-        case Glass:
-            return ItemGlass;
-
-
-        //IronOar
-        case Iron:
-            return ItemIronOar;
-
-        //CopperOar
-        case Copper:
-            return ItemCopperOar;
-
-        //Brick
-        case ClayBrick:
-            return ItemBrick;
-
-        //Stone Brick
-        case StoneBrick:
-        case Furnace:
-        case FloweringStoneBrick:
-            return ItemStoneBrick;
-
-        //IronBar
-        case LBM:
-        case Factory:
-        case Crate:
-        case Metal:
-        case DroneLeftForward:
-        case DroneRightForward:
-        case DroneRightBack:
-        case DroneLeftBack:
-        case DroneDead:
-            return ItemIronBar;
-
-        default:
-            return ItemNull;
-    }
-}
-
-void addItemToInventory(struct Drone* drone, enum DroneItem item, int quantity){
+void addItemToInventory(struct DroneData* droneData, struct Drone* drone, enum DroneItem item, int quantity){
     if (item == ItemNull) {
         return;
     }
+
+    int maxStackSizeOfItem = getItemMaxStackSize(droneData->droneItemData, item);
     //Look for item to stack to
     for (int i = 0; i < 9; i++){
-        if (drone->items[i] == item){
-            drone->itemCounts[i] += quantity;
-            return;
+
+        // If there is a stack and it's not full
+        if (drone->items[i] == item && drone->itemCounts[i] < maxStackSizeOfItem){
+            //If the new stack will be larger call recursively to add the remainder
+            int newStackSize = drone->itemCounts[i] + quantity;
+            if (newStackSize > maxStackSizeOfItem){
+                //Set the current stack to full
+                drone->itemCounts[i] = maxStackSizeOfItem;
+
+                //Call recursively to add the remainder.
+                int stackOverFlow = newStackSize - maxStackSizeOfItem;
+                addItemToInventory(droneData, drone, item, stackOverFlow);
+
+                return;
+            }
+            //Add the item to the slot
+            else {
+                drone->itemCounts[i] += quantity;
+                return;
+            }
         }
     }
-
 
     //Then if no stack look to add item to first free slot
     for (int i = 0; i < 9; i++){
         if (drone->items[i] == ItemNull){
-            drone->items[i] = item;
-            drone->itemCounts[i]+=quantity;
-            return;
+            //If the new stack will be larger call recursively to add the remainder
+            int newStackSize = quantity;
+            if (newStackSize > maxStackSizeOfItem){
+                //Set the current stack to full
+                drone->itemCounts[i] = maxStackSizeOfItem;
+
+                //Call recursively to add the remainder.
+                int stackOverFlow = newStackSize - maxStackSizeOfItem;
+                addItemToInventory(droneData, drone, item, stackOverFlow);
+
+                return;
+            }
+            //Add the item to the slot
+            else {
+                drone->items[i] = item;
+                drone->itemCounts[i] += quantity;
+                return;
+            }
         }
     }
+}
+
+int getTotalItemCountInInventory(struct Drone* drone, enum DroneItem item) {
+    int runningTotal = 0;
+    for (int i = 0; i < 9; i++) {
+       if (drone->items[i] == item) {
+           runningTotal += drone->itemCounts[i];
+       }
+    }
+    return runningTotal;
 }
 
 int removeItemFromInventory(struct Drone* drone, enum DroneItem item, int count) {
@@ -126,6 +85,7 @@ int removeItemFromInventory(struct Drone* drone, enum DroneItem item, int count)
                 }
                 return 1;
             }
+
         }
     }
     return -1;
@@ -135,6 +95,7 @@ enum DroneItem getItemInSlot(struct Drone* drone, int slot){
     if (slot < 9) {
         return drone->items[slot];
     }
+    return ItemNull;
 }
 
 int getItemCountInSlot(struct Drone* drone, int slot){

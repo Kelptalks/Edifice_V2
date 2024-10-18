@@ -9,6 +9,8 @@
 #include "DroneToolManager/DroneToolManager.h"
 #include "DroneInventoryManager/DroneInventoryManager.h"
 #include "DroneLuaCommands/DroneLuaCommands.h"
+#include "DroneBlockProperties/DroneBlockProperties.h"
+#include "DroneItemManager/DroneItemManager.h"
 
 struct DroneData{
     int droneCount;
@@ -17,6 +19,10 @@ struct DroneData{
 
     struct DroneToolData* droneToolData;
     struct DroneLuaCommandsData* droneLuaCommandsData;
+
+    struct DroneItemData* droneItemData;
+    struct DroneBlockProperties* droneBlockProperties;
+    struct DroneCraftingData* droneCraftingData;
 };
 
 struct Drone* getDroneFromId(struct DroneData* droneData, int id);

@@ -3,6 +3,8 @@
 //
 
 #include "MainMenu.h"
+
+#include "../../../../../InGameTime/Drone/Drone.h"
 #include "../../../../../World/World.h"
 #include "../../../../../Visuals/Camera/CameraData.h"
 #include "../../../../../Visuals/Camera/Rendering/RayCasting/CastingThread/castingThread.h"
@@ -80,8 +82,6 @@ void renderMainMenu(struct GameData* gameData){
         gameData->world = NULL;
     }
 
-
-
     struct MainMenu* mainMenu = gameData->menuManger->mainMenu;
     upDateMainMenuCords(gameData);
 
@@ -89,6 +89,15 @@ void renderMainMenu(struct GameData* gameData){
     SDL_Rect srcRect = {960, 0, 320, 175};
     SDL_Rect desRect = {0, 0, gameData->screen->xRez, gameData->screen->yRez};
     SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &srcRect, &desRect);
+
+
+    /*
+    for (int i = 0; i < getTotalItemCount(); i++) {
+        SDL_Rect sourceRect = getDroneItemSrcRect(i);
+        SDL_Rect destRect = {i * 16, 16, 16, 16};
+        SDL_RenderCopy(gameData->screen->renderer, gameData->textures->spriteSheet, &sourceRect, &destRect);
+    }
+    */
 
     //Render all the buttons with text
     struct Button* startButton = mainMenu->startButton;
