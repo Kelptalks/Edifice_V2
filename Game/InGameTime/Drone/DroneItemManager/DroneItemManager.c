@@ -15,7 +15,7 @@ int getTotalToolCount() {
 }
 
 int getTotalItemCount() {
-    return 33;
+    return 35;
 }
 
 //Set the poperties of an item
@@ -28,21 +28,21 @@ void setItemProperties(struct DroneItemData* droneItemData, enum DroneItem item,
 //Allocate arrays for the drone item array struct
 int allocateDroneItemDataArrays(struct DroneItemData* droneItemData) {
     //setup item max stack size array
-    droneItemData->itemMaxStackSize = malloc(getTotalItemCount() * sizeof(bool));
+    droneItemData->itemMaxStackSize = malloc(getTotalItemCount() * sizeof(int));
     if (droneItemData->itemMaxStackSize == NULL) {
         reportBug("failed to malloc item max size array\n");
         return -1;
     }
 
     //Setup if craftable array
-    droneItemData->craftable = malloc(getTotalItemCount() * sizeof(bool));
+    droneItemData->craftable = malloc(getTotalItemCount() * sizeof(int));
     if (droneItemData->craftable == NULL) {
         reportBug("failed to malloc item craftable array\n");
         return -1;
     }
 
     //Setup if tool array
-    droneItemData->tool = malloc(getTotalItemCount() * sizeof(bool));
+    droneItemData->tool = malloc(getTotalItemCount() * sizeof(int));
     if (droneItemData->tool == NULL) {
         reportBug("failed to malloc item craftable array\n");
         return -1;

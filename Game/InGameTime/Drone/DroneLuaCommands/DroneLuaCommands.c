@@ -123,7 +123,7 @@ int luaGetDroneCords(lua_State *L) {
     return 3;
 }
 
-int luaCraftDroneTool(lua_State *L) {
+int luaDroneCraft(lua_State *L) {
     int droneId = luaL_checkinteger(L, 1);  // 1nd argument: droneId (assuming it's an int for this example)
     enum DroneItem tool = luaL_checkinteger(L, 2);  // 2rd argument: x movement
 
@@ -277,7 +277,7 @@ struct DroneLuaCommandsData* setUpLuaFunctions(struct World* world){
     lua_register(luaCommandsData->luaState, "luaGetDroneCount", luaGetDroneCount);
     lua_register(luaCommandsData->luaState, "luaMineRelativeBlock", luaMineRelativeBlock);
     lua_register(luaCommandsData->luaState, "luaGetDroneCords", luaGetDroneCords);
-    lua_register(luaCommandsData->luaState, "luaCraftDroneTool", luaCraftDroneTool);
+    lua_register(luaCommandsData->luaState, "luaDroneCraft", luaDroneCraft);
     lua_register(luaCommandsData->luaState, "luaGetDroneToolSlot", luaGetDroneToolSlot);
     lua_register(luaCommandsData->luaState, "luaGetDroneInventoryItemCount", luaGetDroneInventoryItemCount);
     lua_register(luaCommandsData->luaState, "luaDroneUseItemForFuel", luaDroneUseItemForFuel);

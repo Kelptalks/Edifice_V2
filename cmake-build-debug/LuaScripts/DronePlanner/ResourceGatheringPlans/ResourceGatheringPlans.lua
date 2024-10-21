@@ -19,7 +19,7 @@ function ExecuteScavangeForFuel(droneManager)
         -- Craft one if has recorces and does not currently have one
         if getDroneInventoryItemCount(droneManager.droneId, DroneItem.ItemStone) >= 3 then
             if (hasDrill == false) then
-                droneCraftTool(droneManager.droneId, DroneTool.ToolStoneDrill)
+                droneCraft(droneManager.droneId, DroneTool.ToolStoneDrill)
             end
         end
 
@@ -68,7 +68,7 @@ function ExecuteDroneHarvestWood(droneManager)
         -- Craft one if has recorces and does not currently have one
         if getDroneInventoryItemCount(droneManager.droneId, DroneItem.ItemStone) >= 3 then
             if (hasSaw == false) then
-                droneCraftTool(droneManager.droneId, DroneTool.ToolStoneSaw)
+                droneCraft(droneManager.droneId, DroneTool.ToolStoneSaw)
             end
         end
 

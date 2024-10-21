@@ -10,7 +10,8 @@ DronePlanType = {
     droneHarvestWood = 3,
     spiralStairsOfHeight = 4,
     digTunnel = 5,
-    useFurnaceToSmeltItems = 6
+    useFurnaceToSmeltItems = 6,
+    craftStoneTools = 7,
 }
 
 -- Drone Plan structure
@@ -55,7 +56,8 @@ local functionMap = {
     [DronePlanType.droneHarvestWood] = ExecuteDroneHarvestWood,
     [DronePlanType.spiralStairsOfHeight] = ExecuteBuildSpiralStairsOfHeight,
     [DronePlanType.digTunnel] = ExecuteBuildDigTunnel,
-    [DronePlanType.useFurnaceToSmeltItems] = ExecuteUseFurnaceToSmeltItems
+    [DronePlanType.useFurnaceToSmeltItems] = ExecuteUseFurnaceToSmeltItems,
+    [DronePlanType.craftStoneTools] = ExecuteCraftStoneTools
 }
 
 -- Function to process drone plans on each tick

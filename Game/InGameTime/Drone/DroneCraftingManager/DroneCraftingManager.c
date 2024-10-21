@@ -23,7 +23,7 @@ void setItemRecipeIngredient(struct DroneItemRecipe* recipe, int ingredientIndex
         recipe->itemQuantitys[ingredientIndex] = quantity;
     }
     else {
-        reportBug("Error out of recipe range\n");
+        reportBug("Error out of recipe range | Item (%i), IngredientIndex (%i), recipeUniqueItems(%i)\n", itemType, ingredientIndex, recipe->uniqueItems);
     }
 }
 
@@ -82,16 +82,16 @@ void setUpItemRecipes(struct DroneCraftingData* droneCraftingData) {
 
     //Items
     currentRecipe = setUpItemRecipe(droneCraftingData, ItemStoneBrick, 1, 2);
-    setItemRecipeIngredient(currentRecipe, 1, ItemStone, 4);
+    setItemRecipeIngredient(currentRecipe, 0, ItemStone, 4);
 
     currentRecipe = setUpItemRecipe(droneCraftingData, ItemBrick, 1, 2);
-    setItemRecipeIngredient(currentRecipe, 1, ItemDirt, 4);
+    setItemRecipeIngredient(currentRecipe, 0, ItemDirt, 4);
 
     currentRecipe = setUpItemRecipe(droneCraftingData, ItemScaffolding, 1, 8);
-    setItemRecipeIngredient(currentRecipe, 1, ItemLog, 1);
+    setItemRecipeIngredient(currentRecipe, 0, ItemLog, 1);
 
     currentRecipe = setUpItemRecipe(droneCraftingData, ItemDroneParts, 1, 1);
-    setItemRecipeIngredient(currentRecipe, 1, ItemDroneParts, 1);
+    setItemRecipeIngredient(currentRecipe, 0, ItemDroneParts, 1);
 
 }
 
@@ -124,6 +124,7 @@ int droneAttemptCraftItem(struct DroneData* droneData, struct Drone* drone, enum
         //If lacking current ingredient
         if (totalOfItemsOfCurrentTypeInInventory < recipe.itemQuantitys[i]) {
             hasEnoughItemsToCraft = false;
+            break;
         }
     }
 
@@ -139,4 +140,3 @@ int droneAttemptCraftItem(struct DroneData* droneData, struct Drone* drone, enum
         return -1;
     }
 }
-

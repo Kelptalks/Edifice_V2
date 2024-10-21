@@ -27,7 +27,7 @@ struct Furnace* createFurnace(struct World* world, int x, int y, int z) {
 void tickFurnace(struct World* world, struct Furnace* furnace) {
     if (furnace->fuel > 0) {
         furnace->fuel--;
-        furnace->busyTime --;
+        furnace->busyTime--;
         setBlockAtWorldCor(world, furnace->xCor, furnace->yCor, furnace->zCor, StoneFurnaceOn);
         if (furnace->busyTime <= 0) {
             furnace->itemBeingSmelted = getSmeltedItem(world->furnaceData, furnace->itemBeingSmelted);

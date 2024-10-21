@@ -18,7 +18,7 @@ int setUpDroneBlockPropertiesArrays(struct DroneBlockProperties* droneBlockPrope
         return -1;
     }
 
-    droneBlockProperties->mineTime = malloc( blocksCount * sizeof(bool));
+    droneBlockProperties->mineTime = malloc( blocksCount * sizeof(int));
     if (droneBlockProperties->mineTime == NULL) {
         reportBug("Failed to create mineTime Array");
         return -1;

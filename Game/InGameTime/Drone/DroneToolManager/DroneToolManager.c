@@ -14,12 +14,12 @@
 
 
 void setUpDroneToolDataArrays(struct DroneToolData* droneToolData) {
-    droneToolData->toolLevel = malloc(getTotalToolCount() * sizeof(int));
+    droneToolData->toolLevel = malloc(getTotalItemCount() * sizeof(int));
     if (droneToolData->toolLevel == NULL) {
         reportBug("Failed to create droneToolData tool level array\n");
     }
 
-    droneToolData->mineSpeed = malloc(getTotalToolCount() * sizeof(float));
+    droneToolData->mineSpeed = malloc(getTotalItemCount() * sizeof(float));
     if (droneToolData->mineSpeed == NULL) {
         reportBug("Failed to create droneToolData mine Speed array\n");
     }

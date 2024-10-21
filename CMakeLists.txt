@@ -150,6 +150,8 @@ add_executable(edifice main.c
         Game/InGameTime/Drone/DroneBlockProperties/DroneBlockProperties.h
         Game/InGameTime/Drone/DroneCraftingManager/DroneCraftingManager.c
         Game/InGameTime/Drone/DroneCraftingManager/DroneCraftingManager.h
+        Game/Debuging/DebugMenu/Consol/DebugConsole.c
+        Game/Debuging/DebugMenu/Consol/DebugConsole.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES} ${OpenCL_LIBRARY})

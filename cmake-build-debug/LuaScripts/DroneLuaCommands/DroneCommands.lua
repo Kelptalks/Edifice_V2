@@ -28,8 +28,8 @@ function getDroneCords(droneID)
     return luaGetDroneCords(droneID or 0)
 end
 
-function droneCraftTool(droneID, tool)
-    return luaCraftDroneTool(droneID, tool)
+function droneCraft(droneID, item)
+    return luaDroneCraft(droneID, item)
 end
 
 function getDroneToolSlot(droneID, slot)

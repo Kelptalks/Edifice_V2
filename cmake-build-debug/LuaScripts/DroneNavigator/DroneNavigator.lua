@@ -178,10 +178,10 @@ function BasicWalkInDirection(droneID, xCor, yCor, zCor)
             return 1;
         end 
         if getDroneBlock(droneID, xDirection, 0, 1) ~= Block.Air then
-            mineDroneBlock(droneID, xDirection, 0, 1)
+            moveDrone(droneID, 0, 1, 1)
             return 1;
         end 
-        mineDroneBlock(droneID, xDirection, 0, 0)
+        moveDrone(droneID, 1, -1, 1)
         return 1;
     end
     if absYDistance ~= 0 then
@@ -194,10 +194,10 @@ function BasicWalkInDirection(droneID, xCor, yCor, zCor)
             return 1;
         end
         if getDroneBlock(droneID, 0, yDirection, 1) ~= Block.Air then
-            mineDroneBlock(droneID, 0, yDirection, 1)
+            moveDrone(droneID, 1, 0, 1)
             return 1;
         end 
-        mineDroneBlock(droneID, 0, yDirection, 0)
+        moveDrone(droneID, -1, 0, 1)
         return 1;
     end
 

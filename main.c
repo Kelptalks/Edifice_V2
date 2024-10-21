@@ -13,6 +13,7 @@ int main(int argc, char* argv[]) {
     //int temp = getOctreeVolume(6);
     //reportBug("Octree volume %i", temp);
     //testWorldSaving();
+
     if (true) {
         struct GameData *gameData = createGameData();
 

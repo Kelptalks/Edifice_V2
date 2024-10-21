@@ -9,6 +9,7 @@
 
 
 struct DroneData* createDroneData(struct World* world,int maxDrones){
+    reportBug("Creating Drone Data : \n");
     struct DroneData* droneData = malloc(sizeof (struct DroneData));
     if (droneData == NULL){
         reportBug("Failed To malloc drone Data\n");
@@ -24,15 +25,20 @@ struct DroneData* createDroneData(struct World* world,int maxDrones){
         return NULL;
     }
 
-    droneData->droneToolData = createDroneToolData();
-
-    droneData->droneLuaCommandsData = setUpLuaFunctions(world);
-
-    droneData->droneBlockProperties = createDroneBlockProperties();
-
+    reportBug(" - Creating Drone Item Data \n");
     droneData->droneItemData = createDroneItemData();
 
+    reportBug(" - Creating Drone Block Properties \n");
+    droneData->droneBlockProperties = createDroneBlockProperties();
+
+    reportBug(" - Creating Drone Tool Data \n");
+    droneData->droneToolData = createDroneToolData();
+
+    reportBug(" - Creating Drone Crafting Data \n");
     droneData->droneCraftingData = createDroneCraftingData();
+
+    reportBug(" - Creating Drone Lua Commands \n");
+    droneData->droneLuaCommandsData = setUpLuaFunctions(world);
 
     return droneData;
 }

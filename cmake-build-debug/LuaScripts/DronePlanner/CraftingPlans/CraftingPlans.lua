@@ -53,3 +53,28 @@ function PlanUseFurnaceToSmeltItems(droneManager, itemToSmelt, quantityToSmelt)
     }
     table.insert(droneManager.dronePlans, 1, dronePlan)
 end
+
+function ExecuteCraftStoneTools(droneManager)
+    local dronePlan = droneManager.dronePlans[1]
+    local droneId = droneManager.droneId
+    if (dronePlan.goal == 3) then
+        if (getDroneInventoryItemCount(droneId, DroneItem.ItemStone) < 6) then
+            --Plan Gather Rocks
+            
+        else
+            
+        end           
+    end
+ 
+end
+
+
+function PlanCraftStoneTools(droneManager)
+    ReportDroneBug("Planned : CraftStoneTools")
+    local dronePlan = {
+        planType = DronePlanType.craftStoneTools;
+        goal = 3;
+        goalItemCount = 6;
+    }
+    table.insert(droneManager.dronePlans, 1, dronePlan)
+end

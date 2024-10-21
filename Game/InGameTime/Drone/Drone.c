@@ -221,7 +221,6 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
 }
 
 int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity) {
-
     if (removeItemFromInventory(drone, item, quantity) == 1) {
         if (item == ItemPlantMatter) {
             drone->fuel+=50;
@@ -235,10 +234,50 @@ int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity) {
     return -1;
 }
 
+int equipDroneTool(struct World* world, struct Drone* drone, enum DroneItem item) {
+    struct DroneData* droneData = world->droneData;
+    int totalOfItem = getTotalItemCountInInventory(drone, item);
+    if (isTool(droneData->droneItemData, item) && totalOfItem >= 1) {
+        int emptySlot = -1;
+        for (int i = 0; i < 3; i++) {
+            if (drone->equipment[i] == ItemNull) {
+                emptySlot = i;
+                break;
+            }
+        }
+
+        if (emptySlot != -1) {
+            removeItemFromInventory(drone, item, 1);
+            drone->equipment[emptySlot] = item;
+            return 1;
+        }
+        else {
+            return -2;
+        }
+    }
+    return -1;
+
+}
+
+int unEquipDroneTool(struct World* world, struct Drone* drone, enum DroneItem item) {
+    for (int i = 0; i < 3; i++) {
+        if (drone->equipment[i] == item) {
+            addItemToInventory(world->droneData, drone, item, 1);
+            drone->equipment[i] == ItemNull;
+            return 1;
+        }
+    }
+    return -1;
+}
+
 int droneCraftItem(struct World* world, struct Drone* drone, enum DroneItem item) {
     struct DroneData* droneData = world->droneData;
     if (isCraftable(droneData->droneItemData, item)) {
         if (droneAttemptCraftItem(world->droneData, drone, item) == 1) {
+            if (isTool(droneData->droneItemData, item)) {
+                int test = equipDroneTool(world, drone, item);
+                reportBug("test : %i", test);
+            }
             return 1;
         }
         else {
