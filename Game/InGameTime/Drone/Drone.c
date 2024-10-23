@@ -275,8 +275,7 @@ int droneCraftItem(struct World* world, struct Drone* drone, enum DroneItem item
     if (isCraftable(droneData->droneItemData, item)) {
         if (droneAttemptCraftItem(world->droneData, drone, item) == 1) {
             if (isTool(droneData->droneItemData, item)) {
-                int test = equipDroneTool(world, drone, item);
-                reportBug("test : %i", test);
+                equipDroneTool(world, drone, item);
             }
             return 1;
         }

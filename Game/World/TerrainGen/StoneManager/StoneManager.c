@@ -11,10 +11,10 @@ void generateStone(struct World* world, int worldX, int worldY, int worldZ, enum
     if (block == Stone) {
         int randomVal = rand() % 100;
 
-        if (randomVal >= 97) {
+        if (randomVal >= 96) {
             setBlockAtWorldCor(world, worldX, worldY, worldZ, Iron);
         }
-        else if (randomVal >= 96) {
+        else if (randomVal >= 93) {
             setBlockAtWorldCor(world, worldX, worldY, worldZ, Copper);
         }
 

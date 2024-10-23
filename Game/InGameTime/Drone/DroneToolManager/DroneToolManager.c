@@ -33,10 +33,10 @@ void setToolProperty (struct DroneToolData* droneToolData, enum DroneItem tool, 
 void setUpToolProperties(struct DroneToolData* droneToolData) {
     setToolProperty(droneToolData, ItemNull, 0, 1.0f);
 
-    setToolProperty(droneToolData, ToolStoneDrill, 1, 0.75f);
-    setToolProperty(droneToolData, ToolStoneSaw, -1, 0.75f);
-    setToolProperty(droneToolData, ToolIronDrill, 2, 0.5f);
-    setToolProperty(droneToolData, ToolIronSaw, -2, 0.5f);
+    setToolProperty(droneToolData, ToolStoneDrill, 1, 0.5f);
+    setToolProperty(droneToolData, ToolStoneSaw, -1, 0.5f);
+    setToolProperty(droneToolData, ToolIronDrill, 2, 0.25f);
+    setToolProperty(droneToolData, ToolIronSaw, -2, 0.25f);
     setToolProperty(droneToolData, ToolIronBattery, 0, 1.0f);
     setToolProperty(droneToolData, ToolIronReceptacle, 0, 1.0f);
     setToolProperty(droneToolData, ToolIronCamera, 0, 1.0f);

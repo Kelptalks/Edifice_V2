@@ -1,33 +1,24 @@
 package.path = package.path .. ";./LuaScripts/?.lua"
-require("DronePlanner.BasicPlans.BasicDronePlans")
-require("DronePlanner.ResourceGatheringPlans.ResourceGatheringPlans")
-require("DronePlanner.CraftingPlans.CraftingPlans")
+require("DronePlanner.DroneNavigator.DroneNavigator")
+require("DronePlanner.DroneGatherer.DroneGatherer")
+require("DronePlanner.DroneCrafter.DroneCrafter")
+require("DronePlanner.DroneGatherer.DroneMiner")
 
 -- Plan Types
 DronePlanType = {
     navigateToCords = 1,
-    scavangeForFuel = 2,
-    droneHarvestWood = 3,
-    spiralStairsOfHeight = 4,
-    digTunnel = 5,
-    useFurnaceToSmeltItems = 6,
-    craftStoneTools = 7,
+    scavengeSurface = 2;
+    craftStoneTools = 3;
+    craftScaffolding = 4;
+
+    mineOar = 5;
+    digMineStairs = 6;
+    digTunnel = 7;
 }
 
 -- Drone Plan structure
 DronePlan = {
     planType = nil,
-    goal = 0,
-    goalXCor = 0,
-    goalYCor = 0,
-    goalZCor = 0,
-
-    targetGoal = 0,
-    xDirection = 0,
-    yDirection = 0,
-
-    goalItemCount = 0,
-    goalItemType = 0,
 }
 
 -- Drone Manager structure
@@ -51,13 +42,14 @@ end
 
 -- Function map
 local functionMap = {
-    [DronePlanType.navigateToCords] = ExecuteNavigateToCords,
-    [DronePlanType.scavangeForFuel] = ExecuteScavangeForFuel,
-    [DronePlanType.droneHarvestWood] = ExecuteDroneHarvestWood,
-    [DronePlanType.spiralStairsOfHeight] = ExecuteBuildSpiralStairsOfHeight,
-    [DronePlanType.digTunnel] = ExecuteBuildDigTunnel,
-    [DronePlanType.useFurnaceToSmeltItems] = ExecuteUseFurnaceToSmeltItems,
-    [DronePlanType.craftStoneTools] = ExecuteCraftStoneTools
+    [DronePlanType.navigateToCords] = ExecuteNavigateToCords;
+    [DronePlanType.scavengeSurface] = ExecuteScavengeSurface;
+    [DronePlanType.craftStoneTools] = ExecuteCraftStoneTools;
+    [DronePlanType.craftScaffolding] = ExecuteCraftScaffolding;
+
+    [DronePlanType.mineOar] = ExecuteMineOar;
+    [DronePlanType.digMineStairs] = ExecuteDigMineStairs;
+    [DronePlanType.digTunnel] = ExecuteDigTunnel;
 }
 
 -- Function to process drone plans on each tick

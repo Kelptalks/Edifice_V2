@@ -23,7 +23,7 @@ void createTerrainGenRules(struct World* world){
     terrainGenRules->shiftRules = createList();
 
     //add all lair rules
-    addLairRule(terrainGenRules->lairRules, -20, 15, Stone);
+    addLairRule(terrainGenRules->lairRules, -60, 15, Stone);
     addLairRule(terrainGenRules->lairRules, 16, 20, Dirt);
     addLairRule(terrainGenRules->lairRules, 21, 21, GreenGrass);
 
@@ -72,7 +72,7 @@ void genArea(struct World* world, int xStart, int yStart, int xEnd, int yEnd, in
 
 
                         int oceanLevel = 30;
-                        if (heightMod > oceanLevel){
+                        if (heightMod > oceanLevel && z > 0){
                             int currentHeightMod = heightMod;
                             while (currentHeightMod > oceanLevel) {
                                 currentHeightMod--;

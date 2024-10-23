@@ -78,29 +78,13 @@ Block = {
     WormMouth = 51,
 
     -- Drone
-    Log = 52,
-    DroneLeftForward = 53,
-    DroneRightForward = 54,
-    DroneRightBack = 55,
-    DroneLeftBack = 56,
-    DroneDead = 57,
-}
-
-DroneTool = {
-    ToolNull = 0,
-    ToolStoneDrill = 1,
-    ToolStoneSaw = 2,
-    ToolIronDrill = 3,
-    ToolIronSaw = 4,
-    ToolIronBattery = 5,
-    ToolIronReceptacle = 6,
-    ToolIronCamera = 7,
-    ToolTitaniumDrill = 8,
-    ToolTitaniumSaw = 9,
-    ToolTitaniumBattery = 10,
-    ToolTitaniumReceptacle = 11,
-    ToolTitaniumCamera = 12,
-    ToolExplosiveCamera = 13
+    Scaffolding = 52,
+    Log = 53,
+    DroneLeftForward = 54,
+    DroneRightForward = 55,
+    DroneRightBack = 56,
+    DroneLeftBack = 57,
+    DroneDead = 58,
 }
 
 DroneItem = {
@@ -134,7 +118,11 @@ DroneItem = {
     ItemTitaniumBar = 27,
     ItemPurpleLens = 28,
     ItemCharcoal = 29,
-    ItemSulfur = 30
+    ItemSulfur = 30,
+    ItemScaffolding = 31,
+    ItemDroneParts = 32,
+    ItemGoldOar = 33,
+    ItemGoldBar = 34,
 }
 
 -- Reverse lookup table

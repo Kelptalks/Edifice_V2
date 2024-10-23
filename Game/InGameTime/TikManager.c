@@ -21,6 +21,7 @@ struct TikManager* createTikManager(){
     tikManager->tik = 0;
     tikManager->tikTime = 25;
     tikManager->droneTickInterval = 5;
+    tikManager->ticksPerInterVal = 1;
     return tikManager;
 }
 
@@ -38,33 +39,36 @@ void updateTikTime(struct GameData* gameData){
     tikManager->sdlTime = SDL_GetTicks();
     if (tikManager->sdlTime > (tikManager->tik * tikManager->tikTime)){
         tikManager->tik++;
-        tikPlayer(gameData);
-        tickAllEntityInWorld(gameData);
 
-        struct World* world = gameData->world;
-        struct DroneLuaCommandsData* commandsData = world->droneData->droneLuaCommandsData;
+        for (int t = 0; t < tikManager->ticksPerInterVal; t++) {
+            tikPlayer(gameData);
+            tickAllEntityInWorld(gameData);
 
-        //Run lua tick function
-        if (tikManager->tik % tikManager->droneTickInterval == 0) {
-            lua_getglobal(commandsData->luaState, "ON_TICK");  // Get the onTick function from Lua
-            if (!lua_isfunction(commandsData->luaState, -1)) {  // Check if onTick is a valid function
-                reportBug("Error: ON_TICK is not a function\n");
-                return;
-            }
+            struct World* world = gameData->world;
+            struct DroneLuaCommandsData* commandsData = world->droneData->droneLuaCommandsData;
 
-            if (lua_pcall(commandsData->luaState, 0, 0, 0) != LUA_OK) {  // Call it with no arguments, no return values
-                reportBug("Error running onTick: %s\n", lua_tostring(commandsData->luaState, -1));
-            }
+            if (tikManager->tik % tikManager->droneTickInterval == 0) {
+                //Tick Drone an furnace
+                for (int i = 0; i < world->droneData->droneCount; i++) {
+                    tickDrone(world, world->droneData->drones[i]);
+                }
 
-            for (int i = 0; i < world->droneData->droneCount; i++) {
-                tickDrone(world, world->droneData->drones[i]);
-            }
+                for (int i = 0; i < world->furnaceData->currentFurnaceCount; i++) {
+                    tickFurnace(world, world->furnaceData->furnaces[i]);
+                }
 
-            for (int i = 0; i < world->furnaceData->currentFurnaceCount; i++) {
-                tickFurnace(world, world->furnaceData->furnaces[i]);
+
+                //Run lua tick function
+                lua_getglobal(commandsData->luaState, "ON_TICK");  // Get the onTick function from Lua
+                if (!lua_isfunction(commandsData->luaState, -1)) {  // Check if onTick is a valid function
+                    reportBug("Error: ON_TICK is not a function\n");
+                    return;
+                }
+                if (lua_pcall(commandsData->luaState, 0, 0, 0) != LUA_OK) {  // Call it with no arguments, no return values
+                    reportBug("Error running onTick: %s\n", lua_tostring(commandsData->luaState, -1));
+                }
             }
         }
-
     }
     Uint32 time2 = SDL_GetTicks();
     gameData->debugMenu->tickTime = time2 - time1;

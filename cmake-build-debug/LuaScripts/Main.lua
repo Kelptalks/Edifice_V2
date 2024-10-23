@@ -4,17 +4,17 @@ package.path = package.path .. ";./LuaScripts/?.lua"
 require("DroneLuaCommands.DroneCommands")
 require("DroneLuaCommands.DroneFurnaceCommands")
 require("DroneLuaCommands.BlockData")
-require("DroneMiner.BlockMiner")
-require("DroneNavigator.DroneNavigator")
+
 require("DronePlanner.DronePlanner")
-require("BlockLocator.BlockLocator")
-require("DronePlanner.BasicPlans.BasicDronePlans")
-require("DronePlanner.ResourceGatheringPlans.ResourceGatheringPlans")
-require("DronePlanner.CraftingPlans.CraftingPlans")
+
+require("DronePlanner.DroneNavigator.DroneNavigator")
+require("DronePlanner.DroneGatherer.DroneGatherer")
+require("DronePlanner.DroneGatherer.DroneMiner")
+require("DronePlanner.DroneCrafter.DroneCrafter")
 
 
 DroneManagers = {}
-
+Mine = CreateMine(0, 0, 24)
 
 function ON_TICK()
 
@@ -23,17 +23,11 @@ function ON_TICK()
     -- Loop through all created drones
     if #DroneManagers < droneCount then
         table.insert(DroneManagers, CreateDroneManager(droneCount - 1))
+        local droneManager = DroneManagers[droneCount]
         
-        --PlanUseFurnaceToSmeltItems(DroneManagers[droneCount], DroneItem.ItemIronOar, 3)
-
-        --PlanDroneNavigateToCords(DroneManagers[droneCount], 0, 0, 30)
-
-        --PlanDroneHarvestWood(DroneManagers[droneCount], 100)
-        
-        --PlanDigTunnel(DroneManagers[droneCount], -100, 0, 5, 1, 0, 100)
-        
-        PlanScavangeForFuel(DroneManagers[droneCount], 5000)
-
+        PlanMineForOar(droneManager, Mine, 256, 4, 4)
+        PlanCraftStoneTools(droneManager)
+        PlanScavengeSurface(droneManager, 5000, 0, 0, 6)
     end
 
 

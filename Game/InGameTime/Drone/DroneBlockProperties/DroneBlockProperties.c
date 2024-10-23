@@ -109,8 +109,8 @@ void setUpDroneBlockProperties(struct DroneBlockProperties* blockProperties) {
     setDroneBlockProperty(blockProperties, Rock, true, 10, 0, ItemStone, 1, 50);
 
     // Metals
-    setDroneBlockProperty(blockProperties, Iron, true, 200, 3, ItemIronBar, 1, 10);
-    setDroneBlockProperty(blockProperties, Copper, true, 200, 2, ItemCopperBar, 1, 10);
+    setDroneBlockProperty(blockProperties, Iron, true, 200, 1, ItemIronOar, 1, 10);
+    setDroneBlockProperty(blockProperties, Copper, true, 200, 1, ItemCopperOar, 1, 10);
 
     // Miscellaneous blocks
     setDroneBlockProperty(blockProperties, MudBrick, true, 150, 1, ItemBrick, 1, 8);
@@ -146,7 +146,7 @@ void setUpDroneBlockProperties(struct DroneBlockProperties* blockProperties) {
     setDroneBlockProperty(blockProperties, DroneRightForward, true, 1000, 3, ItemDroneParts, 1, 100);
     setDroneBlockProperty(blockProperties, DroneRightBack, true, 1000, 3, ItemDroneParts, 1, 100);
     setDroneBlockProperty(blockProperties, DroneLeftBack, true, 1000, 3, ItemDroneParts, 1, 100);
-    setDroneBlockProperty(blockProperties, DroneDead, true, 1000, 3, ItemDroneParts, 1, 100);
+    setDroneBlockProperty(blockProperties, DroneDead, true, 1000, 1, ItemDroneParts, 1, 100);
 
 }
 

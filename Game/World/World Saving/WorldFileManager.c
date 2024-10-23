@@ -140,9 +140,9 @@ struct World* readWorldData(char* fileName){
     strcpy(world->name, fileName);
 
     //Set up entity array
-    world->entityCount = 150;
+    world->entityCount = 25;
     world->tempEntityArray = calloc(sizeof (struct Entity*), world->entityCount);
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 25; i++) {
         world->tempEntityArray[i] = createPuffEntity();
         world->tempEntityArray[i]->worldX = rand()%150;
         world->tempEntityArray[i]->worldY = rand()%150;

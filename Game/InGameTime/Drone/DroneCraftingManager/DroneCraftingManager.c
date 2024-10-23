@@ -87,8 +87,9 @@ void setUpItemRecipes(struct DroneCraftingData* droneCraftingData) {
     currentRecipe = setUpItemRecipe(droneCraftingData, ItemBrick, 1, 2);
     setItemRecipeIngredient(currentRecipe, 0, ItemDirt, 4);
 
-    currentRecipe = setUpItemRecipe(droneCraftingData, ItemScaffolding, 1, 8);
+    currentRecipe = setUpItemRecipe(droneCraftingData, ItemScaffolding, 2, 8);
     setItemRecipeIngredient(currentRecipe, 0, ItemLog, 1);
+    setItemRecipeIngredient(currentRecipe, 1, ItemPlantMatter, 1);
 
     currentRecipe = setUpItemRecipe(droneCraftingData, ItemDroneParts, 1, 1);
     setItemRecipeIngredient(currentRecipe, 0, ItemDroneParts, 1);

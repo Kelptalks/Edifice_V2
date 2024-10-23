@@ -11,6 +11,7 @@ struct TikManager{
     int tik; // Unit of in game time
     int tikTime; // in ms
     int droneTickInterval;
+    int ticksPerInterVal;
     Uint32 sdlTime;
 };
 

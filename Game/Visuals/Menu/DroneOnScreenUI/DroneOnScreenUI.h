@@ -16,6 +16,7 @@ struct DroneOnScreenUI{
     int maxDroneWindows;
     int currentDroneWindowCount;
     struct DronePopOutWindow** dronePopOutWindow;
+    struct GameSpeedControls* gameSpeedControls;
 };
 
 void updateDroneOnScreenUI(struct GameData* gameData);

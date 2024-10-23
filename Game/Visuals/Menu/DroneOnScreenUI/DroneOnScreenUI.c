@@ -13,6 +13,7 @@
 #include "../../../InGameTime/Drone/DroneData.h"
 #include "../OnScreenUI/OnScreenUI.h"
 #include "DronePopOutWindow/DronePopOutWindow.h"
+#include "GameSpeedControls/GameSpeedControls.h"
 
 void renderDroneSelectIcon(struct GameData* gameData, struct Drone* drone){
 
@@ -115,6 +116,7 @@ struct DroneOnScreenUI* createDroneOnScreenUI(){
     droneOnScreenUi->visible = true;
     droneOnScreenUi->maxDroneWindows = 100;
     droneOnScreenUi->currentDroneWindowCount = 0;
+    droneOnScreenUi->gameSpeedControls = createGameSpeedControls();
 
     droneOnScreenUi->dronePopOutWindow = malloc(sizeof (struct DroneOnScreenUI*) * droneOnScreenUi->maxDroneWindows);
     if (droneOnScreenUi->dronePopOutWindow == NULL){
@@ -133,6 +135,8 @@ struct DroneOnScreenUI* createDroneOnScreenUI(){
 void renderDroneOnScreenUI(struct GameData* gameData){
     struct World* world = gameData->world;
     struct DroneOnScreenUI* droneOnScreenUi = gameData->menuManger->droneOnScreenUi;
+
+    renderGameSpeedControls(gameData);
 
     if (world->droneData->droneCount > 0){
         for (int i = 0; i < world->droneData->droneCount; i++){
@@ -153,6 +157,8 @@ void renderDroneOnScreenUI(struct GameData* gameData){
 bool handleDroneOnScreenUI(struct GameData* gameData, SDL_Event event){
     bool onDroneScreenUIMouseOn = false;
 
+    handleGameSpeedInputs(gameData, event);
+
     struct World* world = gameData->world;
     for (int i = 0; i < world->droneData->droneCount; i++){
         struct Drone* drone = world->droneData->drones[i];
@@ -172,18 +178,6 @@ bool handleDroneOnScreenUI(struct GameData* gameData, SDL_Event event){
                 droneOnScreenUi->visible = false;
                 gameData->menuManger->onScreenUi->visible = true;
                 break;
-            case SDLK_MINUS :
-                if (gameData->tikManager->droneTickInterval > 1) {
-                    gameData->tikManager->tikTime -= 5;
-                    gameData->tikManager->droneTickInterval -= 1;
-                }
-                break;
-            case SDLK_PLUS :
-                if (gameData->tikManager->droneTickInterval < 5) {
-                    gameData->tikManager->droneTickInterval += 1;
-                    gameData->tikManager->tikTime += 5;
-                }
-            break;
         }
     }
 
