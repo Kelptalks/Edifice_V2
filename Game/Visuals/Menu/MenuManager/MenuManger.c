@@ -14,7 +14,6 @@
 #include "Menus/WorldCreateMenu/WorldCreateMenu.h"
 #include "../../../PlayerData/PlayerData.h"
 
-
 struct MenuManager* createMenuManager(){
     struct MenuManager* menuManager = malloc(sizeof (struct MenuManager));
     if (menuManager == NULL){
@@ -29,6 +28,7 @@ struct MenuManager* createMenuManager(){
     menuManager->worldCreateMenu = createWorldCreateMenu();
     menuManager->onScreenUi = createOnScreenUI();
     menuManager->droneOnScreenUi = createDroneOnScreenUI();
+    menuManager->console = CreateConsole();
 
     return menuManager;
 }
@@ -60,6 +60,11 @@ void renderCurrentMenu(struct GameData* gameData){
         if (gameData->debugMenu->visible) {
             renderDebugMenu(gameData);
         }
+
+        if (gameData->menuManger->console->visible) {
+            renderConsole(gameData);
+        }
+
         Uint32 UiRenderTime2 = SDL_GetTicks();
         gameData->debugMenu->frameRenderingData->onScreenUIRenderingTime = UiRenderTime1 - UiRenderTime2;
 
@@ -80,6 +85,13 @@ void renderCurrentMenu(struct GameData* gameData){
 }
 
 void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
+    switch (event.key.keysym.sym) {
+        case SDLK_SLASH :
+            gameData->menuManger->console->clickedOn = true;
+        break;
+    }
+
+
     enum MenuType currentMenuType = gameData->menuManger->currentMenuType;
     if (currentMenuType == MainMenu){
         handleInputMainMenu(gameData, event);
@@ -90,8 +102,11 @@ void handleCurrentMenuInputs(struct GameData* gameData, SDL_Event event){
         if (gameData->menuManger->onScreenUi->visible){
             onScreenUIMouseOn = handleOnScreenUIInput(gameData, event);
         }
-        if (gameData->menuManger->droneOnScreenUi->visible){
+        if (!onScreenUIMouseOn && gameData->menuManger->droneOnScreenUi->visible){
             onScreenUIMouseOn = handleDroneOnScreenUI(gameData, event);
+        }
+        if (!onScreenUIMouseOn && gameData->menuManger->console->visible) {
+            onScreenUIMouseOn = handleConsoleInputs(gameData, event);
         }
         if (!onScreenUIMouseOn) {
             // if on screen UI is not hit then take camera control inputs.

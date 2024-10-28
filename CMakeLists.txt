@@ -154,6 +154,8 @@ add_executable(edifice main.c
         Game/Debuging/DebugMenu/Consol/DebugConsole.h
         Game/Visuals/Menu/DroneOnScreenUI/GameSpeedControls/GameSpeedControls.c
         Game/Visuals/Menu/DroneOnScreenUI/GameSpeedControls/GameSpeedControls.h
+        Game/Visuals/Consol/Consol.c
+        Game/Visuals/Consol/Consol.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES} ${OpenCL_LIBRARY})

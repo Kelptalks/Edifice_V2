@@ -130,7 +130,6 @@ int droneAttemptCraftItem(struct DroneData* droneData, struct Drone* drone, enum
     }
 
     if (hasEnoughItemsToCraft) {
-        reportBug("Remove %i\n", recipe.uniqueItems);
         for (int i = 0; i < recipe.uniqueItems; i++) {
             int num = removeItemFromInventory(drone, recipe.items[i], recipe.itemQuantitys[i]);
         }

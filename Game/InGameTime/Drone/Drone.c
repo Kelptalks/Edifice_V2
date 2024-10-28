@@ -223,11 +223,11 @@ int placeBlockRelativeToDrone(struct World* world, struct Drone* drone, int x, i
 int useItemForFuel(struct Drone* drone, enum DroneItem item, int quantity) {
     if (removeItemFromInventory(drone, item, quantity) == 1) {
         if (item == ItemPlantMatter) {
-            drone->fuel+=50;
+            drone->fuel += 50 * quantity;
             return 1;
         }
         else if (item == ItemLog) {
-            drone->fuel += 300;
+            drone->fuel += 300 * quantity;
             return 1;
         }
     }

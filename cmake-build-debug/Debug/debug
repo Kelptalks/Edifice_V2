@@ -11,4 +11,15 @@ Creating cameraData
 Creating PlayerData
 Creating Tik Manager 
 Creating Sound Manager
+reading world Saves/World0.bin
+Creating Drone Data : 
+ - Creating Drone Item Data 
+ - Creating Drone Block Properties 
+ - Creating Drone Tool Data 
+ - Creating Drone Crafting Data 
+ - Creating Drone Lua Commands 
+creating lua
+Execute Command : test this consol command
+Execute Command : dronegive 0 item 10                                                                                 
+Failed to Perform Command dronegive | item or drone id out of range
 File deleted successfully.

@@ -27,7 +27,8 @@ function ON_TICK()
         
         PlanMineForOar(droneManager, Mine, 256, 4, 4)
         PlanCraftStoneTools(droneManager)
-        PlanScavengeSurface(droneManager, 5000, 0, 0, 6)
+        PlanCraftScaffolding(droneManager, 4)
+        PlanScavengeSurface(droneManager, 5000, 4, 4, 6)
     end
 
 

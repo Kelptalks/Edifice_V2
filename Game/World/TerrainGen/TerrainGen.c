@@ -54,7 +54,7 @@ void genArea(struct World* world, int xStart, int yStart, int xEnd, int yEnd, in
     //Get an array of only rules applicable to area
     struct ArrayList* lairRulesInArea = getLairRulesInArea(world->terrainGenRules->lairRules, zStart, zEnd);
 
-    float RoughNess = 0.01f * ((float)roughNess / 5.0f);
+    float RoughNess = 0.005f * ((float)roughNess / 5.0f);
 
     //Loop through keys in the area
     for (int x = xStart; x < xEnd; x++){
@@ -68,10 +68,10 @@ void genArea(struct World* world, int xStart, int yStart, int xEnd, int yEnd, in
                     struct LairRule *lairRule = (struct LairRule *) indexList(lairRulesInArea, rule);
                     if (zInRuleBounds(lairRule, zStart + z)) {
 
-                        int heightMod = perlinAt(x * RoughNess, y * RoughNess) * (50);
+                        int heightMod = perlinAt(x * RoughNess, y * RoughNess) * (100);
 
 
-                        int oceanLevel = 30;
+                        int oceanLevel = 90;
                         if (heightMod > oceanLevel && z > 0){
                             int currentHeightMod = heightMod;
                             while (currentHeightMod > oceanLevel) {

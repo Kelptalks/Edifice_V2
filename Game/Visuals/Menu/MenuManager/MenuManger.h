@@ -10,6 +10,7 @@
 #include " UIManager/UIManger.h"
 #include "Menus/WorldSelectMenu/WorldSelectMenu.h"
 #include "../DroneOnScreenUI/DroneOnScreenUI.h"
+#include "../../Consol/Consol.h"
 
 enum MenuType{
     MainMenu,
@@ -27,6 +28,7 @@ struct MenuManager{
     struct WorldCreateMenu* worldCreateMenu;
     struct OnScreenUI* onScreenUi;
     struct DroneOnScreenUI* droneOnScreenUi;
+    struct Console* console;
 
 };
 
