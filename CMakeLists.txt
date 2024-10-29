@@ -156,6 +156,10 @@ add_executable(edifice main.c
         Game/Visuals/Menu/DroneOnScreenUI/GameSpeedControls/GameSpeedControls.h
         Game/Visuals/Consol/Consol.c
         Game/Visuals/Consol/Consol.h
+        Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/GPUCastingManager.c
+        Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/GPUCastingManager.h
+        Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.c
+        Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES} ${OpenCL_LIBRARY})
