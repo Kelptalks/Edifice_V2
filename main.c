@@ -16,6 +16,8 @@ int main(int argc, char* argv[]) {
 
     if (true) {
         struct GameData *gameData = createGameData();
+        int octreeSize = getOctreeDimensions(6);
+        reportBug("OctreeDataArrayLength : %i", octreeSize);
 
         //Play start music
         //playSound(gameData->soundManager, MusicSunn);

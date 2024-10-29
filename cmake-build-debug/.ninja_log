@@ -1,13 +1,13 @@
 # ninja log v6
-370	868	7519246911057554	edifice.exe	bec1a32cebed9b3b
+391	562	7519288827797115	edifice.exe	915a6a81ffaf0a03
 78	228	7507206976403436	CMakeFiles/edifice.dir/Game/World/TerrainGen/LairManager/LairManager.c.obj	f52b1179091472d2
 1873	2403	7518496421984039	CMakeFiles/edifice.dir/Game/InGameTime/Furnace/FurnaceData.c.obj	55a2ff4f2e4b236d
 62	276	7501903368220099	CMakeFiles/edifice.dir/Game/Visuals/Camera/IsoCordTool/IsoCordManager.c.obj	7ec82fa59b918c79
+600	1237	7518496409251635	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj	ba3718349435a71a
 10	90	7507210755229558	CMakeFiles/edifice.dir/Game/World/TerrainGen/PlantManager/PlantManager.c.obj	f15671d93f7f0347
 1343	1905	7518496416683433	CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/FrameRenderingData/FrameRenderingData.c.obj	4dc446c806435538
-600	1237	7518496409251635	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/CastedBlockManager/ChunkMap/ChunkMap.c.obj	ba3718349435a71a
-105	287	7501903368650103	CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj	eb153da2dc924323
 551	1170	7518496408767519	CMakeFiles/edifice.dir/Game/Visuals/Menu/TextManager/TextManager.c.obj	9694441a3577d8fb
+105	287	7501903368650103	CMakeFiles/edifice.dir/Game/World/Octree/Tools/KeyMod.c.obj	eb153da2dc924323
 287	398	7501903370460102	CMakeFiles/edifice.dir/ArrayList/arrayList.c.obj	8c7825183d9c5b40
 1206	1773	7518496415313434	CMakeFiles/edifice.dir/Game/InGameTime/TikEvent/EntityManager/EntityManager.c.obj	bb837c16adb05fb0
 95	716	7501903368550097	CMakeFiles/edifice.dir/Game/Debuging/Test_Main.c.obj	fc2ec5ad971cb0ce
@@ -65,7 +65,7 @@
 1757	2360	7518496420823424	CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneToolManager/DroneToolManager.c.obj	60924a6825dc7763
 1821	2390	7518496421464041	CMakeFiles/edifice.dir/Game/InGameTime/Drone/DroneData.c.obj	2dd21b5b34c3ff98
 10	90	7514176835648729	CMakeFiles/edifice.dir/Game/World/TerrainGen/StoneManager/StoneManager.c.obj	dc048d7a53cbe11d
-3	243	7519263591900526	build.ninja	839ef356f3f73f19
+3	243	7519320998458109	build.ninja	839ef356f3f73f19
 26	111	7507197785173364	CMakeFiles/edifice.dir/Game/InGameTime/Furnace/furnace.c.obj	574b9cea87b829e5
 1906	2429	7518496422314047	CMakeFiles/edifice.dir/Game/InGameTime/Furnace/Furnace.c.obj	d7c2ef405230b523
 9	59	7507207124861667	CMakeFiles/edifice.dir/Game/World/WorldChunk/WorldChunkEntityHashMap/WorldChunkEntityHashMap.c.obj	318c3c4b2b6700b6
@@ -76,9 +76,16 @@
 37	123	7512649194752361	CMakeFiles/edifice.dir/Game/Debuging/DebugMenu/Consol/DebugConsole.c.obj	7d772726218f3fa3
 2003	2793	7518496423284039	CMakeFiles/edifice.dir/Game/Visuals/Menu/DroneOnScreenUI/GameSpeedControls/GameSpeedControls.c.obj	eaee6716a631fdd4
 10	360	7518548299277108	CMakeFiles/edifice.dir/Game/Visuals/Consol/Consol.c.obj	92f657c335512ff5
-20	370	7519246907551672	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/GPUCastingManager.c.obj	8c59beb2528f415f
 22	327	7519287531455128	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/GPUCastingManager.c.obj	8c59beb2528f415f
-20	371	7519287678923852	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.c.obj	d42662987d03f9a8
-373	512	7519287682444369	edifice.exe	915a6a81ffaf0a03
 20	386	7519288824087121	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.c.obj	d42662987d03f9a8
-391	562	7519288827797115	edifice.exe	915a6a81ffaf0a03
+20	360	7519324322551451	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.c.obj	d42662987d03f9a8
+18	67	7519324408340504	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUWorldData/GPUWorldData.c.obj	8bf09fdc30e2eaf0
+68	202	7519324408830495	edifice.exe	6ec505777f20c74b
+28	401	7519332486833534	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUWorldData/GPUWorldData.c.obj	8bf09fdc30e2eaf0
+20	407	7519332486753530	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.c.obj	d42662987d03f9a8
+412	551	7519332490673530	edifice.exe	6ec505777f20c74b
+17	359	7519333092507511	CMakeFiles/edifice.dir/main.c.obj	b6e48515f3391b1
+363	497	7519333095957565	edifice.exe	6ec505777f20c74b
+31	361	7519336490497403	CMakeFiles/edifice.dir/Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUWorldData/GPUWorldData.c.obj	8bf09fdc30e2eaf0
+23	363	7519336490407398	CMakeFiles/edifice.dir/main.c.obj	b6e48515f3391b1
+369	508	7519336493867392	edifice.exe	6ec505777f20c74b

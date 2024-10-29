@@ -160,6 +160,8 @@ add_executable(edifice main.c
         Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/GPUCastingManager.h
         Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.c
         Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUCastingData/GPUCastingData.h
+        Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUWorldData/GPUWorldData.c
+        Game/Visuals/Camera/Rendering/RayCasting/GPUCasting/RayCasting/GPUWorldData/GPUWorldData.h
 )
 
 target_link_libraries(edifice  ${LUA_LIBRARIES}  ${SDL2_LIBRARIES} ${OpenCL_LIBRARY})

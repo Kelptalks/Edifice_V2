@@ -27,11 +27,25 @@ void clearCastedBlockSendData(struct CastedBlocksSendData* castedBlocksSendData)
 void addCastedChunkToSendData(struct CastedBlocksSendData* castedBlocksSendData, const struct CastedChunk* castedChunk);
 
 struct CastedBlockReturnData {
-    int totalCastedBlocks;
-    int totalTransparentTextures;
+    int* chunkXCor;
+    int* chunkYCor;
+    int* chunkArrayPosition;
 
-    int* triangleTypes;
-    int* blockTypes;
+    int maxCastedBlocks;
+    int totalCastedBlocks;
+
+    int textureArrayLength;
+    int* leftTriangleTypes;
+    int* leftBlockTypes;
+    int* rightTriangleTypes;
+    int* rightBlockTypes;
 };
+
+struct CastedBlockReturnData* createCastedBlockReturnData(int maxCastedBlocks, int textureArrayLength);
+
+void clearCastedBlockReturnData(struct CastedBlockReturnData* castedBlockReturnData);
+
+void unPackBlockReturnData(struct CastedBlockReturnData* castedBlockReturnData, struct CastedBlocksSendData* castedBlocksSendData, struct CastedPool* castedPool);
+
 
 #endif //GPUCASTINGDATA_H
